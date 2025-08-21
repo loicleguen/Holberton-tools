@@ -19,15 +19,15 @@ def generer_readme(fichier_html):
     soup = BeautifulSoup(html_content, 'html.parser')
     readme_content = []
 
-    # --- 1. Bannière (inchangé) ---
+    # --- 1. Bannière  ---
     readme_content.append('<div align="center"><img src="https://github.com/ksyv/holbertonschool-web_front_end/blob/main/baniere_holberton.png"></div>\n\n')
 
-    # --- 2. Titre du Projet (inchangé) ---
+    # --- 2. Titre du Projet  ---
     project_description = soup.find(id="project-description")
     titre_projet = project_description.find('h2').text.strip() if project_description and project_description.find('h2') else "Titre du Projet (à remplacer)"
     readme_content.append(f"# {titre_projet}\n\n")
 
-    # --- 3. Sommaire (inchangé) ---
+    # --- 3. Sommaire  ---
     readme_content.append("## Table of Contents :\n\n")
     tasks = soup.find_all('div', class_='panel panel-default task-card')
     if tasks:
@@ -35,10 +35,10 @@ def generer_readme(fichier_html):
     for i, task in enumerate(tasks):
         task_title_tag = task.find('h3', class_='panel-title')
         task_title = task_title_tag.get_text(strip=True) if task_title_tag else f"Titre de la tâche {i+1} (à remplacer)"
-        task_title = task_title.lstrip('0123456789. ') # Enleve le numero, point, espace
+        task_title = task_title.lstrip('0123456789. ') 
         readme_content.append(f"  - [{i}. {task_title}](#subparagraph{i})\n")
 
-    # --- 4. Resources (MODIFIÉ: Correction des liens) ---
+    # --- 4. Resources  ---
     resources_section = soup.find('h2', string='Resources')
     if resources_section:
         readme_content.append("\n## Resources\n")
@@ -49,21 +49,20 @@ def generer_readme(fichier_html):
                 link = li.find('a')
                 if link:
                     href = link.get('href', '#')
-                    # Correction du lien:
                     if href.startswith('/redirect'):
                         parsed_url = urllib.parse.urlparse(href)
                         query_params = urllib.parse.parse_qs(parsed_url.query)
                         if 'url' in query_params:
-                            real_url = urllib.parse.unquote(query_params['url'][0])  # [0] car parse_qs retourne une liste
+                            real_url = urllib.parse.unquote(query_params['url'][0])  
                             readme_content.append(f"* [{link.text}]({real_url})\n")
                         else:
-                            readme_content.append(f"* [{link.text}]({href})\n") # Si pas de paramètre 'url', on garde le lien original
+                            readme_content.append(f"* [{link.text}]({href})\n") 
                     else:
-                         readme_content.append(f"* [{link.text}]({href})\n") #Si ce n'est pas un lien de redirection
+                         readme_content.append(f"* [{link.text}]({href})\n") 
 
 
 
-    # --- 5. Learning Objectives, 6. Requirements (inchangés) ---
+    # --- 5. Learning Objectives, 6. Requirements  ---
     learning_objectives_section = soup.find('h2', string='Learning Objectives')
     if learning_objectives_section:
         readme_content.append("\n## Learning Objectives\n")
@@ -82,7 +81,7 @@ def generer_readme(fichier_html):
             for li in requirements_list.find_all('li'):
                 readme_content.append(f"* {li.get_text(strip=True)}\n")
 
-    # --- 7. Consignes des Tâches (Tasks) ---
+    # --- 7. Consignes des Tâches ---
     readme_content.append("\n## Task\n")
 
     for i, task in enumerate(tasks):
@@ -108,21 +107,20 @@ def generer_readme(fichier_html):
                 elif element.name == 'pre':
                     code_content = element.find('code')
                     if code_content:
-                         # Détection du langage (simplifié)
-                        language = ""  # Vraiment par défaut cette fois
+                        language = ""
                         for cls in code_content.get('class', []):
                             if cls.startswith('language-'):
                                 language = cls.split('-')[1]
-                                break  # On sort dès qu'on a trouvé
+                                break  
 
-                        # Gestion des retours à la ligne dans le code:
-                        code_text = code_content.get_text()  # Pas de strip=True!
-                        code_text = code_text.strip()       # ... mais on nettoie manuellement
+                        
+                        code_text = code_content.get_text()
+                        code_text = code_text.strip()
                         return f"```{language}\n{code_text}\n```\n\n"
                 elif element.name == 'strong':
-                     return f"**{element.get_text(strip=True)}**" # Markdown pour bold
+                     return f"**{element.get_text(strip=True)}**"
                 elif element.name == 'em':
-                    return f"*{element.get_text(strip=True)}*"  # Markdown pour italic
+                    return f"*{element.get_text(strip=True)}*"
 
                 return ""
 
@@ -131,7 +129,7 @@ def generer_readme(fichier_html):
 
         readme_content.append("---\n\n")
 
-    # --- 8. Authors (inchangé) ---
+    # --- 8. Authors ---
     readme_content.append("\n## Authors\n")
     readme_content.append("Ksyv - [GitHub Profile](https://github.com/ksyv)\n")
 
@@ -139,6 +137,6 @@ def generer_readme(fichier_html):
     with open("README.md", "w", encoding="utf-8") as f:
         f.write("".join(readme_content))
 
-    print("README.md généré avec succès (retours à la ligne dans le code + liens corrigés)!")
+    print("README.md généré avec succès!")
 
-generer_readme("projet.html")  # REMPLACE par le nom de ton fichier
+generer_readme("projet.html") 

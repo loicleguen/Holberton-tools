@@ -1,315 +1,399 @@
 <div align="center"><img src="https://github.com/ksyv/holbertonschool-web_front_end/blob/main/baniere_holberton.png"></div>
 
-# Resources
+# Enhancing Code Quality and Efficiency with ChatGPT
 
 ## Table of Contents :
 
-  - [0. Safe list printing](#subparagraph0)
-  - [1. Safe printing of an integers list](#subparagraph1)
-  - [2. Print and count integers](#subparagraph2)
-  - [3. Integers division with debug](#subparagraph3)
-  - [4. Divide a list](#subparagraph4)
-  - [5. Raise exception](#subparagraph5)
-  - [6. Raise a message](#subparagraph6)
-
-## Resources
-### Read or watch:
-* [Errors and Exceptions](/rltoken/WxV68L6c_WRMEzZt8P7oIA)
-* [Learn to Program 11 Static & Exception Handling](/rltoken/OTYmJ8UpJotqIVyrVgSL4A)
-
-## Learning Objectives
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* Why Python programming is awesome
-* What’s the difference between errors and exceptions
-* What are exceptions and how to use them
-* When do we need to use exceptions
-* How to correctly handle an exception
-* What’s the purpose of catching exceptions
-* How to raise a builtin exception
-* When do we need to implement a clean-up action after an exception
-
-## Requirements
-### General
-* Allowed editors:vi,vim,emacs
-* All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
-* All your files should end with a new line
-* The first line of all your files should be exactly#!/usr/bin/python3
-* AREADME.mdfile, at the root of the folder of the project, is mandatory
-* Your code should use the pycodestyle (version 2.7.*)
-* All your files must be executable
-* The length of your files will be tested usingwc
+  - [0. Debugging - Python Factorial](#subparagraph0)
+  - [1. Debugging - Python Arguments](#subparagraph1)
+  - [2. Debugging - HTML / Javascript](#subparagraph2)
+  - [3. Debugging - Python Mines](#subparagraph3)
+  - [4. Documentation - Python Factorial](#subparagraph4)
+  - [5. Error Handling - Python Checkbook](#subparagraph5)
+  - [6. Debugging - Tic Tac Toe Python](#subparagraph6)
 
 ## Task
-### 0. Safe list printing <a name='subparagraph0'></a>
+### 0. Debugging - Python Factorial <a name='subparagraph0'></a>
 
-Write a function that prints <code>x</code> elements of a list.
-
-* Prototype: <code>def safe_print_list(my_list=[], x=0):</code>
-* <code>my_list</code> can contain any type (integer, string, etc.)
-* All elements must be printed on the same line followed by a new line.
-* <code>x</code> represents the number of elements to print
-* <code>x</code> can be bigger than the length of <code>my_list</code>
-* Returns the real number of elements printed
-* You have to use <code>try: / except:</code>
-* You are not allowed to import any module
-* You are not allowed to use <code>len()</code>
+<strong>Objective:</strong> Use ChatGPT to identify and correct errors in code samples.
 
 ```
-guillaume@ubuntu:~/$ cat 0-main.py
+$ cat factorial.py
 #!/usr/bin/python3
-safe_print_list = __import__('0-safe_print_list').safe_print_list
+import sys
 
-my_list = [1, 2, 3, 4, 5]
+def factorial(n):
+    result = 1
+    while n > 1:
+        result *= n
+    return result
 
-nb_print = safe_print_list(my_list, 2)
-print("nb_print: {:d}".format(nb_print))
-nb_print = safe_print_list(my_list, len(my_list))
-print("nb_print: {:d}".format(nb_print))
-nb_print = safe_print_list(my_list, len(my_list) + 2)
-print("nb_print: {:d}".format(nb_print))
+f = factorial(int(sys.argv[1]))
+print(f)
 
-guillaume@ubuntu:~/$ ./0-main.py
-12
-nb_print: 2
-12345
-nb_print: 5
-12345
-nb_print: 5
-guillaume@ubuntu:~/$
+$ ./factorial.py 2
+^CTraceback (most recent call last):
+  File "/private/tmp/factorial.py", line 9, in <module>
+    factorial(int(sys.argv[1]))
+  File "/private/tmp/factorial.py", line 5, in factorial
+    while n > 1:
+          ^^^^^
+KeyboardInterrupt
+```
+
+You can download the code <a href="https://github.com/hs-hq-service/3156/blob/main/factorial.py" target="_blank" title="here">here</a>.
+
+Fix the code, it should print the factorial of the argument.
+
+---
+
+### 1. Debugging - Python Arguments <a name='subparagraph1'></a>
+
+<strong>Objective:</strong> Use ChatGPT to identify and correct errors in code samples.
+
+```
+$ cat print_arguments.py
+#!/usr/bin/python3
+import sys
+
+for i in range(len(sys.argv)):
+    print(sys.argv[i])
+
+$ ./print_arguments.py 1 2 3
+print_arguments.py
+1
+2
+3
+```
+
+You can download the code <a href="https://github.com/hs-hq-service/3156/blob/main/print_arguments.py" target="_blank" title="here">here</a>.
+
+Fix the code, it should print only the arguments without the python file name.
+
+---
+
+### 2. Debugging - HTML / Javascript <a name='subparagraph2'></a>
+
+<strong>Objective:</strong> Use ChatGPT to identify and correct errors in code samples.
+
+```
+$ cat change_background.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Background Color</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 50px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<h2>Click the button to change the background color</h2>
+
+<button id="colorButon">Change Color</button>
+
+<script>
+    document.getElementById("colorButton").addEventListener("click", function() {
+        changeBackgroundColor();
+    });
+
+    function changeBackgroundColor() {
+        // Generate a random color
+        var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+        // Change the background color of the body
+        document.body.style.backgroundColor = randomColor;
+    }
+</script>
+
+</body>
+</html>
+```
+
+You can download the code <a href="/rltoken/Q2IZY5FB9a-udDliTmvHOQ" target="_blank" title="here">here</a>.
+<a href="/rltoken/EqntmyG56eyYIid9ghEO0g" target="_blank" title="This">This</a> editor can be use to test your code.
+
+Fix the code, it should change the background color when you click on the button.
+
+---
+
+### 3. Debugging - Python Mines <a name='subparagraph3'></a>
+
+<strong>Objective:</strong> Use ChatGPT to identify and correct errors in code samples.
+
+<strong>Game Overview</strong>: Minesweeper is a puzzle game where the player must clear a field of hidden “mines” without detonating any of them, using clues about the number of neighboring mines in each field.
+
+```
+$ cat mines.py
+#!/usr/bin/python3
+import random
+import os
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+class Minesweeper:
+    def __init__(self, width=10, height=10, mines=10):
+        self.width = width
+        self.height = height
+        self.mines = set(random.sample(range(width * height), mines))
+        self.field = [[' ' for _ in range(width)] for _ in range(height)]
+        self.revealed = [[False for _ in range(width)] for _ in range(height)]
+
+    def print_board(self, reveal=False):
+        clear_screen()
+        print('  ' + ' '.join(str(i) for i in range(self.width)))
+        for y in range(self.height):
+            print(y, end=' ')
+            for x in range(self.width):
+                if reveal or self.revealed[y][x]:
+                    if (y * self.width + x) in self.mines:
+                        print('*', end=' ')
+                    else:
+                        count = self.count_mines_nearby(x, y)
+                        print(count if count > 0 else ' ', end=' ')
+                else:
+                    print('.', end=' ')
+            print()
+
+    def count_mines_nearby(self, x, y):
+        count = 0
+        for dx in [-1, 0, 1]:
+            for dy in [-1, 0, 1]:
+                nx, ny = x + dx, y + dy
+                if 0 <= nx < self.width and 0 <= ny < self.height:
+                    if (ny * self.width + nx) in self.mines:
+                        count += 1
+        return count
+
+    def reveal(self, x, y):
+        if (y * self.width + x) in self.mines:
+            return False
+        self.revealed[y][x] = True
+        if self.count_mines_nearby(x, y) == 0:
+            for dx in [-1, 0, 1]:
+                for dy in [-1, 0, 1]:
+                    nx, ny = x + dx, y + dy
+                    if 0 <= nx < self.width and 0 <= ny < self.height and not self.revealed[ny][nx]:
+                        self.reveal(nx, ny)
+        return True
+
+    def play(self):
+        while True:
+            self.print_board()
+            try:
+                x = int(input("Enter x coordinate: "))
+                y = int(input("Enter y coordinate: "))
+                if not self.reveal(x, y):
+                    self.print_board(reveal=True)
+                    print("Game Over! You hit a mine.")
+                    break
+            except ValueError:
+                print("Invalid input. Please enter numbers only.")
+
+if __name__ == "__main__":
+    game = Minesweeper()
+    game.play()
+```
+
+You can download the code <a href="https://github.com/hs-hq-service/3156/blob/main/mines.py" target="_blank" title="here">here</a>.
+
+Fix the code, implement a mechanism to detect when all non-mine cells have been revealed, thus winning the game.
+
+```
+$ ./mines.py
+0 1 2 3 4 5 6 7 8 9
+1
+2
+3
+4
+5
+6
+7
+8
+9
+...
+...
+0 1 2 3 4 5 6 7 8 9
+0
+1       1 1 1   1 1 1
+2 1 1 1 1 . 1   2 . 2
+3 2 . 2 1 1 1   2 . 2
+4 2 . 3 1       1 1 1
+5 1 2 . 1
+6 1 2 2 3 2 1
+7 . 1 1 . . 1
+8 1 1 2 3 3 1
+9     1 . 1
+Congratulations! You've won the game.
 ```
 
 ---
 
-### 1. Safe printing of an integers list <a name='subparagraph1'></a>
+### 4. Documentation - Python Factorial <a name='subparagraph4'></a>
 
-Write a function that prints an integer with <code>"{:d}".format()</code>.
-
-* Prototype: <code>def safe_print_integer(value):</code>
-* <code>value</code> can be any type (integer, string, etc.)
-* The integer should be printed followed by a new line
-* Returns <code>True</code> if <code>value</code> has been correctly printed (it means the <code>value</code> is an integer)
-* Otherwise, returns <code>False</code>
-* You have to use <code>try: / except:</code>
-* You have to use <code>"{:d}".format()</code> to print as integer
-* You are not allowed to import any module
-* You are not allowed to use <code>type()</code>
+<strong>Objective:</strong> Use ChatGPT to document the code
 
 ```
-guillaume@ubuntu:~/$ cat 1-main.py
+$ cat factorial_recursive.py
 #!/usr/bin/python3
-safe_print_integer = __import__('1-safe_print_integer').safe_print_integer
+import sys
 
-value = 89
-has_been_print = safe_print_integer(value)
-if not has_been_print:
-    print("{} is not an integer".format(value))
+def factorial(n):
+        if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
 
-value = -89
-has_been_print = safe_print_integer(value)
-if not has_been_print:
-    print("{} is not an integer".format(value))
+f = factorial(int(sys.argv[1]))
+print(f)
 
-value = "School"
-has_been_print = safe_print_integer(value)
-if not has_been_print:
-    print("{} is not an integer".format(value))
+$ ./factorial_recursive.py 4
+24
+```
 
-guillaume@ubuntu:~/$ ./1-main.py
-89
--89
-School is not an integer
-guillaume@ubuntu:~/$
+You can download the code <a href="https://github.com/hs-hq-service/3156/blob/main/factorial_recursive.py" target="_blank" title="here">here</a>.
+
+Add the comments to this code.
+You should have 3 sections: function description, parameters and returns.
+
+---
+
+### 5. Error Handling - Python Checkbook <a name='subparagraph5'></a>
+
+<strong>Objective:</strong> Use ChatGPT to document the code
+
+```
+$ cat checkbook.py
+class Checkbook:
+    def __init__(self):
+        self.balance = 0.0
+
+    def deposit(self, amount):
+        self.balance += amount
+        print("Deposited ${:.2f}".format(amount))
+        print("Current Balance: ${:.2f}".format(self.balance))
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print("Insufficient funds to complete the withdrawal.")
+        else:
+            self.balance -= amount
+            print("Withdrew ${:.2f}".format(amount))
+            print("Current Balance: ${:.2f}".format(self.balance))
+
+    def get_balance(self):
+        print("Current Balance: ${:.2f}".format(self.balance))
+
+def main():
+    cb = Checkbook()
+    while True:
+        action = input("What would you like to do? (deposit, withdraw, balance, exit): ")
+        if action.lower() == 'exit':
+            break
+        elif action.lower() == 'deposit':
+            amount = float(input("Enter the amount to deposit: $"))
+            cb.deposit(amount)
+        elif action.lower() == 'withdraw':
+            amount = float(input("Enter the amount to withdraw: $"))
+            cb.withdraw(amount)
+        elif action.lower() == 'balance':
+            cb.get_balance()
+        else:
+            print("Invalid command. Please try again.")
+
+if __name__ == "__main__":
+    main()
+```
+
+You can download the code <a href="https://github.com/hs-hq-service/3156/blob/main/checkbook.py" target="_blank" title="here">here</a>.
+
+Fix the code, to prevent the program from crashing due to invalid input (e.g., non-numeric values), add error handling mechanisms.
+
+```
+$ ./checkbook.py
+What would you like to do? (deposit, withdraw, balance, exit): deposit
+Enter the amount to deposit: $test
+Traceback (most recent call last):
+  File "/private/tmp/3156/checkbook.py", line 39, in <module>
+    main()
+  File "/private/tmp/3156/checkbook.py", line 28, in main
+    amount = float(input("Enter the amount to deposit: $"))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'test'
 ```
 
 ---
 
-### 2. Print and count integers <a name='subparagraph2'></a>
+### 6. Debugging - Tic Tac Toe Python <a name='subparagraph6'></a>
 
-Write a function that prints the first <code>x</code> elements of a list and only integers.
+<strong>Objective:</strong> Use ChatGPT to identify and correct errors in code samples. (There may be several errors on the code)
 
-* Prototype: <code>def safe_print_list_integers(my_list=[], x=0):</code>
-* <code>my_list</code> can contain any type (integer, string, etc.)
-* All integers have to be printed on the same line followed by a new line - other type of value in the list must be skipped (in silence).
-* <code>x</code> represents the number of elements to access in <code>my_list</code>
-* <code>x</code> can be bigger than the length of <code>my_list</code> - if it’s the case, an exception is expected to occur
-* Returns the real number of integers printed
-* You have to use <code>try: / except:</code>
-* You have to use <code>"{:d}".format()</code> to print an integer
-* You are not allowed to import any module
-* You are not allowed to use <code>len()</code>
+<strong>Game Overview</strong>: Players alternate placing “X” or “O” on a 3x3 board, aiming to get three in a row horizontally, vertically, or diagonally to win.
 
 ```
-guillaume@ubuntu:~/$ cat 2-main.py
+$ cat tic.py
 #!/usr/bin/python3
-safe_print_list_integers = \
-    __import__('2-safe_print_list_integers').safe_print_list_integers
+def print_board(board):
+    for row in board:
+        print(" | ".join(row))
+        print("-" * 5)
 
-my_list = [1, 2, 3, 4, 5]
+def check_winner(board):
+    for row in board:
+        if row.count(row[0]) == len(row) and row[0] != " ":
+            return True
 
-nb_print = safe_print_list_integers(my_list, 2)
-print("nb_print: {:d}".format(nb_print))
+    for col in range(len(board[0])):
+        if board[0][col] == board[1][col] == board[2][col] and board[0][col] != " ":
+            return True
 
-my_list = [1, 2, 3, "School", 4, 5, [1, 2, 3]]
-nb_print = safe_print_list_integers(my_list, len(my_list))
-print("nb_print: {:d}".format(nb_print))
+    if board[0][0] == board[1][1] == board[2][2] and board[0][0] != " ":
+        return True
 
-nb_print = safe_print_list_integers(my_list, len(my_list) + 2)
-print("nb_print: {:d}".format(nb_print))
+    if board[0][2] == board[1][1] == board[2][0] and board[0][2] != " ":
+        return True
 
-guillaume@ubuntu:~/$ ./2-main.py
-12
-nb_print: 2
-12345
-nb_print: 5
-12345Traceback (most recent call last):
-  File "./2-main.py", line 14, in <module>
-    nb_print = safe_print_list_integers(my_list, len(my_list) + 2)
-  File "//2-safe_print_list_integers.py", line 7, in safe_print_list_integers
-    print("{:d}".format(my_list[i]), end="")
-IndexError: list index out of range
-guillaume@ubuntu:~/$
+    return False
+
+def tic_tac_toe():
+    board = [[" "]*3 for _ in range(3)]
+    player = "X"
+    while not check_winner(board):
+        print_board(board)
+        row = int(input("Enter row (0, 1, or 2) for player " + player + ": "))
+        col = int(input("Enter column (0, 1, or 2) for player " + player + ": "))
+        if board[row][col] == " ":
+            board[row][col] = player
+            if player == "X":
+                player = "O"
+            else:
+                player = "X"
+        else:
+            print("That spot is already taken! Try again.")
+
+    print_board(board)
+    print("Player " + player + " wins!")
+
+tic_tac_toe()
 ```
 
----
+You can download the code <a href="https://github.com/hs-hq-service/3156/blob/main/tic.py" target="_blank" title="here">here</a>.
 
-### 3. Integers division with debug <a name='subparagraph3'></a>
-
-Write a function that divides 2 integers and prints the result.
-
-* Prototype: <code>def safe_print_division(a, b):</code>
-* You can assume that <code>a</code> and <code>b</code> are integers
-* The result of the division should print on the <code>finally:</code> section preceded by <code>Inside result:</code>
-* Returns the value of the division, otherwise: <code>None</code>
-* You have to use <code>try: / except: / finally:</code>
-* You have to use <code>"{}".format()</code> to print the result
-* You are not allowed to import any module
-
-```
-guillaume@ubuntu:~/$ cat 3-main.py
-#!/usr/bin/python3
-safe_print_division = __import__('3-safe_print_division').safe_print_division
-
-a = 12
-b = 2
-result = safe_print_division(a, b)
-print("{:d} / {:d} = {}".format(a, b, result))
-
-a = 12
-b = 0
-result = safe_print_division(a, b)
-print("{:d} / {:d} = {}".format(a, b, result))
-
-guillaume@ubuntu:~/$ ./3-main.py
-Inside result: 6.0
-12 / 2 = 6.0
-Inside result: None
-12 / 0 = None
-guillaume@ubuntu:~/$
-```
-
----
-
-### 4. Divide a list <a name='subparagraph4'></a>
-
-Write a function that divides element by element 2 lists.
-
-* Prototype: <code>def list_division(my_list_1, my_list_2, list_length):</code>
-* <code>my_list_1</code> and <code>my_list_2</code> can contain any type (integer, string, etc.)
-* <code>list_length</code> can be bigger than the length of both lists
-* Returns a new list (length = <code>list_length</code>) with all divisions
-* If 2 elements can’t be divided, the division result should be equal to <code>0</code>
-* If an element is not an integer or float:
-
-
-  * print: <code>wrong type</code>
-* If the division can’t be done (<code>/0</code>):
-
-
-  * print: <code>division by 0</code>
-* If <code>my_list_1</code> or <code>my_list_2</code> is too short
-
-
-  * print: <code>out of range</code>
-* You have to use <code>try: / except: / finally:</code>
-* You are not allowed to import any module
-
-```
-guillaume@ubuntu:~/$ cat 4-main.py
-#!/usr/bin/python3
-list_division = __import__('4-list_division').list_division
-
-my_l_1 = [10, 8, 4]
-my_l_2 = [2, 4, 4]
-result = list_division(my_l_1, my_l_2, max(len(my_l_1), len(my_l_2)))
-print(result)
-
-print("--")
-
-my_l_1 = [10, 8, 4, 4]
-my_l_2 = [2, 0, "H", 2, 7]
-result = list_division(my_l_1, my_l_2, max(len(my_l_1), len(my_l_2)))
-print(result)
-
-guillaume@ubuntu:~/$ ./4-main.py
-[5.0, 2.0, 1.0]
---
-division by 0
-wrong type
-out of range
-[5.0, 0, 0, 2.0, 0]
-guillaume@ubuntu:~/$
-```
-
----
-
-### 5. Raise exception <a name='subparagraph5'></a>
-
-Write a function that raises a type exception.
-
-* Prototype: <code>def raise_exception():</code>
-* You are not allowed to import any module
-
-```
-guillaume@ubuntu:~/$ cat 5-main.py
-#!/usr/bin/python3
-raise_exception = __import__('5-raise_exception').raise_exception
-
-try:
-    raise_exception()
-except TypeError as te:
-    print("Exception raised")
-
-guillaume@ubuntu:~/$ ./5-main.py
-Exception raised
-guillaume@ubuntu:~/$
-```
-
----
-
-### 6. Raise a message <a name='subparagraph6'></a>
-
-Write a function that raises a name exception with a message.
-
-* Prototype: <code>def raise_exception_msg(message=""):</code>
-* You are not allowed to import any module
-
-```
-guillaume@ubuntu:~/$ cat 6-main.py
-#!/usr/bin/python3
-raise_exception_msg = __import__('6-raise_exception_msg').raise_exception_msg
-
-try:
-    raise_exception_msg("C is fun")
-except NameError as ne:
-    print(ne)
-
-guillaume@ubuntu:~/$ ./6-main.py
-C is fun
-guillaume@ubuntu:~/$
-```
+<strong>Warning:</strong> Test all the user inputs !
 
 ---
 
 
 ## Authors
-Ksyv - [GitHub Profile](https://github.com/ksyv)
+loicleguen - [GitHub Profile](https://github.com/loicleguen)

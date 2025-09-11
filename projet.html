@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="google" content="notranslate">
-    <title>Project: Python - Test-driven development | Holberton Thonon-les-Bains, France Intranet</title>
+    <title>Project: Python - Exceptions | Holberton Thonon-les-Bains, France Intranet</title>
       <link rel="stylesheet" href="https://use.typekit.net/xgz4ilr.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
       <link rel="stylesheet" href="/assets/application-7eb9b1e48427cd1bd28dbc513b5724dbd9fef87b6f1da03bb757f217b94f7ded.css" media="all" />
@@ -16,7 +16,7 @@
       <script src="/assets/application-1bc6dd7915d3b62389d2b1e80bd4e9e08c101a17b4117ee518b441b43aa1a5fd.js"></script>
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="CpcKzzzJu2Y72cZKvV4-tZQNCQgUA78EAyW4fLoI-PxXLiHVqHVEtPJMHFSx45TQFVJK9X2sWN7M1XGFhZv1AA" />
+<meta name="csrf-token" content="L9XDjttTTNS2iwRCNqWiCRApRk-0HqwfpRfZqtVxsopybOiUT--zBn8e3lw6GAhskXYFst2xS8Vq5xBT6uK_dg" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png">
       <!-- Select2 -->
       <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
@@ -325,18 +325,17 @@
 <div class="project row container-max">
 
     <div class="sm-gap">
-    <div data-react-class="projects/ProjectHeader" data-react-props="{&quot;metadata&quot;:{&quot;level&quot;:&quot;Amateur&quot;,&quot;author&quot;:&quot;Guillaume&quot;,&quot;weight&quot;:1,&quot;migrated_to_sasheck&quot;:true,&quot;task_level_review_type&quot;:&quot;Your score will be updated as you progress.&quot;,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_manual_correction&quot;:false}},&quot;project&quot;:{&quot;completion&quot;:100.0,&quot;id&quot;:2123,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/003_color-0c5b38973bfe29fff8dd86f65a213ea2d2499a7d0d9e4549f440c50dc84c9618.png&quot;,&quot;name&quot;:&quot;Python - Test-driven development&quot;,&quot;score&quot;:{&quot;mandatory&quot;:100.0,&quot;optional&quot;:0.0},&quot;tasksCount&quot;:2},&quot;slackLink&quot;:null,&quot;tags&quot;:[],&quot;videoRoomLink&quot;:null}" data-react-cache-id="projects/ProjectHeader-0"></div>
+    <div data-react-class="projects/ProjectHeader" data-react-props="{&quot;metadata&quot;:{&quot;level&quot;:&quot;Amateur&quot;,&quot;author&quot;:&quot;Guillaume&quot;,&quot;weight&quot;:1,&quot;migrated_to_sasheck&quot;:true,&quot;task_level_review_type&quot;:&quot;Your score will be updated as you progress.&quot;,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_manual_correction&quot;:false}},&quot;project&quot;:{&quot;completion&quot;:100.0,&quot;id&quot;:2122,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/003_color-0c5b38973bfe29fff8dd86f65a213ea2d2499a7d0d9e4549f440c50dc84c9618.png&quot;,&quot;name&quot;:&quot;Python - Exceptions&quot;,&quot;score&quot;:{&quot;mandatory&quot;:100.0,&quot;optional&quot;:0.0},&quot;tasksCount&quot;:3},&quot;slackLink&quot;:null,&quot;tags&quot;:[],&quot;videoRoomLink&quot;:null}" data-react-cache-id="projects/ProjectHeader-0"></div>
   </div>
 
 
-  <div id="project_id" class="d-none" data-project-id="2123"></div>
+  <div id="project_id" class="d-none" data-project-id="2122"></div>
 
 
 
     <div>
       <ul class="nav nav-pills nav-justified" role="tablist">
           <li class="active"><a href="#description" role="tab" data-toggle="tab">Description</a></li>
-          <li class=""><a href="#quiz" role="tab" data-toggle="tab">Quiz</a></li>
       </ul>
       <div class="tab-content mt-4">
         <div role="tabpanel" class="tab-pane active" id="description">
@@ -345,50 +344,35 @@
     Go to tasks <i class="ml-1 fa fa-arrow-down"></i>
   </a>
   <div class="panel-body text-justify">
-    <p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-higher-level_programming+/246/giphy-4.gif" alt="" loading='lazy' style="" /></p>
-
-<h2>Background Context</h2>
-
-<h3>Important notice on intranet checks for Python projects</h3>
-
-<p>Starting from today:</p>
-
-<ul>
-<li>Based on the requirements of each task, <strong>you should always write the documentation (module(s) + function(s)) and tests first</strong>, before you actually code anything</li>
-<li>The intranet checks for Python projects won&rsquo;t be released before their first deadline, in order for you to focus more on TDD and think about all possible cases</li>
-<li>We strongly encourage you to work together on test cases, so that you don&rsquo;t miss any edge case. <strong>But not in the implementation of them!</strong></li>
-<li><strong>Don&rsquo;t trust the user</strong>, always think about all possible edge cases</li>
-</ul>
-
-<h2>Resources</h2>
+    <h2>Resources</h2>
 
 <p><strong>Read or watch</strong>:</p>
 
 <ul>
-<li><a href="/rltoken/Hmd_LI8NZ-F2ymDxue5HCg" title="doctest — Test interactive Python examples" target="_blank">doctest — Test interactive Python examples</a> (<em>until &ldquo;26.2.3.7. Warnings&rdquo; included</em>)</li>
-<li><a href="/rltoken/fbFfGNFU07L2yD0D1uc-Xg" title="doctest – Testing through documentation" target="_blank">doctest – Testing through documentation</a> </li>
-<li><a href="/rltoken/LhbdUZYzqiP7cjxjE3rG3w" title="Unit Tests in Python" target="_blank">Unit Tests in Python</a></li>
+<li><a href="/rltoken/WxV68L6c_WRMEzZt8P7oIA" title="Errors and Exceptions" target="_blank">Errors and Exceptions</a> </li>
+<li><a href="/rltoken/OTYmJ8UpJotqIVyrVgSL4A" title="Learn to Program 11 Static &amp; Exception Handling" target="_blank">Learn to Program 11 Static &amp; Exception Handling</a> (<em>starting at minute 7</em>)</li>
 </ul>
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/RMt2qsdC652WOJu2QyacaA" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="/rltoken/TnecOG_n964IZ9aQvErdtQ" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 
 <ul>
-<li>Why Python programming is awesome</li>
-<li>What&rsquo;s an interactive test</li>
-<li>Why tests are important</li>
-<li>How to write Docstrings to create tests</li>
-<li>How to write documentation for each module and function</li>
-<li>What are the basic option flags to create tests</li>
-<li>How to find edge cases</li>
+<li>Why Python programming is awesome </li>
+<li>What&rsquo;s the difference between errors and exceptions</li>
+<li>What are exceptions and how to use them</li>
+<li>When do we need to use exceptions</li>
+<li>How to correctly handle an exception</li>
+<li>What&rsquo;s the purpose of catching exceptions</li>
+<li>How to raise a builtin exception</li>
+<li>When do we need to implement a clean-up action after an exception</li>
 </ul>
 
 <h2>Requirements</h2>
 
-<h3>Python Scripts</h3>
+<h3>General</h3>
 
 <ul>
 <li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
@@ -401,386 +385,22 @@
 <li>The length of your files will be tested using <code>wc</code></li>
 </ul>
 
-<h3>Python Test Cases</h3>
-
-<ul>
-<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
-<li>All your files should end with a new line</li>
-<li>All your test files should be inside a folder <code>tests</code></li>
-<li>All your test files should be text files (extension: <code>.txt</code>)</li>
-<li>All your tests should be executed by using this command: <code>python3 -m doctest ./tests/*</code></li>
-<li>All your modules should have a documentation (<code>python3 -c &#39;print(__import__(&quot;my_module&quot;).__doc__)&#39;</code>)</li>
-<li>All your functions should have a documentation (<code>python3 -c &#39;print(__import__(&quot;my_module&quot;).my_function.__doc__)&#39;</code>)</li>
-<li>A documentation is not a simple word, it&rsquo;s a real sentence explaining what&rsquo;s the purpose of the module, class or method (the length of it will be verified)</li>
-<li>We strongly encourage you to work together on test cases, so that you don&rsquo;t miss any edge case &ndash; The Checker is checking for tests!</li>
-</ul>
-
   </div>
 </div>
         </div>
-          <div role="tabpanel" class="tab-pane " id="quiz">
-              <div class="panel panel-default" id="project-quiz-questions-title">
-    <div class="panel-body">
-
-        <div class="alert alert-info">
-          <strong>Great!</strong>
-          You've completed the quiz successfully! Keep going!
-          <span id="quiz_questions_collapse_toggle"></span>
-        </div>
-
-      <section class="quiz_questions_show_container">
-          <div class="quiz_question_item_container" data-role="quiz_question5486" data-position="1">
-            <div class=" clearfix" id="quiz_question-5486">
-
-    <h4 class="quiz_question">
-        
-        Question #0
-    </h4>
-
-    <!-- Quiz question Body -->
-    <p>Is this a standardized way to comment a function in Python?</p>
-
-<pre><code>/* Addition function */
-def add(a, b):
-    return a + b
-</code></pre>
-
-
-    <!-- Quiz question Answers -->
-        <ul class="quiz_question_answers" data-question-id="5486">
-                <li class="">
-
-  <input type="radio" name="5486" id="5486-1503344951635" value="1503344951635" data-quiz-answer-id="1503344951635" data-quiz-question-id="5486" disabled="disabled" />
-  <label for="5486-1503344951635"><p>Yes</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="radio" name="5486" id="5486-1503344954614" value="1503344954614" data-quiz-answer-id="1503344954614" data-quiz-question-id="5486" disabled="disabled" checked="checked" />
-  <label for="5486-1503344954614"><p>No</p>
-</label>
-</li>
-
-        </ul>
-
-    <!-- Quiz question Tips -->
-
-</div>
-
-          </div>
-          <div class="quiz_question_item_container" data-role="quiz_question5487" data-position="2">
-            <div class=" clearfix" id="quiz_question-5487">
-
-    <h4 class="quiz_question">
-        
-        Question #1
-    </h4>
-
-    <!-- Quiz question Body -->
-    <p>Is this a standardized way to comment a function in Python?</p>
-
-<pre><code>&quot;&quot;&quot;&quot; Addition function &quot;&quot;&quot;
-def add(a, b):
-    return a + b
-</code></pre>
-
-
-    <!-- Quiz question Answers -->
-        <ul class="quiz_question_answers" data-question-id="5487">
-                <li class="">
-
-  <input type="radio" name="5487" id="5487-1503344960923" value="1503344960923" data-quiz-answer-id="1503344960923" data-quiz-question-id="5487" disabled="disabled" />
-  <label for="5487-1503344960923"><p>Yes</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="radio" name="5487" id="5487-1503344963518" value="1503344963518" data-quiz-answer-id="1503344963518" data-quiz-question-id="5487" disabled="disabled" checked="checked" />
-  <label for="5487-1503344963518"><p>No</p>
-</label>
-</li>
-
-        </ul>
-
-    <!-- Quiz question Tips -->
-
-</div>
-
-          </div>
-          <div class="quiz_question_item_container" data-role="quiz_question5488" data-position="3">
-            <div class=" clearfix" id="quiz_question-5488">
-
-    <h4 class="quiz_question">
-        
-        Question #2
-    </h4>
-
-    <!-- Quiz question Body -->
-    <p>Is this a standardized way to comment a function in Python?</p>
-
-<pre><code>##########
-# Addition function
-##########
-def add(a, b):
-    return a + b
-</code></pre>
-
-
-    <!-- Quiz question Answers -->
-        <ul class="quiz_question_answers" data-question-id="5488">
-                <li class="">
-
-  <input type="radio" name="5488" id="5488-1503344968632" value="1503344968632" data-quiz-answer-id="1503344968632" data-quiz-question-id="5488" disabled="disabled" />
-  <label for="5488-1503344968632"><p>Yes</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="radio" name="5488" id="5488-1503344972406" value="1503344972406" data-quiz-answer-id="1503344972406" data-quiz-question-id="5488" disabled="disabled" checked="checked" />
-  <label for="5488-1503344972406"><p>No</p>
-</label>
-</li>
-
-        </ul>
-
-    <!-- Quiz question Tips -->
-
-</div>
-
-          </div>
-          <div class="quiz_question_item_container" data-role="quiz_question5489" data-position="4">
-            <div class=" clearfix" id="quiz_question-5489">
-
-    <h4 class="quiz_question">
-        
-        Question #3
-    </h4>
-
-    <!-- Quiz question Body -->
-    <p>Is this a standardized way to comment a function in Python?</p>
-
-<pre><code>def add(a, b):
-    &quot;&quot;&quot; Addition function &quot;&quot;&quot;
-    return a + b
-</code></pre>
-
-
-    <!-- Quiz question Answers -->
-        <ul class="quiz_question_answers" data-question-id="5489">
-                <li class="">
-
-  <input type="radio" name="5489" id="5489-1503344976220" value="1503344976220" data-quiz-answer-id="1503344976220" data-quiz-question-id="5489" disabled="disabled" checked="checked" />
-  <label for="5489-1503344976220"><p>Yes</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="radio" name="5489" id="5489-1503344978978" value="1503344978978" data-quiz-answer-id="1503344978978" data-quiz-question-id="5489" disabled="disabled" />
-  <label for="5489-1503344978978"><p>No</p>
-</label>
-</li>
-
-        </ul>
-
-    <!-- Quiz question Tips -->
-
-</div>
-
-          </div>
-          <div class="quiz_question_item_container" data-role="quiz_question5490" data-position="5">
-            <div class=" clearfix" id="quiz_question-5490">
-
-    <h4 class="quiz_question">
-        
-        Question #4
-    </h4>
-
-    <!-- Quiz question Body -->
-    <p>Is this module correctly commented?</p>
-
-<pre><code>#!/usr/bin/python3
-&quot;&quot;&quot; 
-    My calculation module
-&quot;&quot;&quot;
-import sys
-...
-</code></pre>
-
-
-    <!-- Quiz question Answers -->
-        <ul class="quiz_question_answers" data-question-id="5490">
-                <li class="">
-
-  <input type="radio" name="5490" id="5490-1503344983799" value="1503344983799" data-quiz-answer-id="1503344983799" data-quiz-question-id="5490" disabled="disabled" checked="checked" />
-  <label for="5490-1503344983799"><p>Yes</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="radio" name="5490" id="5490-1503344986684" value="1503344986684" data-quiz-answer-id="1503344986684" data-quiz-question-id="5490" disabled="disabled" />
-  <label for="5490-1503344986684"><p>No</p>
-</label>
-</li>
-
-        </ul>
-
-    <!-- Quiz question Tips -->
-
-</div>
-
-          </div>
-          <div class="quiz_question_item_container" data-role="quiz_question5491" data-position="6">
-            <div class=" clearfix" id="quiz_question-5491">
-
-    <h4 class="quiz_question">
-        
-        Question #5
-    </h4>
-
-    <!-- Quiz question Body -->
-    <p>Is this module correctly commented?</p>
-
-<pre><code>#!/usr/bin/python3
-import sys
-
-&quot;&quot;&quot; 
-    My calculation module
-&quot;&quot;&quot;
-...
-</code></pre>
-
-
-    <!-- Quiz question Answers -->
-        <ul class="quiz_question_answers" data-question-id="5491">
-                <li class="">
-
-  <input type="radio" name="5491" id="5491-1503344991891" value="1503344991891" data-quiz-answer-id="1503344991891" data-quiz-question-id="5491" disabled="disabled" />
-  <label for="5491-1503344991891"><p>Yes</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="radio" name="5491" id="5491-1503344994844" value="1503344994844" data-quiz-answer-id="1503344994844" data-quiz-question-id="5491" disabled="disabled" checked="checked" />
-  <label for="5491-1503344994844"><p>No</p>
-</label>
-</li>
-
-        </ul>
-
-    <!-- Quiz question Tips -->
-        <div class="alert alert-info">
-            <h4>Tips:</h4>
-            <p>Docstring must be before import statements</p>
-
-        </div>
-
-</div>
-
-          </div>
-          <div class="quiz_question_item_container" data-role="quiz_question5492" data-position="7">
-            <div class=" clearfix" id="quiz_question-5492">
-
-    <h4 class="quiz_question">
-        
-        Question #6
-    </h4>
-
-    <!-- Quiz question Body -->
-    <p>Based on this code, what should all the test cases be? (select multiple)</p>
-
-<pre><code>def uniq(list):
-    &quot;&quot;&quot; Returns unique values of a list &quot;&quot;&quot;
-    u_list = []
-    for item in list:
-        if item not in u_list:
-            u_list.append(item)
-    return u_list
-</code></pre>
-
-
-    <!-- Quiz question Answers -->
-        <ul class="quiz_question_answers" data-question-id="5492">
-                <li class="">
-
-  <input type="checkbox" name="5492" id="5492-1503345028280" value="1503345028280" data-quiz-answer-id="1503345028280" data-quiz-question-id="5492" disabled="disabled" checked="checked" />
-  <label for="5492-1503345028280"><p>empty list</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="5492" id="5492-1503345034708" value="1503345034708" data-quiz-answer-id="1503345034708" data-quiz-question-id="5492" disabled="disabled" checked="checked" />
-  <label for="5492-1503345034708"><p>list with one element (any type)</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="5492" id="5492-1503345045707" value="1503345045707" data-quiz-answer-id="1503345045707" data-quiz-question-id="5492" disabled="disabled" checked="checked" />
-  <label for="5492-1503345045707"><p>list with 2 different element (same type)</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="5492" id="5492-1503345056728" value="1503345056728" data-quiz-answer-id="1503345056728" data-quiz-question-id="5492" disabled="disabled" checked="checked" />
-  <label for="5492-1503345056728"><p>list with twice the same element (same type)</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="5492" id="5492-1503345080985" value="1503345080985" data-quiz-answer-id="1503345080985" data-quiz-question-id="5492" disabled="disabled" checked="checked" />
-  <label for="5492-1503345080985"><p>list with more than 2 times the same element (same type)</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="5492" id="5492-1503345098717" value="1503345098717" data-quiz-answer-id="1503345098717" data-quiz-question-id="5492" disabled="disabled" checked="checked" />
-  <label for="5492-1503345098717"><p>list with multiple types (integer, string, etc&hellip;)</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="5492" id="5492-1503345131400" value="1503345131400" data-quiz-answer-id="1503345131400" data-quiz-question-id="5492" disabled="disabled" checked="checked" />
-  <label for="5492-1503345131400"><p>not a list argument (ex: passing a dictionary to the method)</p>
-</label>
-</li>
-
-        </ul>
-
-    <!-- Quiz question Tips -->
-
-</div>
-
-          </div>
-
-      </section>
-    </div>
-  </div>
-
-          </div>
       </div>
     </div>
 
         <h2 id="task-container" class="gap">Tasks</h2>
   
   <div class="col-sm-12 col-md-12 col-lg-8 xol-xl-9">
-      <div data-role="task19430" data-position="1" id="task-num-0">
-        <div class="panel panel-default task-card " id="task-19430">
+      <div data-role="task19418" data-position="1" id="task-num-0">
+        <div class="panel panel-default task-card " id="task-19418">
   <span id="user_id" data-id="11510"></span>
 
   <div class="panel-heading panel-heading-actions">
     <h3 class="panel-title">
-      0. Integers addition
+      0. Safe list printing
     </h3>
 
     <div>
@@ -794,7 +414,7 @@ import sys
     <span id="user_id" data-id="11510"></span>
 
     <!-- Progress vs Score -->
-      <div class="task_progress_score_bar" data-task-id="19430" data-correction-id="1518318">
+      <div class="task_progress_score_bar" data-task-id="19418" data-correction-id="1518308">
         <div class="task_progress_bar">
           <div class="task_score_bar">
           </div>
@@ -805,47 +425,40 @@ import sys
       </div>
 
     <!-- Task Body -->
-    <p>Write a function that adds 2 integers.</p>
+    <p>Write a function that prints <code>x</code> elements of a list.</p>
 
 <ul>
-<li>Prototype: <code>def add_integer(a, b=98):</code></li>
-<li><code>a</code> and <code>b</code> must be integers or floats, otherwise raise a <code>TypeError</code> exception with the message <code>a must be an integer</code> or <code>b must be an integer</code></li>
-<li><code>a</code> and <code>b</code> must be first casted to integers if they are float</li>
-<li>Returns an integer: the addition of <code>a</code> and <code>b</code></li>
+<li>Prototype: <code>def safe_print_list(my_list=[], x=0):</code></li>
+<li><code>my_list</code> can contain any type (integer, string, etc.)</li>
+<li>All elements must be printed on the same line followed by a new line.</li>
+<li><code>x</code> represents the number of elements to print</li>
+<li><code>x</code> can be bigger than the length of <code>my_list</code></li>
+<li>Returns the real number of elements printed</li>
+<li>You have to use <code>try: / except:</code> </li>
 <li>You are not allowed to import any module</li>
+<li>You are not allowed to use <code>len()</code></li>
 </ul>
 
 <pre><code>guillaume@ubuntu:~/$ cat 0-main.py
 #!/usr/bin/python3
-add_integer = __import__(&#39;0-add_integer&#39;).add_integer
+safe_print_list = __import__(&#39;0-safe_print_list&#39;).safe_print_list
 
-print(add_integer(1, 2))
-print(add_integer(100, -2))
-print(add_integer(2))
-print(add_integer(100.3, -2))
-try:
-    print(add_integer(4, &quot;School&quot;))
-except Exception as e:
-    print(e)
-try:
-    print(add_integer(None))
-except Exception as e:
-    print(e)
+my_list = [1, 2, 3, 4, 5]
+
+nb_print = safe_print_list(my_list, 2)
+print(&quot;nb_print: {:d}&quot;.format(nb_print))
+nb_print = safe_print_list(my_list, len(my_list))
+print(&quot;nb_print: {:d}&quot;.format(nb_print))
+nb_print = safe_print_list(my_list, len(my_list) + 2)
+print(&quot;nb_print: {:d}&quot;.format(nb_print))
 
 guillaume@ubuntu:~/$ ./0-main.py
-3
-98
-100
-98
-b must be an integer
-a must be an integer
-guillaume@ubuntu:~/$ python3 -m doctest -v ./tests/0-add_integer.txt | tail -2
-9 passed and 0 failed.
-Test passed.
-guillaume@ubuntu:~/$ python3 -c &#39;print(__import__(&quot;0-add_integer&quot;).__doc__)&#39; | wc -l
-5
-guillaume@ubuntu:~/$ python3 -c &#39;print(__import__(&quot;0-add_integer&quot;).add_integer.__doc__)&#39; | wc -l
-3
+12
+nb_print: 2
+12345
+nb_print: 5
+12345
+nb_print: 5
 guillaume@ubuntu:~/$ 
 </code></pre>
 
@@ -859,8 +472,8 @@ guillaume@ubuntu:~/$
         <p><strong>Repo:</strong></p>
         <ul>
           <li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-            <li>Directory: <code>python-test_driven_development</code></li>
-            <li>File: <code>0-add_integer.py, tests/0-add_integer.txt</code></li>
+            <li>Directory: <code>python-exceptions</code></li>
+            <li>File: <code>0-safe_print_list.py</code></li>
         </ul>
       </div>
 
@@ -873,15 +486,15 @@ guillaume@ubuntu:~/$
         
 <div>
 
-  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="19430" data-batch-id="1062" data-toggle="modal" data-target="#task-19430-users-done-modal">
+  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="19418" data-batch-id="1062" data-toggle="modal" data-target="#task-19418-users-done-modal">
     Help
   </button>
-  <div class="modal fade users-done-modal" id="task-19430-users-done-modal" data-task-id="19430" data-batch-id="1062">
+  <div class="modal fade users-done-modal" id="task-19418-users-done-modal" data-task-id="19418" data-batch-id="1062">
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Students who are done with "0. Integers addition"</h4>
+            <h4 class="modal-title">Students who are done with "0. Safe list printing"</h4>
         </div>
         <div class="modal-body">
             <div class="list-group">
@@ -898,22 +511,22 @@ guillaume@ubuntu:~/$
 </div>
 
 
-      <button class="btn btn-default btn-sm" data-task-id="19430" data-toggle="modal" data-target="#task-test-correction-19430-correction-modal" id="task-num-0-check-code-btn">
+      <button class="btn btn-default btn-sm" data-task-id="19418" data-toggle="modal" data-target="#task-test-correction-19418-correction-modal" id="task-num-0-check-code-btn">
           Review your work
       </button>
-      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-19430-correction-modal">
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-19418-correction-modal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Correction of "0. Integers addition"</h4>
+                <h4 class="modal-title">Correction of "0. Safe list printing"</h4>
             </div>
             <div class="modal-body">
                 <div class="actions">
                     <center>
                         <div class="alert alert-info hidden"></div>
 
-                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="19430" data-last-request-id="13936560">Start a new test</button>
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="19418" data-last-request-id="13932521">Start a new test</button>
                         <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
 
                         <div class="spinner" style="display: none;">
@@ -930,10 +543,10 @@ guillaume@ubuntu:~/$
                 <div class="result"></div>
 
                 <div class="help">
-    <button data-task-id="19430">
+    <button data-task-id="19418">
         <i aria-hidden="true" class="fa fa-info-circle "></i>
     </button>
-    <div class="help-container" data-task-id="19430">
+    <div class="help-container" data-task-id="19418">
         <div class="check-line">
             <div class="check-inline requirement success">
                   <i aria-hidden="true" class="fa fa-check-circle "></i>
@@ -996,13 +609,13 @@ guillaume@ubuntu:~/$
 
 
         <div class="fs-4 text-right">
-            <strong class="text-danger">
-              <span>10</span>
+            <strong class="text-success">
+              <span>1</span>
             </strong>
-            <span class="text-muted">correction requests</span>
+            <span class="text-muted">correction request</span>
             <br>
             <strong class="text-success">
-              <span id="task-19430-score-info-score">30</span>/30
+              <span id="task-19418-score-info-score">11</span>/11
             </strong>
             <span class="text-muted">pts</span>
         </div>
@@ -1013,13 +626,13 @@ guillaume@ubuntu:~/$
 </div>
 
       </div>
-      <div data-role="task19432" data-position="3" id="task-num-1">
-        <div class="panel panel-default task-card " id="task-19432">
+      <div data-role="task19419" data-position="2" id="task-num-1">
+        <div class="panel panel-default task-card " id="task-19419">
   <span id="user_id" data-id="11510"></span>
 
   <div class="panel-heading panel-heading-actions">
     <h3 class="panel-title">
-      1. Divide a matrix
+      1. Safe printing of an integers list
     </h3>
 
     <div>
@@ -1033,7 +646,7 @@ guillaume@ubuntu:~/$
     <span id="user_id" data-id="11510"></span>
 
     <!-- Progress vs Score -->
-      <div class="task_progress_score_bar" data-task-id="19432" data-correction-id="1518318">
+      <div class="task_progress_score_bar" data-task-id="19419" data-correction-id="1518308">
         <div class="task_progress_bar">
           <div class="task_score_bar">
           </div>
@@ -1044,40 +657,286 @@ guillaume@ubuntu:~/$
       </div>
 
     <!-- Task Body -->
-    <p>Write a function that divides all elements of a matrix.</p>
+    <p>Write a function that prints an integer with <code>&quot;{:d}&quot;.format()</code>.</p>
 
 <ul>
-<li>Prototype: <code>def matrix_divided(matrix, div):</code></li>
-<li><code>matrix</code> must be a list of lists of integers or floats, otherwise raise a <code>TypeError</code> exception with the message <code>matrix must be a matrix (list of lists) of integers/floats</code></li>
-<li>Each row of the <code>matrix</code> must be of the same size, otherwise raise a <code>TypeError</code> exception with the message <code>Each row of the matrix must have the same size</code></li>
-<li><code>div</code> must be a number (integer or float), otherwise raise a <code>TypeError</code> exception with the message <code>div must be a number</code></li>
-<li><code>div</code> can&rsquo;t be equal to <code>0</code>, otherwise raise a <code>ZeroDivisionError</code> exception with the message <code>division by zero</code></li>
-<li>All elements of the matrix should be divided by <code>div</code>, rounded to 2 decimal places </li>
-<li>Returns a new matrix</li>
+<li>Prototype: <code>def safe_print_integer(value):</code></li>
+<li><code>value</code> can be any type (integer, string, etc.)</li>
+<li>The integer should be printed followed by a new line</li>
+<li>Returns <code>True</code> if <code>value</code> has been correctly printed (it means the <code>value</code> is an integer)</li>
+<li>Otherwise, returns <code>False</code></li>
+<li>You have to use <code>try: / except:</code> </li>
+<li>You have to use <code>&quot;{:d}&quot;.format()</code> to print as integer</li>
 <li>You are not allowed to import any module</li>
+<li>You are not allowed to use <code>type()</code></li>
+</ul>
+
+<pre><code>guillaume@ubuntu:~/$ cat 1-main.py
+#!/usr/bin/python3
+safe_print_integer = __import__(&#39;1-safe_print_integer&#39;).safe_print_integer
+
+value = 89
+has_been_print = safe_print_integer(value)
+if not has_been_print:
+    print(&quot;{} is not an integer&quot;.format(value))
+
+value = -89
+has_been_print = safe_print_integer(value)
+if not has_been_print:
+    print(&quot;{} is not an integer&quot;.format(value))
+
+value = &quot;School&quot;
+has_been_print = safe_print_integer(value)
+if not has_been_print:
+    print(&quot;{} is not an integer&quot;.format(value))
+
+guillaume@ubuntu:~/$ ./1-main.py
+89
+-89
+School is not an integer
+guillaume@ubuntu:~/$ 
+</code></pre>
+
+  </div>
+
+  <div class="list-group">
+    <!-- Task URLs -->
+
+    <!-- Technical information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
+            <li>Directory: <code>python-exceptions</code></li>
+            <li>File: <code>1-safe_print_integer.py</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+
+  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="19419" data-batch-id="1062" data-toggle="modal" data-target="#task-19419-users-done-modal">
+    Help
+  </button>
+  <div class="modal fade users-done-modal" id="task-19419-users-done-modal" data-task-id="19419" data-batch-id="1062">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Students who are done with "1. Safe printing of an integers list"</h4>
+        </div>
+        <div class="modal-body">
+            <div class="list-group">
+            </div>
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+            <div class="error"></div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-default btn-sm" data-task-id="19419" data-toggle="modal" data-target="#task-test-correction-19419-correction-modal" id="task-num-1-check-code-btn">
+          Review your work
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-19419-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Correction of "1. Safe printing of an integers list"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="19419" data-last-request-id="13932693">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+
+
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="19419">
+        <i aria-hidden="true" class="fa fa-info-circle "></i>
+    </button>
+    <div class="help-container" data-task-id="19419">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                  <i aria-hidden="true" class="fa fa-check-circle "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                  <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                  <i aria-hidden="true" class="fa fa-check-circle "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                  <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                  <i aria-hidden="true" class="fa fa-check-circle "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                  <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                  <i aria-hidden="true" class="fa fa-check-circle "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                  <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                  <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#sandboxes-modal"><i aria-hidden="true" class="fa fa-terminal "></i><span>Get a sandbox</span></button>
+
+</div>
+
+
+        <div class="fs-4 text-right">
+            <strong class="text-success">
+              <span>2</span>
+            </strong>
+            <span class="text-muted">correction requests</span>
+            <br>
+            <strong class="text-success">
+              <span id="task-19419-score-info-score">14</span>/14
+            </strong>
+            <span class="text-muted">pts</span>
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+      </div>
+      <div data-role="task19420" data-position="3" id="task-num-2">
+        <div class="panel panel-default task-card " id="task-19420">
+  <span id="user_id" data-id="11510"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      2. Print and count integers
+    </h3>
+
+    <div>
+        <span class="label label-info">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="11510"></span>
+
+    <!-- Progress vs Score -->
+      <div class="task_progress_score_bar" data-task-id="19420" data-correction-id="1518308">
+        <div class="task_progress_bar">
+          <div class="task_score_bar">
+          </div>
+        </div>
+        <div class="task_progress_score_text">
+          Score: <span class="task_score_value">0%</span> (<span class="task_progress_value">Checks completed: 0%</span>)
+        </div>
+      </div>
+
+    <!-- Task Body -->
+    <p>Write a function that prints the first <code>x</code> elements of a list and only integers.</p>
+
+<ul>
+<li>Prototype: <code>def safe_print_list_integers(my_list=[], x=0):</code></li>
+<li><code>my_list</code> can contain any type (integer, string, etc.)</li>
+<li>All integers have to be printed on the same line followed by a new line - other type of value in the list must be skipped (in silence).</li>
+<li><code>x</code> represents the number of elements to access in <code>my_list</code></li>
+<li><code>x</code> can be bigger than the length of <code>my_list</code> - if it&rsquo;s the case, an exception is expected to occur</li>
+<li>Returns the real number of integers printed</li>
+<li>You have to use <code>try: / except:</code> </li>
+<li>You have to use <code>&quot;{:d}&quot;.format()</code> to print an integer</li>
+<li>You are not allowed to import any module</li>
+<li>You are not allowed to use <code>len()</code></li>
 </ul>
 
 <pre><code>guillaume@ubuntu:~/$ cat 2-main.py
 #!/usr/bin/python3
-matrix_divided = __import__(&#39;2-matrix_divided&#39;).matrix_divided
+safe_print_list_integers = \
+    __import__(&#39;2-safe_print_list_integers&#39;).safe_print_list_integers
 
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6]
-]
-print(matrix_divided(matrix, 3))
-print(matrix)
+my_list = [1, 2, 3, 4, 5]
+
+nb_print = safe_print_list_integers(my_list, 2)
+print(&quot;nb_print: {:d}&quot;.format(nb_print))
+
+my_list = [1, 2, 3, &quot;School&quot;, 4, 5, [1, 2, 3]]
+nb_print = safe_print_list_integers(my_list, len(my_list))
+print(&quot;nb_print: {:d}&quot;.format(nb_print))
+
+nb_print = safe_print_list_integers(my_list, len(my_list) + 2)
+print(&quot;nb_print: {:d}&quot;.format(nb_print))
 
 guillaume@ubuntu:~/$ ./2-main.py
-[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
-[[1, 2, 3], [4, 5, 6]]
-guillaume@ubuntu:~/$ python3 -m doctest -v ./tests/2-matrix_divided.txt | tail -2
-5 passed and 0 failed.
-Test passed.
+12
+nb_print: 2
+12345
+nb_print: 5
+12345Traceback (most recent call last):
+  File &quot;./2-main.py&quot;, line 14, in &lt;module&gt;
+    nb_print = safe_print_list_integers(my_list, len(my_list) + 2)
+  File &quot;//2-safe_print_list_integers.py&quot;, line 7, in safe_print_list_integers
+    print(&quot;{:d}&quot;.format(my_list[i]), end=&quot;&quot;)
+IndexError: list index out of range
 guillaume@ubuntu:~/$ 
 </code></pre>
-
-<p>Note: you might have a different number of tests than in the above example. As usual, your tests should cover all possible cases.</p>
 
   </div>
 
@@ -1089,8 +948,8 @@ guillaume@ubuntu:~/$
         <p><strong>Repo:</strong></p>
         <ul>
           <li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-            <li>Directory: <code>python-test_driven_development</code></li>
-            <li>File: <code>2-matrix_divided.py, tests/2-matrix_divided.txt</code></li>
+            <li>Directory: <code>python-exceptions</code></li>
+            <li>File: <code>2-safe_print_list_integers.py</code></li>
         </ul>
       </div>
 
@@ -1103,15 +962,15 @@ guillaume@ubuntu:~/$
         
 <div>
 
-  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="19432" data-batch-id="1062" data-toggle="modal" data-target="#task-19432-users-done-modal">
+  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="19420" data-batch-id="1062" data-toggle="modal" data-target="#task-19420-users-done-modal">
     Help
   </button>
-  <div class="modal fade users-done-modal" id="task-19432-users-done-modal" data-task-id="19432" data-batch-id="1062">
+  <div class="modal fade users-done-modal" id="task-19420-users-done-modal" data-task-id="19420" data-batch-id="1062">
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Students who are done with "1. Divide a matrix"</h4>
+            <h4 class="modal-title">Students who are done with "2. Print and count integers"</h4>
         </div>
         <div class="modal-body">
             <div class="list-group">
@@ -1128,22 +987,22 @@ guillaume@ubuntu:~/$
 </div>
 
 
-      <button class="btn btn-default btn-sm" data-task-id="19432" data-toggle="modal" data-target="#task-test-correction-19432-correction-modal" id="task-num-1-check-code-btn">
+      <button class="btn btn-default btn-sm" data-task-id="19420" data-toggle="modal" data-target="#task-test-correction-19420-correction-modal" id="task-num-2-check-code-btn">
           Review your work
       </button>
-      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-19432-correction-modal">
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-19420-correction-modal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Correction of "1. Divide a matrix"</h4>
+                <h4 class="modal-title">Correction of "2. Print and count integers"</h4>
             </div>
             <div class="modal-body">
                 <div class="actions">
                     <center>
                         <div class="alert alert-info hidden"></div>
 
-                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="19432" data-last-request-id="13937532">Start a new test</button>
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="19420" data-last-request-id="13932822">Start a new test</button>
                         <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
 
                         <div class="spinner" style="display: none;">
@@ -1160,10 +1019,10 @@ guillaume@ubuntu:~/$
                 <div class="result"></div>
 
                 <div class="help">
-    <button data-task-id="19432">
+    <button data-task-id="19420">
         <i aria-hidden="true" class="fa fa-info-circle "></i>
     </button>
-    <div class="help-container" data-task-id="19432">
+    <div class="help-container" data-task-id="19420">
         <div class="check-line">
             <div class="check-inline requirement success">
                   <i aria-hidden="true" class="fa fa-check-circle "></i>
@@ -1226,13 +1085,13 @@ guillaume@ubuntu:~/$
 
 
         <div class="fs-4 text-right">
-            <strong class="text-danger">
-              <span>5</span>
+            <strong class="text-success">
+              <span>1</span>
             </strong>
-            <span class="text-muted">correction requests</span>
+            <span class="text-muted">correction request</span>
             <br>
             <strong class="text-success">
-              <span id="task-19432-score-info-score">39</span>/39
+              <span id="task-19420-score-info-score">13</span>/13
             </strong>
             <span class="text-muted">pts</span>
         </div>
@@ -1243,13 +1102,13 @@ guillaume@ubuntu:~/$
 </div>
 
       </div>
-      <div data-role="task19433" data-position="4" id="task-num-2">
-        <div class="panel panel-default task-card " id="task-19433">
+      <div data-role="task19421" data-position="4" id="task-num-3">
+        <div class="panel panel-default task-card " id="task-19421">
   <span id="user_id" data-id="11510"></span>
 
   <div class="panel-heading panel-heading-actions">
     <h3 class="panel-title">
-      2. Say my name
+      3. Integers division with debug
     </h3>
 
     <div>
@@ -1263,7 +1122,7 @@ guillaume@ubuntu:~/$
     <span id="user_id" data-id="11510"></span>
 
     <!-- Progress vs Score -->
-      <div class="task_progress_score_bar" data-task-id="19433" data-correction-id="1518318">
+      <div class="task_progress_score_bar" data-task-id="19421" data-correction-id="1518308">
         <div class="task_progress_bar">
           <div class="task_score_bar">
           </div>
@@ -1274,38 +1133,39 @@ guillaume@ubuntu:~/$
       </div>
 
     <!-- Task Body -->
-    <p>Write a function that prints <code>My name is &lt;first name&gt; &lt;last name&gt;</code></p>
+    <p>Write a function that divides 2 integers and prints the result.</p>
 
 <ul>
-<li>Prototype: <code>def say_my_name(first_name, last_name=&quot;&quot;):</code></li>
-<li><code>first_name</code> and <code>last_name</code> must be strings otherwise, raise a <code>TypeError</code> exception with the message <code>first_name must be a string</code> or <code>last_name must be a string</code></li>
+<li>Prototype: <code>def safe_print_division(a, b):</code></li>
+<li>You can assume that <code>a</code> and <code>b</code> are integers</li>
+<li>The result of the division should print on the <code>finally:</code> section preceded by <code>Inside result:</code></li>
+<li>Returns the value of the division, otherwise: <code>None</code></li>
+<li>You have to use <code>try: / except: / finally:</code> </li>
+<li>You have to use <code>&quot;{}&quot;.format()</code> to print the result</li>
 <li>You are not allowed to import any module</li>
 </ul>
 
 <pre><code>guillaume@ubuntu:~/$ cat 3-main.py
 #!/usr/bin/python3
-say_my_name = __import__(&#39;3-say_my_name&#39;).say_my_name
+safe_print_division = __import__(&#39;3-safe_print_division&#39;).safe_print_division
 
-say_my_name(&quot;John&quot;, &quot;Smith&quot;)
-say_my_name(&quot;Walter&quot;, &quot;White&quot;)
-say_my_name(&quot;Bob&quot;)
-try:
-    say_my_name(12, &quot;White&quot;)
-except Exception as e:
-    print(e)
+a = 12
+b = 2
+result = safe_print_division(a, b)
+print(&quot;{:d} / {:d} = {}&quot;.format(a, b, result))
 
-guillaume@ubuntu:~/$ ./3-main.py | cat -e
-My name is John Smith$
-My name is Walter White$
-My name is Bob $
-first_name must be a string$
-guillaume@ubuntu:~/$ python3 -m doctest -v ./tests/3-say_my_name.txt | tail -2
-5 passed and 0 failed.
-Test passed.
+a = 12
+b = 0
+result = safe_print_division(a, b)
+print(&quot;{:d} / {:d} = {}&quot;.format(a, b, result))
+
+guillaume@ubuntu:~/$ ./3-main.py
+Inside result: 6.0
+12 / 2 = 6.0
+Inside result: None
+12 / 0 = None
 guillaume@ubuntu:~/$ 
 </code></pre>
-
-<p>Note: you might have a different number of tests than in the above example. As usual, your tests should cover all possible cases.</p>
 
   </div>
 
@@ -1317,8 +1177,8 @@ guillaume@ubuntu:~/$
         <p><strong>Repo:</strong></p>
         <ul>
           <li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-            <li>Directory: <code>python-test_driven_development</code></li>
-            <li>File: <code>3-say_my_name.py, tests/3-say_my_name.txt</code></li>
+            <li>Directory: <code>python-exceptions</code></li>
+            <li>File: <code>3-safe_print_division.py</code></li>
         </ul>
       </div>
 
@@ -1331,15 +1191,15 @@ guillaume@ubuntu:~/$
         
 <div>
 
-  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="19433" data-batch-id="1062" data-toggle="modal" data-target="#task-19433-users-done-modal">
+  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="19421" data-batch-id="1062" data-toggle="modal" data-target="#task-19421-users-done-modal">
     Help
   </button>
-  <div class="modal fade users-done-modal" id="task-19433-users-done-modal" data-task-id="19433" data-batch-id="1062">
+  <div class="modal fade users-done-modal" id="task-19421-users-done-modal" data-task-id="19421" data-batch-id="1062">
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Students who are done with "2. Say my name"</h4>
+            <h4 class="modal-title">Students who are done with "3. Integers division with debug"</h4>
         </div>
         <div class="modal-body">
             <div class="list-group">
@@ -1356,22 +1216,22 @@ guillaume@ubuntu:~/$
 </div>
 
 
-      <button class="btn btn-default btn-sm" data-task-id="19433" data-toggle="modal" data-target="#task-test-correction-19433-correction-modal" id="task-num-2-check-code-btn">
+      <button class="btn btn-default btn-sm" data-task-id="19421" data-toggle="modal" data-target="#task-test-correction-19421-correction-modal" id="task-num-3-check-code-btn">
           Review your work
       </button>
-      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-19433-correction-modal">
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-19421-correction-modal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Correction of "2. Say my name"</h4>
+                <h4 class="modal-title">Correction of "3. Integers division with debug"</h4>
             </div>
             <div class="modal-body">
                 <div class="actions">
                     <center>
                         <div class="alert alert-info hidden"></div>
 
-                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="19433" data-last-request-id="13937896">Start a new test</button>
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="19421" data-last-request-id="13932972">Start a new test</button>
                         <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
 
                         <div class="spinner" style="display: none;">
@@ -1388,10 +1248,10 @@ guillaume@ubuntu:~/$
                 <div class="result"></div>
 
                 <div class="help">
-    <button data-task-id="19433">
+    <button data-task-id="19421">
         <i aria-hidden="true" class="fa fa-info-circle "></i>
     </button>
-    <div class="help-container" data-task-id="19433">
+    <div class="help-container" data-task-id="19421">
         <div class="check-line">
             <div class="check-inline requirement success">
                   <i aria-hidden="true" class="fa fa-check-circle "></i>
@@ -1454,13 +1314,13 @@ guillaume@ubuntu:~/$
 
 
         <div class="fs-4 text-right">
-            <strong class="text-danger">
-              <span>11</span>
+            <strong class="text-success">
+              <span>1</span>
             </strong>
-            <span class="text-muted">correction requests</span>
+            <span class="text-muted">correction request</span>
             <br>
             <strong class="text-success">
-              <span id="task-19433-score-info-score">24</span>/24
+              <span id="task-19421-score-info-score">10</span>/10
             </strong>
             <span class="text-muted">pts</span>
         </div>
@@ -1471,13 +1331,13 @@ guillaume@ubuntu:~/$
 </div>
 
       </div>
-      <div data-role="task19434" data-position="5" id="task-num-3">
-        <div class="panel panel-default task-card " id="task-19434">
+      <div data-role="task19422" data-position="5" id="task-num-4">
+        <div class="panel panel-default task-card " id="task-19422">
   <span id="user_id" data-id="11510"></span>
 
   <div class="panel-heading panel-heading-actions">
     <h3 class="panel-title">
-      3. Print square
+      4. Divide a list
     </h3>
 
     <div>
@@ -1491,7 +1351,7 @@ guillaume@ubuntu:~/$
     <span id="user_id" data-id="11510"></span>
 
     <!-- Progress vs Score -->
-      <div class="task_progress_score_bar" data-task-id="19434" data-correction-id="1518318">
+      <div class="task_progress_score_bar" data-task-id="19422" data-correction-id="1518308">
         <div class="task_progress_bar">
           <div class="task_score_bar">
           </div>
@@ -1502,58 +1362,56 @@ guillaume@ubuntu:~/$
       </div>
 
     <!-- Task Body -->
-    <p>Write a function that prints a square with the character <code>#</code>.</p>
+    <p>Write a function that divides element by element 2 lists.</p>
 
 <ul>
-<li>Prototype: <code>def print_square(size):</code></li>
-<li><code>size</code> is the size length of the square</li>
-<li><code>size</code> must be an integer, otherwise raise a <code>TypeError</code> exception with the message <code>size must be an integer</code></li>
-<li>if <code>size</code> is less than <code>0</code>, raise a <code>ValueError</code> exception with the message <code>size must be &gt;= 0</code></li>
-<li>if <code>size</code> is a float and is less than 0, raise a <code>TypeError</code> exception with the message <code>size must be an integer</code></li>
+<li>Prototype: <code>def list_division(my_list_1, my_list_2, list_length):</code></li>
+<li><code>my_list_1</code> and <code>my_list_2</code> can contain any type (integer, string, etc.)</li>
+<li><code>list_length</code> can be bigger than the length of both lists</li>
+<li>Returns a new list (length = <code>list_length</code>) with all divisions</li>
+<li>If 2 elements can&rsquo;t be divided, the division result should be equal to <code>0</code></li>
+<li>If an element is not an integer or float:
+
+<ul>
+<li>print: <code>wrong type</code></li>
+</ul></li>
+<li>If the division can&rsquo;t be done (<code>/0</code>):
+
+<ul>
+<li>print: <code>division by 0</code></li>
+</ul></li>
+<li>If <code>my_list_1</code> or <code>my_list_2</code> is too short
+
+<ul>
+<li>print: <code>out of range</code></li>
+</ul></li>
+<li>You have to use <code>try: / except: / finally:</code> </li>
 <li>You are not allowed to import any module</li>
 </ul>
 
 <pre><code>guillaume@ubuntu:~/$ cat 4-main.py
 #!/usr/bin/python3
-print_square = __import__(&#39;4-print_square&#39;).print_square
+list_division = __import__(&#39;4-list_division&#39;).list_division
 
-print_square(4)
-print(&quot;&quot;)
-print_square(10)
-print(&quot;&quot;)
-print_square(0)
-print(&quot;&quot;)
-print_square(1)
-print(&quot;&quot;)
-try:
-    print_square(-1)
-except Exception as e:
-    print(e)
-print(&quot;&quot;)
+my_l_1 = [10, 8, 4]
+my_l_2 = [2, 4, 4]
+result = list_division(my_l_1, my_l_2, max(len(my_l_1), len(my_l_2)))
+print(result)
+
+print(&quot;--&quot;)
+
+my_l_1 = [10, 8, 4, 4]
+my_l_2 = [2, 0, &quot;H&quot;, 2, 7]
+result = list_division(my_l_1, my_l_2, max(len(my_l_1), len(my_l_2)))
+print(result)
 
 guillaume@ubuntu:~/$ ./4-main.py
-####
-####
-####
-####
-
-##########
-##########
-##########
-##########
-##########
-##########
-##########
-##########
-##########
-##########
-
-
-#
-
-size must be &gt;= 0
-
-guillaume@ubuntu:~/$ python3 -m doctest -v ./tests/4-print_square.txt
+[5.0, 2.0, 1.0]
+--
+division by 0
+wrong type
+out of range
+[5.0, 0, 0, 2.0, 0]
 guillaume@ubuntu:~/$ 
 </code></pre>
 
@@ -1567,8 +1425,8 @@ guillaume@ubuntu:~/$
         <p><strong>Repo:</strong></p>
         <ul>
           <li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-            <li>Directory: <code>python-test_driven_development</code></li>
-            <li>File: <code>4-print_square.py, tests/4-print_square.txt</code></li>
+            <li>Directory: <code>python-exceptions</code></li>
+            <li>File: <code>4-list_division.py</code></li>
         </ul>
       </div>
 
@@ -1581,15 +1439,15 @@ guillaume@ubuntu:~/$
         
 <div>
 
-  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="19434" data-batch-id="1062" data-toggle="modal" data-target="#task-19434-users-done-modal">
+  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="19422" data-batch-id="1062" data-toggle="modal" data-target="#task-19422-users-done-modal">
     Help
   </button>
-  <div class="modal fade users-done-modal" id="task-19434-users-done-modal" data-task-id="19434" data-batch-id="1062">
+  <div class="modal fade users-done-modal" id="task-19422-users-done-modal" data-task-id="19422" data-batch-id="1062">
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Students who are done with "3. Print square"</h4>
+            <h4 class="modal-title">Students who are done with "4. Divide a list"</h4>
         </div>
         <div class="modal-body">
             <div class="list-group">
@@ -1606,22 +1464,22 @@ guillaume@ubuntu:~/$
 </div>
 
 
-      <button class="btn btn-default btn-sm" data-task-id="19434" data-toggle="modal" data-target="#task-test-correction-19434-correction-modal" id="task-num-3-check-code-btn">
+      <button class="btn btn-default btn-sm" data-task-id="19422" data-toggle="modal" data-target="#task-test-correction-19422-correction-modal" id="task-num-4-check-code-btn">
           Review your work
       </button>
-      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-19434-correction-modal">
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-19422-correction-modal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Correction of "3. Print square"</h4>
+                <h4 class="modal-title">Correction of "4. Divide a list"</h4>
             </div>
             <div class="modal-body">
                 <div class="actions">
                     <center>
                         <div class="alert alert-info hidden"></div>
 
-                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="19434" data-last-request-id="13939743">Start a new test</button>
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="19422" data-last-request-id="13933231">Start a new test</button>
                         <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
 
                         <div class="spinner" style="display: none;">
@@ -1638,10 +1496,10 @@ guillaume@ubuntu:~/$
                 <div class="result"></div>
 
                 <div class="help">
-    <button data-task-id="19434">
+    <button data-task-id="19422">
         <i aria-hidden="true" class="fa fa-info-circle "></i>
     </button>
-    <div class="help-container" data-task-id="19434">
+    <div class="help-container" data-task-id="19422">
         <div class="check-line">
             <div class="check-inline requirement success">
                   <i aria-hidden="true" class="fa fa-check-circle "></i>
@@ -1704,13 +1562,13 @@ guillaume@ubuntu:~/$
 
 
         <div class="fs-4 text-right">
-            <strong class="text-danger">
-              <span>8</span>
+            <strong class="text-success">
+              <span>1</span>
             </strong>
-            <span class="text-muted">correction requests</span>
+            <span class="text-muted">correction request</span>
             <br>
             <strong class="text-success">
-              <span id="task-19434-score-info-score">25</span>/25
+              <span id="task-19422-score-info-score">16</span>/16
             </strong>
             <span class="text-muted">pts</span>
         </div>
@@ -1721,13 +1579,13 @@ guillaume@ubuntu:~/$
 </div>
 
       </div>
-      <div data-role="task19435" data-position="6" id="task-num-4">
-        <div class="panel panel-default task-card " id="task-19435">
+      <div data-role="task19423" data-position="6" id="task-num-5">
+        <div class="panel panel-default task-card " id="task-19423">
   <span id="user_id" data-id="11510"></span>
 
   <div class="panel-heading panel-heading-actions">
     <h3 class="panel-title">
-      4. Text indentation
+      5. Raise exception
     </h3>
 
     <div>
@@ -1741,7 +1599,7 @@ guillaume@ubuntu:~/$
     <span id="user_id" data-id="11510"></span>
 
     <!-- Progress vs Score -->
-      <div class="task_progress_score_bar" data-task-id="19435" data-correction-id="1518318">
+      <div class="task_progress_score_bar" data-task-id="19423" data-correction-id="1518308">
         <div class="task_progress_bar">
           <div class="task_score_bar">
           </div>
@@ -1752,58 +1610,24 @@ guillaume@ubuntu:~/$
       </div>
 
     <!-- Task Body -->
-    <p>Write a function that prints a text with 2 new lines after each of these characters: <code>.</code>, <code>?</code> and <code>:</code></p>
+    <p>Write a function that raises a type exception.</p>
 
 <ul>
-<li>Prototype: <code>def text_indentation(text):</code></li>
-<li><code>text</code> must be a string, otherwise raise a <code>TypeError</code> exception with the message <code>text must be a string</code></li>
-<li>There should be no space at the beginning or at the end of each printed line</li>
+<li>Prototype: <code>def raise_exception():</code></li>
 <li>You are not allowed to import any module</li>
 </ul>
 
 <pre><code>guillaume@ubuntu:~/$ cat 5-main.py
 #!/usr/bin/python3
-text_indentation = __import__(&#39;5-text_indentation&#39;).text_indentation
+raise_exception = __import__(&#39;5-raise_exception&#39;).raise_exception
 
-text_indentation(&quot;&quot;&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
-Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
-Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
-Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. \
-Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum \
-rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo \
-stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum \
-cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
-beatiorem! Iam ruinas videres&quot;&quot;&quot;)
+try:
+    raise_exception()
+except TypeError as te:
+    print(&quot;Exception raised&quot;)
 
-guillaume@ubuntu:~/$ ./5-main.py | cat -e
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.$
-$
-Quonam modo?$
-$
-Utrum igitur tibi litteram videor an totas paginas commovere?$
-$
-Non autem hoc:$
-$
-igitur ne illud quidem.$
-$
-Fortasse id optimum, sed ubi illud:$
-$
-Plus semper voluptatis?$
-$
-Teneo, inquit, finem illi videri nihil dolere.$
-$
-Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens.$
-$
-Si id dicis, vicimus.$
-$
-Inde sermone vario sex illa a Dipylo stadia confecimus.$
-$
-Sin aliud quid voles, postea.$
-$
-Quae animi affectio suum cuique tribuens atque hanc, quam dico.$
-$
-Utinam quidem dicerent alium alio beatiorem! Iam ruinas videresguillaume@ubuntu:~/$
-guillaume@ubuntu:~/$ python3 -m doctest -v ./tests/5-text_indentation.txt
+guillaume@ubuntu:~/$ ./5-main.py
+Exception raised
 guillaume@ubuntu:~/$ 
 </code></pre>
 
@@ -1817,8 +1641,8 @@ guillaume@ubuntu:~/$
         <p><strong>Repo:</strong></p>
         <ul>
           <li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-            <li>Directory: <code>python-test_driven_development</code></li>
-            <li>File: <code>5-text_indentation.py, tests/5-text_indentation.txt</code></li>
+            <li>Directory: <code>python-exceptions</code></li>
+            <li>File: <code>5-raise_exception.py</code></li>
         </ul>
       </div>
 
@@ -1831,15 +1655,15 @@ guillaume@ubuntu:~/$
         
 <div>
 
-  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="19435" data-batch-id="1062" data-toggle="modal" data-target="#task-19435-users-done-modal">
+  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="19423" data-batch-id="1062" data-toggle="modal" data-target="#task-19423-users-done-modal">
     Help
   </button>
-  <div class="modal fade users-done-modal" id="task-19435-users-done-modal" data-task-id="19435" data-batch-id="1062">
+  <div class="modal fade users-done-modal" id="task-19423-users-done-modal" data-task-id="19423" data-batch-id="1062">
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Students who are done with "4. Text indentation"</h4>
+            <h4 class="modal-title">Students who are done with "5. Raise exception"</h4>
         </div>
         <div class="modal-body">
             <div class="list-group">
@@ -1856,22 +1680,22 @@ guillaume@ubuntu:~/$
 </div>
 
 
-      <button class="btn btn-default btn-sm" data-task-id="19435" data-toggle="modal" data-target="#task-test-correction-19435-correction-modal" id="task-num-4-check-code-btn">
+      <button class="btn btn-default btn-sm" data-task-id="19423" data-toggle="modal" data-target="#task-test-correction-19423-correction-modal" id="task-num-5-check-code-btn">
           Review your work
       </button>
-      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-19435-correction-modal">
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-19423-correction-modal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Correction of "4. Text indentation"</h4>
+                <h4 class="modal-title">Correction of "5. Raise exception"</h4>
             </div>
             <div class="modal-body">
                 <div class="actions">
                     <center>
                         <div class="alert alert-info hidden"></div>
 
-                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="19435" data-last-request-id="13940020">Start a new test</button>
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="19423" data-last-request-id="13933236">Start a new test</button>
                         <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
 
                         <div class="spinner" style="display: none;">
@@ -1888,10 +1712,10 @@ guillaume@ubuntu:~/$
                 <div class="result"></div>
 
                 <div class="help">
-    <button data-task-id="19435">
+    <button data-task-id="19423">
         <i aria-hidden="true" class="fa fa-info-circle "></i>
     </button>
-    <div class="help-container" data-task-id="19435">
+    <div class="help-container" data-task-id="19423">
         <div class="check-line">
             <div class="check-inline requirement success">
                   <i aria-hidden="true" class="fa fa-check-circle "></i>
@@ -1955,12 +1779,12 @@ guillaume@ubuntu:~/$
 
         <div class="fs-4 text-right">
             <strong class="text-success">
-              <span>2</span>
+              <span>1</span>
             </strong>
-            <span class="text-muted">correction requests</span>
+            <span class="text-muted">correction request</span>
             <br>
             <strong class="text-success">
-              <span id="task-19435-score-info-score">24</span>/24
+              <span id="task-19423-score-info-score">11</span>/11
             </strong>
             <span class="text-muted">pts</span>
         </div>
@@ -1971,13 +1795,13 @@ guillaume@ubuntu:~/$
 </div>
 
       </div>
-      <div data-role="task19438" data-position="7" id="task-num-5">
-        <div class="panel panel-default task-card " id="task-19438">
+      <div data-role="task19424" data-position="7" id="task-num-6">
+        <div class="panel panel-default task-card " id="task-19424">
   <span id="user_id" data-id="11510"></span>
 
   <div class="panel-heading panel-heading-actions">
     <h3 class="panel-title">
-      5. Max integer - Unittest
+      6. Raise a message
     </h3>
 
     <div>
@@ -1991,7 +1815,7 @@ guillaume@ubuntu:~/$
     <span id="user_id" data-id="11510"></span>
 
     <!-- Progress vs Score -->
-      <div class="task_progress_score_bar" data-task-id="19438" data-correction-id="1518318">
+      <div class="task_progress_score_bar" data-task-id="19424" data-correction-id="1518308">
         <div class="task_progress_bar">
           <div class="task_score_bar">
           </div>
@@ -2002,62 +1826,24 @@ guillaume@ubuntu:~/$
       </div>
 
     <!-- Task Body -->
-    <p>Since the beginning you have been creating &ldquo;Interactive tests&rdquo;. For this exercise, you will add Unittests.</p>
-
-<p>In this task, you will write unittests for the function <code>def max_integer(list=[]):</code>.</p>
+    <p>Write a function that raises a name exception with a message.</p>
 
 <ul>
-<li>Your test file should be inside a folder <code>tests</code></li>
-<li>You have to use the <a href="/rltoken/0a3DSCMIMni_V7pgq1myLQ" title="unittest module" target="_blank">unittest module</a> </li>
-<li>Your test file should be python files (extension: <code>.py</code>)</li>
-<li>Your test file should be executed by using this command: <code>python3 -m unittest tests.6-max_integer_test</code> </li>
-<li>All tests you make must be passable by the function below</li>
-<li>We strongly encourage you to work together on test cases, so that you don&rsquo;t miss any edge case</li>
+<li>Prototype: <code>def raise_exception_msg(message=&quot;&quot;):</code></li>
+<li>You are not allowed to import any module</li>
 </ul>
 
-<pre><code>guillaume@ubuntu:~/$ cat 6-max_integer.py
+<pre><code>guillaume@ubuntu:~/$ cat 6-main.py
 #!/usr/bin/python3
-&quot;&quot;&quot;Module to find the max integer in a list
-&quot;&quot;&quot;
+raise_exception_msg = __import__(&#39;6-raise_exception_msg&#39;).raise_exception_msg
 
+try:
+    raise_exception_msg(&quot;C is fun&quot;)
+except NameError as ne:
+    print(ne)
 
-def max_integer(list=[]):
-    &quot;&quot;&quot;Function to find and return the max integer in a list of integers
-        If the list is empty, the function returns None
-    &quot;&quot;&quot;
-    if len(list) == 0:
-        return None
-    result = list[0]
-    i = 1
-    while i &lt; len(list):
-        if list[i] &gt; result:
-            result = list[i]
-        i += 1
-    return result
-
-guillaume@ubuntu:~/$ 
-guillaume@ubuntu:~/$ cat 6-main.py
-#!/usr/bin/python3
-max_integer = __import__(&#39;6-max_integer&#39;).max_integer
-
-print(max_integer([1, 2, 3, 4]))
-print(max_integer([1, 3, 4, 2]))
-guillaume@ubuntu:~/$
 guillaume@ubuntu:~/$ ./6-main.py
-4
-4
-guillaume@ubuntu:~/$
-guillaume@ubuntu:~/$ python3 -m unittest tests.6-max_integer_test 2&gt;&amp;1 | tail -1
-OK
-guillaume@ubuntu:~/$
-guillaume@ubuntu:~/$ head -7 tests/6-max_integer_test.py 
-#!/usr/bin/python3
-&quot;&quot;&quot;Unittest for max_integer([..])
-&quot;&quot;&quot;
-import unittest
-max_integer = __import__(&#39;6-max_integer&#39;).max_integer
-
-class TestMaxInteger(unittest.TestCase):
+C is fun
 guillaume@ubuntu:~/$ 
 </code></pre>
 
@@ -2071,8 +1857,8 @@ guillaume@ubuntu:~/$
         <p><strong>Repo:</strong></p>
         <ul>
           <li>GitHub repository: <code>holbertonschool-higher_level_programming</code></li>
-            <li>Directory: <code>python-test_driven_development</code></li>
-            <li>File: <code>tests/6-max_integer_test.py</code></li>
+            <li>Directory: <code>python-exceptions</code></li>
+            <li>File: <code>6-raise_exception_msg.py</code></li>
         </ul>
       </div>
 
@@ -2085,15 +1871,15 @@ guillaume@ubuntu:~/$
         
 <div>
 
-  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="19438" data-batch-id="1062" data-toggle="modal" data-target="#task-19438-users-done-modal">
+  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="19424" data-batch-id="1062" data-toggle="modal" data-target="#task-19424-users-done-modal">
     Help
   </button>
-  <div class="modal fade users-done-modal" id="task-19438-users-done-modal" data-task-id="19438" data-batch-id="1062">
+  <div class="modal fade users-done-modal" id="task-19424-users-done-modal" data-task-id="19424" data-batch-id="1062">
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title">Students who are done with "5. Max integer - Unittest"</h4>
+            <h4 class="modal-title">Students who are done with "6. Raise a message"</h4>
         </div>
         <div class="modal-body">
             <div class="list-group">
@@ -2110,22 +1896,22 @@ guillaume@ubuntu:~/$
 </div>
 
 
-      <button class="btn btn-default btn-sm" data-task-id="19438" data-toggle="modal" data-target="#task-test-correction-19438-correction-modal" id="task-num-5-check-code-btn">
+      <button class="btn btn-default btn-sm" data-task-id="19424" data-toggle="modal" data-target="#task-test-correction-19424-correction-modal" id="task-num-6-check-code-btn">
           Review your work
       </button>
-      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-19438-correction-modal">
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-19424-correction-modal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Correction of "5. Max integer - Unittest"</h4>
+                <h4 class="modal-title">Correction of "6. Raise a message"</h4>
             </div>
             <div class="modal-body">
                 <div class="actions">
                     <center>
                         <div class="alert alert-info hidden"></div>
 
-                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="19438" data-last-request-id="13940273">Start a new test</button>
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="19424" data-last-request-id="13933243">Start a new test</button>
                         <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
 
                         <div class="spinner" style="display: none;">
@@ -2142,10 +1928,10 @@ guillaume@ubuntu:~/$
                 <div class="result"></div>
 
                 <div class="help">
-    <button data-task-id="19438">
+    <button data-task-id="19424">
         <i aria-hidden="true" class="fa fa-info-circle "></i>
     </button>
-    <div class="help-container" data-task-id="19438">
+    <div class="help-container" data-task-id="19424">
         <div class="check-line">
             <div class="check-inline requirement success">
                   <i aria-hidden="true" class="fa fa-check-circle "></i>
@@ -2209,12 +1995,12 @@ guillaume@ubuntu:~/$
 
         <div class="fs-4 text-right">
             <strong class="text-success">
-              <span>2</span>
+              <span>1</span>
             </strong>
-            <span class="text-muted">correction requests</span>
+            <span class="text-muted">correction request</span>
             <br>
             <strong class="text-success">
-              <span id="task-19438-score-info-score">25</span>/25
+              <span id="task-19424-score-info-score">9</span>/9
             </strong>
             <span class="text-muted">pts</span>
         </div>
@@ -2227,21 +2013,21 @@ guillaume@ubuntu:~/$
       </div>
 
     <p class="mb-4">
-      <a class="btn btn-primary btn-block" data-confirm="Are you sure? Make sure you focused on the mandatory tasks first" href="/projects/2123/unlock_optionals">Done with the mandatory tasks? Unlock 2 advanced tasks now!</a>
+      <a class="btn btn-primary btn-block" data-confirm="Are you sure? Make sure you focused on the mandatory tasks first" href="/projects/2122/unlock_optionals">Done with the mandatory tasks? Unlock 3 advanced tasks now!</a>
     </p>
 
       <div class="panel panel-default">
         <div class="panel-body">
           <div class="d-flex justify-content-around">
               <div>
-                <a data-toggle="tooltip" title="Python - Exceptions" class="btn btn-primary" role="button" href="/projects/2122">
+                <a data-toggle="tooltip" title="Python - More Data Structures: Set, Dictionary" class="btn btn-primary" role="button" href="/projects/2121">
                   <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Previous project
 </a>              </div>
-              <form action=/corrections/1518318/skip method="post">
+              <form action=/corrections/1518308/skip method="post">
                 <input
                   name="authenticity_token"
                   type="hidden"
-                  value=2hcMmqWAmcpv99Kk_KJqHdFstlU6vwoFZpHpz9mYuwGHrieAMTxmGKZiCLrwH8B4UDP1qFMQ7d-pYSA25gu2_Q
+                  value=FM4ZMrfDkZMq4Iht2M1MlQHm3-V3uEAzg4ZDZ-WlT0RJdzIoI39uQeN1UnPUcObwgLmcGB4Xp-lMdoqe2jZCuA
                 />
                 <button class="btn btn-warning" type="submit">
                   Next project <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
@@ -2253,12 +2039,12 @@ guillaume@ubuntu:~/$
   </div>
   
     <div class="col-sm-12 col-md-12 hidden-lg">
-        <div data-react-class="projects/ProjectReview" data-react-props="{&quot;style&quot;:&quot;line&quot;,&quot;correction&quot;:{&quot;statusURI&quot;:&quot;/corrections/1518318/status_self_paced.json&quot;,&quot;startReviewURI&quot;:&quot;/corrections/1518318/start_auto_review_self_paced.json&quot;},&quot;csrfToken&quot;:&quot;pkzOGYEjTsMQib7KO2OrVtFiy5FR482F96bwcgEvovz79eUDFZ-xEdkcZNQ33gEzUD2IbDhMKl84VjmLPryvAA&quot;,&quot;nextProject&quot;:{&quot;details&quot;:{&quot;curriculum_completed&quot;:false,&quot;message&quot;:&quot;Next project: Python - Classes and Objects&quot;,&quot;uri&quot;:&quot;/projects/2124&quot;},&quot;fetchURI&quot;:&quot;/projects/2123/next&quot;},&quot;pollingInterval&quot;:10000,&quot;progress&quot;:{&quot;auto_review&quot;:{&quot;can_execute&quot;:false,&quot;completion&quot;:{&quot;count&quot;:6,&quot;is_completed&quot;:true,&quot;percentage&quot;:100.0},&quot;inability_to_execute_reason&quot;:&quot;done&quot;},&quot;tasks&quot;:[{&quot;id&quot;:19430,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:30,&quot;score&quot;:30.0}},{&quot;id&quot;:19432,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:39,&quot;score&quot;:39.0}},{&quot;id&quot;:19433,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:24,&quot;score&quot;:24.0}},{&quot;id&quot;:19434,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:25,&quot;score&quot;:25.0}},{&quot;id&quot;:19435,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:24,&quot;score&quot;:24.0}},{&quot;id&quot;:19438,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:25,&quot;score&quot;:25.0}}],&quot;summary&quot;:{&quot;completion&quot;:100.0,&quot;score&quot;:{&quot;mandatory&quot;:100.0,&quot;optional&quot;:0.0}},&quot;can_skip&quot;:true,&quot;can_start_peer_review&quot;:false},&quot;peerReview&quot;:null,&quot;project&quot;:{&quot;completion&quot;:100.0,&quot;id&quot;:2123,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/003_color-0c5b38973bfe29fff8dd86f65a213ea2d2499a7d0d9e4549f440c50dc84c9618.png&quot;,&quot;name&quot;:&quot;Python - Test-driven development&quot;,&quot;score&quot;:{&quot;mandatory&quot;:100.0,&quot;optional&quot;:0.0},&quot;tasksCount&quot;:2},&quot;skipURI&quot;:&quot;/corrections/1518318/skip&quot;,&quot;taskLevelReviewTypeHumanized&quot;:&quot;Your score will be updated as you progress.&quot;}" data-react-cache-id="projects/ProjectReview-0"></div>
+        <div data-react-class="projects/ProjectReview" data-react-props="{&quot;style&quot;:&quot;line&quot;,&quot;correction&quot;:{&quot;statusURI&quot;:&quot;/corrections/1518308/status_self_paced.json&quot;,&quot;startReviewURI&quot;:&quot;/corrections/1518308/start_auto_review_self_paced.json&quot;},&quot;csrfToken&quot;:&quot;TG4bjzPO_geJIkBqfoqT6_Y9jIiqHi3OMyOeBCVzGo8R1zCVp3IB1UC3mnRyNzmOd2LPdcOxyhT801f9GuAXcw&quot;,&quot;nextProject&quot;:{&quot;details&quot;:{&quot;curriculum_completed&quot;:false,&quot;message&quot;:&quot;Next project: Python - Test-driven development&quot;,&quot;uri&quot;:&quot;/projects/2123&quot;},&quot;fetchURI&quot;:&quot;/projects/2122/next&quot;},&quot;pollingInterval&quot;:10000,&quot;progress&quot;:{&quot;auto_review&quot;:{&quot;can_execute&quot;:false,&quot;completion&quot;:{&quot;count&quot;:7,&quot;is_completed&quot;:true,&quot;percentage&quot;:100.0},&quot;inability_to_execute_reason&quot;:&quot;done&quot;},&quot;tasks&quot;:[{&quot;id&quot;:19418,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:11,&quot;score&quot;:11.0}},{&quot;id&quot;:19419,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:14,&quot;score&quot;:14.0}},{&quot;id&quot;:19420,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:13,&quot;score&quot;:13.0}},{&quot;id&quot;:19421,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:10,&quot;score&quot;:10.0}},{&quot;id&quot;:19422,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:16,&quot;score&quot;:16.0}},{&quot;id&quot;:19423,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:11,&quot;score&quot;:11.0}},{&quot;id&quot;:19424,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:9,&quot;score&quot;:9.0}}],&quot;summary&quot;:{&quot;completion&quot;:100.0,&quot;score&quot;:{&quot;mandatory&quot;:100.0,&quot;optional&quot;:0.0}},&quot;can_skip&quot;:true,&quot;can_start_peer_review&quot;:false},&quot;peerReview&quot;:null,&quot;project&quot;:{&quot;completion&quot;:100.0,&quot;id&quot;:2122,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/003_color-0c5b38973bfe29fff8dd86f65a213ea2d2499a7d0d9e4549f440c50dc84c9618.png&quot;,&quot;name&quot;:&quot;Python - Exceptions&quot;,&quot;score&quot;:{&quot;mandatory&quot;:100.0,&quot;optional&quot;:0.0},&quot;tasksCount&quot;:3},&quot;skipURI&quot;:&quot;/corrections/1518308/skip&quot;,&quot;taskLevelReviewTypeHumanized&quot;:&quot;Your score will be updated as you progress.&quot;}" data-react-cache-id="projects/ProjectReview-0"></div>
 
     </div>
 
   <div class="col-xl-3 col-lg-4 hidden-xs hidden-sm hidden-md sticky-nav">
-          <div data-react-class="projects/ProjectReview" data-react-props="{&quot;style&quot;:&quot;column&quot;,&quot;correction&quot;:{&quot;statusURI&quot;:&quot;/corrections/1518318/status_self_paced.json&quot;,&quot;startReviewURI&quot;:&quot;/corrections/1518318/start_auto_review_self_paced.json&quot;},&quot;csrfToken&quot;:&quot;RB06KRpLxDPTwPuaEw_jemmnqM7YesX35WoXE_ODk3YZpBEzjvc74RpVIYQfskkf6PjrM7HVIi0qmt7qzBCeig&quot;,&quot;nextProject&quot;:{&quot;details&quot;:{&quot;curriculum_completed&quot;:false,&quot;message&quot;:&quot;Next project: Python - Classes and Objects&quot;,&quot;uri&quot;:&quot;/projects/2124&quot;},&quot;fetchURI&quot;:&quot;/projects/2123/next&quot;},&quot;pollingInterval&quot;:10000,&quot;progress&quot;:{&quot;auto_review&quot;:{&quot;can_execute&quot;:false,&quot;completion&quot;:{&quot;count&quot;:6,&quot;is_completed&quot;:true,&quot;percentage&quot;:100.0},&quot;inability_to_execute_reason&quot;:&quot;done&quot;},&quot;tasks&quot;:[{&quot;id&quot;:19430,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:30,&quot;score&quot;:30.0}},{&quot;id&quot;:19432,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:39,&quot;score&quot;:39.0}},{&quot;id&quot;:19433,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:24,&quot;score&quot;:24.0}},{&quot;id&quot;:19434,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:25,&quot;score&quot;:25.0}},{&quot;id&quot;:19435,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:24,&quot;score&quot;:24.0}},{&quot;id&quot;:19438,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:25,&quot;score&quot;:25.0}}],&quot;summary&quot;:{&quot;completion&quot;:100.0,&quot;score&quot;:{&quot;mandatory&quot;:100.0,&quot;optional&quot;:0.0}},&quot;can_skip&quot;:true,&quot;can_start_peer_review&quot;:false},&quot;peerReview&quot;:null,&quot;project&quot;:{&quot;completion&quot;:100.0,&quot;id&quot;:2123,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/003_color-0c5b38973bfe29fff8dd86f65a213ea2d2499a7d0d9e4549f440c50dc84c9618.png&quot;,&quot;name&quot;:&quot;Python - Test-driven development&quot;,&quot;score&quot;:{&quot;mandatory&quot;:100.0,&quot;optional&quot;:0.0},&quot;tasksCount&quot;:2},&quot;skipURI&quot;:&quot;/corrections/1518318/skip&quot;,&quot;taskLevelReviewTypeHumanized&quot;:&quot;Your score will be updated as you progress.&quot;}" data-react-cache-id="projects/ProjectReview-0"></div>
+          <div data-react-class="projects/ProjectReview" data-react-props="{&quot;style&quot;:&quot;column&quot;,&quot;correction&quot;:{&quot;statusURI&quot;:&quot;/corrections/1518308/status_self_paced.json&quot;,&quot;startReviewURI&quot;:&quot;/corrections/1518308/start_auto_review_self_paced.json&quot;},&quot;csrfToken&quot;:&quot;xtwk0dfSBW5YZCyM0uTMvbuMqbXUDJpCYYJ4ev756nCbZQ_LQ276vJHx9pLeWWbYOtPqSL2jfZiucrGDwWrnjA&quot;,&quot;nextProject&quot;:{&quot;details&quot;:{&quot;curriculum_completed&quot;:false,&quot;message&quot;:&quot;Next project: Python - Test-driven development&quot;,&quot;uri&quot;:&quot;/projects/2123&quot;},&quot;fetchURI&quot;:&quot;/projects/2122/next&quot;},&quot;pollingInterval&quot;:10000,&quot;progress&quot;:{&quot;auto_review&quot;:{&quot;can_execute&quot;:false,&quot;completion&quot;:{&quot;count&quot;:7,&quot;is_completed&quot;:true,&quot;percentage&quot;:100.0},&quot;inability_to_execute_reason&quot;:&quot;done&quot;},&quot;tasks&quot;:[{&quot;id&quot;:19418,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:11,&quot;score&quot;:11.0}},{&quot;id&quot;:19419,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:14,&quot;score&quot;:14.0}},{&quot;id&quot;:19420,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:13,&quot;score&quot;:13.0}},{&quot;id&quot;:19421,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:10,&quot;score&quot;:10.0}},{&quot;id&quot;:19422,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:16,&quot;score&quot;:16.0}},{&quot;id&quot;:19423,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:11,&quot;score&quot;:11.0}},{&quot;id&quot;:19424,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:9,&quot;score&quot;:9.0}}],&quot;summary&quot;:{&quot;completion&quot;:100.0,&quot;score&quot;:{&quot;mandatory&quot;:100.0,&quot;optional&quot;:0.0}},&quot;can_skip&quot;:true,&quot;can_start_peer_review&quot;:false},&quot;peerReview&quot;:null,&quot;project&quot;:{&quot;completion&quot;:100.0,&quot;id&quot;:2122,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/003_color-0c5b38973bfe29fff8dd86f65a213ea2d2499a7d0d9e4549f440c50dc84c9618.png&quot;,&quot;name&quot;:&quot;Python - Exceptions&quot;,&quot;score&quot;:{&quot;mandatory&quot;:100.0,&quot;optional&quot;:0.0},&quot;tasksCount&quot;:3},&quot;skipURI&quot;:&quot;/corrections/1518308/skip&quot;,&quot;taskLevelReviewTypeHumanized&quot;:&quot;Your score will be updated as you progress.&quot;}" data-react-cache-id="projects/ProjectReview-0"></div>
 
 
     <div class="panel panel-default task-card " id="task-18584">
@@ -2276,28 +2062,32 @@ guillaume@ubuntu:~/$
           <div class="tab-content mt-4">
             <div role="tabpanel" class="tab-pane active" id="mandatory">
                   <div class="task-button d-flex align-center justify-content-between" role="button" data-task-index="0" id="heading-0">
-                    <div class="task-title-list">0. <code>Integers addition</code></div>
-                    <strong class='task_progress_score text-primary ml-2' data-task-id='19430'></strong>
+                    <div class="task-title-list">0. <code>Safe list printing</code></div>
+                    <strong class='task_progress_score text-primary ml-2' data-task-id='19418'></strong>
                   </div>
                   <div class="task-button d-flex align-center justify-content-between" role="button" data-task-index="1" id="heading-1">
-                    <div class="task-title-list">1. <code>Divide a matrix</code></div>
-                    <strong class='task_progress_score text-primary ml-2' data-task-id='19432'></strong>
+                    <div class="task-title-list">1. <code>Safe printing of an integers list</code></div>
+                    <strong class='task_progress_score text-primary ml-2' data-task-id='19419'></strong>
                   </div>
                   <div class="task-button d-flex align-center justify-content-between" role="button" data-task-index="2" id="heading-2">
-                    <div class="task-title-list">2. <code>Say my name</code></div>
-                    <strong class='task_progress_score text-primary ml-2' data-task-id='19433'></strong>
+                    <div class="task-title-list">2. <code>Print and count integers</code></div>
+                    <strong class='task_progress_score text-primary ml-2' data-task-id='19420'></strong>
                   </div>
                   <div class="task-button d-flex align-center justify-content-between" role="button" data-task-index="3" id="heading-3">
-                    <div class="task-title-list">3. <code>Print square</code></div>
-                    <strong class='task_progress_score text-primary ml-2' data-task-id='19434'></strong>
+                    <div class="task-title-list">3. <code>Integers division with debug</code></div>
+                    <strong class='task_progress_score text-primary ml-2' data-task-id='19421'></strong>
                   </div>
                   <div class="task-button d-flex align-center justify-content-between" role="button" data-task-index="4" id="heading-4">
-                    <div class="task-title-list">4. <code>Text indentation</code></div>
-                    <strong class='task_progress_score text-primary ml-2' data-task-id='19435'></strong>
+                    <div class="task-title-list">4. <code>Divide a list</code></div>
+                    <strong class='task_progress_score text-primary ml-2' data-task-id='19422'></strong>
                   </div>
                   <div class="task-button d-flex align-center justify-content-between" role="button" data-task-index="5" id="heading-5">
-                    <div class="task-title-list">5. <code>Max integer - Unittest</code></div>
-                    <strong class='task_progress_score text-primary ml-2' data-task-id='19438'></strong>
+                    <div class="task-title-list">5. <code>Raise exception</code></div>
+                    <strong class='task_progress_score text-primary ml-2' data-task-id='19423'></strong>
+                  </div>
+                  <div class="task-button d-flex align-center justify-content-between" role="button" data-task-index="6" id="heading-6">
+                    <div class="task-title-list">6. <code>Raise a message</code></div>
+                    <strong class='task_progress_score text-primary ml-2' data-task-id='19424'></strong>
                   </div>
             </div>
             <div role="tabpanel" class="tab-pane" id="advanced">
@@ -2311,21 +2101,21 @@ guillaume@ubuntu:~/$
 <script src="/assets/javascripts/application/custom/project_tasks.js"></script>
 
 
-        <div class="modal fade" id="container-specs-modal"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Recommended Sandbox</h4></div><div class="modal-body"><div data-react-class="user_containers/ContainerSpecs" data-react-props="{&quot;containerModelName&quot;:&quot;Sandbox&quot;,&quot;containerSpecs&quot;:[{&quot;description&quot;:&quot;\u003cp\u003eBasic Ubuntu 20.04, with vim, emacs, curl, wget and all needed for Holberton Foundations\u003c/p\u003e\n&quot;,&quot;id&quot;:39,&quot;name&quot;:&quot;Ubuntu 20.04&quot;,&quot;online&quot;:true}],&quot;containersLimit&quot;:3,&quot;csrfToken&quot;:&quot;_AcB2Gh39c4rJM4DE6wH5Vlxqudwh9l7mvfEO4r3zQmhvirC_MsKHOKxFB0fEa2A2C7pGhkoPqFVBw3CtWTA9Q&quot;,&quot;startStatusURI&quot;:&quot;/user_containers/start_status.json&quot;,&quot;startURI&quot;:&quot;/user_containers/start.json&quot;}" data-react-cache-id="user_containers/ContainerSpecs-0"></div></div></div></div></div>
+        <div class="modal fade" id="container-specs-modal"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Recommended Sandbox</h4></div><div class="modal-body"><div data-react-class="user_containers/ContainerSpecs" data-react-props="{&quot;containerModelName&quot;:&quot;Sandbox&quot;,&quot;containerSpecs&quot;:[{&quot;description&quot;:&quot;\u003cp\u003eBasic Ubuntu 20.04, with vim, emacs, curl, wget and all needed for Holberton Foundations\u003c/p\u003e\n&quot;,&quot;id&quot;:39,&quot;name&quot;:&quot;Ubuntu 20.04&quot;,&quot;online&quot;:true}],&quot;containersLimit&quot;:3,&quot;csrfToken&quot;:&quot;TBdvyVvJ2uyci-2io1zrPeVtPuJKgHgbN4SRfGikr4ARrkTTz3UlPlUeN7yv4UFYZDJ9HyMvn8H4dFiFVzeifA&quot;,&quot;startStatusURI&quot;:&quot;/user_containers/start_status.json&quot;,&quot;startURI&quot;:&quot;/user_containers/start.json&quot;}" data-react-cache-id="user_containers/ContainerSpecs-0"></div></div></div></div></div>
       
-        <div class="modal fade" id="sandboxes-modal"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Recommended Sandboxes</h4></div><div class="modal-body"><div data-react-class="user_sandboxes/Sandboxes" data-react-props="{&quot;images&quot;:[{&quot;id&quot;:130,&quot;name&quot;:&quot;Ubuntu 22.04 - Java&quot;,&quot;aws_region&quot;:&quot;South America (São Paulo)&quot;},{&quot;id&quot;:17,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;South America (São Paulo)&quot;},{&quot;id&quot;:14,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;Europe (Paris)&quot;},{&quot;id&quot;:18,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;Asia Pacific (Sydney)&quot;},{&quot;id&quot;:16,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;US East (N. Virginia)\t&quot;},{&quot;id&quot;:128,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;Middle East (UAE)&quot;},{&quot;id&quot;:129,&quot;name&quot;:&quot;Ubuntu 18.04&quot;,&quot;aws_region&quot;:&quot;Middle East (UAE)&quot;}],&quot;sandboxesUri&quot;:&quot;/user_sandboxes&quot;,&quot;csrfToken&quot;:&quot;HPFoHsd67eR_2jesClH0LLl6ytEuzqABeCC0rOlpD79BSEMEU8YSNrZP7bIG7F5JOCWJLEdhR9u30H1V1voCQw&quot;,&quot;maxNumberOfContainers&quot;:2}" data-react-cache-id="user_sandboxes/Sandboxes-0"></div></div></div></div></div>
+        <div class="modal fade" id="sandboxes-modal"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title">Recommended Sandboxes</h4></div><div class="modal-body"><div data-react-class="user_sandboxes/Sandboxes" data-react-props="{&quot;images&quot;:[{&quot;id&quot;:130,&quot;name&quot;:&quot;Ubuntu 22.04 - Java&quot;,&quot;aws_region&quot;:&quot;South America (São Paulo)&quot;},{&quot;id&quot;:17,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;South America (São Paulo)&quot;},{&quot;id&quot;:14,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;Europe (Paris)&quot;},{&quot;id&quot;:18,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;Asia Pacific (Sydney)&quot;},{&quot;id&quot;:16,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;US East (N. Virginia)\t&quot;},{&quot;id&quot;:128,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;Middle East (UAE)&quot;},{&quot;id&quot;:129,&quot;name&quot;:&quot;Ubuntu 18.04&quot;,&quot;aws_region&quot;:&quot;Middle East (UAE)&quot;}],&quot;sandboxesUri&quot;:&quot;/user_sandboxes&quot;,&quot;csrfToken&quot;:&quot;97weFUHKf5SnKgOQIbKzwYNau_32D2uQwM84UerIYFSqBTUP1XaARm6_2Y4tDxmkAgX4AJ-gjEoPP_Go1VttqA&quot;,&quot;maxNumberOfContainers&quot;:2}" data-react-cache-id="user_sandboxes/Sandboxes-0"></div></div></div></div></div>
       <div class="panel panel-default">
         <div class="panel-body">
           <div class="d-flex justify-content-around">
               <div>
-                <a data-toggle="tooltip" title="Python - Exceptions" class="btn btn-primary" role="button" href="/projects/2122">
+                <a data-toggle="tooltip" title="Python - More Data Structures: Set, Dictionary" class="btn btn-primary" role="button" href="/projects/2121">
                   <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Previous project
 </a>              </div>
-              <form action=/corrections/1518318/skip method="post">
+              <form action=/corrections/1518308/skip method="post">
                 <input
                   name="authenticity_token"
                   type="hidden"
-                  value=i0JTjAMWXKNZra3TI7XxqBe7Lic8XI7fthsXk6jg3RvW-3iWl6qjcZA4d80vCFvNluRt2lXzaQV5695ql3PQ5w
+                  value=isHEhpYDrMV5NMRRqo8RpBU_G-loUS94XeOBX2zVLBrXeO-cAr9TF7ChHk-mMrvBlGBYFAH-yKKSE0imU0Yh5g
                 />
                 <button class="btn btn-warning" type="submit">
                   Next project <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
@@ -2459,7 +2249,7 @@ alert(example);
                             data-slack-id="U08V055A476"
                             data-is-staff="false"
                             data-location="Holberton Thonon-les-Bains, France"
-                            data-project-id="2123"
+                            data-project-id="2122"
                             data-location-white-label="false"></div>
 <script type="module" src="https://clippy.hbtn.io/static/client/js/clippy/app.js"></script>
 </body>

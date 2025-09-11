@@ -131,7 +131,7 @@ def generer_readme(fichier_html):
 
     # --- 8. Authors ---
     readme_content.append("\n## Authors\n")
-    readme_content.append("Ksyv - [GitHub Profile](https://github.com/ksyv)\n")
+    readme_content.append("loicleguen - [GitHub Profile](https://github.com/loicleguen)\n")
 
     # --- Écriture du fichier README.md ---
     with open("README.md", "w", encoding="utf-8") as f:

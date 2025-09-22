@@ -1,396 +1,211 @@
 <div align="center"><img src="https://github.com/ksyv/holbertonschool-web_front_end/blob/main/baniere_holberton.png"></div>
 
-# Enhancing Code Quality and Efficiency with ChatGPT
+# Python OOP - Abtract Class, Interface, Subclassing
 
 ## Table of Contents :
 
-  - [0. Debugging - Python Factorial](#subparagraph0)
-  - [1. Debugging - Python Arguments](#subparagraph1)
-  - [2. Debugging - HTML / Javascript](#subparagraph2)
-  - [3. Debugging - Python Mines](#subparagraph3)
-  - [4. Documentation - Python Factorial](#subparagraph4)
-  - [5. Error Handling - Python Checkbook](#subparagraph5)
-  - [6. Debugging - Tic Tac Toe Python](#subparagraph6)
+  - [0. Abstract Animal Class and its Subclasses](#subparagraph0)
+  - [1. Shapes, Interfaces, and Duck Typing](#subparagraph1)
+  - [2. Extending the Python List with Notifications](#subparagraph2)
+  - [3. CountedIterator - Keeping Track of Iteration](#subparagraph3)
+  - [4. The Enigmatic FlyingFish - Exploring Multiple Inheritance](#subparagraph4)
+  - [5. The Mystical Dragon - Mastering Mixins](#subparagraph5)
 
 ## Task
-### 0. Debugging - Python Factorial <a name='subparagraph0'></a>
+### 0. Abstract Animal Class and its Subclasses <a name='subparagraph0'></a>
 
-<strong>Objective:</strong> Use ChatGPT to identify and correct errors in code samples.
+In object-oriented programming, Abstract Base Classes (ABCs) ensure that derived classes implement specific methods from the base class. This provides a blueprint for creating and structuring derived classes. Python’s <code>ABC</code> package facilitates the creation of abstract base classes.
 
-```
-$ cat factorial.py
-#!/usr/bin/python3
-import sys
+* Python <code>ABC</code> documentation: <a href="/rltoken/_0PgSum1lebIia7sFQmIbA" target="_blank" title="https://docs.python.org/3/library/abc.html">https://docs.python.org/3/library/abc.html</a>
 
-def factorial(n):
-    result = 1
-    while n > 1:
-        result *= n
-    return result
+<strong>Hints</strong>:
 
-f = factorial(int(sys.argv[1]))
-print(f)
-
-$ ./factorial.py 2
-^CTraceback (most recent call last):
-  File "/private/tmp/factorial.py", line 9, in <module>
-    factorial(int(sys.argv[1]))
-  File "/private/tmp/factorial.py", line 5, in factorial
-    while n > 1:
-          ^^^^^
-KeyboardInterrupt
-```
-
-You can download the code <a href="https://github.com/hs-hq-service/3156/blob/main/factorial.py" target="_blank" title="here">here</a>.
-
-Fix the code, it should print the factorial of the argument.
-
----
-
-### 1. Debugging - Python Arguments <a name='subparagraph1'></a>
-
-<strong>Objective:</strong> Use ChatGPT to identify and correct errors in code samples.
+* The abstract method in the base class doesn’t have a body. You need to provide the implementation in the subclasses.
+* If you try to instantiate a class that hasn’t implemented all of its abstract methods, Python will raise a <code>TypeError</code>.
 
 ```
-$ cat print_arguments.py
-#!/usr/bin/python3
-import sys
+$ cat main_00_abc.py 
+#!/usr/bin/env python3
+from task_00_abc import Animal, Dog, Cat
 
-for i in range(len(sys.argv)):
-    print(sys.argv[i])
+bobby = Dog()
+garfield = Cat()
 
-$ ./print_arguments.py 1 2 3
-print_arguments.py
-1
-2
-3
-```
+print(bobby.sound())
+print(garfield.sound())
 
-You can download the code <a href="https://github.com/hs-hq-service/3156/blob/main/print_arguments.py" target="_blank" title="here">here</a>.
+animal = Animal()
+print(animal.sound())
 
-Fix the code, it should print only the arguments without the python file name.
-
----
-
-### 2. Debugging - HTML / Javascript <a name='subparagraph2'></a>
-
-<strong>Objective:</strong> Use ChatGPT to identify and correct errors in code samples.
-
-```
-$ cat change_background.html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Change Background Color</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding-top: 50px;
-    }
-    button {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-</style>
-</head>
-<body>
-
-<h2>Click the button to change the background color</h2>
-
-<button id="colorButon">Change Color</button>
-
-<script>
-    document.getElementById("colorButton").addEventListener("click", function() {
-        changeBackgroundColor();
-    });
-
-    function changeBackgroundColor() {
-        // Generate a random color
-        var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
-        // Change the background color of the body
-        document.body.style.backgroundColor = randomColor;
-    }
-</script>
-
-</body>
-</html>
-```
-
-You can download the code <a href="/rltoken/Q2IZY5FB9a-udDliTmvHOQ" target="_blank" title="here">here</a>.
-<a href="/rltoken/EqntmyG56eyYIid9ghEO0g" target="_blank" title="This">This</a> editor can be use to test your code.
-
-Fix the code, it should change the background color when you click on the button.
-
----
-
-### 3. Debugging - Python Mines <a name='subparagraph3'></a>
-
-<strong>Objective:</strong> Use ChatGPT to identify and correct errors in code samples.
-
-<strong>Game Overview</strong>: Minesweeper is a puzzle game where the player must clear a field of hidden “mines” without detonating any of them, using clues about the number of neighboring mines in each field.
-
-```
-$ cat mines.py
-#!/usr/bin/python3
-import random
-import os
-
-def clear_screen():
-    os.system('cls' if os.name == 'nt' else 'clear')
-
-class Minesweeper:
-    def __init__(self, width=10, height=10, mines=10):
-        self.width = width
-        self.height = height
-        self.mines = set(random.sample(range(width * height), mines))
-        self.field = [[' ' for _ in range(width)] for _ in range(height)]
-        self.revealed = [[False for _ in range(width)] for _ in range(height)]
-
-    def print_board(self, reveal=False):
-        clear_screen()
-        print('  ' + ' '.join(str(i) for i in range(self.width)))
-        for y in range(self.height):
-            print(y, end=' ')
-            for x in range(self.width):
-                if reveal or self.revealed[y][x]:
-                    if (y * self.width + x) in self.mines:
-                        print('*', end=' ')
-                    else:
-                        count = self.count_mines_nearby(x, y)
-                        print(count if count > 0 else ' ', end=' ')
-                else:
-                    print('.', end=' ')
-            print()
-
-    def count_mines_nearby(self, x, y):
-        count = 0
-        for dx in [-1, 0, 1]:
-            for dy in [-1, 0, 1]:
-                nx, ny = x + dx, y + dy
-                if 0 <= nx < self.width and 0 <= ny < self.height:
-                    if (ny * self.width + nx) in self.mines:
-                        count += 1
-        return count
-
-    def reveal(self, x, y):
-        if (y * self.width + x) in self.mines:
-            return False
-        self.revealed[y][x] = True
-        if self.count_mines_nearby(x, y) == 0:
-            for dx in [-1, 0, 1]:
-                for dy in [-1, 0, 1]:
-                    nx, ny = x + dx, y + dy
-                    if 0 <= nx < self.width and 0 <= ny < self.height and not self.revealed[ny][nx]:
-                        self.reveal(nx, ny)
-        return True
-
-    def play(self):
-        while True:
-            self.print_board()
-            try:
-                x = int(input("Enter x coordinate: "))
-                y = int(input("Enter y coordinate: "))
-                if not self.reveal(x, y):
-                    self.print_board(reveal=True)
-                    print("Game Over! You hit a mine.")
-                    break
-            except ValueError:
-                print("Invalid input. Please enter numbers only.")
-
-if __name__ == "__main__":
-    game = Minesweeper()
-    game.play()
-```
-
-You can download the code <a href="https://github.com/hs-hq-service/3156/blob/main/mines.py" target="_blank" title="here">here</a>.
-
-Fix the code, implement a mechanism to detect when all non-mine cells have been revealed, thus winning the game.
-
-```
-$ ./mines.py
-0 1 2 3 4 5 6 7 8 9
-1
-2
-3
-4
-5
-6
-7
-8
-9
-...
-...
-0 1 2 3 4 5 6 7 8 9
-0
-1       1 1 1   1 1 1
-2 1 1 1 1 . 1   2 . 2
-3 2 . 2 1 1 1   2 . 2
-4 2 . 3 1       1 1 1
-5 1 2 . 1
-6 1 2 2 3 2 1
-7 . 1 1 . . 1
-8 1 1 2 3 3 1
-9     1 . 1
-Congratulations! You've won the game.
-```
-
----
-
-### 4. Documentation - Python Factorial <a name='subparagraph4'></a>
-
-<strong>Objective:</strong> Use ChatGPT to document the code
-
-```
-$ cat factorial_recursive.py
-#!/usr/bin/python3
-import sys
-
-def factorial(n):
-        if n == 0:
-        return 1
-    else:
-        return n * factorial(n-1)
-
-f = factorial(int(sys.argv[1]))
-print(f)
-
-$ ./factorial_recursive.py 4
-24
-```
-
-You can download the code <a href="https://github.com/hs-hq-service/3156/blob/main/factorial_recursive.py" target="_blank" title="here">here</a>.
-
-Add the comments to this code.
-You should have 3 sections: function description, parameters and returns.
-
----
-
-### 5. Error Handling - Python Checkbook <a name='subparagraph5'></a>
-
-<strong>Objective:</strong> Use ChatGPT to document the code
-
-```
-$ cat checkbook.py
-class Checkbook:
-    def __init__(self):
-        self.balance = 0.0
-
-    def deposit(self, amount):
-        self.balance += amount
-        print("Deposited ${:.2f}".format(amount))
-        print("Current Balance: ${:.2f}".format(self.balance))
-
-    def withdraw(self, amount):
-        if amount > self.balance:
-            print("Insufficient funds to complete the withdrawal.")
-        else:
-            self.balance -= amount
-            print("Withdrew ${:.2f}".format(amount))
-            print("Current Balance: ${:.2f}".format(self.balance))
-
-    def get_balance(self):
-        print("Current Balance: ${:.2f}".format(self.balance))
-
-def main():
-    cb = Checkbook()
-    while True:
-        action = input("What would you like to do? (deposit, withdraw, balance, exit): ")
-        if action.lower() == 'exit':
-            break
-        elif action.lower() == 'deposit':
-            amount = float(input("Enter the amount to deposit: $"))
-            cb.deposit(amount)
-        elif action.lower() == 'withdraw':
-            amount = float(input("Enter the amount to withdraw: $"))
-            cb.withdraw(amount)
-        elif action.lower() == 'balance':
-            cb.get_balance()
-        else:
-            print("Invalid command. Please try again.")
-
-if __name__ == "__main__":
-    main()
-```
-
-You can download the code <a href="https://github.com/hs-hq-service/3156/blob/main/checkbook.py" target="_blank" title="here">here</a>.
-
-Fix the code, to prevent the program from crashing due to invalid input (e.g., non-numeric values), add error handling mechanisms.
-
-```
-$ ./checkbook.py
-What would you like to do? (deposit, withdraw, balance, exit): deposit
-Enter the amount to deposit: $test
+$ ./main_00_abc.py 
+Bark
+Meow
 Traceback (most recent call last):
-  File "/private/tmp/3156/checkbook.py", line 39, in <module>
-    main()
-  File "/private/tmp/3156/checkbook.py", line 28, in main
-    amount = float(input("Enter the amount to deposit: $"))
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-ValueError: could not convert string to float: 'test'
+  File "main_00_abc.py", line 10, in <module>
+    animal = Animal()
+TypeError: Can't instantiate abstract class Animal with abstract method sound
 ```
 
 ---
 
-### 6. Debugging - Tic Tac Toe Python <a name='subparagraph6'></a>
+### 1. Shapes, Interfaces, and Duck Typing <a name='subparagraph1'></a>
 
-<strong>Objective:</strong> Use ChatGPT to identify and correct errors in code samples. (There may be several errors on the code)
+Python employs a concept called “duck typing,” which is concerned with the semantics of objects rather than their inheritance hierarchy. If an object behaves like a duck (i.e., has all the methods and properties of a duck), then it’s considered a duck, regardless of its actual class. This concept allows for flexible and dynamic polymorphism.
 
-<strong>Game Overview</strong>: Players alternate placing “X” or “O” on a 3x3 board, aiming to get three in a row horizontally, vertically, or diagonally to win.
+In this exercise, we’ll use abstract base classes to design a blueprint for shapes and use duck typing to handle objects of different shapes uniformly.
+
+* Python <code>ABC</code> documentation: <a href="/rltoken/_0PgSum1lebIia7sFQmIbA" target="_blank" title="https://docs.python.org/3/library/abc.html">https://docs.python.org/3/library/abc.html</a>
+* Concept of Duck Typing: <a href="/rltoken/i3FBxu-VBtDf3LuXcT_82g" target="_blank" title="https://realpython.com/lessons/duck-typing/">https://realpython.com/lessons/duck-typing/</a>
+
+<strong>Hints</strong>:
+
+* While Python doesn’t enforce interfaces in the same way as statically-typed languages, abstract base classes provide a mechanism to ensure certain methods are implemented in subclasses.
+* Duck typing in the <code>shape_info</code> function implies that you shouldn’t use <code>isinstance</code> checks. Instead, trust that the passed object adheres to the <code>Shape</code> interface.
 
 ```
-$ cat tic.py
-#!/usr/bin/python3
-def print_board(board):
-    for row in board:
-        print(" | ".join(row))
-        print("-" * 5)
+$ cat main_01_duck_typing.py 
+#!/usr/bin/env python3
+from task_01_duck_typing import Circle, Rectangle, shape_info
 
-def check_winner(board):
-    for row in board:
-        if row.count(row[0]) == len(row) and row[0] != " ":
-            return True
+circle = Circle(radius=5)
+rectangle = Rectangle(width=4, height=7)
 
-    for col in range(len(board[0])):
-        if board[0][col] == board[1][col] == board[2][col] and board[0][col] != " ":
-            return True
+shape_info(circle)
+shape_info(rectangle)
 
-    if board[0][0] == board[1][1] == board[2][2] and board[0][0] != " ":
-        return True
-
-    if board[0][2] == board[1][1] == board[2][0] and board[0][2] != " ":
-        return True
-
-    return False
-
-def tic_tac_toe():
-    board = [[" "]*3 for _ in range(3)]
-    player = "X"
-    while not check_winner(board):
-        print_board(board)
-        row = int(input("Enter row (0, 1, or 2) for player " + player + ": "))
-        col = int(input("Enter column (0, 1, or 2) for player " + player + ": "))
-        if board[row][col] == " ":
-            board[row][col] = player
-            if player == "X":
-                player = "O"
-            else:
-                player = "X"
-        else:
-            print("That spot is already taken! Try again.")
-
-    print_board(board)
-    print("Player " + player + " wins!")
-
-tic_tac_toe()
+$ ./main_01_duck_typing.py 
+Area: 78.53981633974483
+Perimeter: 31.41592653589793
+Area: 28
+Perimeter: 22
 ```
 
-You can download the code <a href="https://github.com/hs-hq-service/3156/blob/main/tic.py" target="_blank" title="here">here</a>.
+---
 
-<strong>Warning:</strong> Test all the user inputs !
+### 2. Extending the Python List with Notifications <a name='subparagraph2'></a>
+
+In Python, you can extend built-in classes to add or modify behavior. The <code>list</code> class provides a collection of methods and functionalities that handle list operations. By extending the <code>list</code> class, you can provide custom behaviors while retaining the original functionalities.
+
+Create a class named <code>VerboseList</code> that extends the Python <code>list</code> class. This custom class should print a notification message every time an item is added (using the <code>append</code> or <code>extend</code> methods) or removed (using the <code>remove</code> or <code>pop</code> methods).
+
+<strong>Hints</strong>:
+
+* Remember to call the original method of the <code>list</code> class using the <code>super()</code> function to ensure that the original functionality is retained. For example, for <code>append</code>: <code>super().append(item)</code>.
+* Think about edge cases, such as trying to remove an item that doesn’t exist in the list.
+
+```
+$ cat main_02_verboselist.py 
+#!/usr/bin/env python3
+from task_02_verboselist import VerboseList
+
+vl = VerboseList([1, 2, 3])
+vl.append(4)
+vl.extend([5, 6])
+vl.remove(2)
+vl.pop()
+vl.pop(0)
+
+$ ./main_02_verboselist.py 
+Added [4] to the list.
+Extended the list with [2] items.
+Removed [2] from the list.
+Popped [6] from the list.
+Popped [1] from the list.
+```
+
+---
+
+### 3. CountedIterator - Keeping Track of Iteration <a name='subparagraph3'></a>
+
+Subclassing allows a new class to inherit properties and methods from an existing class. In Python, many built-in classes can be extended to customize or enhance their behavior. The <code>iter</code> function, which returns an iterator object, provides the <code>__next__</code> method to fetch the next item in the sequence. This exercise focuses on extending the functionality of this iterator object.
+
+Create a class named <code>CountedIterator</code> that extends the built-in iterator obtained from the <code>iter</code> function. The <code>CountedIterator</code> should keep track of the number of items that have been iterated over. Specifically, you will need to override the <code>__next__</code> method to increment a counter each time an item is fetched.
+
+<strong>Hints</strong>:
+
+* Remember that the <code>__next__</code> method should raise a <code>StopIteration</code> exception when there are no more items to iterate, so ensure this behavior is retained in your overridden method.
+* You can initialize the iterator object in the <code>CountedIterator</code> constructor using: <code>self.iterator = iter(some_iterable)</code>.
+
+```
+$ cat main_03_countediterator.py 
+#!/usr/bin/env python3
+from task_03_countediterator import CountedIterator
+
+data = [1, 2, 3, 4]
+counted_iter = CountedIterator(data)
+
+try:
+    while True:
+        item = next(counted_iter)
+        print(f"Got {item}, total {counted_iter.get_count()} items iterated.")
+except StopIteration:
+    print("No more items.")
+
+$ ./main_03_countediterator.py 
+Got 1, total 1 items iterated.
+Got 2, total 2 items iterated.
+Got 3, total 3 items iterated.
+Got 4, total 4 items iterated.
+No more items.
+```
+
+---
+
+### 4. The Enigmatic FlyingFish - Exploring Multiple Inheritance <a name='subparagraph4'></a>
+
+In some object-oriented languages, a class can inherit attributes and behaviors from more than one parent class. This is known as multiple inheritance. Python is one of the languages that supports multiple inheritance, which can be a powerful tool, but it also comes with complexities, particularly regarding method resolution order (MRO).
+
+Construct a <code>FlyingFish</code> class that inherits from both a <code>Fish</code> class and a <code>Bird</code> class. Within <code>FlyingFish</code>, override methods from both parents. The goal is to comprehend multiple inheritance and how Python determines method resolution order.
+
+<strong>Hints</strong>:
+
+* Consider the order in which you list the parent classes when defining <code>FlyingFish</code>. It affects the method resolution order.
+* While multiple inheritance can be a powerful tool, it should be used judiciously, as it can make the code more complex and harder to read.
+
+```
+$ cat main_04_flyingfish.py 
+#!/usr/bin/env python3
+from task_04_flyingfish import Fish, FlyingFish
+
+flying_fish = FlyingFish()
+flying_fish.swim()
+flying_fish.fly()
+flying_fish.habitat()
+
+$ ./main_04_flyingfish.py 
+The flying fish is swimming!
+The flying fish is soaring!
+The flying fish lives both in water and the sky!
+```
+
+---
+
+### 5. The Mystical Dragon - Mastering Mixins <a name='subparagraph5'></a>
+
+Mixins are a way to add functionality to classes in a modular fashion. They’re not meant to stand alone but are meant to be combined with other classes to add behaviors. By using mixins, you can compose behaviors in classes without the need for deep or rigid inheritance hierarchies.
+
+Design two mixin classes, <code>SwimMixin</code> and <code>FlyMixin</code>, each equipped with methods <code>swim</code> and <code>fly</code> respectively. Next, construct a class <code>Dragon</code> that inherits from both these mixins. Your aim is to show that a <code>Dragon</code> instance can both swim and fly.
+
+<strong>Hints</strong>:
+
+* While designing mixins, remember that they should be focused, providing a single piece of functionality. They shouldn’t be overly broad or try to manage too much behavior.
+* Mixins allow for code reusability and can be combined in various ways to give objects different capabilities without setting up complex inheritance hierarchies.
+
+```
+$ cat main_05_dragon.py 
+#!/usr/bin/env python3
+from task_05_dragon import Dragon
+
+dragon = Dragon()
+dragon.swim()  # Outputs: The creature swims!
+dragon.fly()   # Outputs: The creature flies!
+dragon.roar()  # Outputs: The dragon roars!
+
+$ ./main_05_dragon.py 
+The creature swims!
+The creature flies!
+The dragon roars!
+```
 
 ---
 

@@ -4,339 +4,438 @@
 
 ## Table of Contents :
 
-  - [0. Simple helper function](#subparagraph0)
-  - [1. Simple pagination](#subparagraph1)
-  - [2. Hypermedia pagination](#subparagraph2)
-  - [3. Deletion-resilient hypermedia pagination](#subparagraph3)
+  - [0. List all databases](#subparagraph0)
+  - [1. Create a database](#subparagraph1)
+  - [2. Insert document](#subparagraph2)
+  - [3. All documents](#subparagraph3)
+  - [4. All matches](#subparagraph4)
+  - [5. Count](#subparagraph5)
+  - [6. Update](#subparagraph6)
+  - [7. Delete by match](#subparagraph7)
+  - [8. List all documents in Python](#subparagraph8)
+  - [9. Insert a document in Python](#subparagraph9)
+  - [10. Change school topics](#subparagraph10)
+  - [11. Where can I learn Python?](#subparagraph11)
+  - [12. Log stats](#subparagraph12)
 
 ## Resources
 ### Read or watch:
-* [REST API Design: Pagination](/rltoken/VeL1Cbu_NVNND6WKJrECbg)
-* [HATEOAS](/rltoken/Mqk-KBxLRtJaQuWZO-oeAQ)
+* [NoSQL Databases Explained](/rltoken/0HR2bZ3XFJzkttuEVF5Rug)
+* [What is NoSQL ?](/rltoken/JGxz6PJsAN9cjBBT_WVCAg)
+* [MongoDB with Python Crash Course - Tutorial for Beginners](/rltoken/PkdXgnfXUfJIk5iqf9Wp4A)
+* [MongoDB Tutorial 2 : Insert, Update, Remove, Query](/rltoken/y6ncfHy0Hn7uqaIyitWQRg)
+* [Aggregation](/rltoken/sIORcQADQT2Wf2opdMu30Q)
+* [Introduction to MongoDB and Python](/rltoken/BLt93wwWTkVQWVlSDerI1g)
+* [mongo Shell Methods](/rltoken/q-RfEFpmN-fGiX-SvmQjHA)
+* [The mongo Shell](/rltoken/fmrWM3wzfC2d2-WHqzzPBQ)
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* How to paginate a dataset with simple page and page_size parameters
-* How to paginate a dataset with hypermedia metadata
-* How to paginate in a deletion-resilient manner
+* What NoSQL means
+* What is difference between SQL and NoSQL
+* What is ACID
+* What is a document storage
+* What are NoSQL types
+* What are benefits of a NoSQL database
+* How to query information from a NoSQL database
+* How to insert/update/delete information from a NoSQL database
+* How to use MongoDB
 
 ## Requirements
 ### General
-* All your files will be interpreted/compiled on Ubuntu 20.04 LTS usingpython3(version 3.9)
+* All your files will be interpreted/compiled on Ubuntu 20.04 LTS usingMongoDB(version 4.4)
 * All your files should end with a new line
-* The first line of all your files should be exactly#!/usr/bin/env python3
+* The first line of all your files should be a comment:// my comment
 * AREADME.mdfile, at the root of the folder of the project, is mandatory
-* Your code should use thepycodestylestyle (version 2.5.*)
 * The length of your files will be tested usingwc
-* All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
-* All your functions should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)'
-* A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
-* All your functions and coroutines must be type-annotated.
 
 ## Task
-### 0. Simple helper function <a name='subparagraph0'></a>
+### 0. List all databases <a name='subparagraph0'></a>
 
-Write a function named <code>index_range</code> that takes two integer arguments <code>page</code> and <code>page_size</code>.
-
-The function should return a tuple of size two containing a start index and an end index corresponding to the range of indexes to return in a list for those particular pagination parameters.
-
-Page numbers are 1-indexed, i.e. the first page is page 1.
+Write a script that lists all databases in MongoDB.
 
 ```
-bob@dylan:~$ cat 0-main.py
+guillaume@ubuntu:~/$ cat 0-list_databases | mongo
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017
+MongoDB server version: 3.6.3
+admin        0.000GB
+config       0.000GB
+local        0.000GB
+logs         0.005GB
+bye
+guillaume@ubuntu:~/$
+```
+
+---
+
+### 1. Create a database <a name='subparagraph1'></a>
+
+Write a script that creates or uses the database <code>my_db</code>:
+
+```
+guillaume@ubuntu:~/$ cat 0-list_databases | mongo
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017
+MongoDB server version: 3.6.3
+admin        0.000GB
+config       0.000GB
+local        0.000GB
+logs         0.005GB
+bye
+guillaume@ubuntu:~/$
+guillaume@ubuntu:~/$ cat 1-use_or_create_database | mongo
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017
+MongoDB server version: 3.6.3
+switched to db my_db
+bye
+guillaume@ubuntu:~/$
+```
+
+---
+
+### 2. Insert document <a name='subparagraph2'></a>
+
+Write a script that inserts a document in the collection <code>school</code>:
+
+* The document must have one attribute <code>name</code> with value “Holberton school”
+* The database name will be passed as option of <code>mongo</code> command
+
+```
+guillaume@ubuntu:~/$ cat 2-insert | mongo my_db
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017/my_db
+MongoDB server version: 3.6.3
+WriteResult({ "nInserted" : 1 })
+bye
+guillaume@ubuntu:~/$
+```
+
+---
+
+### 3. All documents <a name='subparagraph3'></a>
+
+Write a script that lists all documents in the collection <code>school</code>:
+
+* The database name will be passed as option of <code>mongo</code> command
+
+```
+guillaume@ubuntu:~/$ cat 3-all | mongo my_db
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017/my_db
+MongoDB server version: 3.6.3
+{ "_id" : ObjectId("5a8fad532b69437b63252406"), "name" : "Holberton school" }
+bye
+guillaume@ubuntu:~/$
+```
+
+---
+
+### 4. All matches <a name='subparagraph4'></a>
+
+Write a script that lists all documents with <code>name="Holberton school"</code> in the collection <code>school</code>:
+
+* The database name will be passed as option of <code>mongo</code> command
+
+```
+guillaume@ubuntu:~/$ cat 4-match | mongo my_db
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017/my_db
+MongoDB server version: 3.6.3
+{ "_id" : ObjectId("5a8fad532b69437b63252406"), "name" : "Holberton school" }
+bye
+guillaume@ubuntu:~/$
+```
+
+---
+
+### 5. Count <a name='subparagraph5'></a>
+
+Write a script that displays the number of documents in the collection <code>school</code>:
+
+* The database name will be passed as option of <code>mongo</code> command
+
+```
+guillaume@ubuntu:~/$ cat 5-count | mongo my_db
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017/my_db
+MongoDB server version: 3.6.3
+1
+bye
+guillaume@ubuntu:~/$
+```
+
+---
+
+### 6. Update <a name='subparagraph6'></a>
+
+Write a script that adds a new attribute to a document in the collection <code>school</code>:
+
+* The script should update only document with <code>name="Holberton school"</code> (all of them)
+* The update should add the attribute <code>address</code> with the value “972 Mission street”
+* The database name will be passed as option of <code>mongo</code> command
+
+```
+guillaume@ubuntu:~/$ cat 6-update | mongo my_db
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017/my_db
+MongoDB server version: 3.6.3
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+bye
+guillaume@ubuntu:~/$ 
+guillaume@ubuntu:~/$ cat 4-match | mongo my_db
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017/my_db
+MongoDB server version: 3.6.3
+{ "_id" : ObjectId("5a8fad532b69437b63252406"), "name" : "Holberton school", "address" : "972 Mission street" }
+bye
+guillaume@ubuntu:~/$
+```
+
+---
+
+### 7. Delete by match <a name='subparagraph7'></a>
+
+Write a script that deletes all documents with <code>name="Holberton school"</code> in the collection <code>school</code>:
+
+* The database name will be passed as option of <code>mongo</code> command
+
+```
+guillaume@ubuntu:~/$ cat 7-delete | mongo my_db
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017/my_db
+MongoDB server version: 3.6.3
+{ "acknowledged" : true, "deletedCount" : 1 }
+bye
+guillaume@ubuntu:~/$ 
+guillaume@ubuntu:~/$ cat 4-match | mongo my_db
+MongoDB shell version v3.6.3
+connecting to: mongodb://127.0.0.1:27017/my_db
+MongoDB server version: 3.6.3
+bye
+guillaume@ubuntu:~/$
+```
+
+---
+
+### 8. List all documents in Python <a name='subparagraph8'></a>
+
+Write a Python function that lists all documents in a collection:
+
+* Prototype: <code>def list_all(mongo_collection):</code>
+* Return an empty list if no document in the collection
+* <code>mongo_collection</code> will be the <code>pymongo</code> collection object
+
+```
+guillaume@ubuntu:~/$ cat 8-main.py
 #!/usr/bin/env python3
-"""
-Main file
-"""
+""" 8-main """
+from pymongo import MongoClient
+list_all = __import__('8-all').list_all
 
-index_range = __import__('0-simple_helper_function').index_range
+if __name__ == "__main__":
+    client = MongoClient('mongodb://127.0.0.1:27017')
+    school_collection = client.my_db.school
+    schools = list_all(school_collection)
+    for school in schools:
+        print("[{}] {}".format(school.get('_id'), school.get('name')))
 
-res = index_range(1, 7)
-print(type(res))
-print(res)
-
-res = index_range(page=3, page_size=15)
-print(type(res))
-print(res)
-
-bob@dylan:~$ ./0-main.py
-<class 'tuple'>
-(0, 7)
-<class 'tuple'>
-(30, 45)
-bob@dylan:~$
+guillaume@ubuntu:~/$ 
+guillaume@ubuntu:~/$ ./8-main.py
+[5a8f60cfd4321e1403ba7ab9] Holberton school
+[5a8f60cfd4321e1403ba7aba] UCSD
+guillaume@ubuntu:~/$
 ```
 
 ---
 
-### 1. Simple pagination <a name='subparagraph1'></a>
+### 9. Insert a document in Python <a name='subparagraph9'></a>
 
-Copy <code>index_range</code> from the previous task and the following class into your code
+Write a Python function that inserts a new document in a collection based on <code>kwargs</code>:
 
-```
-import csv
-import math
-from typing import List
-
-
-class Server:
-    """Server class to paginate a database of popular baby names.
-    """
-    DATA_FILE = "Popular_Baby_Names.csv"
-
-    def __init__(self):
-        self.__dataset = None
-
-    def dataset(self) -> List[List]:
-        """Cached dataset
-        """
-        if self.__dataset is None:
-            with open(self.DATA_FILE) as f:
-                reader = csv.reader(f)
-                dataset = [row for row in reader]
-            self.__dataset = dataset[1:]
-
-        return self.__dataset
-
-    def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-            pass
-```
-
-Implement a method named <code>get_page</code> that takes two integer arguments <code>page</code> with default value 1 and <code>page_size</code> with default value 10.
-
-* You have to use this <a href="/rltoken/7IKLZ7i4pO4MJ9CQoGHfVw" target="_blank" title="CSV file">CSV file</a> (same as the one presented at the top of the project)
-* Use <code>assert</code> to verify that both arguments are integers greater than 0.
-* Use <code>index_range</code> to find the correct indexes to paginate the dataset correctly and return the appropriate page of the dataset (i.e. the correct list of rows).
-* If the input arguments are out of range for the dataset, an empty list should be returned.
+* Prototype: <code>def insert_school(mongo_collection, **kwargs):</code>
+* <code>mongo_collection</code> will be the <code>pymongo</code> collection object
+* Returns the new <code>_id</code>
 
 ```
-bob@dylan:~$  wc -l Popular_Baby_Names.csv 
-19419 Popular_Baby_Names.csv
-bob@dylan:~$  
-bob@dylan:~$ head Popular_Baby_Names.csv
-Year of Birth,Gender,Ethnicity,Child's First Name,Count,Rank
-2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Olivia,172,1
-2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Chloe,112,2
-2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Sophia,104,3
-2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Emma,99,4
-2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Emily,99,4
-2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Mia,79,5
-2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Charlotte,59,6
-2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Sarah,57,7
-2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Isabella,56,8
-bob@dylan:~$  
-bob@dylan:~$  cat 1-main.py
+guillaume@ubuntu:~/$ cat 9-main.py
 #!/usr/bin/env python3
-"""
-Main file
-"""
+""" 9-main """
+from pymongo import MongoClient
+list_all = __import__('8-all').list_all
+insert_school = __import__('9-insert_school').insert_school
 
-Server = __import__('1-simple_pagination').Server
+if __name__ == "__main__":
+    client = MongoClient('mongodb://127.0.0.1:27017')
+    school_collection = client.my_db.school
+    new_school_id = insert_school(school_collection, name="UCSF", address="505 Parnassus Ave")
+    print("New school created: {}".format(new_school_id))
 
-server = Server()
+    schools = list_all(school_collection)
+    for school in schools:
+        print("[{}] {} {}".format(school.get('_id'), school.get('name'), school.get('address', "")))
 
-try:
-    should_err = server.get_page(-10, 2)
-except AssertionError:
-    print("AssertionError raised with negative values")
-
-try:
-    should_err = server.get_page(0, 0)
-except AssertionError:
-    print("AssertionError raised with 0")
-
-try:
-    should_err = server.get_page(2, 'Bob')
-except AssertionError:
-    print("AssertionError raised when page and/or page_size are not ints")
-
-
-print(server.get_page(1, 3))
-print(server.get_page(3, 2))
-print(server.get_page(3000, 100))
-
-bob@dylan:~$ 
-bob@dylan:~$ ./1-main.py
-AssertionError raised with negative values
-AssertionError raised with 0
-AssertionError raised when page and/or page_size are not ints
-[['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Olivia', '172', '1'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Chloe', '112', '2'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Sophia', '104', '3']]
-[['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Emily', '99', '4'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Mia', '79', '5']]
-[]
-bob@dylan:~$
+guillaume@ubuntu:~/$ 
+guillaume@ubuntu:~/$ ./9-main.py
+New school created: 5a8f60cfd4321e1403ba7abb
+[5a8f60cfd4321e1403ba7ab9] Holberton school
+[5a8f60cfd4321e1403ba7aba] UCSD
+[5a8f60cfd4321e1403ba7abb] UCSF 505 Parnassus Ave
+guillaume@ubuntu:~/$
 ```
 
 ---
 
-### 2. Hypermedia pagination <a name='subparagraph2'></a>
+### 10. Change school topics <a name='subparagraph10'></a>
 
-Replicate code from the previous task.
+Write a Python function that changes all topics of a school document based on the name:
 
-Implement a <code>get_hyper</code> method that takes the same arguments (and defaults) as <code>get_page</code> and returns a dictionary containing the following key-value pairs:
-
-* <code>page_size</code>: the length of the returned dataset page
-* <code>page</code>: the current page number
-* <code>data</code>: the dataset page (equivalent to return from previous task)
-* <code>next_page</code>: number of the next page, <code>None</code> if no next page
-* <code>prev_page</code>: number of the previous page, <code>None</code> if no previous page
-* <code>total_pages</code>: the total number of pages in the dataset as an integer
-
-Make sure to reuse <code>get_page</code> in your implementation.
-
-You can use the <code>math</code> module if necessary.
+* Prototype: <code>def update_topics(mongo_collection, name, topics):</code>
+* <code>mongo_collection</code> will be the <code>pymongo</code> collection object
+* <code>name</code> (string) will be the school name to update
+* <code>topics</code> (list of strings) will be the list of topics approached in the school
 
 ```
-bob@dylan:~$ cat 2-main.py
+guillaume@ubuntu:~/$ cat 10-main.py
 #!/usr/bin/env python3
-"""
-Main file
-"""
+""" 10-main """
+from pymongo import MongoClient
+list_all = __import__('8-all').list_all
+update_topics = __import__('10-update_topics').update_topics
 
-Server = __import__('2-hypermedia_pagination').Server
+if __name__ == "__main__":
+    client = MongoClient('mongodb://127.0.0.1:27017')
+    school_collection = client.my_db.school
+    update_topics(school_collection, "Holberton school", ["Sys admin", "AI", "Algorithm"])
 
-server = Server()
+    schools = list_all(school_collection)
+    for school in schools:
+        print("[{}] {} {}".format(school.get('_id'), school.get('name'), school.get('topics', "")))
 
-print(server.get_hyper(1, 2))
-print("---")
-print(server.get_hyper(2, 2))
-print("---")
-print(server.get_hyper(100, 3))
-print("---")
-print(server.get_hyper(3000, 100))
+    update_topics(school_collection, "Holberton school", ["iOS"])
 
-bob@dylan:~$ 
-bob@dylan:~$ ./2-main.py
-{'page_size': 2, 'page': 1, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Olivia', '172', '1'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Chloe', '112', '2']], 'next_page': 2, 'prev_page': None, 'total_pages': 9709}
----
-{'page_size': 2, 'page': 2, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Sophia', '104', '3'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Emma', '99', '4']], 'next_page': 3, 'prev_page': 1, 'total_pages': 9709}
----
-{'page_size': 3, 'page': 100, 'data': [['2016', 'FEMALE', 'BLACK NON HISPANIC', 'Londyn', '14', '39'], ['2016', 'FEMALE', 'BLACK NON HISPANIC', 'Amirah', '14', '39'], ['2016', 'FEMALE', 'BLACK NON HISPANIC', 'McKenzie', '14', '39']], 'next_page': 101, 'prev_page': 99, 'total_pages': 6473}
----
-{'page_size': 0, 'page': 3000, 'data': [], 'next_page': None, 'prev_page': 2999, 'total_pages': 195}
-bob@dylan:~$
+    schools = list_all(school_collection)
+    for school in schools:
+        print("[{}] {} {}".format(school.get('_id'), school.get('name'), school.get('topics', "")))
+
+guillaume@ubuntu:~/$ 
+guillaume@ubuntu:~/$ ./10-main.py
+[5a8f60cfd4321e1403ba7abb] UCSF 
+[5a8f60cfd4321e1403ba7aba] UCSD 
+[5a8f60cfd4321e1403ba7ab9] Holberton school ['Sys admin', 'AI', 'Algorithm']
+[5a8f60cfd4321e1403ba7abb] UCSF 
+[5a8f60cfd4321e1403ba7aba] UCSD 
+[5a8f60cfd4321e1403ba7ab9] Holberton school ['iOS']
+guillaume@ubuntu:~/$
 ```
 
 ---
 
-### 3. Deletion-resilient hypermedia pagination <a name='subparagraph3'></a>
+### 11. Where can I learn Python? <a name='subparagraph11'></a>
 
-The goal here is that if between two queries, certain rows are removed from the dataset, the user does not miss items from dataset when changing page.
+Write a Python function that returns the list of school having a specific topic:
 
-Start <code>3-hypermedia_del_pagination.py</code> with this code:
+* Prototype: <code>def schools_by_topic(mongo_collection, topic):</code>
+* <code>mongo_collection</code> will be the <code>pymongo</code> collection object
+* <code>topic</code> (string) will be topic searched
 
 ```
+guillaume@ubuntu:~/$ cat 11-main.py
 #!/usr/bin/env python3
-"""
-Deletion-resilient hypermedia pagination
-"""
+""" 11-main """
+from pymongo import MongoClient
+list_all = __import__('8-all').list_all
+insert_school = __import__('9-insert_school').insert_school
+schools_by_topic = __import__('11-schools_by_topic').schools_by_topic
 
-import csv
-import math
-from typing import List
+if __name__ == "__main__":
+    client = MongoClient('mongodb://127.0.0.1:27017')
+    school_collection = client.my_db.school
 
+    j_schools = [
+        { 'name': "Holberton school", 'topics': ["Algo", "C", "Python", "React"]},
+        { 'name': "UCSF", 'topics': ["Algo", "MongoDB"]},
+        { 'name': "UCLA", 'topics': ["C", "Python"]},
+        { 'name': "UCSD", 'topics': ["Cassandra"]},
+        { 'name': "Stanford", 'topics': ["C", "React", "Javascript"]}
+    ]
+    for j_school in j_schools:
+        insert_school(school_collection, **j_school)
 
-class Server:
-    """Server class to paginate a database of popular baby names.
-    """
-    DATA_FILE = "Popular_Baby_Names.csv"
+    schools = schools_by_topic(school_collection, "Python")
+    for school in schools:
+        print("[{}] {} {}".format(school.get('_id'), school.get('name'), school.get('topics', "")))
 
-    def __init__(self):
-        self.__dataset = None
-        self.__indexed_dataset = None
-
-    def dataset(self) -> List[List]:
-        """Cached dataset
-        """
-        if self.__dataset is None:
-            with open(self.DATA_FILE) as f:
-                reader = csv.reader(f)
-                dataset = [row for row in reader]
-            self.__dataset = dataset[1:]
-
-        return self.__dataset
-
-    def indexed_dataset(self) -> Dict[int, List]:
-        """Dataset indexed by sorting position, starting at 0
-        """
-        if self.__indexed_dataset is None:
-            dataset = self.dataset()
-            truncated_dataset = dataset[:1000]
-            self.__indexed_dataset = {
-                i: dataset[i] for i in range(len(dataset))
-            }
-        return self.__indexed_dataset
-
-    def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
-            pass
+guillaume@ubuntu:~/$ 
+guillaume@ubuntu:~/$ ./11-main.py
+[5a90731fd4321e1e5a3f53e3] Holberton school ['Algo', 'C', 'Python', 'React']
+[5a90731fd4321e1e5a3f53e5] UCLA ['C', 'Python']
+guillaume@ubuntu:~/$
 ```
 
-Implement a <code>get_hyper_index</code> method with two integer arguments: <code>index</code> with a <code>None</code> default value and <code>page_size</code> with default value of 10.
+---
 
-* The method should return a dictionary with the following key-value pairs:
+### 12. Log stats <a name='subparagraph12'></a>
+
+Write a Python script that provides some stats about Nginx logs stored in MongoDB:
+
+* Database: <code>logs</code>
+* Collection: <code>nginx</code>
+* Display (same as the example):
 
 
-  * <code>index</code>: the current start index of the return page. That is the index of the first item in the current page. For example if requesting page 3 with <code>page_size</code> 20, and no data was removed from the dataset, the current index should be 60.
-  * <code>next_index</code>: the next index to query with. That should be the index of the first item after the last item on the current page.
-  * <code>page_size</code>: the current page size
-  * <code>data</code>: the actual page of the dataset
+  * first line: <code>x logs</code> where <code>x</code> is the number of documents in this collection
+  * second line: <code>Methods:</code>
+  * 5 lines with the number of documents with the <code>method</code> = <code>["GET", "POST", "PUT", "PATCH", "DELETE"]</code> in this order (see example below - warning: it’s a tabulation before each line)
+  * one line with the number of documents with:
 
-<strong>Requirements/Behavior</strong>:
 
-* Use <code>assert</code> to verify that <code>index</code> is in a valid range.
-* If the user queries index 0, <code>page_size</code> 10, they will get rows indexed 0 to 9 included.
-* If they request the next index (10) with <code>page_size</code> 10, but rows 3, 6 and 7 were deleted, the user should still receive rows indexed 10 to 19 included.
+    * <code>method=GET</code>
+    * <code>path=/status</code>
+
+You can use this dump as data sample: <a href="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/misc/2020/6/645541f867bb79ae47b7a80922e9a48604a569b9.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20251201%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20251201T124813Z&amp;X-Amz-Expires=345600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=7ea65f8b8e5408e1b22c2f93f967517af25e4151511b9be5e6b39983cd832bff" target="_blank" title="dump.zip">dump.zip</a>
+
+The output of your script <strong>must be exactly the same as the example</strong>
 
 ```
-bob@dylan:~$ cat 3-main.py
-#!/usr/bin/env python3
-"""
-Main file
-"""
-
-Server = __import__('3-hypermedia_del_pagination').Server
-
-server = Server()
-
-server.indexed_dataset()
-
-try:
-    server.get_hyper_index(300000, 100)
-except AssertionError:
-    print("AssertionError raised when out of range")        
-
-
-index = 3
-page_size = 2
-
-print("Nb items: {}".format(len(server._Server__indexed_dataset)))
-
-# 1- request first index
-res = server.get_hyper_index(index, page_size)
-print(res)
-
-# 2- request next index
-print(server.get_hyper_index(res.get('next_index'), page_size))
-
-# 3- remove the first index
-del server._Server__indexed_dataset[res.get('index')]
-print("Nb items: {}".format(len(server._Server__indexed_dataset)))
-
-# 4- request again the initial index -> the first data retreives is not the same as the first request
-print(server.get_hyper_index(index, page_size))
-
-# 5- request again initial next index -> same data page as the request 2-
-print(server.get_hyper_index(res.get('next_index'), page_size))
-
-bob@dylan:~$ 
-bob@dylan:~$ ./3-main.py
-AssertionError raised when out of range
-Nb items: 19418
-{'index': 3, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Emma', '99', '4'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Emily', '99', '4']], 'page_size': 2, 'next_index': 5}
-{'index': 5, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Mia', '79', '5'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Charlotte', '59', '6']], 'page_size': 2, 'next_index': 7}
-Nb items: 19417
-{'index': 3, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Emily', '99', '4'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Mia', '79', '5']], 'page_size': 2, 'next_index': 6}
-{'index': 5, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Mia', '79', '5'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Charlotte', '59', '6']], 'page_size': 2, 'next_index': 7}
-bob@dylan:~$
+guillaume@ubuntu:~/$ curl -o dump.zip -s "https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-webstack/411/dump.zip"
+guillaume@ubuntu:~/$ 
+guillaume@ubuntu:~/$ unzip dump.zip
+Archive:  dump.zip
+   creating: dump/
+   creating: dump/logs/
+  inflating: dump/logs/nginx.metadata.json  
+  inflating: dump/logs/nginx.bson    
+guillaume@ubuntu:~/$ 
+guillaume@ubuntu:~/$ mongorestore dump
+2018-02-23T20:12:37.807+0000    preparing collections to restore from
+2018-02-23T20:12:37.816+0000    reading metadata for logs.nginx from dump/logs/nginx.metadata.json
+2018-02-23T20:12:37.825+0000    restoring logs.nginx from dump/logs/nginx.bson
+2018-02-23T20:12:40.804+0000    [##......................]  logs.nginx  1.21MB/13.4MB  (9.0%)
+2018-02-23T20:12:43.803+0000    [#####...................]  logs.nginx  2.88MB/13.4MB  (21.4%)
+2018-02-23T20:12:46.803+0000    [#######.................]  logs.nginx  4.22MB/13.4MB  (31.4%)
+2018-02-23T20:12:49.803+0000    [##########..............]  logs.nginx  5.73MB/13.4MB  (42.7%)
+2018-02-23T20:12:52.803+0000    [############............]  logs.nginx  7.23MB/13.4MB  (53.8%)
+2018-02-23T20:12:55.803+0000    [###############.........]  logs.nginx  8.53MB/13.4MB  (63.5%)
+2018-02-23T20:12:58.803+0000    [#################.......]  logs.nginx  10.1MB/13.4MB  (74.9%)
+2018-02-23T20:13:01.803+0000    [####################....]  logs.nginx  11.3MB/13.4MB  (83.9%)
+2018-02-23T20:13:04.803+0000    [######################..]  logs.nginx  12.8MB/13.4MB  (94.9%)
+2018-02-23T20:13:06.228+0000    [########################]  logs.nginx  13.4MB/13.4MB  (100.0%)
+2018-02-23T20:13:06.230+0000    no indexes to restore
+2018-02-23T20:13:06.231+0000    finished restoring logs.nginx (94778 documents)
+2018-02-23T20:13:06.232+0000    done
+guillaume@ubuntu:~/$ 
+guillaume@ubuntu:~/$ ./12-log_stats.py 
+94778 logs
+Methods:
+    method GET: 93842
+    method POST: 229
+    method PUT: 0
+    method PATCH: 0
+    method DELETE: 0
+47415 status check
+guillaume@ubuntu:~/$
 ```
 
 ---

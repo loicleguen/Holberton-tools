@@ -5,16 +5,16 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="google" content="notranslate">
-    <title>Project: Python - Async Comprehension | Holberton Thonon-les-Bains, France Intranet</title>
+    <title>Project: Pagination | Holberton Thonon-les-Bains, France Intranet</title>
       <style data-tippy-stylesheet="">.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;white-space:normal;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}</style><link rel="stylesheet" href="https://use.typekit.net/xgz4ilr.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
       <link rel="stylesheet" href="/assets/application-b0870db4f62e97bdbee223a8756bc5b96104d6af1f60fd0e19c83830b08e2b04.css" media="all">
       <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-E61MDMQF4S&amp;cx=c&amp;_slc=1"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script src="https://www.gstatic.com/charts/loader.js"></script>
       <meta name="action-cable-url" content="/cable">
-      <script src="/assets/application-411b7528760d0c57547b56e96fc43c2222a550e49819c87482374b012870ed04.js"></script>
+      <script src="/assets/application-963b73707af4026fa312e470f3b3344cfd47dcca398bfbd52d715c25a6686c9f.js"></script>
       <link rel="icon" type="image/x-icon" href="/favicon.ico">
       <meta name="csrf-param" content="authenticity_token">
-<meta name="csrf-token" content="zc1ujJJhhmhenqkx7OFAA9ZJnYlp0YH1_VS0wILE4jcVWKxRfe_zKdgrAKNDH2Xmhwg4dW51PIrqzy5sHaEuUw">
+<meta name="csrf-token" content="NdQtWCMJBl6S_rTkvJN1BSPLTF_jXhqGkAhKvfzUtMikFgdduV943G6GR8aXQnr6hRREthn1EjvY1h2RTJGCwQ">
       <link rel="apple-touch-icon" href="/apple-touch-icon.png">
       <!-- Google OAuth -->
         <script src="https://accounts.google.com/gsi/client" async="" defer=""></script>
@@ -33,7 +33,7 @@
       window.I18n = window.I18n || {};
       window.I18n.locale = 'en';
       window.I18n.t = function(key, defaultValue) {
-        const translations = {"projects.metadata.by":"By","projects.metadata.weight":"Weight","projects.metadata.manual_review_behavior":"Manual review behavior","projects.metadata.synchronous_manual_review":"Synchronous manual review","projects.metadata.synchronous_tooltip":"Synchronous (Interview mode): Student and reviewer need to review the project together.","projects.metadata.asynchronous_manual_review":"Asynchronous manual review","projects.metadata.project_to_be_done_in_teams":"Project to be done in teams of %{count} people","projects.metadata.your_team":"(your team: %{members})","projects.metadata.ongoing_project_started":"Ongoing project - started","projects.metadata.must_end_by":", must end by","projects.metadata.project_will_start":"Project will start","projects.metadata.ongoing_second_chance":"Ongoing second chance project - started","projects.metadata.project_over":"Project over - took place from","projects.metadata.to":"to","projects.metadata.you_are_done_with":"- you're done with","projects.metadata.of_tasks":"% of tasks.","projects.metadata.was_released_at":"was released at","projects.metadata.will_be_released_at":"will be released at","projects.metadata.manual_qa_review_done":"Manual QA review was done by","projects.metadata.on":"\u003cspan class=\"translation_missing\" title=\"translation missing: en.projects.metadata.on\"\u003eOn\u003c/span\u003e","projects.metadata.manual_qa_review_must_be_done":"Manual QA review must be done","projects.metadata.request_when_done":"(request it when you are done with the project)","projects.metadata.synchronous_manual_review_note":"Synchronous manual review:","projects.metadata.you_and_reviewer_together":"you and the reviewer need to review the project together","projects.metadata.auto_review_launched_deadline":"An auto review will be launched at the deadline","projects.review.please_review_all_manual_checks":"Please review all the","projects.review.manual_checks":"manual checks","projects.review.before_launch":"before you launch the project review.","projects.review.please_review_all_tasks":"Please review","projects.review.all_the_tasks":"all the tasks","projects.review.before_peer_review":"before you start the peer review.","projects.review.processing_wait":"Processing... Please wait...","projects.review.go_to_home":"Go to home","projects.review.reviewing_all_tasks":"Reviewing all the tasks","projects.review.review_all_tasks":"Review all the tasks","projects.review.preparing_manual_review":"Preparing your manual review","projects.review.ready_for_review":"Ready for my review","projects.review.open_next_project":"Open the next project","projects.review.skip_project":"Skip this project","projects.review.connect_with_peers":"Connect with","projects.review.one_of_your_peers":"one of your peers","projects.review.now_to_review":"now to review your work together.","projects.review.contact_one_of_peers":"Contact one of your peers","projects.review.manual_qa_review_was_done_by":"Manual QA review was done by","projects.review.manual_qa_review_must_be_done":"Manual QA review must be done","projects.review.request_when_done_project":"(request it when you are done with the project)","projects.review.synchronous_manual_review_note":"Synchronous manual review:","projects.review.you_and_reviewer_together":"you and the reviewer need to review the project together","projects.review.auto_review_launched_deadline":"An auto review will be launched at the deadline","sandboxes.error_fetching":"Error while fetching sandboxes. Try again later.","sandboxes.error_creating":"Error while creating the sandbox. Try again later.","sandboxes.creating_sandbox":"Creating sandbox","sandboxes.loading":"Loading...","sandboxes.new_sandbox":"New sandbox","sandboxes.no_sandboxes_yet":"No sandboxes yet!","sandboxes.minutes_remaining":"minutes remaining","sandboxes.add_more_time":"Add more time","sandboxes.delete_sandbox":"Delete sandbox","sandboxes.generating_ssh_config":"Generating ssh config...","sandboxes.status_pending":"PENDING","sandboxes.status_running":"RUNNING","sandboxes.status_creating":"CREATING","sandboxes.status_destroying":"DESTROYING","sandboxes.ttyd_explanation":"This button opens a web-based terminal in a new tab, giving you direct command-line access to your sandbox.","sandboxes.ttyd_usage":"You can use this terminal just like a regular terminal: run commands, edit files, compile code, etc.","sandboxes.http_port_80_explanation":"This button opens a new tab in your browser to port 80 of the sandbox.","sandboxes.http_port_80_no_service":"By default, no service is listening on this port, so if you want to test your website for example, you need to start a web server first.","sandboxes.http_port_80_examples":"Examples:","sandboxes.http_port_80_python":"Using Python","sandboxes.http_port_80_nginx":"Or install and start nginx","common.help":"Help","projects.score_mandatory_tasks":"Score Mandatory Tasks","projects.score_advanced_tasks":"Score Advanced Tasks","projects.advanced":"\u003cspan class=\"translation_missing\" title=\"translation missing: en.projects.advanced\"\u003eAdvanced\u003c/span\u003e","projects.advanced_abbr":"\u003cspan class=\"translation_missing\" title=\"translation missing: en.projects.advanced_abbr\"\u003eAdvanced Abbr\u003c/span\u003e","projects.quiz.hide_quiz":"(Hide quiz)","projects.quiz.show_quiz":"(Show quiz)","projects.review.score":"Score","projects.review.congratulations_made_it":"Congratulations! You made it!","projects.review.still_tasks_to_work_on":"Still some tasks to work on!","projects.review.good_job_can_grab_points":"Good job! You can still grab some points!","projects.show.my_peers":"My peers:","projects.show.from_other_cohorts":"From other cohorts:","projects.show.load_from_other_cohorts":"Load from other cohorts","tasks.checks_completed":"Checks completed","tasks.congratulations":"Congratulations!","tasks.all_tests_passed_success":"All tests passed successfully!","tasks.ready_for_next_mission":"You are ready for your next mission!","tasks.some_checks_failing":"Some checks are failing. Make sure you fix them before starting a new review","tasks.you_got_this":"You got this!","tasks.result":"Result:","tasks.close":"Close","tasks.requirement":"Requirement","tasks.correct_output_of_code":"Correct output of your code","tasks.efficiency":"Efficiency","tasks.correct_answer":"Correct answer","tasks.success":"success","tasks.fail":"fail","tasks.skipped_previous_check_failed":"Skipped - previous check failed","tasks.skipped_previous_check_failed_prefix":"Skipped - previous check failed - "};
+        const translations = {"projects.metadata.by":"By","projects.metadata.weight":"Weight","projects.metadata.manual_review_behavior":"Manual review behavior","projects.metadata.synchronous_manual_review":"Synchronous manual review","projects.metadata.synchronous_tooltip":"Synchronous (Interview mode): Student and reviewer need to review the project together.","projects.metadata.asynchronous_manual_review":"Asynchronous manual review","projects.metadata.project_to_be_done_in_teams":"Project to be done in teams of %{count} people","projects.metadata.your_team":"(your team: %{members})","projects.metadata.ongoing_project_started":"Ongoing project - started","projects.metadata.must_end_by":", must end by","projects.metadata.project_will_start":"Project will start","projects.metadata.ongoing_second_chance":"Ongoing second chance project - started","projects.metadata.project_over":"Project over - took place from","projects.metadata.to":"to","projects.metadata.you_are_done_with":"- you're done with","projects.metadata.of_tasks":"% of tasks.","projects.metadata.was_released_at":"was released at","projects.metadata.will_be_released_at":"will be released at","projects.metadata.manual_qa_review_done":"Manual QA review was done by","projects.metadata.on":"\u003cspan class=\"translation_missing\" title=\"translation missing: en.projects.metadata.on\"\u003eOn\u003c/span\u003e","projects.metadata.manual_qa_review_must_be_done":"Manual QA review must be done","projects.metadata.request_when_done":"(request it when you are done with the project)","projects.metadata.synchronous_manual_review_note":"Synchronous manual review:","projects.metadata.you_and_reviewer_together":"you and the reviewer need to review the project together","projects.metadata.auto_review_launched_deadline":"An auto review will be launched at the deadline","projects.review.please_review_all_manual_checks":"Please review all the","projects.review.manual_checks":"manual checks","projects.review.before_launch":"before you launch the project review.","projects.review.please_review_all_tasks":"Please review","projects.review.all_the_tasks":"all the tasks","projects.review.before_peer_review":"before you start the peer review.","projects.review.processing_wait":"Processing... Please wait...","projects.review.go_to_home":"Go to home","projects.review.reviewing_all_tasks":"Reviewing all the tasks","projects.review.review_all_tasks":"Review all the tasks","projects.review.preparing_manual_review":"Preparing your manual review","projects.review.ready_for_review":"Ready for my review","projects.review.open_next_project":"Open the next project","projects.review.skip_project":"Skip this project","projects.review.connect_with_peers":"Connect with","projects.review.one_of_your_peers":"one of your peers","projects.review.now_to_review":"now to review your work together.","projects.review.contact_one_of_peers":"Contact one of your peers","projects.review.manual_qa_review_was_done_by":"Manual QA review was done by","projects.review.manual_qa_review_must_be_done":"Manual QA review must be done","projects.review.request_when_done_project":"(request it when you are done with the project)","projects.review.synchronous_manual_review_note":"Synchronous manual review:","projects.review.you_and_reviewer_together":"you and the reviewer need to review the project together","projects.review.auto_review_launched_deadline":"An auto review will be launched at the deadline","sandboxes.error_fetching":"Error while fetching sandboxes. Try again later.","sandboxes.error_creating":"Error while creating the sandbox. Try again later.","sandboxes.creating_sandbox":"Creating sandbox","sandboxes.loading":"Loading...","sandboxes.new_sandbox":"New sandbox","sandboxes.no_sandboxes_yet":"No sandboxes yet!","sandboxes.minutes_remaining":"minutes remaining","sandboxes.add_more_time":"Add more time","sandboxes.delete_sandbox":"Delete sandbox","sandboxes.generating_ssh_config":"Generating ssh config...","sandboxes.status_pending":"PENDING","sandboxes.status_running":"RUNNING","sandboxes.status_creating":"CREATING","sandboxes.status_destroying":"DESTROYING","sandboxes.ttyd_explanation":"This button opens a web-based terminal in a new tab, giving you direct command-line access to your sandbox.","sandboxes.ttyd_usage":"You can use this terminal just like a regular terminal: run commands, edit files, compile code, etc.","sandboxes.http_port_80_explanation":"This button opens a new tab in your browser to port 80 of the sandbox.","sandboxes.http_port_80_no_service":"By default, no service is listening on this port, so if you want to test your website for example, you need to start a web server first.","sandboxes.http_port_80_examples":"Examples:","sandboxes.http_port_80_python":"Using Python","sandboxes.http_port_80_nginx":"Or install and start nginx","common.help":"Help","projects.score_mandatory_tasks":"Score Mandatory Tasks","projects.score_advanced_tasks":"Score Advanced Tasks","projects.advanced":"Advanced","projects.advanced_abbr":"Advan.","projects.quiz.hide_quiz":"(Hide quiz)","projects.quiz.show_quiz":"(Show quiz)","projects.review.score":"Score","projects.review.congratulations_made_it":"Congratulations! You made it!","projects.review.still_tasks_to_work_on":"Still some tasks to work on!","projects.review.good_job_can_grab_points":"Good job! You can still grab some points!","projects.show.my_peers":"My peers:","projects.show.from_other_cohorts":"From other cohorts:","projects.show.load_from_other_cohorts":"Load from other cohorts","tasks.checks_completed":"Checks completed","tasks.congratulations":"Congratulations!","tasks.all_tests_passed_success":"All tests passed successfully!","tasks.ready_for_next_mission":"You are ready for your next mission!","tasks.some_checks_failing":"Some checks are failing. Make sure you fix them before starting a new review","tasks.you_got_this":"You got this!","tasks.result":"Result:","tasks.close":"Close","tasks.requirement":"Requirement","tasks.correct_output_of_code":"Correct output of your code","tasks.efficiency":"Efficiency","tasks.correct_answer":"Correct answer","tasks.success":"success","tasks.fail":"fail","tasks.skipped_previous_check_failed":"Skipped - previous check failed","tasks.skipped_previous_check_failed_prefix":"Skipped - previous check failed - "};
         return translations[key] || defaultValue || key;
       };
     </script>
@@ -200,14 +200,14 @@
 </a>    </div>
 
 
-  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
-    <a href="/users/my_profile">
-        <div class="image ">
-          <div class="inner" style="background-image: url('/images/missing/profile.png')"></div>
-        </div>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+      <a href="/users/my_profile">
+          <div class="image ">
+            <div class="inner" style="background-image: url('/images/missing/profile.png')"></div>
+          </div>
 
-      <div class="visible-xs">My Profile</div>
-</a>  </div>
+        <div class="visible-xs">My Profile</div>
+</a>    </div>
 </li>
 
 
@@ -342,14 +342,14 @@
 </a>    </div>
 
 
-  <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
-    <a href="/users/my_profile">
-        <div class="image ">
-          <div class="inner" style="background-image: url('/images/missing/profile.png')"></div>
-        </div>
+    <div data-container="body" data-placement="right" data-toggle="tooltip" title="" data-original-title="My Profile">
+      <a href="/users/my_profile">
+          <div class="image ">
+            <div class="inner" style="background-image: url('/images/missing/profile.png')"></div>
+          </div>
 
-      <div class="visible-xs">My Profile</div>
-</a>  </div>
+        <div class="visible-xs">My Profile</div>
+</a>    </div>
 </li>
 
 
@@ -365,10 +365,10 @@
       <div class="d-flex flex-column" style="line-height: 16px">
         <span class="fs-4 fw-600">
             [C#27]
-          Foundations v2.1 - Part 2
+          Foundations v2.1 - Part 3
         </span>
         <span class="fs-small text-muted">
-          Average: <span class="fw-500">100.0%</span>
+          Average: <span class="fw-500">%</span>
         </span>
       </div>
       <div class="d-flex flex-column justify-content-center">
@@ -420,7 +420,7 @@
                   HBnB v2
                 </span>
                 <span class="text-muted">
-                  Average: <span class="fw-500">97.7%
+                  Average: <span class="fw-500">98.28%
                           </span>
                 </span>
               </div>
@@ -437,6 +437,21 @@
                 <span class="text-muted">
                   Average: <span class="fw-500">100.0%
                       ( Technical: 100.0%&nbsp;-&nbsp;Professional: 100.0%)
+                          </span>
+                </span>
+              </div>
+            </div>
+</a>        </li>
+        <li>
+          <a class="" href="/curriculums/510/observe/88282">
+            <div class="align-items-center d-flex py-2">
+              <div class="d-flex flex-column" style="line-height: 16px">
+                <span class="fs-4 fw-500">
+                    [C#27]
+                  Foundations v2.1 - Part 3
+                </span>
+                <span class="text-muted">
+                  Average: <span class="fw-500">%
                           </span>
                 </span>
               </div>
@@ -459,7 +474,7 @@
 <div class="project row container-max" id="project-show-container">
 
     <div class="sm-gap">
-    <div data-react-class="projects/ProjectHeader" data-react-props="{&quot;metadata&quot;:{&quot;level&quot;:&quot;Master&quot;,&quot;author&quot;:&quot;Emmanuel Turlay, Staff Software Engineer at Cruise&quot;,&quot;weight&quot;:1,&quot;migrated_to_sasheck&quot;:true,&quot;task_level_review_type&quot;:&quot;Your score will be updated as you progress.&quot;,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_manual_correction&quot;:false}},&quot;project&quot;:{&quot;completion&quot;:100.0,&quot;id&quot;:2344,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/001_color-bb105595db22648e67fe1bf13ccc170165764f9c481034cdfd49dbb416af34af.png&quot;,&quot;name&quot;:&quot;Python - Async Comprehension&quot;,&quot;score&quot;:{&quot;mandatory&quot;:100.0,&quot;optional&quot;:null},&quot;tasksCount&quot;:0},&quot;slackLink&quot;:null,&quot;tags&quot;:[],&quot;videoRoomLink&quot;:null}" data-react-cache-id="projects/ProjectHeader-0"><div class="panel panel-tile project-header"><div class="panel-body" style="align-items: center; display: flex;"><div class="pathway" style="padding: 16px;"><div class="project-circle project-circle-on-tile" style="border-radius: 100%; height: 150px; margin: auto; padding: 5px; width: 150px;"><div data-test-id="CircularProgressbarWithChildren"><div style="position: relative; width: 100%; height: 100%;"><svg class="CircularProgressbar " viewBox="0 0 100 100" data-test-id="CircularProgressbar" style="height: 140px; vertical-align: middle; width: 140px;"><path class="CircularProgressbar-trail" d="
+    <div data-react-class="projects/ProjectHeader" data-react-props="{&quot;metadata&quot;:{&quot;level&quot;:&quot;Master&quot;,&quot;author&quot;:&quot;Emmanuel Turlay, Staff Software Engineer at Cruise&quot;,&quot;weight&quot;:1,&quot;migrated_to_sasheck&quot;:true,&quot;task_level_review_type&quot;:&quot;Your score will be updated as you progress.&quot;,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_manual_correction&quot;:false}},&quot;project&quot;:{&quot;completion&quot;:0.0,&quot;id&quot;:2351,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/001_color-bb105595db22648e67fe1bf13ccc170165764f9c481034cdfd49dbb416af34af.png&quot;,&quot;name&quot;:&quot;Pagination&quot;,&quot;score&quot;:{&quot;mandatory&quot;:null,&quot;optional&quot;:null},&quot;tasksCount&quot;:0},&quot;slackLink&quot;:null,&quot;tags&quot;:[],&quot;videoRoomLink&quot;:null}" data-react-cache-id="projects/ProjectHeader-0"><div class="panel panel-tile project-header"><div class="panel-body" style="align-items: center; display: flex;"><div class="pathway" style="padding: 16px;"><div class="project-circle project-circle-on-tile" style="border-radius: 100%; height: 150px; margin: auto; padding: 5px; width: 150px;"><div data-test-id="CircularProgressbarWithChildren"><div style="position: relative; width: 100%; height: 100%;"><svg class="CircularProgressbar " viewBox="0 0 100 100" data-test-id="CircularProgressbar" style="height: 140px; vertical-align: middle; width: 140px;"><path class="CircularProgressbar-trail" d="
       M 50,50
       m 0,-48.5
       a 48.5,48.5 0 1 1 0,97
@@ -469,11 +484,11 @@
       m 0,-48.5
       a 48.5,48.5 0 1 1 0,97
       a 48.5,48.5 0 1 1 0,-97
-    " stroke-width="3" fill-opacity="0" style="stroke-dasharray: 304.734px, 304.734px; stroke-dashoffset: 0px;"></path></svg><div data-test-id="CircularProgressbarWithChildren__children" style="position: absolute; width: 100%; height: 100%; margin-top: -100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"><div class="position-relative"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Python - Async Comprehension"><div class="align-items-center d-flex justify-content-center project-circle-body active" style="border-radius: 100%; height: 124px; width: 124px;"><img alt="Project badge" src="/assets/pathway/001_color-bb105595db22648e67fe1bf13ccc170165764f9c481034cdfd49dbb416af34af.png" width="60%"></div></span><div class="p-1 position-absolute project-circle-score text-center" style="border-radius: 10px; width: 125px;"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Score Mandatory Tasks"><span class="d-block">100%</span></span></div></div></div></div></div></div></div><div class="project-info" style="flex-basis: 100%; margin: 16px;"><h1 style="margin: 0px;">Python - Async Comprehension</h1><ul class="list-group metadata" id="project-metadata"><li class="list-group-item"><i aria-hidden="true" class="fa fa-level-up fa-fw"></i> Master</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-user fa-fw"></i> By: Emmanuel Turlay, Staff Software Engineer at Cruise</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-cog fa-fw"></i> Weight: 1</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-check-square fa-fw"></i> Your score will be updated as you progress.</li></ul></div></div></div></div>
+    " stroke-width="3" fill-opacity="0" style="stroke-dasharray: 304.734px, 304.734px; stroke-dashoffset: 304.734px;"></path></svg><div data-test-id="CircularProgressbarWithChildren__children" style="position: absolute; width: 100%; height: 100%; margin-top: -100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"><div class="position-relative"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Pagination"><div class="align-items-center d-flex justify-content-center project-circle-body active" style="border-radius: 100%; height: 124px; width: 124px;"><img alt="Project badge" src="/assets/pathway/001_color-bb105595db22648e67fe1bf13ccc170165764f9c481034cdfd49dbb416af34af.png" width="60%"></div></span></div></div></div></div></div></div><div class="project-info" style="flex-basis: 100%; margin: 16px;"><h1 style="margin: 0px;">Pagination</h1><ul class="list-group metadata" id="project-metadata"><li class="list-group-item"><i aria-hidden="true" class="fa fa-level-up fa-fw"></i> Master</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-user fa-fw"></i> By: Emmanuel Turlay, Staff Software Engineer at Cruise</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-cog fa-fw"></i> Weight: 1</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-check-square fa-fw"></i> Your score will be updated as you progress.</li></ul></div></div></div></div>
   </div>
 
 
-  <div id="project_id" class="d-none" data-project-id="2344"></div>
+  <div id="project_id" class="d-none" data-project-id="2351"></div>
 
 
 
@@ -483,64 +498,63 @@
       </ul>
       <div class="tab-content mt-4">
         <div role="tabpanel" class="tab-pane active" id="description">
-              <div class="panel panel-default">
-    <div class="panel-body">
-      <p>
-        <em>For this project, we expect you to look at these concepts:</em>
-      </p>
-
-      <ul>
-          <li>
-            <a target="_blank" href="/concepts/1173">Python - Asynchronous execution</a>
-          </li>
-          <li>
-            <a target="_blank" href="/concepts/1174">Python - Asynchronous Programming</a>
-          </li>
-      </ul>
-    </div>
-  </div>
-
           <div class="panel panel-default position-relative" id="project-description">
   <div class="panel-body text-justify">
-    <p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2019/12/ee85b9f67c384e29525b.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20251126%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20251126T072436Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=cff1268c9ff7e68675e89b4ec4d2e43d85bab5a153f720f1b8e3ce6dfffddb22" alt="" loading="lazy" style=""></p>
+    <p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2019/12/3646eb02de6527ca5d83.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20251201%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20251201T080514Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=96813f6042221b717e9fa715df2ceb08533f0a449b5b0eed96060886a1adec81" alt="" loading="lazy" style=""></p>
+
+<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2019/12/746187b76bea1f46030e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20251201%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20251201T080514Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=98c52a28c0fbf6b1cf3223907c5b2ede112943131ff9602219fcb83d535db87d" alt="" loading="lazy" style=""></p>
+
+<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2019/12/746187b76bea1f46030e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20251201%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20251201T080514Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=98c52a28c0fbf6b1cf3223907c5b2ede112943131ff9602219fcb83d535db87d" alt="" loading="lazy" style=""></p>
+
+<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2019/12/746187b76bea1f46030e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20251201%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20251201T080514Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=98c52a28c0fbf6b1cf3223907c5b2ede112943131ff9602219fcb83d535db87d" alt="" loading="lazy" style=""></p>
+
+<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2019/12/746187b76bea1f46030e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20251201%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20251201T080514Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=98c52a28c0fbf6b1cf3223907c5b2ede112943131ff9602219fcb83d535db87d" alt="" loading="lazy" style=""></p>
+
+<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2019/12/746187b76bea1f46030e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20251201%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20251201T080514Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=98c52a28c0fbf6b1cf3223907c5b2ede112943131ff9602219fcb83d535db87d" alt="" loading="lazy" style=""></p>
+
+<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2019/12/746187b76bea1f46030e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20251201%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20251201T080514Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=98c52a28c0fbf6b1cf3223907c5b2ede112943131ff9602219fcb83d535db87d" alt="" loading="lazy" style=""></p>
+
+<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2019/12/746187b76bea1f46030e.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20251201%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20251201T080514Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=98c52a28c0fbf6b1cf3223907c5b2ede112943131ff9602219fcb83d535db87d" alt="" loading="lazy" style=""></p>
+
+<p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2019/12/665ce871c2ecc66a8e71.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20251201%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20251201T080514Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=95156ad3d3eb0df8d57dfbf7fc698fee1643b2f4181fdc94bdafd615573fef5c" alt="" loading="lazy" style=""></p>
 
 <h2>Resources</h2>
 
-<p><strong>Read or watch</strong>:</p>
+<p><strong>Read or watch:</strong></p>
 
 <ul>
-<li><a href="/rltoken/UFCR8qW3nHmEDZZaHqXL7Q" title="PEP 530 -- Asynchronous Comprehensions" target="_blank">PEP 530 – Asynchronous Comprehensions</a></li>
-<li><a href="/rltoken/PAGwxZUyVGBR8EMFGGNnGg" title="What’s New in Python: Asynchronous Comprehensions / Generators" target="_blank">What’s New in Python: Asynchronous Comprehensions / Generators</a></li>
-<li><a href="/rltoken/fOrb8FrWbcYu8evONWj2Kw" title="Type-hints for generators" target="_blank">Type-hints for generators</a></li>
+<li><a href="/rltoken/VeL1Cbu_NVNND6WKJrECbg" title="REST API Design: Pagination" target="_blank">REST API Design: Pagination</a></li>
+<li><a href="/rltoken/Mqk-KBxLRtJaQuWZO-oeAQ" title="HATEOAS" target="_blank">HATEOAS</a></li>
 </ul>
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/7bPmbDGSheZBV1GZtaNBXg" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="/rltoken/cTaCEqXO09xize9ePftDXg" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <ul>
-<li>How to write an asynchronous generator</li>
-<li>How to use async comprehensions</li>
-<li>How to type-annotate generators</li>
+<li>How to paginate a dataset with simple page and page_size parameters</li>
+<li>How to paginate a dataset with hypermedia metadata</li>
+<li>How to paginate in a deletion-resilient manner</li>
 </ul>
 
 <h2>Requirements</h2>
 
-<h3>General</h3>
-
 <ul>
-<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
 <li>All your files will be interpreted/compiled on Ubuntu 20.04 LTS using <code>python3</code> (version 3.9)</li>
 <li>All your files should end with a new line</li>
 <li>The first line of all your files should be exactly <code>#!/usr/bin/env python3</code></li>
 <li>A <code>README.md</code> file, at the root of the folder of the project, is mandatory</li>
-<li>Your code should use the <code>pycodestyle</code> style (version 2.5.x)</li>
+<li>Your code should use the <code>pycodestyle</code> style (version 2.5.*)</li>
 <li>The length of your files will be tested using <code>wc</code></li>
 <li>All your modules should have a documentation (<code>python3 -c 'print(__import__("my_module").__doc__)'</code>)</li>
 <li>All your functions should have a documentation (<code>python3 -c 'print(__import__("my_module").my_function.__doc__)'</code></li>
 <li>A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)</li>
 <li>All your functions and coroutines must be type-annotated.</li>
 </ul>
+
+<h2>Setup: <code>Popular_Baby_Names.csv</code></h2>
+
+<p><a href="/rltoken/7IKLZ7i4pO4MJ9CQoGHfVw" title="use this data file" target="_blank">use this data file</a> for your project</p>
 
   </div>
 </div>
@@ -550,15 +564,15 @@
 
         <h2 id="task-container" class="gap">Tasks</h2>
   
-  <div class="col-sm-12 col-md-12 col-lg-8 xol-xl-9" data-current-task-index="0" data-total-tasks="3">
+  <div class="col-sm-12 col-md-12 col-lg-8 xol-xl-9" data-current-task-index="0" data-total-tasks="4">
     <!-- All Tasks Display (initially hidden, shown one at a time via JS) -->
-      <div class="task-container" data-role="task21452" data-position="1" id="task-num-0" style="display: block;">
-        <div class="panel panel-default task-card " id="task-21452">
+      <div class="task-container" data-role="task21530" data-position="1" id="task-num-0" style="display: block;">
+        <div class="panel panel-default task-card " id="task-21530">
   <span id="user_id" data-id="11510"></span>
 
   <div class="panel-heading panel-heading-actions">
     <h3 class="panel-title">
-      0. Async Generator
+      0. Simple helper function
     </h3>
 
     <div>
@@ -572,38 +586,36 @@
     <span id="user_id" data-id="11510"></span>
 
     <!-- Progress vs Score -->
-      <div class="task_progress_score_bar" data-task-id="21452" data-correction-id="1518508">
-        <div class="task_progress_bar" style="width: 100%;">
-          <div class="task_score_bar" style="width: 100%;">
-          </div>
-        </div>
-        <div class="task_progress_score_text">
-          Score: <span class="task_score_value">100.00%</span> (<span class="task_progress_value">Checks completed 100.00%</span>)
-        </div>
-      </div>
 
     <!-- Task Body -->
-    <p>Write a coroutine called <code>async_generator</code> that takes no arguments. </p>
+    <p>Write a function named <code>index_range</code> that takes two integer arguments <code>page</code> and <code>page_size</code>.</p>
 
-<p>The coroutine will loop 10 times, each time asynchronously wait 1 second, then yield a random number between 0 and 10. Use the <code>random</code> module. </p>
+<p>The function should return a tuple of size two containing a start index and an end index corresponding to the range of indexes to return in a list for those particular pagination parameters.</p>
+
+<p>Page numbers are 1-indexed, i.e. the first page is page 1.</p>
 
 <pre><code>bob@dylan:~$ cat 0-main.py
 #!/usr/bin/env python3
+"""
+Main file
+"""
 
-import asyncio
+index_range = __import__('0-simple_helper_function').index_range
 
-async_generator = __import__('0-async_generator').async_generator
+res = index_range(1, 7)
+print(type(res))
+print(res)
 
-async def print_yielded_values():
-    result = []
-    async for i in async_generator():
-        result.append(i)
-    print(result)
-
-asyncio.run(print_yielded_values())
+res = index_range(page=3, page_size=15)
+print(type(res))
+print(res)
 
 bob@dylan:~$ ./0-main.py
-[4.403136952967102, 6.9092712604587465, 6.293445466782645, 4.549663490048418, 4.1326571686139015, 9.99058525304903, 6.726734105473811, 9.84331704602206, 1.0067279479988345, 1.3783306401737838]
+&lt;class 'tuple'&gt;
+(0, 7)
+&lt;class 'tuple'&gt;
+(30, 45)
+bob@dylan:~$
 </code></pre>
 
   </div>
@@ -620,8 +632,8 @@ bob@dylan:~$ ./0-main.py
         <p><strong>Repo:</strong></p>
         <ul>
           <li>GitHub repository: <code>holbertonschool-web_back_end</code></li>
-            <li>Directory: <code>python_async_comprehension</code></li>
-            <li>File: <code>0-async_generator.py</code></li>
+            <li>Directory: <code>pagination</code></li>
+            <li>File: <code>0-simple_helper_function.py</code></li>
         </ul>
       </div>
 
@@ -634,15 +646,15 @@ bob@dylan:~$ ./0-main.py
         
 <div>
 
-  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="21452" data-batch-id="1062" data-toggle="modal" data-target="#task-21452-users-done-modal">
+  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="21530" data-batch-id="1062" data-toggle="modal" data-target="#task-21530-users-done-modal">
     Help
   </button>
-  <div class="modal fade users-done-modal" id="task-21452-users-done-modal" data-task-id="21452" data-batch-id="1062">
+  <div class="modal fade users-done-modal" id="task-21530-users-done-modal" data-task-id="21530" data-batch-id="1062">
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <h4 class="modal-title">Students who are done with "0. Async Generator"</h4>
+            <h4 class="modal-title">Students who are done with "0. Simple helper function"</h4>
         </div>
         <div class="modal-body">
             <div class="list-group">
@@ -659,42 +671,42 @@ bob@dylan:~$ ./0-main.py
 </div>
 
 
-      <button class="btn btn-default btn-sm" data-task-id="21452" data-toggle="modal" data-target="#task-test-correction-21452-correction-modal" id="task-num-0-check-code-btn">
+      <button class="btn btn-default btn-sm" data-task-id="21530" data-toggle="modal" data-target="#task-test-correction-21530-correction-modal" id="task-num-0-check-code-btn">
           Review your work
       </button>
-      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-21452-correction-modal">
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-21530-correction-modal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <h4 class="modal-title">Correction of "0. Async Generator"</h4>
+                <h4 class="modal-title">Correction of "0. Simple helper function"</h4>
             </div>
             <div class="modal-body">
                 <div class="actions">
                     <center>
-                        <div class="alert alert-info"><strong>Congratulations!</strong> All tests passed successfully!<br>You are ready for your next mission!</div>
+                        <div class="alert alert-info hidden"></div>
 
-                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="21452" data-last-request-id="14312158">Start a new test</button>
-                        <button class="btn btn-default close-modal" data-dismiss="modal" type="button">Close</button>
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="21530">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
 
                         <div class="spinner" style="display: none;">
                             <div class="bounce1"></div>
                             <div class="bounce2"></div>
                             <div class="bounce3"></div>
                         </div>
-                        <div class="error" style="display: none;"></div>
-                        <div class="info" style="display: none;"></div>
+                        <div class="error"></div>
+                        <div class="info"></div>
 
 
                     </center>
                 </div>
-                <div class="result" style="display: block;"><hr><h4>Result:</h4><div class="check-inline requirement success" id="148304" title="Requirement - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 0</div><div class="check-inline requirement success" id="148305" title="Requirement - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 1</div><div class="check-inline requirement success" id="148306" title="Requirement - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 2</div><div class="check-inline requirement success" id="148309" title="Requirement - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 3</div><div class="check-inline requirement success" id="148310" title="Requirement - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 4</div><div class="check-inline code success" id="148311" title="Correct output of your code - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 5</div><div class="check-inline code success" id="148307" title="Correct output of your code - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 6</div><div class="check-inline code success" id="148313" title="Correct output of your code - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 7</div><div class="check-inline code success" id="148308" title="Correct output of your code - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 8</div></div>
+                <div class="result"></div>
 
-                <div class="help" style="display: block;">
-    <button data-task-id="21452">
+                <div class="help">
+    <button data-task-id="21530">
         <i aria-hidden="true" class="fa fa-info-circle "></i>
     </button>
-    <div class="help-container" data-task-id="21452">
+    <div class="help-container" data-task-id="21530">
         <div class="check-line">
             <div class="check-inline requirement success">
                   <i aria-hidden="true" class="fa fa-check-circle "></i>
@@ -758,24 +770,19 @@ bob@dylan:~$ ./0-main.py
 
         <div class="text-right">
             
-              <div style="margin-bottom: 10px;">
-                <span class="label label-danger" style="font-size: 11px; padding: 4px 8px;">
-                  <span class="glyphicon glyphicon-exclamation-sign"></span> 7 correction requests
-                </span>
-              </div>
             
-            <div style="background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); border-radius: 8px; padding: 12px 16px; border: 2px solid #28a745; box-shadow: 0 2px 4px rgba(0,0,0,0.1); min-width: 120px; display: inline-block;">
+            <div style="background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%); border-radius: 8px; padding: 12px 16px; border: 2px solid #dc3545; box-shadow: 0 2px 4px rgba(0,0,0,0.1); min-width: 120px; display: inline-block;">
               <div class="text-center">
-                <div style="font-size: 32px; font-weight: 900; line-height: 1; margin-bottom: 4px;" class="text-success">
-                  <span class="text-success" id="task-21452-score-info-score" style="text-shadow: 0 1px 2px rgba(0,0,0,0.1);">6</span>
-                  <span class="text-muted" style="font-size: 20px; font-weight: 600;">/6</span>
+                <div style="font-size: 32px; font-weight: 900; line-height: 1; margin-bottom: 4px;" class="text-primary">
+                  <span class="text-danger" id="task-21530-score-info-score" style="text-shadow: 0 1px 2px rgba(0,0,0,0.1);">0</span>
+                  <span class="text-muted" style="font-size: 20px; font-weight: 600;">/3</span>
                   <span class="text-muted" style="font-size: 14px; font-weight: 500; margin-left: 4px;">
                     pts
                   </span>
                 </div>
                 <div style="margin-top: 6px;">
-                  <span class="label label-success" style="font-size: 13px; padding: 4px 10px; font-weight: bold; border-radius: 12px;">
-                    100.0%
+                  <span class="label label-danger" style="font-size: 13px; padding: 4px 10px; font-weight: bold; border-radius: 12px;">
+                    0.0%
                   </span>
                 </div>
               </div>
@@ -803,13 +810,13 @@ function toggleTaskFilePreview(fileId) {
 </script>
 
       </div>
-      <div class="task-container" data-role="task21453" data-position="2" id="task-num-1" style="display: none;">
-        <div class="panel panel-default task-card " id="task-21453">
+      <div class="task-container" data-role="task21531" data-position="2" id="task-num-1" style="display: none;">
+        <div class="panel panel-default task-card " id="task-21531">
   <span id="user_id" data-id="11510"></span>
 
   <div class="panel-heading panel-heading-actions">
     <h3 class="panel-title">
-      1. Async Comprehensions
+      1. Simple pagination
     </h3>
 
     <div>
@@ -823,37 +830,101 @@ function toggleTaskFilePreview(fileId) {
     <span id="user_id" data-id="11510"></span>
 
     <!-- Progress vs Score -->
-      <div class="task_progress_score_bar" data-task-id="21453" data-correction-id="1518508">
-        <div class="task_progress_bar" style="width: 100%;">
-          <div class="task_score_bar" style="width: 100%;">
-          </div>
-        </div>
-        <div class="task_progress_score_text">
-          Score: <span class="task_score_value">100.00%</span> (<span class="task_progress_value">Checks completed 100.00%</span>)
-        </div>
-      </div>
 
     <!-- Task Body -->
-    <p>Import <code>async_generator</code> from the previous task and then write a coroutine called <code>async_comprehension</code> that takes no arguments. </p>
+    <p>Copy <code>index_range</code> from the previous task and the following class into your code</p>
 
-<p>The coroutine will collect 10 random numbers using an async comprehensing over <code>async_generator</code>, then return the 10 random numbers.</p>
+<pre><code>import csv
+import math
+from typing import List
 
-<pre><code>bob@dylan:~$ cat 1-main.py
+
+class Server:
+    """Server class to paginate a database of popular baby names.
+    """
+    DATA_FILE = "Popular_Baby_Names.csv"
+
+    def __init__(self):
+        self.__dataset = None
+
+    def dataset(self) -&gt; List[List]:
+        """Cached dataset
+        """
+        if self.__dataset is None:
+            with open(self.DATA_FILE) as f:
+                reader = csv.reader(f)
+                dataset = [row for row in reader]
+            self.__dataset = dataset[1:]
+
+        return self.__dataset
+
+    def get_page(self, page: int = 1, page_size: int = 10) -&gt; List[List]:
+            pass
+</code></pre>
+
+<p>Implement a method named <code>get_page</code> that takes two integer arguments <code>page</code> with default value 1 and <code>page_size</code> with default value 10.</p>
+
+<ul>
+<li>You have to use this <a href="/rltoken/7IKLZ7i4pO4MJ9CQoGHfVw" title="CSV file" target="_blank">CSV file</a> (same as the one presented at the top of the project)</li>
+<li>Use <code>assert</code> to verify that both arguments are integers greater than 0.</li>
+<li>Use <code>index_range</code> to find the correct indexes to paginate the dataset correctly and return the appropriate page of the dataset (i.e. the correct list of rows).</li>
+<li>If the input arguments are out of range for the dataset, an empty list should be returned.</li>
+</ul>
+
+<pre><code>bob@dylan:~$  wc -l Popular_Baby_Names.csv 
+19419 Popular_Baby_Names.csv
+bob@dylan:~$  
+bob@dylan:~$ head Popular_Baby_Names.csv
+Year of Birth,Gender,Ethnicity,Child's First Name,Count,Rank
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Olivia,172,1
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Chloe,112,2
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Sophia,104,3
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Emma,99,4
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Emily,99,4
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Mia,79,5
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Charlotte,59,6
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Sarah,57,7
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Isabella,56,8
+bob@dylan:~$  
+bob@dylan:~$  cat 1-main.py
 #!/usr/bin/env python3
+"""
+Main file
+"""
 
-import asyncio
+Server = __import__('1-simple_pagination').Server
 
-async_comprehension = __import__('1-async_comprehension').async_comprehension
+server = Server()
+
+try:
+    should_err = server.get_page(-10, 2)
+except AssertionError:
+    print("AssertionError raised with negative values")
+
+try:
+    should_err = server.get_page(0, 0)
+except AssertionError:
+    print("AssertionError raised with 0")
+
+try:
+    should_err = server.get_page(2, 'Bob')
+except AssertionError:
+    print("AssertionError raised when page and/or page_size are not ints")
 
 
-async def main():
-    print(await async_comprehension())
+print(server.get_page(1, 3))
+print(server.get_page(3, 2))
+print(server.get_page(3000, 100))
 
-asyncio.run(main())
-
+bob@dylan:~$ 
 bob@dylan:~$ ./1-main.py
-[9.861842105071727, 8.572355293354995, 1.7467182056248265, 4.0724372912858575, 0.5524750922145316, 8.084266576021555, 8.387128918690468, 1.5486451376520916, 7.713335177885325, 7.673533267041574]
-
+AssertionError raised with negative values
+AssertionError raised with 0
+AssertionError raised when page and/or page_size are not ints
+[['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Olivia', '172', '1'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Chloe', '112', '2'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Sophia', '104', '3']]
+[['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Emily', '99', '4'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Mia', '79', '5']]
+[]
+bob@dylan:~$ 
 </code></pre>
 
   </div>
@@ -870,8 +941,8 @@ bob@dylan:~$ ./1-main.py
         <p><strong>Repo:</strong></p>
         <ul>
           <li>GitHub repository: <code>holbertonschool-web_back_end</code></li>
-            <li>Directory: <code>python_async_comprehension</code></li>
-            <li>File: <code>1-async_comprehension.py</code></li>
+            <li>Directory: <code>pagination</code></li>
+            <li>File: <code>1-simple_pagination.py</code></li>
         </ul>
       </div>
 
@@ -884,15 +955,15 @@ bob@dylan:~$ ./1-main.py
         
 <div>
 
-  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="21453" data-batch-id="1062" data-toggle="modal" data-target="#task-21453-users-done-modal">
+  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="21531" data-batch-id="1062" data-toggle="modal" data-target="#task-21531-users-done-modal">
     Help
   </button>
-  <div class="modal fade users-done-modal" id="task-21453-users-done-modal" data-task-id="21453" data-batch-id="1062">
+  <div class="modal fade users-done-modal" id="task-21531-users-done-modal" data-task-id="21531" data-batch-id="1062">
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <h4 class="modal-title">Students who are done with "1. Async Comprehensions"</h4>
+            <h4 class="modal-title">Students who are done with "1. Simple pagination"</h4>
         </div>
         <div class="modal-body">
             <div class="list-group">
@@ -909,42 +980,42 @@ bob@dylan:~$ ./1-main.py
 </div>
 
 
-      <button class="btn btn-default btn-sm" data-task-id="21453" data-toggle="modal" data-target="#task-test-correction-21453-correction-modal" id="task-num-1-check-code-btn">
+      <button class="btn btn-default btn-sm" data-task-id="21531" data-toggle="modal" data-target="#task-test-correction-21531-correction-modal" id="task-num-1-check-code-btn">
           Review your work
       </button>
-      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-21453-correction-modal">
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-21531-correction-modal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <h4 class="modal-title">Correction of "1. Async Comprehensions"</h4>
+                <h4 class="modal-title">Correction of "1. Simple pagination"</h4>
             </div>
             <div class="modal-body">
                 <div class="actions">
                     <center>
-                        <div class="alert alert-info"><strong>Congratulations!</strong> All tests passed successfully!<br>You are ready for your next mission!</div>
+                        <div class="alert alert-info hidden"></div>
 
-                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="21453" data-last-request-id="14312372">Start a new test</button>
-                        <button class="btn btn-default close-modal" data-dismiss="modal" type="button">Close</button>
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="21531">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
 
                         <div class="spinner" style="display: none;">
                             <div class="bounce1"></div>
                             <div class="bounce2"></div>
                             <div class="bounce3"></div>
                         </div>
-                        <div class="error" style="display: none;"></div>
-                        <div class="info" style="display: none;"></div>
+                        <div class="error"></div>
+                        <div class="info"></div>
 
 
                     </center>
                 </div>
-                <div class="result" style="display: block;"><hr><h4>Result:</h4><div class="check-inline requirement success" id="148314" title="Requirement - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 0</div><div class="check-inline requirement success" id="148315" title="Requirement - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 1</div><div class="check-inline requirement success" id="148317" title="Requirement - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 2</div><div class="check-inline requirement success" id="148318" title="Requirement - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 3</div><div class="check-inline code success" id="148316" title="Correct output of your code - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 4</div><div class="check-inline code success" id="148321" title="Correct output of your code - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 5</div><div class="check-inline code success" id="148319" title="Correct output of your code - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 6</div><div class="check-inline code success" id="148320" title="Correct output of your code - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 7</div></div>
+                <div class="result"></div>
 
-                <div class="help" style="display: block;">
-    <button data-task-id="21453">
+                <div class="help">
+    <button data-task-id="21531">
         <i aria-hidden="true" class="fa fa-info-circle "></i>
     </button>
-    <div class="help-container" data-task-id="21453">
+    <div class="help-container" data-task-id="21531">
         <div class="check-line">
             <div class="check-inline requirement success">
                   <i aria-hidden="true" class="fa fa-check-circle "></i>
@@ -1008,24 +1079,19 @@ bob@dylan:~$ ./1-main.py
 
         <div class="text-right">
             
-              <div style="margin-bottom: 10px;">
-                <span class="label label-success" style="font-size: 11px; padding: 4px 8px;">
-                  <span class="glyphicon glyphicon-exclamation-sign"></span> 1 correction request
-                </span>
-              </div>
             
-            <div style="background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); border-radius: 8px; padding: 12px 16px; border: 2px solid #28a745; box-shadow: 0 2px 4px rgba(0,0,0,0.1); min-width: 120px; display: inline-block;">
+            <div style="background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%); border-radius: 8px; padding: 12px 16px; border: 2px solid #dc3545; box-shadow: 0 2px 4px rgba(0,0,0,0.1); min-width: 120px; display: inline-block;">
               <div class="text-center">
-                <div style="font-size: 32px; font-weight: 900; line-height: 1; margin-bottom: 4px;" class="text-success">
-                  <span class="text-success" id="task-21453-score-info-score" style="text-shadow: 0 1px 2px rgba(0,0,0,0.1);">6</span>
-                  <span class="text-muted" style="font-size: 20px; font-weight: 600;">/6</span>
+                <div style="font-size: 32px; font-weight: 900; line-height: 1; margin-bottom: 4px;" class="text-primary">
+                  <span class="text-danger" id="task-21531-score-info-score" style="text-shadow: 0 1px 2px rgba(0,0,0,0.1);">0</span>
+                  <span class="text-muted" style="font-size: 20px; font-weight: 600;">/4</span>
                   <span class="text-muted" style="font-size: 14px; font-weight: 500; margin-left: 4px;">
                     pts
                   </span>
                 </div>
                 <div style="margin-top: 6px;">
-                  <span class="label label-success" style="font-size: 13px; padding: 4px 10px; font-weight: bold; border-radius: 12px;">
-                    100.0%
+                  <span class="label label-danger" style="font-size: 13px; padding: 4px 10px; font-weight: bold; border-radius: 12px;">
+                    0.0%
                   </span>
                 </div>
               </div>
@@ -1053,13 +1119,13 @@ function toggleTaskFilePreview(fileId) {
 </script>
 
       </div>
-      <div class="task-container" data-role="task21454" data-position="3" id="task-num-2" style="display: none;">
-        <div class="panel panel-default task-card " id="task-21454">
+      <div class="task-container" data-role="task21532" data-position="3" id="task-num-2" style="display: none;">
+        <div class="panel panel-default task-card " id="task-21532">
   <span id="user_id" data-id="11510"></span>
 
   <div class="panel-heading panel-heading-actions">
     <h3 class="panel-title">
-      2. Run time for four parallel comprehensions
+      2. Hypermedia pagination
     </h3>
 
     <div>
@@ -1073,42 +1139,53 @@ function toggleTaskFilePreview(fileId) {
     <span id="user_id" data-id="11510"></span>
 
     <!-- Progress vs Score -->
-      <div class="task_progress_score_bar" data-task-id="21454" data-correction-id="1518508">
-        <div class="task_progress_bar" style="width: 100%;">
-          <div class="task_score_bar" style="width: 100%;">
-          </div>
-        </div>
-        <div class="task_progress_score_text">
-          Score: <span class="task_score_value">100.00%</span> (<span class="task_progress_value">Checks completed 100.00%</span>)
-        </div>
-      </div>
 
     <!-- Task Body -->
-    <p>Import <code>async_comprehension</code> from the previous file and write a <code>measure_runtime</code> coroutine that will execute <code>async_comprehension</code> four times in parallel using <code>asyncio.gather</code>.</p>
+    <p>Replicate code from the previous task.</p>
 
-<p><code>measure_runtime</code> should measure the total runtime and return it.</p>
+<p>Implement a <code>get_hyper</code> method that takes the same arguments (and defaults) as <code>get_page</code> and returns a dictionary containing the following key-value pairs:</p>
 
-<p>Notice that the total runtime is roughly 10 seconds, explain it to yourself.</p>
+<ul>
+<li><code>page_size</code>: the length of the returned dataset page</li>
+<li><code>page</code>: the current page number</li>
+<li><code>data</code>: the dataset page (equivalent to return from previous task)</li>
+<li><code>next_page</code>: number of the next page, <code>None</code> if no next page</li>
+<li><code>prev_page</code>: number of the previous page, <code>None</code> if no previous page</li>
+<li><code>total_pages</code>: the total number of pages in the dataset as an integer</li>
+</ul>
+
+<p>Make sure to reuse <code>get_page</code> in your implementation. </p>
+
+<p>You can use the <code>math</code> module if necessary.</p>
 
 <pre><code>bob@dylan:~$ cat 2-main.py
 #!/usr/bin/env python3
+"""
+Main file
+"""
 
-import asyncio
+Server = __import__('2-hypermedia_pagination').Server
 
+server = Server()
 
-measure_runtime = __import__('2-measure_runtime').measure_runtime
+print(server.get_hyper(1, 2))
+print("---")
+print(server.get_hyper(2, 2))
+print("---")
+print(server.get_hyper(100, 3))
+print("---")
+print(server.get_hyper(3000, 100))
 
-
-async def main():
-    return await(measure_runtime())
-
-print(
-    asyncio.run(main())
-)
-
+bob@dylan:~$ 
 bob@dylan:~$ ./2-main.py
-10.021936893463135
-
+{'page_size': 2, 'page': 1, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Olivia', '172', '1'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Chloe', '112', '2']], 'next_page': 2, 'prev_page': None, 'total_pages': 9709}
+---
+{'page_size': 2, 'page': 2, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Sophia', '104', '3'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Emma', '99', '4']], 'next_page': 3, 'prev_page': 1, 'total_pages': 9709}
+---
+{'page_size': 3, 'page': 100, 'data': [['2016', 'FEMALE', 'BLACK NON HISPANIC', 'Londyn', '14', '39'], ['2016', 'FEMALE', 'BLACK NON HISPANIC', 'Amirah', '14', '39'], ['2016', 'FEMALE', 'BLACK NON HISPANIC', 'McKenzie', '14', '39']], 'next_page': 101, 'prev_page': 99, 'total_pages': 6473}
+---
+{'page_size': 0, 'page': 3000, 'data': [], 'next_page': None, 'prev_page': 2999, 'total_pages': 195}
+bob@dylan:~$ 
 </code></pre>
 
   </div>
@@ -1125,8 +1202,8 @@ bob@dylan:~$ ./2-main.py
         <p><strong>Repo:</strong></p>
         <ul>
           <li>GitHub repository: <code>holbertonschool-web_back_end</code></li>
-            <li>Directory: <code>python_async_comprehension</code></li>
-            <li>File: <code>2-measure_runtime.py</code></li>
+            <li>Directory: <code>pagination</code></li>
+            <li>File: <code>2-hypermedia_pagination.py</code></li>
         </ul>
       </div>
 
@@ -1139,15 +1216,15 @@ bob@dylan:~$ ./2-main.py
         
 <div>
 
-  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="21454" data-batch-id="1062" data-toggle="modal" data-target="#task-21454-users-done-modal">
+  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="21532" data-batch-id="1062" data-toggle="modal" data-target="#task-21532-users-done-modal">
     Help
   </button>
-  <div class="modal fade users-done-modal" id="task-21454-users-done-modal" data-task-id="21454" data-batch-id="1062">
+  <div class="modal fade users-done-modal" id="task-21532-users-done-modal" data-task-id="21532" data-batch-id="1062">
     <div class="modal-dialog">
         <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-            <h4 class="modal-title">Students who are done with "2. Run time for four parallel comprehensions"</h4>
+            <h4 class="modal-title">Students who are done with "2. Hypermedia pagination"</h4>
         </div>
         <div class="modal-body">
             <div class="list-group">
@@ -1164,42 +1241,42 @@ bob@dylan:~$ ./2-main.py
 </div>
 
 
-      <button class="btn btn-default btn-sm" data-task-id="21454" data-toggle="modal" data-target="#task-test-correction-21454-correction-modal" id="task-num-2-check-code-btn">
+      <button class="btn btn-default btn-sm" data-task-id="21532" data-toggle="modal" data-target="#task-test-correction-21532-correction-modal" id="task-num-2-check-code-btn">
           Review your work
       </button>
-      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-21454-correction-modal">
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-21532-correction-modal">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                <h4 class="modal-title">Correction of "2. Run time for four parallel comprehensions"</h4>
+                <h4 class="modal-title">Correction of "2. Hypermedia pagination"</h4>
             </div>
             <div class="modal-body">
                 <div class="actions">
                     <center>
-                        <div class="alert alert-info"><strong>Congratulations!</strong> All tests passed successfully!<br>You are ready for your next mission!</div>
+                        <div class="alert alert-info hidden"></div>
 
-                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="21454" data-last-request-id="14312451">Start a new test</button>
-                        <button class="btn btn-default close-modal" data-dismiss="modal" type="button">Close</button>
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="21532">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
 
                         <div class="spinner" style="display: none;">
                             <div class="bounce1"></div>
                             <div class="bounce2"></div>
                             <div class="bounce3"></div>
                         </div>
-                        <div class="error" style="display: none;"></div>
-                        <div class="info" style="display: none;"></div>
+                        <div class="error"></div>
+                        <div class="info"></div>
 
 
                     </center>
                 </div>
-                <div class="result" style="display: block;"><hr><h4>Result:</h4><div class="check-inline requirement success" id="148322" title="Requirement - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 0</div><div class="check-inline requirement success" id="148323" title="Requirement - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 1</div><div class="check-inline requirement success" id="148325" title="Requirement - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 2</div><div class="check-inline requirement success" id="148326" title="Requirement - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 3</div><div class="check-inline code success" id="148328" title="Correct output of your code - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 4</div><div class="check-inline code success" id="148329" title="Correct output of your code - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 5</div><div class="check-inline code success" id="148324" title="Correct output of your code - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 6</div><div class="check-inline code success" id="148327" title="Correct output of your code - success"><i class="fa fa-check-circle" aria-hidden="true"></i>Check 7</div></div>
+                <div class="result"></div>
 
-                <div class="help" style="display: block;">
-    <button data-task-id="21454">
+                <div class="help">
+    <button data-task-id="21532">
         <i aria-hidden="true" class="fa fa-info-circle "></i>
     </button>
-    <div class="help-container" data-task-id="21454">
+    <div class="help-container" data-task-id="21532">
         <div class="check-line">
             <div class="check-inline requirement success">
                   <i aria-hidden="true" class="fa fa-check-circle "></i>
@@ -1263,24 +1340,355 @@ bob@dylan:~$ ./2-main.py
 
         <div class="text-right">
             
-              <div style="margin-bottom: 10px;">
-                <span class="label label-success" style="font-size: 11px; padding: 4px 8px;">
-                  <span class="glyphicon glyphicon-exclamation-sign"></span> 1 correction request
-                </span>
-              </div>
             
-            <div style="background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); border-radius: 8px; padding: 12px 16px; border: 2px solid #28a745; box-shadow: 0 2px 4px rgba(0,0,0,0.1); min-width: 120px; display: inline-block;">
+            <div style="background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%); border-radius: 8px; padding: 12px 16px; border: 2px solid #dc3545; box-shadow: 0 2px 4px rgba(0,0,0,0.1); min-width: 120px; display: inline-block;">
               <div class="text-center">
-                <div style="font-size: 32px; font-weight: 900; line-height: 1; margin-bottom: 4px;" class="text-success">
-                  <span class="text-success" id="task-21454-score-info-score" style="text-shadow: 0 1px 2px rgba(0,0,0,0.1);">6</span>
-                  <span class="text-muted" style="font-size: 20px; font-weight: 600;">/6</span>
+                <div style="font-size: 32px; font-weight: 900; line-height: 1; margin-bottom: 4px;" class="text-primary">
+                  <span class="text-danger" id="task-21532-score-info-score" style="text-shadow: 0 1px 2px rgba(0,0,0,0.1);">0</span>
+                  <span class="text-muted" style="font-size: 20px; font-weight: 600;">/4</span>
                   <span class="text-muted" style="font-size: 14px; font-weight: 500; margin-left: 4px;">
                     pts
                   </span>
                 </div>
                 <div style="margin-top: 6px;">
-                  <span class="label label-success" style="font-size: 13px; padding: 4px 10px; font-weight: bold; border-radius: 12px;">
-                    100.0%
+                  <span class="label label-danger" style="font-size: 13px; padding: 4px 10px; font-weight: bold; border-radius: 12px;">
+                    0.0%
+                  </span>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+  </div>
+</div>
+
+<script>
+function toggleTaskFilePreview(fileId) {
+  const previewDiv = document.getElementById('task-preview-' + fileId);
+  const toggleButton = document.getElementById('task-preview-toggle-' + fileId);
+  
+  if (previewDiv.style.display === 'none') {
+    previewDiv.style.display = 'block';
+    toggleButton.textContent = 'Hide Preview';
+  } else {
+    previewDiv.style.display = 'none';
+    toggleButton.textContent = 'Show Preview';
+  }
+}
+</script>
+
+      </div>
+      <div class="task-container" data-role="task21533" data-position="4" id="task-num-3" style="display: none;">
+        <div class="panel panel-default task-card " id="task-21533">
+  <span id="user_id" data-id="11510"></span>
+
+  <div class="panel-heading panel-heading-actions">
+    <h3 class="panel-title">
+      3. Deletion-resilient hypermedia pagination
+    </h3>
+
+    <div>
+        <span class="label label-warning">
+          mandatory
+        </span>
+    </div>
+  </div>
+
+  <div class="panel-body">
+    <span id="user_id" data-id="11510"></span>
+
+    <!-- Progress vs Score -->
+
+    <!-- Task Body -->
+    <p>The goal here is that if between two queries, certain rows are removed from the dataset, the user does not miss items from dataset when changing page.</p>
+
+<p>Start <code>3-hypermedia_del_pagination.py</code> with this code:</p>
+
+<pre><code>#!/usr/bin/env python3
+"""
+Deletion-resilient hypermedia pagination
+"""
+
+import csv
+import math
+from typing import List
+
+
+class Server:
+    """Server class to paginate a database of popular baby names.
+    """
+    DATA_FILE = "Popular_Baby_Names.csv"
+
+    def __init__(self):
+        self.__dataset = None
+        self.__indexed_dataset = None
+
+    def dataset(self) -&gt; List[List]:
+        """Cached dataset
+        """
+        if self.__dataset is None:
+            with open(self.DATA_FILE) as f:
+                reader = csv.reader(f)
+                dataset = [row for row in reader]
+            self.__dataset = dataset[1:]
+
+        return self.__dataset
+
+    def indexed_dataset(self) -&gt; Dict[int, List]:
+        """Dataset indexed by sorting position, starting at 0
+        """
+        if self.__indexed_dataset is None:
+            dataset = self.dataset()
+            truncated_dataset = dataset[:1000]
+            self.__indexed_dataset = {
+                i: dataset[i] for i in range(len(dataset))
+            }
+        return self.__indexed_dataset
+
+    def get_hyper_index(self, index: int = None, page_size: int = 10) -&gt; Dict:
+            pass
+</code></pre>
+
+<p>Implement a <code>get_hyper_index</code> method with two integer arguments: <code>index</code> with a <code>None</code> default value and <code>page_size</code> with default value of 10.</p>
+
+<ul>
+<li>The method should return a dictionary with the following key-value pairs:
+
+<ul>
+<li><code>index</code>: the current start index of the return page. That is the index of the first item in the current page. For example if requesting page 3 with <code>page_size</code> 20, and no data was removed from the dataset, the current index should be 60.</li>
+<li><code>next_index</code>: the next index to query with. That should be the index of the first item after the last item on the current page.</li>
+<li><code>page_size</code>: the current page size</li>
+<li><code>data</code>: the actual page of the dataset</li>
+</ul></li>
+</ul>
+
+<p><strong>Requirements/Behavior</strong>:</p>
+
+<ul>
+<li>Use <code>assert</code> to verify that <code>index</code> is in a valid range.</li>
+<li>If the user queries index 0, <code>page_size</code> 10, they will get rows indexed 0 to 9 included. </li>
+<li>If they request the next index (10) with <code>page_size</code> 10, but rows 3, 6 and 7 were deleted, the user should still receive rows indexed 10 to 19 included.</li>
+</ul>
+
+<pre><code>bob@dylan:~$ cat 3-main.py
+#!/usr/bin/env python3
+"""
+Main file
+"""
+
+Server = __import__('3-hypermedia_del_pagination').Server
+
+server = Server()
+
+server.indexed_dataset()
+
+try:
+    server.get_hyper_index(300000, 100)
+except AssertionError:
+    print("AssertionError raised when out of range")        
+
+
+index = 3
+page_size = 2
+
+print("Nb items: {}".format(len(server._Server__indexed_dataset)))
+
+# 1- request first index
+res = server.get_hyper_index(index, page_size)
+print(res)
+
+# 2- request next index
+print(server.get_hyper_index(res.get('next_index'), page_size))
+
+# 3- remove the first index
+del server._Server__indexed_dataset[res.get('index')]
+print("Nb items: {}".format(len(server._Server__indexed_dataset)))
+
+# 4- request again the initial index -&gt; the first data retreives is not the same as the first request
+print(server.get_hyper_index(index, page_size))
+
+# 5- request again initial next index -&gt; same data page as the request 2-
+print(server.get_hyper_index(res.get('next_index'), page_size))
+
+bob@dylan:~$ 
+bob@dylan:~$ ./3-main.py
+AssertionError raised when out of range
+Nb items: 19418
+{'index': 3, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Emma', '99', '4'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Emily', '99', '4']], 'page_size': 2, 'next_index': 5}
+{'index': 5, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Mia', '79', '5'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Charlotte', '59', '6']], 'page_size': 2, 'next_index': 7}
+Nb items: 19417
+{'index': 3, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Emily', '99', '4'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Mia', '79', '5']], 'page_size': 2, 'next_index': 6}
+{'index': 5, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Mia', '79', '5'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Charlotte', '59', '6']], 'page_size': 2, 'next_index': 7}
+bob@dylan:~$ 
+</code></pre>
+
+  </div>
+
+  <div class="list-group">
+    <!-- Task URLs -->
+
+    <!-- Task Files -->
+
+    <!-- Task Text Area -->
+
+    <!-- Technical information -->
+      <div class="list-group-item">
+        <p><strong>Repo:</strong></p>
+        <ul>
+          <li>GitHub repository: <code>holbertonschool-web_back_end</code></li>
+            <li>Directory: <code>pagination</code></li>
+            <li>File: <code>3-hypermedia_del_pagination.py</code></li>
+        </ul>
+      </div>
+
+    <!-- Self-paced manual review -->
+  </div>
+
+  <!-- Panel footer - Controls -->
+  <div class="panel-footer">
+      <div class="align-items-center d-flex justify-content-between">
+        
+<div>
+
+  <button class="student-task-done-by btn btn-default btn-sm" data-task-id="21533" data-batch-id="1062" data-toggle="modal" data-target="#task-21533-users-done-modal">
+    Help
+  </button>
+  <div class="modal fade users-done-modal" id="task-21533-users-done-modal" data-task-id="21533" data-batch-id="1062">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            <h4 class="modal-title">Students who are done with "3. Deletion-resilient hypermedia pagination"</h4>
+        </div>
+        <div class="modal-body">
+            <div class="list-group">
+            </div>
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+            <div class="error"></div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+      <button class="btn btn-default btn-sm" data-task-id="21533" data-toggle="modal" data-target="#task-test-correction-21533-correction-modal" id="task-num-3-check-code-btn">
+          Review your work
+      </button>
+      <div class="modal fade task_correction_modal student_modal" id="task-test-correction-21533-correction-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title">Correction of "3. Deletion-resilient hypermedia pagination"</h4>
+            </div>
+            <div class="modal-body">
+                <div class="actions">
+                    <center>
+                        <div class="alert alert-info hidden"></div>
+
+                        <button name="button" type="submit" class="btn btn-primary correction_request_test_send" data-task-id="21533">Start a new test</button>
+                        <button class="btn btn-default close-modal hidden" data-dismiss="modal" type="button">Close</button>
+
+                        <div class="spinner" style="display: none;">
+                            <div class="bounce1"></div>
+                            <div class="bounce2"></div>
+                            <div class="bounce3"></div>
+                        </div>
+                        <div class="error"></div>
+                        <div class="info"></div>
+
+
+                    </center>
+                </div>
+                <div class="result"></div>
+
+                <div class="help">
+    <button data-task-id="21533">
+        <i aria-hidden="true" class="fa fa-info-circle "></i>
+    </button>
+    <div class="help-container" data-task-id="21533">
+        <div class="check-line">
+            <div class="check-inline requirement success">
+                  <i aria-hidden="true" class="fa fa-check-circle "></i>
+                Requirement success
+            </div>
+            <div class="check-inline requirement fail">
+                  <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Requirement fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline code success">
+                  <i aria-hidden="true" class="fa fa-check-circle "></i>
+                Code success
+            </div>
+            <div class="check-inline code fail">
+                  <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Code fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline efficiency success">
+                  <i aria-hidden="true" class="fa fa-check-circle "></i>
+                Efficiency success
+            </div>
+            <div class="check-inline efficiency fail">
+                  <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Efficiency fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline answer success">
+                  <i aria-hidden="true" class="fa fa-check-circle "></i>
+                Text answer success
+            </div>
+            <div class="check-inline answer fail">
+                  <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Text answer fail
+            </div>
+        </div>
+        <div class="check-line">
+            <div class="check-inline requirement fail offline">
+                  <i aria-hidden="true" class="fa fa-times-circle "></i>
+                Skipped - Previous check failed
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+
+
+    <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#sandboxes-modal"><i aria-hidden="true" class="fa fa-terminal "></i><span>Get a sandbox</span></button>
+
+</div>
+
+
+        <div class="text-right">
+            
+            
+            <div style="background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%); border-radius: 8px; padding: 12px 16px; border: 2px solid #dc3545; box-shadow: 0 2px 4px rgba(0,0,0,0.1); min-width: 120px; display: inline-block;">
+              <div class="text-center">
+                <div style="font-size: 32px; font-weight: 900; line-height: 1; margin-bottom: 4px;" class="text-primary">
+                  <span class="text-danger" id="task-21533-score-info-score" style="text-shadow: 0 1px 2px rgba(0,0,0,0.1);">0</span>
+                  <span class="text-muted" style="font-size: 20px; font-weight: 600;">/4</span>
+                  <span class="text-muted" style="font-size: 14px; font-weight: 500; margin-left: 4px;">
+                    pts
+                  </span>
+                </div>
+                <div style="margin-top: 6px;">
+                  <span class="label label-danger" style="font-size: 13px; padding: 4px 10px; font-weight: bold; border-radius: 12px;">
+                    0.0%
                   </span>
                 </div>
               </div>
@@ -1422,6 +1830,36 @@ function toggleTaskFilePreview(fileId) {
                 </div>
                 
                 <!-- Connector Line -->
+                  <div class="task-connector-line" style="
+                         width: 40px;
+                         height: 2px;
+                         background-color: #d3d3d3;
+                         margin: 0 5px;
+                         flex-shrink: 0;
+                       "></div>
+              </div>
+              
+              <!-- Task Circle -->
+              <div class="task-progress-item d-flex align-items-center" data-task-index="3">
+                <div class="task-progress-circle" data-task-index="3" style="
+                       width: 40px;
+                       height: 40px;
+                       border-radius: 50%;
+                       border: 2px solid #d3d3d3;
+                       background-color: #fff;
+                       display: flex;
+                       align-items: center;
+                       justify-content: center;
+                       font-weight: bold;
+                       color: #666;
+                       font-size: 16px;
+                       cursor: pointer;
+                       flex-shrink: 0;
+                     ">
+                  3
+                </div>
+                
+                <!-- Connector Line -->
               </div>
           </div>
         </div>
@@ -1432,7 +1870,7 @@ function toggleTaskFilePreview(fileId) {
             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
           </button>
           
-          <span id="task-counter" style="color: #666; font-weight: bold;" data-translation-template="Task %{current} of %{total}">Task 0 of 2</span>
+          <span id="task-counter" style="color: #666; font-weight: bold;" data-translation-template="Task %{current} of %{total}">Task 0 of 3</span>
           
           <button id="task-nav-next" class="btn btn-primary" data-task-index="1">
             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
@@ -1445,13 +1883,17 @@ function toggleTaskFilePreview(fileId) {
         <div class="panel-body">
           <div class="d-flex justify-content-around flex-wrap" style="gap: 10px;">
             <div>
-                <a data-toggle="tooltip" title="" class="btn btn-primary" role="button" href="/projects/2343" data-original-title="Python - Async">
+                <button class="btn btn-primary" disabled="">
                   <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Previous project
-</a>            </div>
-            <div>
-                <button class="btn btn-warning" disabled="">
-                  Next project <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
                 </button>
+            </div>
+            <div>
+                <form action="/corrections/1581777/skip" method="post" style="display: inline;">
+                  <input name="authenticity_token" type="hidden" value="NdQtWCMJBl6S_rTkvJN1BSPLTF_jXhqGkAhKvfzUtMikFgdduV943G6GR8aXQnr6hRREthn1EjvY1h2RTJGCwQ">
+                  <button class="btn btn-warning" type="submit">
+                    Next project <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                  </button>
+                </form>
             </div>
           </div>
         </div>
@@ -1460,7 +1902,7 @@ function toggleTaskFilePreview(fileId) {
   </div>
   
     <div class="col-sm-12 col-md-12 hidden-lg">
-        <div data-react-class="projects/ProjectReview" data-react-props="{&quot;style&quot;:&quot;line&quot;,&quot;correction&quot;:{&quot;statusURI&quot;:&quot;/corrections/1518508/status_self_paced.json&quot;,&quot;startReviewURI&quot;:&quot;/corrections/1518508/start_auto_review_self_paced.json&quot;},&quot;csrfToken&quot;:&quot;r6aX9cF31_6BDHhiqE6JUNHcDo_AR8SIUoo4c77oItx3M1UoLvmivwe50fAHsKy1gJ2rc8fjefdFEaLfIY3uuA&quot;,&quot;nextProject&quot;:{&quot;details&quot;:{&quot;curriculum_completed&quot;:true,&quot;message&quot;:&quot;You have successfully completed all the projects! Well done!&quot;,&quot;uri&quot;:null},&quot;fetchURI&quot;:&quot;/projects/2344/next&quot;},&quot;pollingInterval&quot;:10000,&quot;progress&quot;:{&quot;auto_review&quot;:{&quot;can_execute&quot;:false,&quot;completion&quot;:{&quot;count&quot;:3,&quot;is_completed&quot;:true,&quot;percentage&quot;:100.0},&quot;inability_to_execute_reason&quot;:&quot;done&quot;},&quot;tasks&quot;:[{&quot;id&quot;:21452,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:6,&quot;score&quot;:6.0}},{&quot;id&quot;:21453,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:6,&quot;score&quot;:6.0}},{&quot;id&quot;:21454,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:6,&quot;score&quot;:6.0}}],&quot;summary&quot;:{&quot;completion&quot;:100.0,&quot;score&quot;:{&quot;mandatory&quot;:100.0,&quot;optional&quot;:null}},&quot;can_skip&quot;:false,&quot;can_start_peer_review&quot;:false},&quot;peerReview&quot;:null,&quot;project&quot;:{&quot;completion&quot;:100.0,&quot;id&quot;:2344,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/001_color-bb105595db22648e67fe1bf13ccc170165764f9c481034cdfd49dbb416af34af.png&quot;,&quot;name&quot;:&quot;Python - Async Comprehension&quot;,&quot;score&quot;:{&quot;mandatory&quot;:100.0,&quot;optional&quot;:null},&quot;tasksCount&quot;:0},&quot;skipURI&quot;:&quot;/corrections/1518508/skip&quot;,&quot;taskLevelReviewTypeHumanized&quot;:&quot;Your score will be updated as you progress.&quot;}" data-react-cache-id="projects/ProjectReview-0"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">Score</h3></div><div class="panel-body"><div class="align-items-center gap-5 d-flex"><div class="pathway" style="padding: 10px 30px 40px;"><div class="project-circle " style="border-radius: 100%; box-shadow: rgb(229, 230, 230) 10px 20px 10px; height: 125px; margin: auto; padding: 5px; width: 125px;"><div data-test-id="CircularProgressbarWithChildren"><div style="position: relative; width: 100%; height: 100%;"><svg class="CircularProgressbar " viewBox="0 0 100 100" data-test-id="CircularProgressbar" style="height: 115px; vertical-align: middle; width: 115px;"><path class="CircularProgressbar-trail" d="
+        <div data-react-class="projects/ProjectReview" data-react-props="{&quot;style&quot;:&quot;line&quot;,&quot;correction&quot;:{&quot;statusURI&quot;:&quot;/corrections/1581777/status_self_paced.json&quot;,&quot;startReviewURI&quot;:&quot;/corrections/1581777/start_auto_review_self_paced.json&quot;},&quot;csrfToken&quot;:&quot;C9i3twsnApT4O8wOD4MCFPG7Iq5sXsUB0PEuvTo3BE6aGp2ykXF8FgRDPywkUg3rV2QqR5b1zbyYL3mRinIyRw&quot;,&quot;nextProject&quot;:{&quot;details&quot;:{&quot;curriculum_completed&quot;:false,&quot;message&quot;:&quot;Next project: NoSQL&quot;,&quot;uri&quot;:&quot;/projects/2234&quot;},&quot;fetchURI&quot;:&quot;/projects/2351/next&quot;},&quot;pollingInterval&quot;:10000,&quot;progress&quot;:{&quot;auto_review&quot;:{&quot;can_execute&quot;:true,&quot;completion&quot;:{&quot;count&quot;:0,&quot;is_completed&quot;:false,&quot;percentage&quot;:0.0},&quot;inability_to_execute_reason&quot;:null},&quot;tasks&quot;:[{&quot;id&quot;:21530,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:3,&quot;score&quot;:0}},{&quot;id&quot;:21531,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:4,&quot;score&quot;:0}},{&quot;id&quot;:21532,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:4,&quot;score&quot;:0}},{&quot;id&quot;:21533,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:4,&quot;score&quot;:0}}],&quot;summary&quot;:{&quot;completion&quot;:0.0,&quot;score&quot;:{&quot;mandatory&quot;:null,&quot;optional&quot;:null}},&quot;can_skip&quot;:true,&quot;can_start_peer_review&quot;:false},&quot;peerReview&quot;:null,&quot;project&quot;:{&quot;completion&quot;:0.0,&quot;id&quot;:2351,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/001_color-bb105595db22648e67fe1bf13ccc170165764f9c481034cdfd49dbb416af34af.png&quot;,&quot;name&quot;:&quot;Pagination&quot;,&quot;score&quot;:{&quot;mandatory&quot;:null,&quot;optional&quot;:null},&quot;tasksCount&quot;:0},&quot;skipURI&quot;:&quot;/corrections/1581777/skip&quot;,&quot;taskLevelReviewTypeHumanized&quot;:&quot;Your score will be updated as you progress.&quot;}" data-react-cache-id="projects/ProjectReview-0"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">Score</h3></div><div class="panel-body"><div class="align-items-center gap-5 d-flex"><div class="pathway" style="padding: 10px 30px 40px;"><div class="project-circle " style="border-radius: 100%; box-shadow: rgb(229, 230, 230) 10px 20px 10px; height: 125px; margin: auto; padding: 5px; width: 125px;"><div data-test-id="CircularProgressbarWithChildren"><div style="position: relative; width: 100%; height: 100%;"><svg class="CircularProgressbar " viewBox="0 0 100 100" data-test-id="CircularProgressbar" style="height: 115px; vertical-align: middle; width: 115px;"><path class="CircularProgressbar-trail" d="
       M 50,50
       m 0,-48.5
       a 48.5,48.5 0 1 1 0,97
@@ -1470,12 +1912,12 @@ function toggleTaskFilePreview(fileId) {
       m 0,-48.5
       a 48.5,48.5 0 1 1 0,97
       a 48.5,48.5 0 1 1 0,-97
-    " stroke-width="3" fill-opacity="0" style="stroke-dasharray: 304.734px, 304.734px; stroke-dashoffset: 0px;"></path></svg><div data-test-id="CircularProgressbarWithChildren__children" style="position: absolute; width: 100%; height: 100%; margin-top: -100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"><div class="position-relative"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Python - Async Comprehension"><div class="align-items-center d-flex justify-content-center project-circle-body active" style="border-radius: 100%; height: 100px; width: 100px;"><img alt="Project badge" src="/assets/pathway/001_color-bb105595db22648e67fe1bf13ccc170165764f9c481034cdfd49dbb416af34af.png" width="60%"></div></span><div class="p-1 position-absolute project-circle-score text-center" style="border-radius: 10px; width: 100px;"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Score Mandatory Tasks"><span class="d-block">100%</span></span></div></div></div></div></div></div></div><div style="display: flex; flex-direction: column; justify-content: center; align-items: center;"><p class="mb-2 text-primary"><span>Congratulations! You made it!</span></p><div><p>You have successfully completed all the projects! Well done!</p></div><div class="d-flex flex-wrap gap-3 justify-content-between mt-4"><div class="btn-group"><a class="btn btn-primary" href="/"><i aria-hidden="true" class="fa fa-home"></i><span class="ml-2">Go to home</span></a></div><div></div></div></div></div></div></div></div>
+    " stroke-width="3" fill-opacity="0" style="stroke-dasharray: 304.734px, 304.734px; stroke-dashoffset: 304.734px;"></path></svg><div data-test-id="CircularProgressbarWithChildren__children" style="position: absolute; width: 100%; height: 100%; margin-top: -100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"><div class="position-relative"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Pagination"><div class="align-items-center d-flex justify-content-center project-circle-body active" style="border-radius: 100%; height: 100px; width: 100px;"><img alt="Project badge" src="/assets/pathway/001_color-bb105595db22648e67fe1bf13ccc170165764f9c481034cdfd49dbb416af34af.png" width="60%"></div></span></div></div></div></div></div></div><div style="display: flex; flex-direction: column; justify-content: center; align-items: center;"><p class="mb-2 text-primary"><span>Your score will be updated as you progress.</span></p><p>Please review <strong>all the tasks</strong> before you start the peer review.</p><div class="d-flex flex-wrap gap-3 justify-content-between mt-4"><div class="btn-group"><button class="btn btn-primary" id="project-launch-review-btn"><i aria-hidden="true" class="fa fa-paper-plane"></i><span class="ml-2">Review all the tasks</span></button></div><div></div></div></div></div></div></div></div>
 
     </div>
 
   <div class="col-xl-3 col-lg-4 hidden-xs hidden-sm hidden-md sticky-nav">
-          <div data-react-class="projects/ProjectReview" data-react-props="{&quot;style&quot;:&quot;column&quot;,&quot;correction&quot;:{&quot;statusURI&quot;:&quot;/corrections/1518508/status_self_paced.json&quot;,&quot;startReviewURI&quot;:&quot;/corrections/1518508/start_auto_review_self_paced.json&quot;},&quot;csrfToken&quot;:&quot;w-zdq2oVdKkAYvmNwEMHBQlq29xHmP6KuA2Lklqy3lgbeR92hZsB6IbXUB9vvSLgWCt-IEA8Q_WvlhE-xdcSPA&quot;,&quot;nextProject&quot;:{&quot;details&quot;:{&quot;curriculum_completed&quot;:true,&quot;message&quot;:&quot;You have successfully completed all the projects! Well done!&quot;,&quot;uri&quot;:null},&quot;fetchURI&quot;:&quot;/projects/2344/next&quot;},&quot;pollingInterval&quot;:10000,&quot;progress&quot;:{&quot;auto_review&quot;:{&quot;can_execute&quot;:false,&quot;completion&quot;:{&quot;count&quot;:3,&quot;is_completed&quot;:true,&quot;percentage&quot;:100.0},&quot;inability_to_execute_reason&quot;:&quot;done&quot;},&quot;tasks&quot;:[{&quot;id&quot;:21452,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:6,&quot;score&quot;:6.0}},{&quot;id&quot;:21453,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:6,&quot;score&quot;:6.0}},{&quot;id&quot;:21454,&quot;progress_score&quot;:{&quot;progress&quot;:1.0,&quot;score&quot;:1.0},&quot;score_info&quot;:{&quot;passed&quot;:true,&quot;points&quot;:6,&quot;score&quot;:6.0}}],&quot;summary&quot;:{&quot;completion&quot;:100.0,&quot;score&quot;:{&quot;mandatory&quot;:100.0,&quot;optional&quot;:null}},&quot;can_skip&quot;:false,&quot;can_start_peer_review&quot;:false},&quot;peerReview&quot;:null,&quot;project&quot;:{&quot;completion&quot;:100.0,&quot;id&quot;:2344,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/001_color-bb105595db22648e67fe1bf13ccc170165764f9c481034cdfd49dbb416af34af.png&quot;,&quot;name&quot;:&quot;Python - Async Comprehension&quot;,&quot;score&quot;:{&quot;mandatory&quot;:100.0,&quot;optional&quot;:null},&quot;tasksCount&quot;:0},&quot;skipURI&quot;:&quot;/corrections/1518508/skip&quot;,&quot;taskLevelReviewTypeHumanized&quot;:&quot;Your score will be updated as you progress.&quot;}" data-react-cache-id="projects/ProjectReview-0"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">Score</h3></div><div class="panel-body"><div class="align-items-center gap-5 "><div class="pathway" style="padding: 10px 30px 40px;"><div class="project-circle " style="border-radius: 100%; box-shadow: rgb(229, 230, 230) 10px 20px 10px; height: 125px; margin: auto; padding: 5px; width: 125px;"><div data-test-id="CircularProgressbarWithChildren"><div style="position: relative; width: 100%; height: 100%;"><svg class="CircularProgressbar " viewBox="0 0 100 100" data-test-id="CircularProgressbar" style="height: 115px; vertical-align: middle; width: 115px;"><path class="CircularProgressbar-trail" d="
+          <div data-react-class="projects/ProjectReview" data-react-props="{&quot;style&quot;:&quot;column&quot;,&quot;correction&quot;:{&quot;statusURI&quot;:&quot;/corrections/1581777/status_self_paced.json&quot;,&quot;startReviewURI&quot;:&quot;/corrections/1581777/start_auto_review_self_paced.json&quot;},&quot;csrfToken&quot;:&quot;Ix79QD1CS-d3hXgwit9Zx-emukMScrOVDSx8pxLps2Oy3NdFpxQ1ZYv9ixKhDlY4QXmyqujZuyhF8iuLoqyFag&quot;,&quot;nextProject&quot;:{&quot;details&quot;:{&quot;curriculum_completed&quot;:false,&quot;message&quot;:&quot;Next project: NoSQL&quot;,&quot;uri&quot;:&quot;/projects/2234&quot;},&quot;fetchURI&quot;:&quot;/projects/2351/next&quot;},&quot;pollingInterval&quot;:10000,&quot;progress&quot;:{&quot;auto_review&quot;:{&quot;can_execute&quot;:true,&quot;completion&quot;:{&quot;count&quot;:0,&quot;is_completed&quot;:false,&quot;percentage&quot;:0.0},&quot;inability_to_execute_reason&quot;:null},&quot;tasks&quot;:[{&quot;id&quot;:21530,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:3,&quot;score&quot;:0}},{&quot;id&quot;:21531,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:4,&quot;score&quot;:0}},{&quot;id&quot;:21532,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:4,&quot;score&quot;:0}},{&quot;id&quot;:21533,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:4,&quot;score&quot;:0}}],&quot;summary&quot;:{&quot;completion&quot;:0.0,&quot;score&quot;:{&quot;mandatory&quot;:null,&quot;optional&quot;:null}},&quot;can_skip&quot;:true,&quot;can_start_peer_review&quot;:false},&quot;peerReview&quot;:null,&quot;project&quot;:{&quot;completion&quot;:0.0,&quot;id&quot;:2351,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/001_color-bb105595db22648e67fe1bf13ccc170165764f9c481034cdfd49dbb416af34af.png&quot;,&quot;name&quot;:&quot;Pagination&quot;,&quot;score&quot;:{&quot;mandatory&quot;:null,&quot;optional&quot;:null},&quot;tasksCount&quot;:0},&quot;skipURI&quot;:&quot;/corrections/1581777/skip&quot;,&quot;taskLevelReviewTypeHumanized&quot;:&quot;Your score will be updated as you progress.&quot;}" data-react-cache-id="projects/ProjectReview-0"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">Score</h3></div><div class="panel-body"><div class="align-items-center gap-5 "><div class="pathway" style="padding: 10px 30px 40px;"><div class="project-circle " style="border-radius: 100%; box-shadow: rgb(229, 230, 230) 10px 20px 10px; height: 125px; margin: auto; padding: 5px; width: 125px;"><div data-test-id="CircularProgressbarWithChildren"><div style="position: relative; width: 100%; height: 100%;"><svg class="CircularProgressbar " viewBox="0 0 100 100" data-test-id="CircularProgressbar" style="height: 115px; vertical-align: middle; width: 115px;"><path class="CircularProgressbar-trail" d="
       M 50,50
       m 0,-48.5
       a 48.5,48.5 0 1 1 0,97
@@ -1485,7 +1927,7 @@ function toggleTaskFilePreview(fileId) {
       m 0,-48.5
       a 48.5,48.5 0 1 1 0,97
       a 48.5,48.5 0 1 1 0,-97
-    " stroke-width="3" fill-opacity="0" style="stroke-dasharray: 304.734px, 304.734px; stroke-dashoffset: 0px;"></path></svg><div data-test-id="CircularProgressbarWithChildren__children" style="position: absolute; width: 100%; height: 100%; margin-top: -100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"><div class="position-relative"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Python - Async Comprehension"><div class="align-items-center d-flex justify-content-center project-circle-body active" style="border-radius: 100%; height: 100px; width: 100px;"><img alt="Project badge" src="/assets/pathway/001_color-bb105595db22648e67fe1bf13ccc170165764f9c481034cdfd49dbb416af34af.png" width="60%"></div></span><div class="p-1 position-absolute project-circle-score text-center" style="border-radius: 10px; width: 100px;"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Score Mandatory Tasks"><span class="d-block">100%</span></span></div></div></div></div></div></div></div><div style="display: flex; flex-direction: column; justify-content: center; align-items: center;"><p class="mb-2 text-primary"><span>Congratulations! You made it!</span></p><div><p>You have successfully completed all the projects! Well done!</p></div><div class="d-flex flex-wrap gap-3 justify-content-between mt-4"><div class="btn-group"><a class="btn btn-primary" href="/"><i aria-hidden="true" class="fa fa-home"></i><span class="ml-2">Go to home</span></a></div><div></div></div></div></div></div></div></div>
+    " stroke-width="3" fill-opacity="0" style="stroke-dasharray: 304.734px, 304.734px; stroke-dashoffset: 304.734px;"></path></svg><div data-test-id="CircularProgressbarWithChildren__children" style="position: absolute; width: 100%; height: 100%; margin-top: -100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"><div class="position-relative"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Pagination"><div class="align-items-center d-flex justify-content-center project-circle-body active" style="border-radius: 100%; height: 100px; width: 100px;"><img alt="Project badge" src="/assets/pathway/001_color-bb105595db22648e67fe1bf13ccc170165764f9c481034cdfd49dbb416af34af.png" width="60%"></div></span></div></div></div></div></div></div><div style="display: flex; flex-direction: column; justify-content: center; align-items: center;"><p class="mb-2 text-primary"><span>Your score will be updated as you progress.</span></p><p>Please review <strong>all the tasks</strong> before you start the peer review.</p><div class="d-flex flex-wrap gap-3 justify-content-between mt-4"><div class="btn-group"><button class="btn btn-primary" id="project-launch-review-btn"><i aria-hidden="true" class="fa fa-paper-plane"></i><span class="ml-2">Review all the tasks</span></button></div><div></div></div></div></div></div></div></div>
 
 
     <div class="panel panel-default task-card">
@@ -1497,40 +1939,53 @@ function toggleTaskFilePreview(fileId) {
       <div class="panel-body task-list">
           <div class="task-button d-flex justify-content-between active" data-task-index="0" style="text-decoration: none; padding: 10px; margin-bottom: 5px; border-radius: 4px; cursor: pointer; background-color: #f0f0f0; border-left: 3px solid #dc3545;" role="button">
             <div class="task-title-list">
-              0. <code>Async Generator</code>
+              0. <code>Simple helper function</code>
             </div>
             <div class="d-flex ml-2 align-center">
                 <span class="label label-warning">
                   Mandatory
                 </span>
-                  <strong class="ml-2 text-success" style="font-size: 14px; min-width: 50px; text-align: right;">
-                    6/6
+                  <strong class="ml-2 text-danger" style="font-size: 14px; min-width: 50px; text-align: right;">
+                    0/3
                   </strong>
             </div>
           </div>
           <div class="task-button d-flex justify-content-between" data-task-index="1" style="text-decoration: none; padding: 10px; margin-bottom: 5px; border-radius: 4px; cursor: pointer; " role="button">
             <div class="task-title-list">
-              1. <code>Async Comprehensions</code>
+              1. <code>Simple pagination</code>
             </div>
             <div class="d-flex ml-2 align-center">
                 <span class="label label-warning">
                   Mandatory
                 </span>
-                  <strong class="ml-2 text-success" style="font-size: 14px; min-width: 50px; text-align: right;">
-                    6/6
+                  <strong class="ml-2 text-danger" style="font-size: 14px; min-width: 50px; text-align: right;">
+                    0/4
                   </strong>
             </div>
           </div>
           <div class="task-button d-flex justify-content-between" data-task-index="2" style="text-decoration: none; padding: 10px; margin-bottom: 5px; border-radius: 4px; cursor: pointer; " role="button">
             <div class="task-title-list">
-              2. <code>Run time for four parallel comprehensions</code>
+              2. <code>Hypermedia pagination</code>
             </div>
             <div class="d-flex ml-2 align-center">
                 <span class="label label-warning">
                   Mandatory
                 </span>
-                  <strong class="ml-2 text-success" style="font-size: 14px; min-width: 50px; text-align: right;">
-                    6/6
+                  <strong class="ml-2 text-danger" style="font-size: 14px; min-width: 50px; text-align: right;">
+                    0/4
+                  </strong>
+            </div>
+          </div>
+          <div class="task-button d-flex justify-content-between" data-task-index="3" style="text-decoration: none; padding: 10px; margin-bottom: 5px; border-radius: 4px; cursor: pointer; " role="button">
+            <div class="task-title-list">
+              3. <code>Deletion-resilient hypermedia pagination</code>
+            </div>
+            <div class="d-flex ml-2 align-center">
+                <span class="label label-warning">
+                  Mandatory
+                </span>
+                  <strong class="ml-2 text-danger" style="font-size: 14px; min-width: 50px; text-align: right;">
+                    0/4
                   </strong>
             </div>
           </div>
@@ -1542,10 +1997,10 @@ function toggleTaskFilePreview(fileId) {
 <script src="/assets/javascripts/application/custom/project_tasks.js"></script>
 
 
-        <div class="modal fade" id="container-specs-modal"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="modal-title">Recommended User container</h4></div><div class="modal-body"><div data-react-class="user_containers/ContainerSpecs" data-react-props="{&quot;containerModelName&quot;:&quot;User container&quot;,&quot;containerSpecs&quot;:[{&quot;description&quot;:&quot;\u003cp\u003eUbuntu 18.04 with Python 3.7\u003c/p\u003e\n&quot;,&quot;id&quot;:23,&quot;name&quot;:&quot;Ubuntu 18.04 - Python 3.7&quot;,&quot;online&quot;:true}],&quot;containersLimit&quot;:3,&quot;csrfToken&quot;:&quot;Tag0ZantP-UaOQQmbYS16m95O0ae0ZxHpXgzTqTj3-CVPfa4RmNKpJyMrbTCepAPPjieupl1ITiy46niO4YThA&quot;,&quot;startStatusURI&quot;:&quot;/user_containers/start_status.json&quot;,&quot;startURI&quot;:&quot;/user_containers/start.json&quot;}" data-react-cache-id="user_containers/ContainerSpecs-0"><div><div class="d-flex gap-4 sandboxes-filters"><a class="btn btn-outline-primary"><i aria-hidden="true" class="fa fa-filter"></i><span class="ml-2">Running only</span></a><div class="align-items-center d-flex" style="position: relative; width: 100%;"><input class="form-control" placeholder="Search for an image ..." type="search" value=""></div></div><div class="mt-3"><h3>1 image<small class="ml-2">(0/3 User containers spawned)</small></h3></div><div class="mt-3"><div class="panel panel-default"><div class="panel-body"><div class="align-items-center d-flex flex-wrap justify-content-between"><div><h3 class="mt-0"><i aria-hidden="true" class="fa fa-terminal text-danger"></i><span class="ml-2">Ubuntu 18.04 - Python 3.7</span></h3><div class="mt-2 text-muted"><p>Ubuntu 18.04 with Python 3.7</p>
+        <div class="modal fade" id="container-specs-modal"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="modal-title">Recommended User container</h4></div><div class="modal-body"><div data-react-class="user_containers/ContainerSpecs" data-react-props="{&quot;containerModelName&quot;:&quot;User container&quot;,&quot;containerSpecs&quot;:[{&quot;description&quot;:&quot;\u003cp\u003eUbuntu 18.04 with Python 3.7\u003c/p\u003e\n&quot;,&quot;id&quot;:23,&quot;name&quot;:&quot;Ubuntu 18.04 - Python 3.7&quot;,&quot;online&quot;:true}],&quot;containersLimit&quot;:3,&quot;csrfToken&quot;:&quot;fYQmV6ybVENzM1zh6Dz2rQ-CCSwBHnKGvte2bOwQZ27sRgxSNs0qwY9Lr8PD7flSqV0Bxfu1ejv2CeFAXFVRZw&quot;,&quot;startStatusURI&quot;:&quot;/user_containers/start_status.json&quot;,&quot;startURI&quot;:&quot;/user_containers/start.json&quot;}" data-react-cache-id="user_containers/ContainerSpecs-0"><div><div class="d-flex gap-4 sandboxes-filters"><a class="btn btn-outline-primary"><i aria-hidden="true" class="fa fa-filter"></i><span class="ml-2">Running only</span></a><div class="align-items-center d-flex" style="position: relative; width: 100%;"><input class="form-control" placeholder="Search for an image ..." type="search" value=""></div></div><div class="mt-3"><h3>1 image<small class="ml-2">(0/3 User containers spawned)</small></h3></div><div class="mt-3"><div class="panel panel-default"><div class="panel-body"><div class="align-items-center d-flex flex-wrap justify-content-between"><div><h3 class="mt-0"><i aria-hidden="true" class="fa fa-terminal text-danger"></i><span class="ml-2">Ubuntu 18.04 - Python 3.7</span></h3><div class="mt-2 text-muted"><p>Ubuntu 18.04 with Python 3.7</p>
 </div></div><div class="d-flex flex-wrap gap-5"><a class="btn btn-success"><i aria-hidden="true" class="fa fa-play"></i><span class="ml-2">Run</span></a></div></div></div></div></div></div></div></div></div></div></div>
       
-        <div class="modal fade" id="sandboxes-modal"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="modal-title">Recommended Sandboxes</h4></div><div class="modal-body"><div data-react-class="user_sandboxes/Sandboxes" data-react-props="{&quot;images&quot;:[{&quot;id&quot;:130,&quot;name&quot;:&quot;Ubuntu 22.04 - Java&quot;,&quot;aws_region&quot;:&quot;South America (São Paulo)&quot;},{&quot;id&quot;:17,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;South America (São Paulo)&quot;},{&quot;id&quot;:14,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;Europe (Paris)&quot;},{&quot;id&quot;:18,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;Asia Pacific (Sydney)&quot;},{&quot;id&quot;:16,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;US East (N. Virginia)\t&quot;},{&quot;id&quot;:128,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;Middle East (UAE)&quot;},{&quot;id&quot;:129,&quot;name&quot;:&quot;Ubuntu 18.04&quot;,&quot;aws_region&quot;:&quot;Middle East (UAE)&quot;}],&quot;sandboxesUri&quot;:&quot;/user_sandboxes&quot;,&quot;csrfToken&quot;:&quot;vbv_cPUlapUG7ZO2j1UyNIFvAkiGRI0W1Z71mx0a8GplLj2tGqsf1IBYOiQgqxfR0C6ntIHgMGnCBW83gn88Dg&quot;,&quot;maxNumberOfContainers&quot;:2}" data-react-cache-id="user_sandboxes/Sandboxes-0"><div class="d-flex flex-column"><div class="dropdown pull-right" style="align-self: end;"><button aria-expanded="false" aria-haspopup="true" class="btn btn-lg btn-primary dropdown-toggle" data-toggle="dropdown" type="button">New sandbox <span class="caret"></span></button><ul class="dropdown-menu dropdown-menu-right"><li class="divider" role="separator"></li><li class="dropdown-header">Middle East (UAE)</li><li><a role="button">Ubuntu 18.04</a></li><li><a role="button">Ubuntu 22.04</a></li><li class="divider" role="separator"></li><li class="dropdown-header">South America (São Paulo)</li><li><a role="button">Ubuntu 22.04</a></li><li><a role="button">Ubuntu 22.04 - Java</a></li><li class="divider" role="separator"></li><li class="dropdown-header">Europe (Paris)</li><li><a role="button">Ubuntu 22.04</a></li><li class="divider" role="separator"></li><li class="dropdown-header">Asia Pacific (Sydney)</li><li><a role="button">Ubuntu 22.04</a></li><li class="divider" role="separator"></li><li class="dropdown-header">US East (N. Virginia)	</li><li><a role="button">Ubuntu 22.04</a></li></ul></div><div class="mt-2 alert alert-info">No sandboxes yet!</div></div></div></div></div></div></div>
+        <div class="modal fade" id="sandboxes-modal"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="modal-title">Recommended Sandboxes</h4></div><div class="modal-body"><div data-react-class="user_sandboxes/Sandboxes" data-react-props="{&quot;images&quot;:[{&quot;id&quot;:130,&quot;name&quot;:&quot;Ubuntu 22.04 - Java&quot;,&quot;aws_region&quot;:&quot;South America (São Paulo)&quot;},{&quot;id&quot;:17,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;South America (São Paulo)&quot;},{&quot;id&quot;:14,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;Europe (Paris)&quot;},{&quot;id&quot;:18,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;Asia Pacific (Sydney)&quot;},{&quot;id&quot;:16,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;US East (N. Virginia)\t&quot;},{&quot;id&quot;:128,&quot;name&quot;:&quot;Ubuntu 22.04&quot;,&quot;aws_region&quot;:&quot;Middle East (UAE)&quot;},{&quot;id&quot;:129,&quot;name&quot;:&quot;Ubuntu 18.04&quot;,&quot;aws_region&quot;:&quot;Middle East (UAE)&quot;}],&quot;sandboxesUri&quot;:&quot;/user_sandboxes&quot;,&quot;csrfToken&quot;:&quot;73OD_FzaEQ3o16CQYy8pw9BeFuJhX4tK3nGf5II-CC1-san5xoxvjxSvU7JI_iY8doEeC5v0g_eWr8jIMns-JA&quot;,&quot;maxNumberOfContainers&quot;:2}" data-react-cache-id="user_sandboxes/Sandboxes-0"><div class="d-flex flex-column"><div class="dropdown pull-right" style="align-self: end;"><button aria-expanded="false" aria-haspopup="true" class="btn btn-lg btn-primary dropdown-toggle" data-toggle="dropdown" type="button">New sandbox <span class="caret"></span></button><ul class="dropdown-menu dropdown-menu-right"><li class="divider" role="separator"></li><li class="dropdown-header">Middle East (UAE)</li><li><a role="button">Ubuntu 18.04</a></li><li><a role="button">Ubuntu 22.04</a></li><li class="divider" role="separator"></li><li class="dropdown-header">South America (São Paulo)</li><li><a role="button">Ubuntu 22.04</a></li><li><a role="button">Ubuntu 22.04 - Java</a></li><li class="divider" role="separator"></li><li class="dropdown-header">Europe (Paris)</li><li><a role="button">Ubuntu 22.04</a></li><li class="divider" role="separator"></li><li class="dropdown-header">Asia Pacific (Sydney)</li><li><a role="button">Ubuntu 22.04</a></li><li class="divider" role="separator"></li><li class="dropdown-header">US East (N. Virginia)	</li><li><a role="button">Ubuntu 22.04</a></li></ul></div><div class="mt-2 alert alert-info">No sandboxes yet!</div></div></div></div></div></div></div>
 
 </div>
 
@@ -1661,7 +2116,7 @@ alert(example);
         });
       </script>
       
-        <div id="clippyAssistant" data-id="11510" data-firstname="Loic" data-batch-number="C#27" data-lastname="Le Guen" data-slack-id="U08V055A476" data-is-staff="false" data-location="Holberton Thonon-les-Bains, France" data-project-id="2344" data-location-white-label="false">
+        <div id="clippyAssistant" data-id="11510" data-firstname="Loic" data-batch-number="C#27" data-lastname="Le Guen" data-slack-id="U08V055A476" data-is-staff="false" data-location="Holberton Thonon-les-Bains, France" data-project-id="2351" data-location-white-label="false">
         <div class="chat-container" id="chat-container">
             <div class="chat-header" style="cursor: default;">
                 <div>
@@ -1728,7 +2183,7 @@ alert(example);
             </div>
             <div id="chat-inputs">
                 <div id="chat-input-container">
-                    <textarea class="chat-textarea" id="chatUserInput" rows="1" placeholder="Message Clippy Assistant"></textarea>
+                    <textarea class="chat-textarea" id="chatUserInput" rows="1" placeholder="Message Clippy Assistant" data-listener-added_7dac3070="true"></textarea>
                 </div>
                 <div id="chat-controls-container">
                     <div id="chat-controls-container-left">
@@ -1801,6 +2256,6 @@ cropperjs/dist/cropper.css:
    * Date: 2024-04-21T07:43:02.731Z
    *)
 */
-</style><div><div translate="no" class="_monica-theme-d2f2b383 root-container-UmvGjM markdown-font-size-provider-3KSWBx sidebar-ZRQNut" lang="fr"><div class="content-root-WCIiJJ"><div class="page-extra-window--rG3TB" style="right: 0px; left: 0px;"></div><div dir="ltr" class="sidebar-entry-btn-hvXPZj sidebar-entry-btn-right-doBuCO large-width-anF0uz" style="visibility: visible; top: 556.5px; right: 0px;"><div><div class="float-btn-dmQyFz"><img src="chrome-extension://ofpnmcalabcbjgholdjcjblkibolbppb/static/global/src/static/monicaLogo.png" class="" draggable="false" alt="Monica" style="width: 24px; height: 24px; border-radius: 4px;"><span class="shortcut--0OZjH">Ctrl+M</span></div></div><div class="extra-tools-box-Q-raLQ toolbar-AlHpmQ" style="top: -220px;"><div class="group--zSS-5"><div class="action-tool-avY9AO addTool-IFqpta hide-Xtmj6d"><span class="popover-content-wrapper-hJnY4r popover-wrapper-slOCoa popover-pZMF8G"><div class="action-menu-inner-P9EwRQ"><svg class="icon-PIRQLq" width="12" height="12" fill="none" viewBox="0 0 12 12" style="min-width: 12px; min-height: 12px;"><g><path fill="currentColor" d="M.207 6c0-.333.27-.603.603-.603h10.38a.603.603 0 1 1 0 1.207H.81A.603.603 0 0 1 .207 6Z" data-follow-fill="#6841EA"></path><path fill="currentColor" d="M6 11.793a.603.603 0 0 1-.603-.603V.81a.603.603 0 1 1 1.207 0v10.38c0 .333-.27.603-.604.603Z" data-follow-fill="#6841EA"></path><path stroke-width=".331" stroke="currentColor" d="M.207 6c0-.333.27-.603.603-.603h10.38a.603.603 0 1 1 0 1.207H.81A.603.603 0 0 1 .207 6Z" data-follow-stroke="#6841EA"></path><path stroke-width=".331" stroke="currentColor" d="M6 11.793a.603.603 0 0 1-.603-.603V.81a.603.603 0 1 1 1.207 0v10.38c0 .333-.27.603-.604.603Z" data-follow-stroke="#6841EA"></path></g></svg></div></span></div><div class="wrapper-WocCcb large-list-L5eAp3" style="justify-content: end;"><div class="expand-action-tool---HITr"><div class="node-wrapper-vV-bhR"><span class="popover-content-wrapper-hJnY4r"><div class="action-menu-inner-NhJs3t"><svg class="icon-PIRQLq" width="18" height="18" fill="none" viewBox="0 0 20 20" style="min-width: 18px; min-height: 18px;"><g><path data-follow-fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M9.375 5.898a1.836 1.836 0 1 1-3.672 0 1.836 1.836 0 0 1 3.672 0Zm1.463.82a3.4 3.4 0 0 1-6.598 0H2.5a.781.781 0 0 1 0-1.562h1.722a3.4 3.4 0 0 1 6.634 0H17.5a.781.781 0 1 1 0 1.563h-6.662Zm3.459 7.384a1.836 1.836 0 1 1-3.672 0 1.836 1.836 0 0 1 3.672 0Zm1.463.82a3.4 3.4 0 0 1-6.598 0H2.5a.781.781 0 0 1 0-1.563h6.644a3.4 3.4 0 0 1 6.634 0H17.5a.781.781 0 1 1 0 1.563h-1.74Z" fill="currentColor"></path></g></svg></div></span></div><div class="node-wrapper-vV-bhR"><div class="action-menu-inner-NhJs3t"><svg class="icon-PIRQLq" width="18" height="18" fill="none" viewBox="0 0 20 20" style="min-width: 18px; min-height: 18px;"><g><path fill="currentColor" d="M10.055 1.719c-4.564 0-8.227 3.8-8.227 8.44 0 .721.147 1.365.284 1.926l.038.155v.001c.126.512.232.945.264 1.404.01.133-.017.33-.092.606-.067.247-.158.503-.256.779l-.029.08c-.1.285-.217.617-.275.915-.03.151-.054.333-.039.522.016.192.075.438.255.657.194.235.448.326.617.365.176.04.354.046.506.04.307-.011.652-.074.969-.144.725-.162.98-.216 1.1-.223l.03-.001.12-.007h.036l.035.004.119.018.029.005c.034.005.144.032.41.116.25.078.589.19 1.054.343.932.307 2.04.561 2.74.561 4.616 0 8.538-3.405 8.538-8.121 0-4.641-3.662-8.441-8.226-8.441Zm-6.664 8.44c0-3.82 3.004-6.878 6.664-6.878 3.66 0 6.664 3.059 6.664 6.879 0 3.744-3.11 6.559-6.977 6.559-.445 0-1.36-.19-2.25-.483l-.007-.002c-.456-.15-.807-.267-1.069-.349a4.966 4.966 0 0 0-.632-.168l-.037-.006h-.001a2.896 2.896 0 0 0-.313-.038 2.86 2.86 0 0 0-.315.007l-.038.002c-.267.016-.662.104-1.24.233l-.11.025a6.74 6.74 0 0 1-.349.069 13.344 13.344 0 0 1 .159-.46v-.001c.095-.266.206-.578.29-.886.091-.336.17-.733.143-1.126-.042-.6-.181-1.165-.303-1.659v-.001l-.04-.162c-.135-.552-.239-1.037-.239-1.554Zm2.859 1.013a1.172 1.172 0 1 0 0-2.344 1.172 1.172 0 0 0 0 2.344ZM11.172 10a1.172 1.172 0 1 1-2.344 0 1.172 1.172 0 0 1 2.344 0Zm2.578 1.172a1.172 1.172 0 1 0 0-2.344 1.172 1.172 0 0 0 0 2.344Z" clip-rule="evenodd" fill-rule="evenodd" data-follow-fill="#55555D"></path></g></svg></div></div><div class="node-wrapper-vV-bhR"><div class="action-menu-inner-NhJs3t"><svg class="icon-PIRQLq" width="18" height="18" fill="none" viewBox="0 0 20 20" style="min-width: 18px; min-height: 18px;"><g><path data-follow-fill="#545C66" fill="currentColor" d="M4.375 3.281c-.604 0-1.094.49-1.094 1.094v8.94c0 .604.49 1.094 1.094 1.094h3.257c.57 0 1.115.136 1.587.39V5.625a2.344 2.344 0 0 0-2.344-2.344h-2.5Zm5.625 0a3.9 3.9 0 0 0-3.125-1.562h-2.5a2.656 2.656 0 0 0-2.656 2.656v8.94a2.656 2.656 0 0 0 2.656 2.656h3.257c.928 0 1.587.59 1.587 1.529a.781.781 0 1 0 1.562 0c0-.939.659-1.529 1.587-1.529h3.257a2.656 2.656 0 0 0 2.656-2.656v-8.94a2.656 2.656 0 0 0-2.656-2.656h-2.5A3.9 3.9 0 0 0 10 3.28Zm.781 11.518a3.346 3.346 0 0 1 1.587-.39h3.257c.604 0 1.094-.49 1.094-1.094v-8.94c0-.604-.49-1.094-1.094-1.094h-2.5a2.344 2.344 0 0 0-2.344 2.344v9.174Z" clip-rule="evenodd" fill-rule="evenodd"></path></g></svg></div></div></div></div><div class="wrapper-WocCcb" style="justify-content: end;"><div class="expand-action-tool---HITr"><div class="node-wrapper-vV-bhR"><span class="popover-content-wrapper-hJnY4r"><div class="action-menu-inner-NhJs3t"><svg class="icon-PIRQLq" width="18" height="18" fill="none" viewBox="0 0 20 20" style="min-width: 18px; min-height: 18px;"><g><path data-follow-fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M9.375 5.898a1.836 1.836 0 1 1-3.672 0 1.836 1.836 0 0 1 3.672 0Zm1.463.82a3.4 3.4 0 0 1-6.598 0H2.5a.781.781 0 0 1 0-1.562h1.722a3.4 3.4 0 0 1 6.634 0H17.5a.781.781 0 1 1 0 1.563h-6.662Zm3.459 7.384a1.836 1.836 0 1 1-3.672 0 1.836 1.836 0 0 1 3.672 0Zm1.463.82a3.4 3.4 0 0 1-6.598 0H2.5a.781.781 0 0 1 0-1.563h6.644a3.4 3.4 0 0 1 6.634 0H17.5a.781.781 0 1 1 0 1.563h-1.74Z" fill="currentColor"></path></g></svg></div></span></div><div class="node-wrapper-vV-bhR"><div class="action-menu-inner-NhJs3t"><svg class="icon-PIRQLq" width="18" height="18" fill="none" viewBox="0 0 20 20" style="min-width: 18px; min-height: 18px;"><g><path data-follow-fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M12.344 2.5c0-.431.35-.781.781-.781h1.25a3.906 3.906 0 0 1 3.906 3.906v1.25a.781.781 0 1 1-1.562 0v-1.25a2.344 2.344 0 0 0-2.344-2.344h-1.25a.781.781 0 0 1-.781-.781Zm2.801 7.546c-.379-.882-1.63-.882-2.01 0l-3.072 7.145a.781.781 0 0 0 1.436.617l.605-1.406a.794.794 0 0 0 .084.004h3.991l.603 1.402a.781.781 0 1 0 1.436-.617l-3.073-7.144Zm.362 4.798-1.366-3.179-1.367 3.179h2.733ZM6.875 18.28a.781.781 0 1 0 0-1.562h-1.25a2.344 2.344 0 0 1-2.344-2.344v-1.25a.781.781 0 1 0-1.562 0v1.25a3.906 3.906 0 0 0 3.906 3.906h1.25ZM6.209 1.72c.432 0 .782.35.782.781v.376h2.86a.781.781 0 1 1 0 1.563H8.835a6.76 6.76 0 0 1-1.64 3.712c.002 0 .003.002.005.003a5.63 5.63 0 0 0 3.19.987.781.781 0 1 1 0 1.562A7.193 7.193 0 0 1 5.997 9.21 6.202 6.202 0 0 1 2.5 10.295a.781.781 0 0 1 0-1.563c.827 0 1.634-.224 2.348-.644a6.87 6.87 0 0 1-1.126-1.984.781.781 0 0 1 1.468-.535 5.3 5.3 0 0 0 .859 1.52 5.191 5.191 0 0 0 1.21-2.65H2.5a.781.781 0 0 1 0-1.563h2.928V2.5c0-.431.35-.781.781-.781Z" fill="currentColor"></path></g></svg></div></div></div></div><div class="wrapper-WocCcb" style="justify-content: end;"><div class="expand-action-tool---HITr"><div class="node-wrapper-vV-bhR"><span class="popover-content-wrapper-hJnY4r"><div class="action-menu-inner-NhJs3t"><svg class="icon-PIRQLq" width="18" height="18" fill="none" viewBox="0 0 20 20" style="min-width: 18px; min-height: 18px;"><g><path data-follow-fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M9.375 5.898a1.836 1.836 0 1 1-3.672 0 1.836 1.836 0 0 1 3.672 0Zm1.463.82a3.4 3.4 0 0 1-6.598 0H2.5a.781.781 0 0 1 0-1.562h1.722a3.4 3.4 0 0 1 6.634 0H17.5a.781.781 0 1 1 0 1.563h-6.662Zm3.459 7.384a1.836 1.836 0 1 1-3.672 0 1.836 1.836 0 0 1 3.672 0Zm1.463.82a3.4 3.4 0 0 1-6.598 0H2.5a.781.781 0 0 1 0-1.563h6.644a3.4 3.4 0 0 1 6.634 0H17.5a.781.781 0 1 1 0 1.563h-1.74Z" fill="currentColor"></path></g></svg></div></span></div><div class="node-wrapper-vV-bhR"><div class="action-menu-inner-NhJs3t"><svg class="icon-PIRQLq" width="18" height="18" fill="none" viewBox="0 0 20 21" style="min-width: 18px; min-height: 18px;"><g><path fill="currentColor" d="M2.832 10.645a7.286 7.286 0 1 1 11.763 5.748.781.781 0 1 0 .96 1.232 8.848 8.848 0 1 0-10.877 0 .781.781 0 1 0 .962-1.232 7.272 7.272 0 0 1-2.808-5.748Zm3.246 0a4.039 4.039 0 1 1 6.815 2.934.781.781 0 0 0 1.074 1.134 5.601 5.601 0 1 0-7.7 0 .781.781 0 1 0 1.074-1.134 4.025 4.025 0 0 1-1.263-2.934Z" clip-rule="evenodd" fill-rule="evenodd" data-follow-fill="#6841EA"></path><path fill="currentColor" d="M10.12 12.65a2.027 2.027 0 1 0 0-4.054 2.027 2.027 0 0 0 0 4.054Zm-.548.692a.88.88 0 0 0-.793.5l-2.032 4.237a.66.66 0 0 0 .595.945h5.525a.66.66 0 0 0 .596-.942l-2.006-4.236a.88.88 0 0 0-.795-.504h-1.09Z" clip-rule="evenodd" fill-rule="evenodd" data-follow-fill="#6841EA"></path></g></svg></div></div></div></div><span class="popover-content-wrapper-hJnY4r popover-wrapper-slOCoa popover-pZMF8G"><span class="popover-content-wrapper-hJnY4r popover-wrapper-slOCoa popover-pZMF8G"><div class="action-tool-avY9AO"><div class="action-menu-inner-P9EwRQ"><svg class="icon-PIRQLq" width="18" height="18" fill="none" viewBox="0 0 16 16" style="min-width: 18px; min-height: 18px;"><g><path data-follow-fill="#55555D" fill-rule="evenodd" clip-rule="evenodd" d="M4.4 1.375a3.025 3.025 0 0 0 0 6.05h2.4c.345 0 .625-.28.625-.625V4.4A3.025 3.025 0 0 0 4.4 1.375ZM2.625 4.4a1.775 1.775 0 1 1 3.55 0v1.775H4.4c-.98 0-1.775-.795-1.775-1.775ZM11.6 1.375A3.025 3.025 0 0 0 8.575 4.4v2.4c0 .345.28.625.625.625h2.4a3.025 3.025 0 0 0 0-6.05ZM9.825 4.4A1.775 1.775 0 1 1 11.6 6.175H9.825V4.4Zm-8.45 7.2A3.025 3.025 0 0 1 4.4 8.575h2.4c.345 0 .625.28.625.625v2.4a3.025 3.025 0 1 1-6.05 0ZM4.4 9.825A1.775 1.775 0 1 0 6.175 11.6V9.825H4.4Zm4.8-1.25a.625.625 0 0 0-.625.625v2.4A3.025 3.025 0 1 0 11.6 8.575H9.2Zm.625 3.025V9.825H11.6A1.775 1.775 0 1 1 9.825 11.6Z" fill="currentColor"></path></g></svg></div></div></span></span><div style="height: 36px;"></div><div class="setting-menu-SAVOmX hide-jMZWfb"><div class="setting-menu-inner-5DEa4K"><span class="base-icon-UVXGPD"><svg fill="none" width="18" height="18" viewBox="0 0 16 16" style="min-width: 18px; min-height: 18px; color: currentcolor;"><g id="settings">
+</style><div><div translate="no" class="_monica-theme-d2f2b383 root-container-UmvGjM markdown-font-size-provider-3KSWBx sidebar-ZRQNut" lang="fr"><div class="content-root-WCIiJJ"><div class="page-extra-window--rG3TB" style="right: 0px; left: 0px;"></div><div dir="ltr" class="sidebar-entry-btn-hvXPZj sidebar-entry-btn-right-doBuCO large-width-anF0uz" style="visibility: visible; top: 719.25px; right: 0px;"><div><div class="float-btn-dmQyFz"><img src="chrome-extension://ofpnmcalabcbjgholdjcjblkibolbppb/static/global/src/static/monicaLogo.png" class="" draggable="false" alt="Monica" style="width: 24px; height: 24px; border-radius: 4px;"><span class="shortcut--0OZjH">Ctrl+M</span></div></div><div class="extra-tools-box-Q-raLQ toolbar-AlHpmQ" style="top: -220px;"><div class="group--zSS-5"><div class="action-tool-avY9AO addTool-IFqpta hide-Xtmj6d"><span class="popover-content-wrapper-hJnY4r popover-wrapper-slOCoa popover-pZMF8G"><div class="action-menu-inner-P9EwRQ"><svg class="icon-PIRQLq" width="12" height="12" fill="none" viewBox="0 0 12 12" style="min-width: 12px; min-height: 12px;"><g><path fill="currentColor" d="M.207 6c0-.333.27-.603.603-.603h10.38a.603.603 0 1 1 0 1.207H.81A.603.603 0 0 1 .207 6Z" data-follow-fill="#6841EA"></path><path fill="currentColor" d="M6 11.793a.603.603 0 0 1-.603-.603V.81a.603.603 0 1 1 1.207 0v10.38c0 .333-.27.603-.604.603Z" data-follow-fill="#6841EA"></path><path stroke-width=".331" stroke="currentColor" d="M.207 6c0-.333.27-.603.603-.603h10.38a.603.603 0 1 1 0 1.207H.81A.603.603 0 0 1 .207 6Z" data-follow-stroke="#6841EA"></path><path stroke-width=".331" stroke="currentColor" d="M6 11.793a.603.603 0 0 1-.603-.603V.81a.603.603 0 1 1 1.207 0v10.38c0 .333-.27.603-.604.603Z" data-follow-stroke="#6841EA"></path></g></svg></div></span></div><div class="wrapper-WocCcb large-list-L5eAp3" style="justify-content: end;"><div class="expand-action-tool---HITr"><div class="node-wrapper-vV-bhR"><span class="popover-content-wrapper-hJnY4r"><div class="action-menu-inner-NhJs3t"><svg class="icon-PIRQLq" width="18" height="18" fill="none" viewBox="0 0 20 20" style="min-width: 18px; min-height: 18px;"><g><path data-follow-fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M9.375 5.898a1.836 1.836 0 1 1-3.672 0 1.836 1.836 0 0 1 3.672 0Zm1.463.82a3.4 3.4 0 0 1-6.598 0H2.5a.781.781 0 0 1 0-1.562h1.722a3.4 3.4 0 0 1 6.634 0H17.5a.781.781 0 1 1 0 1.563h-6.662Zm3.459 7.384a1.836 1.836 0 1 1-3.672 0 1.836 1.836 0 0 1 3.672 0Zm1.463.82a3.4 3.4 0 0 1-6.598 0H2.5a.781.781 0 0 1 0-1.563h6.644a3.4 3.4 0 0 1 6.634 0H17.5a.781.781 0 1 1 0 1.563h-1.74Z" fill="currentColor"></path></g></svg></div></span></div><div class="node-wrapper-vV-bhR"><div class="action-menu-inner-NhJs3t"><svg class="icon-PIRQLq" width="18" height="18" fill="none" viewBox="0 0 20 20" style="min-width: 18px; min-height: 18px;"><g><path fill="currentColor" d="M10.055 1.719c-4.564 0-8.227 3.8-8.227 8.44 0 .721.147 1.365.284 1.926l.038.155v.001c.126.512.232.945.264 1.404.01.133-.017.33-.092.606-.067.247-.158.503-.256.779l-.029.08c-.1.285-.217.617-.275.915-.03.151-.054.333-.039.522.016.192.075.438.255.657.194.235.448.326.617.365.176.04.354.046.506.04.307-.011.652-.074.969-.144.725-.162.98-.216 1.1-.223l.03-.001.12-.007h.036l.035.004.119.018.029.005c.034.005.144.032.41.116.25.078.589.19 1.054.343.932.307 2.04.561 2.74.561 4.616 0 8.538-3.405 8.538-8.121 0-4.641-3.662-8.441-8.226-8.441Zm-6.664 8.44c0-3.82 3.004-6.878 6.664-6.878 3.66 0 6.664 3.059 6.664 6.879 0 3.744-3.11 6.559-6.977 6.559-.445 0-1.36-.19-2.25-.483l-.007-.002c-.456-.15-.807-.267-1.069-.349a4.966 4.966 0 0 0-.632-.168l-.037-.006h-.001a2.896 2.896 0 0 0-.313-.038 2.86 2.86 0 0 0-.315.007l-.038.002c-.267.016-.662.104-1.24.233l-.11.025a6.74 6.74 0 0 1-.349.069 13.344 13.344 0 0 1 .159-.46v-.001c.095-.266.206-.578.29-.886.091-.336.17-.733.143-1.126-.042-.6-.181-1.165-.303-1.659v-.001l-.04-.162c-.135-.552-.239-1.037-.239-1.554Zm2.859 1.013a1.172 1.172 0 1 0 0-2.344 1.172 1.172 0 0 0 0 2.344ZM11.172 10a1.172 1.172 0 1 1-2.344 0 1.172 1.172 0 0 1 2.344 0Zm2.578 1.172a1.172 1.172 0 1 0 0-2.344 1.172 1.172 0 0 0 0 2.344Z" clip-rule="evenodd" fill-rule="evenodd" data-follow-fill="#55555D"></path></g></svg></div></div><div class="node-wrapper-vV-bhR"><div class="action-menu-inner-NhJs3t"><svg class="icon-PIRQLq" width="18" height="18" fill="none" viewBox="0 0 20 20" style="min-width: 18px; min-height: 18px;"><g><path data-follow-fill="#545C66" fill="currentColor" d="M4.375 3.281c-.604 0-1.094.49-1.094 1.094v8.94c0 .604.49 1.094 1.094 1.094h3.257c.57 0 1.115.136 1.587.39V5.625a2.344 2.344 0 0 0-2.344-2.344h-2.5Zm5.625 0a3.9 3.9 0 0 0-3.125-1.562h-2.5a2.656 2.656 0 0 0-2.656 2.656v8.94a2.656 2.656 0 0 0 2.656 2.656h3.257c.928 0 1.587.59 1.587 1.529a.781.781 0 1 0 1.562 0c0-.939.659-1.529 1.587-1.529h3.257a2.656 2.656 0 0 0 2.656-2.656v-8.94a2.656 2.656 0 0 0-2.656-2.656h-2.5A3.9 3.9 0 0 0 10 3.28Zm.781 11.518a3.346 3.346 0 0 1 1.587-.39h3.257c.604 0 1.094-.49 1.094-1.094v-8.94c0-.604-.49-1.094-1.094-1.094h-2.5a2.344 2.344 0 0 0-2.344 2.344v9.174Z" clip-rule="evenodd" fill-rule="evenodd"></path></g></svg></div></div></div></div><div class="wrapper-WocCcb" style="justify-content: end;"><div class="expand-action-tool---HITr"><div class="node-wrapper-vV-bhR"><span class="popover-content-wrapper-hJnY4r"><div class="action-menu-inner-NhJs3t"><svg class="icon-PIRQLq" width="18" height="18" fill="none" viewBox="0 0 20 20" style="min-width: 18px; min-height: 18px;"><g><path data-follow-fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M9.375 5.898a1.836 1.836 0 1 1-3.672 0 1.836 1.836 0 0 1 3.672 0Zm1.463.82a3.4 3.4 0 0 1-6.598 0H2.5a.781.781 0 0 1 0-1.562h1.722a3.4 3.4 0 0 1 6.634 0H17.5a.781.781 0 1 1 0 1.563h-6.662Zm3.459 7.384a1.836 1.836 0 1 1-3.672 0 1.836 1.836 0 0 1 3.672 0Zm1.463.82a3.4 3.4 0 0 1-6.598 0H2.5a.781.781 0 0 1 0-1.563h6.644a3.4 3.4 0 0 1 6.634 0H17.5a.781.781 0 1 1 0 1.563h-1.74Z" fill="currentColor"></path></g></svg></div></span></div><div class="node-wrapper-vV-bhR"><div class="action-menu-inner-NhJs3t"><svg class="icon-PIRQLq" width="18" height="18" fill="none" viewBox="0 0 20 20" style="min-width: 18px; min-height: 18px;"><g><path data-follow-fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M12.344 2.5c0-.431.35-.781.781-.781h1.25a3.906 3.906 0 0 1 3.906 3.906v1.25a.781.781 0 1 1-1.562 0v-1.25a2.344 2.344 0 0 0-2.344-2.344h-1.25a.781.781 0 0 1-.781-.781Zm2.801 7.546c-.379-.882-1.63-.882-2.01 0l-3.072 7.145a.781.781 0 0 0 1.436.617l.605-1.406a.794.794 0 0 0 .084.004h3.991l.603 1.402a.781.781 0 1 0 1.436-.617l-3.073-7.144Zm.362 4.798-1.366-3.179-1.367 3.179h2.733ZM6.875 18.28a.781.781 0 1 0 0-1.562h-1.25a2.344 2.344 0 0 1-2.344-2.344v-1.25a.781.781 0 1 0-1.562 0v1.25a3.906 3.906 0 0 0 3.906 3.906h1.25ZM6.209 1.72c.432 0 .782.35.782.781v.376h2.86a.781.781 0 1 1 0 1.563H8.835a6.76 6.76 0 0 1-1.64 3.712c.002 0 .003.002.005.003a5.63 5.63 0 0 0 3.19.987.781.781 0 1 1 0 1.562A7.193 7.193 0 0 1 5.997 9.21 6.202 6.202 0 0 1 2.5 10.295a.781.781 0 0 1 0-1.563c.827 0 1.634-.224 2.348-.644a6.87 6.87 0 0 1-1.126-1.984.781.781 0 0 1 1.468-.535 5.3 5.3 0 0 0 .859 1.52 5.191 5.191 0 0 0 1.21-2.65H2.5a.781.781 0 0 1 0-1.563h2.928V2.5c0-.431.35-.781.781-.781Z" fill="currentColor"></path></g></svg></div></div></div></div><div class="wrapper-WocCcb" style="justify-content: end;"><div class="expand-action-tool---HITr"><div class="node-wrapper-vV-bhR"><span class="popover-content-wrapper-hJnY4r"><div class="action-menu-inner-NhJs3t"><svg class="icon-PIRQLq" width="18" height="18" fill="none" viewBox="0 0 20 20" style="min-width: 18px; min-height: 18px;"><g><path data-follow-fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M9.375 5.898a1.836 1.836 0 1 1-3.672 0 1.836 1.836 0 0 1 3.672 0Zm1.463.82a3.4 3.4 0 0 1-6.598 0H2.5a.781.781 0 0 1 0-1.562h1.722a3.4 3.4 0 0 1 6.634 0H17.5a.781.781 0 1 1 0 1.563h-6.662Zm3.459 7.384a1.836 1.836 0 1 1-3.672 0 1.836 1.836 0 0 1 3.672 0Zm1.463.82a3.4 3.4 0 0 1-6.598 0H2.5a.781.781 0 0 1 0-1.563h6.644a3.4 3.4 0 0 1 6.634 0H17.5a.781.781 0 1 1 0 1.563h-1.74Z" fill="currentColor"></path></g></svg></div></span></div><div class="node-wrapper-vV-bhR"><div class="action-menu-inner-NhJs3t"><svg class="icon-PIRQLq" width="18" height="18" fill="none" viewBox="0 0 20 21" style="min-width: 18px; min-height: 18px;"><g><path fill="currentColor" d="M2.832 10.645a7.286 7.286 0 1 1 11.763 5.748.781.781 0 1 0 .96 1.232 8.848 8.848 0 1 0-10.877 0 .781.781 0 1 0 .962-1.232 7.272 7.272 0 0 1-2.808-5.748Zm3.246 0a4.039 4.039 0 1 1 6.815 2.934.781.781 0 0 0 1.074 1.134 5.601 5.601 0 1 0-7.7 0 .781.781 0 1 0 1.074-1.134 4.025 4.025 0 0 1-1.263-2.934Z" clip-rule="evenodd" fill-rule="evenodd" data-follow-fill="#6841EA"></path><path fill="currentColor" d="M10.12 12.65a2.027 2.027 0 1 0 0-4.054 2.027 2.027 0 0 0 0 4.054Zm-.548.692a.88.88 0 0 0-.793.5l-2.032 4.237a.66.66 0 0 0 .595.945h5.525a.66.66 0 0 0 .596-.942l-2.006-4.236a.88.88 0 0 0-.795-.504h-1.09Z" clip-rule="evenodd" fill-rule="evenodd" data-follow-fill="#6841EA"></path></g></svg></div></div></div></div><span class="popover-content-wrapper-hJnY4r popover-wrapper-slOCoa popover-pZMF8G"><span class="popover-content-wrapper-hJnY4r popover-wrapper-slOCoa popover-pZMF8G"><div class="action-tool-avY9AO"><div class="action-menu-inner-P9EwRQ"><svg class="icon-PIRQLq" width="18" height="18" fill="none" viewBox="0 0 16 16" style="min-width: 18px; min-height: 18px;"><g><path data-follow-fill="#55555D" fill-rule="evenodd" clip-rule="evenodd" d="M4.4 1.375a3.025 3.025 0 0 0 0 6.05h2.4c.345 0 .625-.28.625-.625V4.4A3.025 3.025 0 0 0 4.4 1.375ZM2.625 4.4a1.775 1.775 0 1 1 3.55 0v1.775H4.4c-.98 0-1.775-.795-1.775-1.775ZM11.6 1.375A3.025 3.025 0 0 0 8.575 4.4v2.4c0 .345.28.625.625.625h2.4a3.025 3.025 0 0 0 0-6.05ZM9.825 4.4A1.775 1.775 0 1 1 11.6 6.175H9.825V4.4Zm-8.45 7.2A3.025 3.025 0 0 1 4.4 8.575h2.4c.345 0 .625.28.625.625v2.4a3.025 3.025 0 1 1-6.05 0ZM4.4 9.825A1.775 1.775 0 1 0 6.175 11.6V9.825H4.4Zm4.8-1.25a.625.625 0 0 0-.625.625v2.4A3.025 3.025 0 1 0 11.6 8.575H9.2Zm.625 3.025V9.825H11.6A1.775 1.775 0 1 1 9.825 11.6Z" fill="currentColor"></path></g></svg></div></div></span></span><div style="height: 36px;"></div><div class="setting-menu-SAVOmX hide-jMZWfb"><div class="setting-menu-inner-5DEa4K"><span class="base-icon-UVXGPD"><svg fill="none" width="18" height="18" viewBox="0 0 16 16" style="min-width: 18px; min-height: 18px; color: currentcolor;"><g id="settings">
 <path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M7.59811 0.982189C7.86312 0.925859 8.13702 0.925859 8.40203 0.982189C8.70402 1.04638 8.97778 1.20482 9.30278 1.39292C9.32388 1.40512 9.34519 1.41746 9.36674 1.4299L13.0069 3.53155C13.0285 3.54399 13.0498 3.55628 13.0709 3.56845C13.3963 3.75586 13.6704 3.91372 13.877 4.14316C14.0583 4.3445 14.1952 4.5817 14.2789 4.83938C14.3744 5.133 14.374 5.4493 14.3736 5.82481C14.3736 5.84918 14.3736 5.87381 14.3736 5.89869V10.102C14.3736 10.1269 14.3736 10.1515 14.3736 10.1759C14.374 10.5514 14.3744 10.8677 14.2789 11.1613C14.1952 11.419 14.0583 11.6562 13.877 11.8575C13.6704 12.087 13.3963 12.2448 13.0709 12.4322C13.0498 12.4444 13.0285 12.4567 13.0069 12.4691L9.36674 14.5708C9.34518 14.5832 9.32387 14.5956 9.30277 14.6078C8.97777 14.7959 8.70401 14.9543 8.40203 15.0185C8.13702 15.0748 7.86312 15.0748 7.59811 15.0185C7.29612 14.9543 7.02236 14.7959 6.69736 14.6078C6.67627 14.5956 6.65495 14.5832 6.6334 14.5708L2.99323 12.4691C2.97169 12.4567 2.95035 12.4444 2.92923 12.4322C2.60383 12.2448 2.32974 12.087 2.12315 11.8575C1.94186 11.6562 1.80491 11.419 1.72119 11.1613C1.62579 10.8677 1.62612 10.5514 1.62651 10.1759C1.62654 10.1515 1.62657 10.1269 1.62657 10.102V5.89869C1.62657 5.87381 1.62654 5.84918 1.62651 5.82481C1.62612 5.4493 1.62579 5.133 1.72119 4.83938C1.80491 4.5817 1.94186 4.3445 2.12315 4.14316C2.32973 3.91372 2.60383 3.75586 2.92923 3.56845C2.95035 3.55628 2.97168 3.54399 2.99323 3.53155L6.6334 1.4299C6.65495 1.41746 6.67626 1.40513 6.69735 1.39292C7.02236 1.20482 7.29612 1.04638 7.59811 0.982189ZM8.15254 2.15597C8.05201 2.1346 7.94812 2.1346 7.8476 2.15597C7.75606 2.17542 7.65704 2.22454 7.2334 2.46913L3.59323 4.57078C3.16959 4.81537 3.07755 4.87656 3.01493 4.94611C2.94616 5.02248 2.89422 5.11246 2.86246 5.2102C2.83354 5.2992 2.82657 5.40951 2.82657 5.89869V10.102C2.82657 10.5912 2.83354 10.7015 2.86246 10.7905C2.89422 10.8882 2.94616 10.9782 3.01493 11.0546C3.07755 11.1241 3.16959 11.1853 3.59323 11.4299L7.2334 13.5316C7.65705 13.7761 7.75606 13.8253 7.8476 13.8447C7.94812 13.8661 8.05201 13.8661 8.15254 13.8447C8.24408 13.8253 8.34309 13.7761 8.76674 13.5316L12.4069 11.4299C12.8305 11.1853 12.9226 11.1241 12.9852 11.0546C13.054 10.9782 13.1059 10.8882 13.1377 10.7905C13.1666 10.7015 13.1736 10.5912 13.1736 10.102V5.89869C13.1736 5.40951 13.1666 5.2992 13.1377 5.2102C13.1059 5.11246 13.054 5.02249 12.9852 4.94611C12.9226 4.87656 12.8305 4.81537 12.4069 4.57078L8.76674 2.46913C8.34309 2.22454 8.24408 2.17542 8.15254 2.15597ZM8.00007 6.60034C7.22687 6.60034 6.60007 7.22714 6.60007 8.00034C6.60007 8.77354 7.22687 9.40034 8.00007 9.40034C8.77327 9.40034 9.40007 8.77354 9.40007 8.00034C9.40007 7.22714 8.77327 6.60034 8.00007 6.60034ZM5.40007 8.00034C5.40007 6.5644 6.56413 5.40034 8.00007 5.40034C9.43601 5.40034 10.6001 6.5644 10.6001 8.00034C10.6001 9.43628 9.43601 10.6003 8.00007 10.6003C6.56413 10.6003 5.40007 9.43628 5.40007 8.00034Z" fill="currentColor"></path>
 </g></svg></span></div></div></div></div></div><div class="dialog-root-ZbJNQk"></div><div class="artifact-widget-root-g65VNZ"></div><div class="reading-summary-entry-sQ7GjJ" style="display: none;"><div class="menus-TITw4U"><div class="summarize-KNVBZE"><img class="logo-Iet2ed" src="chrome-extension://ofpnmcalabcbjgholdjcjblkibolbppb/static/monicaLogo.png" alt=""><span>Résumer</span></div><div class="monica-popover-2Ez2GR"><span class="trigger-node-J0ZlFj"><div class="action-EvGaDu"><svg class="icon-PIRQLq" width="20" height="20" fill="none" viewBox="0 0 16 16" style="min-width: 20px; min-height: 20px;"><g><g clip-path="url(#readingMorea:re:)"><path data-follow-fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M6.667 12.667a1.333 1.333 0 1 0 2.667 0 1.333 1.333 0 0 0-2.667 0Zm.39-8.39A1.333 1.333 0 1 1 8.943 2.39a1.333 1.333 0 0 1-1.886 1.885Zm0 4.666a1.333 1.333 0 1 1 1.886-1.886 1.333 1.333 0 0 1-1.886 1.886Z" fill="currentColor"></path></g><defs><clipPath id="readingMorea:re:"><path d="M0 0h16v16H0z" fill="#fff"></path></clipPath></defs></g></svg></div></span><div class="content-Acv-lW content-animate-KrETS- content-animate-bottom-XuKU-C" style="top: 20px; inset-inline-end: 0px;"><div class="more-action-card-Gzyxpf"><div class="box-QVo1uj"><div class="item-l-ih8I disable-hover-1zHsn-"><div class="respond-language-select-content-C13-Zp"><div class="item-9Cx2Vc"><div class="lt-xr9LBA"><svg class="icon-PIRQLq" width="16" height="16" fill="none" viewBox="0 0 20 20" style="min-width: 16px; min-height: 16px;"><g><path data-follow-fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M12.344 2.5c0-.431.35-.781.781-.781h1.25a3.906 3.906 0 0 1 3.906 3.906v1.25a.781.781 0 1 1-1.562 0v-1.25a2.344 2.344 0 0 0-2.344-2.344h-1.25a.781.781 0 0 1-.781-.781Zm2.801 7.546c-.379-.882-1.63-.882-2.01 0l-3.072 7.145a.781.781 0 0 0 1.436.617l.605-1.406a.794.794 0 0 0 .084.004h3.991l.603 1.402a.781.781 0 1 0 1.436-.617l-3.073-7.144Zm.362 4.798-1.366-3.179-1.367 3.179h2.733ZM6.875 18.28a.781.781 0 1 0 0-1.562h-1.25a2.344 2.344 0 0 1-2.344-2.344v-1.25a.781.781 0 1 0-1.562 0v1.25a3.906 3.906 0 0 0 3.906 3.906h1.25ZM6.209 1.72c.432 0 .782.35.782.781v.376h2.86a.781.781 0 1 1 0 1.563H8.835a6.76 6.76 0 0 1-1.64 3.712c.002 0 .003.002.005.003a5.63 5.63 0 0 0 3.19.987.781.781 0 1 1 0 1.562A7.193 7.193 0 0 1 5.997 9.21 6.202 6.202 0 0 1 2.5 10.295a.781.781 0 0 1 0-1.563c.827 0 1.634-.224 2.348-.644a6.87 6.87 0 0 1-1.126-1.984.781.781 0 0 1 1.468-.535 5.3 5.3 0 0 0 .859 1.52 5.191 5.191 0 0 0 1.21-2.65H2.5a.781.781 0 0 1 0-1.563h2.928V2.5c0-.431.35-.781.781-.781Z" fill="currentColor"></path></g></svg><span class="name-kzXW89">Langue de réponse</span></div></div><div class="item-9Cx2Vc"><span class="popover-content-wrapper-hJnY4r fullWidth-Eb-SHr"><div class="dropdown-label-Awd3FB" style="width: 100%; height: fit-content;"><div class="label-content-m7v9DF follow-global-setting-label-s0wni4"><span>français</span></div><svg class="icon-PIRQLq monica-dropdown-label" width="16" height="16" fill="none" viewBox="0 0 28 28" style="min-width: 16px; min-height: 16px; color: var(--theme-icon-quaternary);"><g><path fill="currentColor" d="M5.945 10.091a.781.781 0 0 1 1.105-.006l6.4 6.335a.781.781 0 0 0 1.1 0l6.4-6.335a.781.781 0 1 1 1.1 1.11l-6.401 6.335a2.344 2.344 0 0 1-3.298 0l-6.4-6.334a.781.781 0 0 1-.006-1.105Z" clip-rule="evenodd" fill-rule="evenodd" data-follow-fill="#595959"></path></g></svg></div></span></div></div></div><div class="item-l-ih8I"><svg class="icon-PIRQLq" width="16" height="16" fill="none" viewBox="0 0 16 16" style="min-width: 16px; min-height: 16px;"><g><path data-follow-stroke="currentColor" d="M8 14.667A6.667 6.667 0 1 0 8 1.333a6.667 6.667 0 0 0 0 13.334Z" stroke="currentColor" stroke-linejoin="round"></path><path data-follow-stroke="currentColor" d="M5.333 8h5.334" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path></g></svg><span>Désactiver sur ce site</span></div><div class="item-l-ih8I"><svg class="icon-PIRQLq" width="16" height="16" fill="none" viewBox="0 0 16 16" style="min-width: 16px; min-height: 16px;"><g><path data-follow-stroke="currentColor" d="M8 10.667a2.667 2.667 0 1 0 0-5.334 2.667 2.667 0 0 0 0 5.334Z" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path><path data-follow-stroke="currentColor" d="M3.269 5.725a4.94 4.94 0 0 1 .393-.681l-.025-1.625a.51.51 0 0 1 .182-.394A6.484 6.484 0 0 1 5.794 1.88c.143-.05.3-.037.425.044l1.393.837a5.52 5.52 0 0 1 .788 0l1.394-.837a.522.522 0 0 1 .43-.044A6.451 6.451 0 0 1 12.2 3.02a.496.496 0 0 1 .175.393l-.025 1.625c.15.22.281.444.394.682l1.418.787c.132.075.225.2.25.35a6.468 6.468 0 0 1 0 2.275.498.498 0 0 1-.25.35l-1.418.788a4.936 4.936 0 0 1-.394.68l.025 1.626a.51.51 0 0 1-.181.394 6.485 6.485 0 0 1-1.975 1.143.484.484 0 0 1-.425-.043L8.4 13.23a5.534 5.534 0 0 1-.788 0l-1.393.838a.522.522 0 0 1-.432.043 6.45 6.45 0 0 1-1.975-1.137.496.496 0 0 1-.175-.394l.025-1.625a4.943 4.943 0 0 1-.393-.681l-1.42-.788a.499.499 0 0 1-.25-.35 6.47 6.47 0 0 1 0-2.275.499.499 0 0 1 .25-.35l1.42-.787Z" stroke="currentColor" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></g></svg><span>Réglage</span></div></div></div></div></div><div class="action-EvGaDu"><svg class="icon-PIRQLq" width="20" height="20" fill="none" viewBox="0 0 20 20" style="min-width: 20px; min-height: 20px;"><g><path data-follow-stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor" d="m5 5 4.737 4.839L15 15"></path><path data-follow-stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="currentColor" d="m15 5-4.736 4.839L5 15"></path></g></svg></div></div><div class="setting-jbI5O3"><label class="ant-checkbox-wrapper css-hzdm0h"><span class="ant-checkbox ant-wave-target css-hzdm0h"><input class="ant-checkbox-input" type="checkbox"><span class="ant-checkbox-inner"></span></span><span><span class="txt-eqCbJw">Ne pas ouvrir la barre latérale</span></span></label></div></div><div class="reading-summary-status-bar-yFqhHz"></div><div class="contextual-toolbar-BjPOM3" dir="ltr" style="text-align: left;"></div><div class="grammar-check-2yjmU8 _monica-theme-d2f2b383"></div><div class="window-root-ERNrXd"></div></div></div></div></template></div></body></html>

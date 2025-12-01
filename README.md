@@ -4,30 +4,29 @@
 
 ## Table of Contents :
 
-  - [0. Async Generator](#subparagraph0)
-  - [1. Async Comprehensions](#subparagraph1)
-  - [2. Run time for four parallel comprehensions](#subparagraph2)
+  - [0. Simple helper function](#subparagraph0)
+  - [1. Simple pagination](#subparagraph1)
+  - [2. Hypermedia pagination](#subparagraph2)
+  - [3. Deletion-resilient hypermedia pagination](#subparagraph3)
 
 ## Resources
 ### Read or watch:
-* [PEP 530 – Asynchronous Comprehensions](/rltoken/UFCR8qW3nHmEDZZaHqXL7Q)
-* [What’s New in Python: Asynchronous Comprehensions / Generators](/rltoken/PAGwxZUyVGBR8EMFGGNnGg)
-* [Type-hints for generators](/rltoken/fOrb8FrWbcYu8evONWj2Kw)
+* [REST API Design: Pagination](/rltoken/VeL1Cbu_NVNND6WKJrECbg)
+* [HATEOAS](/rltoken/Mqk-KBxLRtJaQuWZO-oeAQ)
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* How to write an asynchronous generator
-* How to use async comprehensions
-* How to type-annotate generators
+* How to paginate a dataset with simple page and page_size parameters
+* How to paginate a dataset with hypermedia metadata
+* How to paginate in a deletion-resilient manner
 
 ## Requirements
 ### General
-* Allowed editors:vi,vim,emacs
 * All your files will be interpreted/compiled on Ubuntu 20.04 LTS usingpython3(version 3.9)
 * All your files should end with a new line
 * The first line of all your files should be exactly#!/usr/bin/env python3
 * AREADME.mdfile, at the root of the folder of the project, is mandatory
-* Your code should use thepycodestylestyle (version 2.5.x)
+* Your code should use thepycodestylestyle (version 2.5.*)
 * The length of your files will be tested usingwc
 * All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
 * All your functions should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)'
@@ -35,87 +34,309 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * All your functions and coroutines must be type-annotated.
 
 ## Task
-### 0. Async Generator <a name='subparagraph0'></a>
+### 0. Simple helper function <a name='subparagraph0'></a>
 
-Write a coroutine called <code>async_generator</code> that takes no arguments.
+Write a function named <code>index_range</code> that takes two integer arguments <code>page</code> and <code>page_size</code>.
 
-The coroutine will loop 10 times, each time asynchronously wait 1 second, then yield a random number between 0 and 10. Use the <code>random</code> module.
+The function should return a tuple of size two containing a start index and an end index corresponding to the range of indexes to return in a list for those particular pagination parameters.
+
+Page numbers are 1-indexed, i.e. the first page is page 1.
 
 ```
 bob@dylan:~$ cat 0-main.py
 #!/usr/bin/env python3
+"""
+Main file
+"""
 
-import asyncio
+index_range = __import__('0-simple_helper_function').index_range
 
-async_generator = __import__('0-async_generator').async_generator
+res = index_range(1, 7)
+print(type(res))
+print(res)
 
-async def print_yielded_values():
-    result = []
-    async for i in async_generator():
-        result.append(i)
-    print(result)
-
-asyncio.run(print_yielded_values())
+res = index_range(page=3, page_size=15)
+print(type(res))
+print(res)
 
 bob@dylan:~$ ./0-main.py
-[4.403136952967102, 6.9092712604587465, 6.293445466782645, 4.549663490048418, 4.1326571686139015, 9.99058525304903, 6.726734105473811, 9.84331704602206, 1.0067279479988345, 1.3783306401737838]
+<class 'tuple'>
+(0, 7)
+<class 'tuple'>
+(30, 45)
+bob@dylan:~$
 ```
 
 ---
 
-### 1. Async Comprehensions <a name='subparagraph1'></a>
+### 1. Simple pagination <a name='subparagraph1'></a>
 
-Import <code>async_generator</code> from the previous task and then write a coroutine called <code>async_comprehension</code> that takes no arguments.
-
-The coroutine will collect 10 random numbers using an async comprehensing over <code>async_generator</code>, then return the 10 random numbers.
+Copy <code>index_range</code> from the previous task and the following class into your code
 
 ```
-bob@dylan:~$ cat 1-main.py
+import csv
+import math
+from typing import List
+
+
+class Server:
+    """Server class to paginate a database of popular baby names.
+    """
+    DATA_FILE = "Popular_Baby_Names.csv"
+
+    def __init__(self):
+        self.__dataset = None
+
+    def dataset(self) -> List[List]:
+        """Cached dataset
+        """
+        if self.__dataset is None:
+            with open(self.DATA_FILE) as f:
+                reader = csv.reader(f)
+                dataset = [row for row in reader]
+            self.__dataset = dataset[1:]
+
+        return self.__dataset
+
+    def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+            pass
+```
+
+Implement a method named <code>get_page</code> that takes two integer arguments <code>page</code> with default value 1 and <code>page_size</code> with default value 10.
+
+* You have to use this <a href="/rltoken/7IKLZ7i4pO4MJ9CQoGHfVw" target="_blank" title="CSV file">CSV file</a> (same as the one presented at the top of the project)
+* Use <code>assert</code> to verify that both arguments are integers greater than 0.
+* Use <code>index_range</code> to find the correct indexes to paginate the dataset correctly and return the appropriate page of the dataset (i.e. the correct list of rows).
+* If the input arguments are out of range for the dataset, an empty list should be returned.
+
+```
+bob@dylan:~$  wc -l Popular_Baby_Names.csv 
+19419 Popular_Baby_Names.csv
+bob@dylan:~$  
+bob@dylan:~$ head Popular_Baby_Names.csv
+Year of Birth,Gender,Ethnicity,Child's First Name,Count,Rank
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Olivia,172,1
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Chloe,112,2
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Sophia,104,3
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Emma,99,4
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Emily,99,4
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Mia,79,5
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Charlotte,59,6
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Sarah,57,7
+2016,FEMALE,ASIAN AND PACIFIC ISLANDER,Isabella,56,8
+bob@dylan:~$  
+bob@dylan:~$  cat 1-main.py
 #!/usr/bin/env python3
+"""
+Main file
+"""
 
-import asyncio
+Server = __import__('1-simple_pagination').Server
 
-async_comprehension = __import__('1-async_comprehension').async_comprehension
+server = Server()
+
+try:
+    should_err = server.get_page(-10, 2)
+except AssertionError:
+    print("AssertionError raised with negative values")
+
+try:
+    should_err = server.get_page(0, 0)
+except AssertionError:
+    print("AssertionError raised with 0")
+
+try:
+    should_err = server.get_page(2, 'Bob')
+except AssertionError:
+    print("AssertionError raised when page and/or page_size are not ints")
 
 
-async def main():
-    print(await async_comprehension())
+print(server.get_page(1, 3))
+print(server.get_page(3, 2))
+print(server.get_page(3000, 100))
 
-asyncio.run(main())
-
+bob@dylan:~$ 
 bob@dylan:~$ ./1-main.py
-[9.861842105071727, 8.572355293354995, 1.7467182056248265, 4.0724372912858575, 0.5524750922145316, 8.084266576021555, 8.387128918690468, 1.5486451376520916, 7.713335177885325, 7.673533267041574]
+AssertionError raised with negative values
+AssertionError raised with 0
+AssertionError raised when page and/or page_size are not ints
+[['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Olivia', '172', '1'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Chloe', '112', '2'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Sophia', '104', '3']]
+[['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Emily', '99', '4'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Mia', '79', '5']]
+[]
+bob@dylan:~$
 ```
 
 ---
 
-### 2. Run time for four parallel comprehensions <a name='subparagraph2'></a>
+### 2. Hypermedia pagination <a name='subparagraph2'></a>
 
-Import <code>async_comprehension</code> from the previous file and write a <code>measure_runtime</code> coroutine that will execute <code>async_comprehension</code> four times in parallel using <code>asyncio.gather</code>.
+Replicate code from the previous task.
 
-<code>measure_runtime</code> should measure the total runtime and return it.
+Implement a <code>get_hyper</code> method that takes the same arguments (and defaults) as <code>get_page</code> and returns a dictionary containing the following key-value pairs:
 
-Notice that the total runtime is roughly 10 seconds, explain it to yourself.
+* <code>page_size</code>: the length of the returned dataset page
+* <code>page</code>: the current page number
+* <code>data</code>: the dataset page (equivalent to return from previous task)
+* <code>next_page</code>: number of the next page, <code>None</code> if no next page
+* <code>prev_page</code>: number of the previous page, <code>None</code> if no previous page
+* <code>total_pages</code>: the total number of pages in the dataset as an integer
+
+Make sure to reuse <code>get_page</code> in your implementation.
+
+You can use the <code>math</code> module if necessary.
 
 ```
 bob@dylan:~$ cat 2-main.py
 #!/usr/bin/env python3
+"""
+Main file
+"""
 
-import asyncio
+Server = __import__('2-hypermedia_pagination').Server
 
+server = Server()
 
-measure_runtime = __import__('2-measure_runtime').measure_runtime
+print(server.get_hyper(1, 2))
+print("---")
+print(server.get_hyper(2, 2))
+print("---")
+print(server.get_hyper(100, 3))
+print("---")
+print(server.get_hyper(3000, 100))
 
-
-async def main():
-    return await(measure_runtime())
-
-print(
-    asyncio.run(main())
-)
-
+bob@dylan:~$ 
 bob@dylan:~$ ./2-main.py
-10.021936893463135
+{'page_size': 2, 'page': 1, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Olivia', '172', '1'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Chloe', '112', '2']], 'next_page': 2, 'prev_page': None, 'total_pages': 9709}
+---
+{'page_size': 2, 'page': 2, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Sophia', '104', '3'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Emma', '99', '4']], 'next_page': 3, 'prev_page': 1, 'total_pages': 9709}
+---
+{'page_size': 3, 'page': 100, 'data': [['2016', 'FEMALE', 'BLACK NON HISPANIC', 'Londyn', '14', '39'], ['2016', 'FEMALE', 'BLACK NON HISPANIC', 'Amirah', '14', '39'], ['2016', 'FEMALE', 'BLACK NON HISPANIC', 'McKenzie', '14', '39']], 'next_page': 101, 'prev_page': 99, 'total_pages': 6473}
+---
+{'page_size': 0, 'page': 3000, 'data': [], 'next_page': None, 'prev_page': 2999, 'total_pages': 195}
+bob@dylan:~$
+```
+
+---
+
+### 3. Deletion-resilient hypermedia pagination <a name='subparagraph3'></a>
+
+The goal here is that if between two queries, certain rows are removed from the dataset, the user does not miss items from dataset when changing page.
+
+Start <code>3-hypermedia_del_pagination.py</code> with this code:
+
+```
+#!/usr/bin/env python3
+"""
+Deletion-resilient hypermedia pagination
+"""
+
+import csv
+import math
+from typing import List
+
+
+class Server:
+    """Server class to paginate a database of popular baby names.
+    """
+    DATA_FILE = "Popular_Baby_Names.csv"
+
+    def __init__(self):
+        self.__dataset = None
+        self.__indexed_dataset = None
+
+    def dataset(self) -> List[List]:
+        """Cached dataset
+        """
+        if self.__dataset is None:
+            with open(self.DATA_FILE) as f:
+                reader = csv.reader(f)
+                dataset = [row for row in reader]
+            self.__dataset = dataset[1:]
+
+        return self.__dataset
+
+    def indexed_dataset(self) -> Dict[int, List]:
+        """Dataset indexed by sorting position, starting at 0
+        """
+        if self.__indexed_dataset is None:
+            dataset = self.dataset()
+            truncated_dataset = dataset[:1000]
+            self.__indexed_dataset = {
+                i: dataset[i] for i in range(len(dataset))
+            }
+        return self.__indexed_dataset
+
+    def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
+            pass
+```
+
+Implement a <code>get_hyper_index</code> method with two integer arguments: <code>index</code> with a <code>None</code> default value and <code>page_size</code> with default value of 10.
+
+* The method should return a dictionary with the following key-value pairs:
+
+
+  * <code>index</code>: the current start index of the return page. That is the index of the first item in the current page. For example if requesting page 3 with <code>page_size</code> 20, and no data was removed from the dataset, the current index should be 60.
+  * <code>next_index</code>: the next index to query with. That should be the index of the first item after the last item on the current page.
+  * <code>page_size</code>: the current page size
+  * <code>data</code>: the actual page of the dataset
+
+<strong>Requirements/Behavior</strong>:
+
+* Use <code>assert</code> to verify that <code>index</code> is in a valid range.
+* If the user queries index 0, <code>page_size</code> 10, they will get rows indexed 0 to 9 included.
+* If they request the next index (10) with <code>page_size</code> 10, but rows 3, 6 and 7 were deleted, the user should still receive rows indexed 10 to 19 included.
+
+```
+bob@dylan:~$ cat 3-main.py
+#!/usr/bin/env python3
+"""
+Main file
+"""
+
+Server = __import__('3-hypermedia_del_pagination').Server
+
+server = Server()
+
+server.indexed_dataset()
+
+try:
+    server.get_hyper_index(300000, 100)
+except AssertionError:
+    print("AssertionError raised when out of range")        
+
+
+index = 3
+page_size = 2
+
+print("Nb items: {}".format(len(server._Server__indexed_dataset)))
+
+# 1- request first index
+res = server.get_hyper_index(index, page_size)
+print(res)
+
+# 2- request next index
+print(server.get_hyper_index(res.get('next_index'), page_size))
+
+# 3- remove the first index
+del server._Server__indexed_dataset[res.get('index')]
+print("Nb items: {}".format(len(server._Server__indexed_dataset)))
+
+# 4- request again the initial index -> the first data retreives is not the same as the first request
+print(server.get_hyper_index(index, page_size))
+
+# 5- request again initial next index -> same data page as the request 2-
+print(server.get_hyper_index(res.get('next_index'), page_size))
+
+bob@dylan:~$ 
+bob@dylan:~$ ./3-main.py
+AssertionError raised when out of range
+Nb items: 19418
+{'index': 3, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Emma', '99', '4'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Emily', '99', '4']], 'page_size': 2, 'next_index': 5}
+{'index': 5, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Mia', '79', '5'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Charlotte', '59', '6']], 'page_size': 2, 'next_index': 7}
+Nb items: 19417
+{'index': 3, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Emily', '99', '4'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Mia', '79', '5']], 'page_size': 2, 'next_index': 6}
+{'index': 5, 'data': [['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Mia', '79', '5'], ['2016', 'FEMALE', 'ASIAN AND PACIFIC ISLANDER', 'Charlotte', '59', '6']], 'page_size': 2, 'next_index': 7}
+bob@dylan:~$
 ```
 
 ---

@@ -4,438 +4,531 @@
 
 ## Table of Contents :
 
-  - [0. List all databases](#subparagraph0)
-  - [1. Create a database](#subparagraph1)
-  - [2. Insert document](#subparagraph2)
-  - [3. All documents](#subparagraph3)
-  - [4. All matches](#subparagraph4)
-  - [5. Count](#subparagraph5)
-  - [6. Update](#subparagraph6)
-  - [7. Delete by match](#subparagraph7)
-  - [8. List all documents in Python](#subparagraph8)
-  - [9. Insert a document in Python](#subparagraph9)
-  - [10. Change school topics](#subparagraph10)
-  - [11. Where can I learn Python?](#subparagraph11)
-  - [12. Log stats](#subparagraph12)
+  - [0. Const or let?](#subparagraph0)
+  - [1. Block Scope](#subparagraph1)
+  - [2. Arrow functions](#subparagraph2)
+  - [3. Parameter defaults](#subparagraph3)
+  - [4. Rest parameter syntax for functions](#subparagraph4)
+  - [5. The wonders of spread syntax](#subparagraph5)
+  - [6. Take advantage of template literals](#subparagraph6)
+  - [7. Object property value shorthand syntax](#subparagraph7)
+  - [8. No need to create empty objects before adding in properties](#subparagraph8)
+  - [9. ES6 method properties](#subparagraph9)
+  - [10. For...of Loops](#subparagraph10)
+  - [11. Iterator](#subparagraph11)
+  - [12. Let's create a report object](#subparagraph12)
 
 ## Resources
 ### Read or watch:
-* [NoSQL Databases Explained](/rltoken/0HR2bZ3XFJzkttuEVF5Rug)
-* [What is NoSQL ?](/rltoken/JGxz6PJsAN9cjBBT_WVCAg)
-* [MongoDB with Python Crash Course - Tutorial for Beginners](/rltoken/PkdXgnfXUfJIk5iqf9Wp4A)
-* [MongoDB Tutorial 2 : Insert, Update, Remove, Query](/rltoken/y6ncfHy0Hn7uqaIyitWQRg)
-* [Aggregation](/rltoken/sIORcQADQT2Wf2opdMu30Q)
-* [Introduction to MongoDB and Python](/rltoken/BLt93wwWTkVQWVlSDerI1g)
-* [mongo Shell Methods](/rltoken/q-RfEFpmN-fGiX-SvmQjHA)
-* [The mongo Shell](/rltoken/fmrWM3wzfC2d2-WHqzzPBQ)
+* [ECMAScript 6 - ECMAScript 2015](/rltoken/Q20cy-_XFufANSBCW0hvog)
+* [Statements and declarations](/rltoken/OHkTGVz-DLmzmrpDuWDYBw)
+* [Arrow functions](/rltoken/5FxmFLP2qwTEo0puWUVHsQ)
+* [Default parameters](/rltoken/qZm6g37BqHVD9G96MLsnsg)
+* [Rest parameter](/rltoken/qD9tUS00akyWTDU7MKUAuA)
+* [Javascript ES6 — Iterables and Iterators](/rltoken/gtglY9FnmYP6aTNXh9QnrA)
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* What NoSQL means
-* What is difference between SQL and NoSQL
-* What is ACID
-* What is a document storage
-* What are NoSQL types
-* What are benefits of a NoSQL database
-* How to query information from a NoSQL database
-* How to insert/update/delete information from a NoSQL database
-* How to use MongoDB
+* What ES6 is
+* New features introduced in ES6
+* The difference between a constant and a variable
+* Block-scoped variables
+* Arrow functions and function parameters default to them
+* Rest and spread function parameters
+* String templating in ES6
+* Object creation and their properties in ES6
+* Iterators and for-of loops
 
 ## Requirements
 ### General
-* All your files will be interpreted/compiled on Ubuntu 20.04 LTS usingMongoDB(version 4.4)
+* All your files will be interpreted/compiled on Ubuntu 20.04 LTS usingnode 20.x.xandnpm 9.x.x
+* Allowed editors:vi,vim,emacs,Visual Studio Code
 * All your files should end with a new line
-* The first line of all your files should be a comment:// my comment
 * AREADME.mdfile, at the root of the folder of the project, is mandatory
-* The length of your files will be tested usingwc
+* Your code should use thejsextension
+* Your code will be tested using theJest Testing Framework
+* Your code will be analyzed using the linterESLintalong with specific rules that we’ll provide
+* All of your functions must be exported
 
 ## Task
-### 0. List all databases <a name='subparagraph0'></a>
+### 0. Const or let? <a name='subparagraph0'></a>
 
-Write a script that lists all databases in MongoDB.
+Modify
 
-```
-guillaume@ubuntu:~/$ cat 0-list_databases | mongo
-MongoDB shell version v3.6.3
-connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.6.3
-admin        0.000GB
-config       0.000GB
-local        0.000GB
-logs         0.005GB
-bye
-guillaume@ubuntu:~/$
-```
-
----
-
-### 1. Create a database <a name='subparagraph1'></a>
-
-Write a script that creates or uses the database <code>my_db</code>:
+* function <code>taskFirst</code> to instantiate variables using <code>const</code>
+* function <code>taskNext</code> to instantiate variables using <code>let</code>
 
 ```
-guillaume@ubuntu:~/$ cat 0-list_databases | mongo
-MongoDB shell version v3.6.3
-connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.6.3
-admin        0.000GB
-config       0.000GB
-local        0.000GB
-logs         0.005GB
-bye
-guillaume@ubuntu:~/$
-guillaume@ubuntu:~/$ cat 1-use_or_create_database | mongo
-MongoDB shell version v3.6.3
-connecting to: mongodb://127.0.0.1:27017
-MongoDB server version: 3.6.3
-switched to db my_db
-bye
-guillaume@ubuntu:~/$
+export function taskFirst() {
+  var task = 'I prefer const when I can.';
+  return task;
+}
+
+export function getLast() {
+  return ' is okay';
+}
+
+export function taskNext() {
+  var combination = 'But sometimes let';
+  combination += getLast();
+
+  return combination;
+}
+```
+
+Execution example:
+
+```
+bob@dylan:~$ cat 0-main.js
+import { taskFirst, taskNext } from './0-constants.js';
+
+console.log(`${taskFirst()} ${taskNext()}`);
+
+bob@dylan:~$ 
+bob@dylan:~$ npm run dev 0-main.js 
+I prefer const when I can. But sometimes let is okay
+bob@dylan:~$
 ```
 
 ---
 
-### 2. Insert document <a name='subparagraph2'></a>
+### 1. Block Scope <a name='subparagraph1'></a>
 
-Write a script that inserts a document in the collection <code>school</code>:
-
-* The document must have one attribute <code>name</code> with value “Holberton school”
-* The database name will be passed as option of <code>mongo</code> command
+Given what you’ve read about <code>var</code> and hoisting, modify the variables inside the function <code>taskBlock</code> so that the variables aren’t overwritten inside the conditional block.
 
 ```
-guillaume@ubuntu:~/$ cat 2-insert | mongo my_db
-MongoDB shell version v3.6.3
-connecting to: mongodb://127.0.0.1:27017/my_db
-MongoDB server version: 3.6.3
-WriteResult({ "nInserted" : 1 })
-bye
-guillaume@ubuntu:~/$
+export default function taskBlock(trueOrFalse) {
+  var task = false;
+  var task2 = true;
+
+  if (trueOrFalse) {
+    var task = true;
+    var task2 = false;
+  }
+
+  return [task, task2];
+}
 ```
 
----
-
-### 3. All documents <a name='subparagraph3'></a>
-
-Write a script that lists all documents in the collection <code>school</code>:
-
-* The database name will be passed as option of <code>mongo</code> command
+Execution:
 
 ```
-guillaume@ubuntu:~/$ cat 3-all | mongo my_db
-MongoDB shell version v3.6.3
-connecting to: mongodb://127.0.0.1:27017/my_db
-MongoDB server version: 3.6.3
-{ "_id" : ObjectId("5a8fad532b69437b63252406"), "name" : "Holberton school" }
-bye
-guillaume@ubuntu:~/$
+bob@dylan:~$ cat 1-main.js
+import taskBlock from './1-block-scoped.js';
+
+console.log(taskBlock(true));
+console.log(taskBlock(false));
+bob@dylan:~$
+bob@dylan:~$ npm run dev 1-main.js 
+[ false, true ]
+[ false, true ]
+bob@dylan:~$
 ```
 
 ---
 
-### 4. All matches <a name='subparagraph4'></a>
+### 2. Arrow functions <a name='subparagraph2'></a>
 
-Write a script that lists all documents with <code>name="Holberton school"</code> in the collection <code>school</code>:
-
-* The database name will be passed as option of <code>mongo</code> command
+Rewrite the following standard function to use ES6’s arrow syntax of the function <code>add</code> (it will be an anonymous function after)
 
 ```
-guillaume@ubuntu:~/$ cat 4-match | mongo my_db
-MongoDB shell version v3.6.3
-connecting to: mongodb://127.0.0.1:27017/my_db
-MongoDB server version: 3.6.3
-{ "_id" : ObjectId("5a8fad532b69437b63252406"), "name" : "Holberton school" }
-bye
-guillaume@ubuntu:~/$
+export default function getNeighborhoodsList() {
+  this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square'];
+
+  const self = this;
+  this.addNeighborhood = function add(newNeighborhood) {
+    self.sanFranciscoNeighborhoods.push(newNeighborhood);
+    return self.sanFranciscoNeighborhoods;
+  };
+}
+```
+
+Execution:
+
+```
+bob@dylan:~$ cat 2-main.js
+import getNeighborhoodsList from './2-arrow.js';
+
+const neighborhoodsList = new getNeighborhoodsList();
+const res = neighborhoodsList.addNeighborhood('Noe Valley');
+console.log(res);
+bob@dylan:~$
+bob@dylan:~$ npm run dev 2-main.js 
+[ 'SOMA', 'Union Square', 'Noe Valley' ]
+bob@dylan:~$
 ```
 
 ---
 
-### 5. Count <a name='subparagraph5'></a>
+### 3. Parameter defaults <a name='subparagraph3'></a>
 
-Write a script that displays the number of documents in the collection <code>school</code>:
+Condense the internals of the following function to 1 line - without changing the name of each function/variable.
 
-* The database name will be passed as option of <code>mongo</code> command
+<em>Hint:</em> The key here to define default parameter values for the function parameters.
 
 ```
-guillaume@ubuntu:~/$ cat 5-count | mongo my_db
-MongoDB shell version v3.6.3
-connecting to: mongodb://127.0.0.1:27017/my_db
-MongoDB server version: 3.6.3
+export default function getSumOfHoods(initialNumber, expansion1989, expansion2019) {
+  if (expansion1989 === undefined) {
+    expansion1989 = 89;
+  }
+
+  if (expansion2019 === undefined) {
+    expansion2019 = 19;
+  }
+  return initialNumber + expansion1989 + expansion2019;
+}
+```
+
+Execution:
+
+```
+bob@dylan:~$ cat 3-main.js
+import getSumOfHoods from './3-default-parameter.js';
+
+console.log(getSumOfHoods(34));
+console.log(getSumOfHoods(34, 3));
+console.log(getSumOfHoods(34, 3, 4));
+bob@dylan:~$
+bob@dylan:~$ npm run dev 3-main.js 
+142
+56
+41
+bob@dylan:~$
+```
+
+---
+
+### 4. Rest parameter syntax for functions <a name='subparagraph4'></a>
+
+Modify the following function to return the number of arguments passed to it using the rest parameter syntax
+
+```
+export default function returnHowManyArguments() {
+
+}
+```
+
+Example:
+
+```
+> returnHowManyArguments("Hello", "Holberton", 2020);
+3
+>
+```
+
+Execution:
+
+```
+bob@dylan:~$ cat 4-main.js
+import returnHowManyArguments from './4-rest-parameter.js';
+
+console.log(returnHowManyArguments("one"));
+console.log(returnHowManyArguments("one", "two", 3, "4th"));
+bob@dylan:~$
+bob@dylan:~$ npm run dev 4-main.js 
 1
-bye
-guillaume@ubuntu:~/$
+4
+bob@dylan:~$
 ```
 
 ---
 
-### 6. Update <a name='subparagraph6'></a>
+### 5. The wonders of spread syntax <a name='subparagraph5'></a>
 
-Write a script that adds a new attribute to a document in the collection <code>school</code>:
-
-* The script should update only document with <code>name="Holberton school"</code> (all of them)
-* The update should add the attribute <code>address</code> with the value “972 Mission street”
-* The database name will be passed as option of <code>mongo</code> command
+Using spread syntax, concatenate 2 arrays and each character of a string by modifying the function below. Your function body should be one line long.
 
 ```
-guillaume@ubuntu:~/$ cat 6-update | mongo my_db
-MongoDB shell version v3.6.3
-connecting to: mongodb://127.0.0.1:27017/my_db
-MongoDB server version: 3.6.3
-WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
-bye
-guillaume@ubuntu:~/$ 
-guillaume@ubuntu:~/$ cat 4-match | mongo my_db
-MongoDB shell version v3.6.3
-connecting to: mongodb://127.0.0.1:27017/my_db
-MongoDB server version: 3.6.3
-{ "_id" : ObjectId("5a8fad532b69437b63252406"), "name" : "Holberton school", "address" : "972 Mission street" }
-bye
-guillaume@ubuntu:~/$
+export default function concatArrays(array1, array2, string) {
+}
 ```
 
----
-
-### 7. Delete by match <a name='subparagraph7'></a>
-
-Write a script that deletes all documents with <code>name="Holberton school"</code> in the collection <code>school</code>:
-
-* The database name will be passed as option of <code>mongo</code> command
+Execution:
 
 ```
-guillaume@ubuntu:~/$ cat 7-delete | mongo my_db
-MongoDB shell version v3.6.3
-connecting to: mongodb://127.0.0.1:27017/my_db
-MongoDB server version: 3.6.3
-{ "acknowledged" : true, "deletedCount" : 1 }
-bye
-guillaume@ubuntu:~/$ 
-guillaume@ubuntu:~/$ cat 4-match | mongo my_db
-MongoDB shell version v3.6.3
-connecting to: mongodb://127.0.0.1:27017/my_db
-MongoDB server version: 3.6.3
-bye
-guillaume@ubuntu:~/$
+bob@dylan:~$ cat 5-main.js
+import concatArrays from './5-spread-operator.js';
+
+console.log(concatArrays(['a', 'b'], ['c', 'd'], 'Hello'));
+
+bob@dylan:~$
+bob@dylan:~$ npm run dev 5-main.js 
+[
+  'a', 'b', 'c',
+  'd', 'H', 'e',
+  'l', 'l', 'o'
+]
+bob@dylan:~$
 ```
 
 ---
 
-### 8. List all documents in Python <a name='subparagraph8'></a>
+### 6. Take advantage of template literals <a name='subparagraph6'></a>
 
-Write a Python function that lists all documents in a collection:
-
-* Prototype: <code>def list_all(mongo_collection):</code>
-* Return an empty list if no document in the collection
-* <code>mongo_collection</code> will be the <code>pymongo</code> collection object
+Rewrite the return statement to use a template literal so you can the substitute the variables you’ve defined.
 
 ```
-guillaume@ubuntu:~/$ cat 8-main.py
-#!/usr/bin/env python3
-""" 8-main """
-from pymongo import MongoClient
-list_all = __import__('8-all').list_all
+export default function getSanFranciscoDescription() {
+  const year = 2017;
+  const budget = {
+    income: '$119,868',
+    gdp: '$154.2 billion',
+    capita: '$178,479',
+  };
 
-if __name__ == "__main__":
-    client = MongoClient('mongodb://127.0.0.1:27017')
-    school_collection = client.my_db.school
-    schools = list_all(school_collection)
-    for school in schools:
-        print("[{}] {}".format(school.get('_id'), school.get('name')))
-
-guillaume@ubuntu:~/$ 
-guillaume@ubuntu:~/$ ./8-main.py
-[5a8f60cfd4321e1403ba7ab9] Holberton school
-[5a8f60cfd4321e1403ba7aba] UCSD
-guillaume@ubuntu:~/$
+  return 'As of ' + year + ', it was the seventh-highest income county in the United States'
+        / ', with a per capita personal income of ' + budget.income + '. As of 2015, San Francisco'
+        / ' proper had a GDP of ' + budget.gdp + ', and a GDP per capita of ' + budget.capita + '.';
+}
 ```
 
----
-
-### 9. Insert a document in Python <a name='subparagraph9'></a>
-
-Write a Python function that inserts a new document in a collection based on <code>kwargs</code>:
-
-* Prototype: <code>def insert_school(mongo_collection, **kwargs):</code>
-* <code>mongo_collection</code> will be the <code>pymongo</code> collection object
-* Returns the new <code>_id</code>
+Execution:
 
 ```
-guillaume@ubuntu:~/$ cat 9-main.py
-#!/usr/bin/env python3
-""" 9-main """
-from pymongo import MongoClient
-list_all = __import__('8-all').list_all
-insert_school = __import__('9-insert_school').insert_school
+bob@dylan:~$ cat 6-main.js
+import getSanFranciscoDescription from './6-string-interpolation.js';
 
-if __name__ == "__main__":
-    client = MongoClient('mongodb://127.0.0.1:27017')
-    school_collection = client.my_db.school
-    new_school_id = insert_school(school_collection, name="UCSF", address="505 Parnassus Ave")
-    print("New school created: {}".format(new_school_id))
+console.log(getSanFranciscoDescription());
 
-    schools = list_all(school_collection)
-    for school in schools:
-        print("[{}] {} {}".format(school.get('_id'), school.get('name'), school.get('address', "")))
-
-guillaume@ubuntu:~/$ 
-guillaume@ubuntu:~/$ ./9-main.py
-New school created: 5a8f60cfd4321e1403ba7abb
-[5a8f60cfd4321e1403ba7ab9] Holberton school
-[5a8f60cfd4321e1403ba7aba] UCSD
-[5a8f60cfd4321e1403ba7abb] UCSF 505 Parnassus Ave
-guillaume@ubuntu:~/$
+bob@dylan:~$
+bob@dylan:~$ npm run dev 6-main.js 
+As of 2017, it was the seventh-highest income county in the United States, with a per capita personal income of $119,868. As of 2015, San Francisco proper had a GDP of $154.2 billion, and a GDP per capita of $178,479.
+bob@dylan:~$
 ```
 
 ---
 
-### 10. Change school topics <a name='subparagraph10'></a>
+### 7. Object property value shorthand syntax <a name='subparagraph7'></a>
 
-Write a Python function that changes all topics of a school document based on the name:
+Notice how the keys and the variable names are the same?
 
-* Prototype: <code>def update_topics(mongo_collection, name, topics):</code>
-* <code>mongo_collection</code> will be the <code>pymongo</code> collection object
-* <code>name</code> (string) will be the school name to update
-* <code>topics</code> (list of strings) will be the list of topics approached in the school
+Modify the following function’s <code>budget</code> object to simply use the object property value shorthand syntax instead.
 
 ```
-guillaume@ubuntu:~/$ cat 10-main.py
-#!/usr/bin/env python3
-""" 10-main """
-from pymongo import MongoClient
-list_all = __import__('8-all').list_all
-update_topics = __import__('10-update_topics').update_topics
+export default function getBudgetObject(income, gdp, capita) {
+  const budget = {
+    income: income,
+    gdp: gdp,
+    capita: capita,
+  };
 
-if __name__ == "__main__":
-    client = MongoClient('mongodb://127.0.0.1:27017')
-    school_collection = client.my_db.school
-    update_topics(school_collection, "Holberton school", ["Sys admin", "AI", "Algorithm"])
+  return budget;
+}
+```
 
-    schools = list_all(school_collection)
-    for school in schools:
-        print("[{}] {} {}".format(school.get('_id'), school.get('name'), school.get('topics', "")))
+Execution:
 
-    update_topics(school_collection, "Holberton school", ["iOS"])
+```
+bob@dylan:~$ cat 7-main.js
+import getBudgetObject from './7-getBudgetObject.js';
 
-    schools = list_all(school_collection)
-    for school in schools:
-        print("[{}] {} {}".format(school.get('_id'), school.get('name'), school.get('topics', "")))
+console.log(getBudgetObject(400, 700, 900));
 
-guillaume@ubuntu:~/$ 
-guillaume@ubuntu:~/$ ./10-main.py
-[5a8f60cfd4321e1403ba7abb] UCSF 
-[5a8f60cfd4321e1403ba7aba] UCSD 
-[5a8f60cfd4321e1403ba7ab9] Holberton school ['Sys admin', 'AI', 'Algorithm']
-[5a8f60cfd4321e1403ba7abb] UCSF 
-[5a8f60cfd4321e1403ba7aba] UCSD 
-[5a8f60cfd4321e1403ba7ab9] Holberton school ['iOS']
-guillaume@ubuntu:~/$
+bob@dylan:~$
+bob@dylan:~$ npm run dev 7-main.js 
+{ income: 400, gdp: 700, capita: 900 }
+bob@dylan:~$
 ```
 
 ---
 
-### 11. Where can I learn Python? <a name='subparagraph11'></a>
+### 8. No need to create empty objects before adding in properties <a name='subparagraph8'></a>
 
-Write a Python function that returns the list of school having a specific topic:
-
-* Prototype: <code>def schools_by_topic(mongo_collection, topic):</code>
-* <code>mongo_collection</code> will be the <code>pymongo</code> collection object
-* <code>topic</code> (string) will be topic searched
+Rewrite the <code>getBudgetForCurrentYear</code> function to use ES6 computed property names on the <code>budget</code> object
 
 ```
-guillaume@ubuntu:~/$ cat 11-main.py
-#!/usr/bin/env python3
-""" 11-main """
-from pymongo import MongoClient
-list_all = __import__('8-all').list_all
-insert_school = __import__('9-insert_school').insert_school
-schools_by_topic = __import__('11-schools_by_topic').schools_by_topic
+function getCurrentYear() {
+  const date = new Date();
+  return date.getFullYear();
+}
 
-if __name__ == "__main__":
-    client = MongoClient('mongodb://127.0.0.1:27017')
-    school_collection = client.my_db.school
+export default function getBudgetForCurrentYear(income, gdp, capita) {
+  const budget = {};
 
-    j_schools = [
-        { 'name': "Holberton school", 'topics': ["Algo", "C", "Python", "React"]},
-        { 'name': "UCSF", 'topics': ["Algo", "MongoDB"]},
-        { 'name': "UCLA", 'topics': ["C", "Python"]},
-        { 'name': "UCSD", 'topics': ["Cassandra"]},
-        { 'name': "Stanford", 'topics': ["C", "React", "Javascript"]}
-    ]
-    for j_school in j_schools:
-        insert_school(school_collection, **j_school)
+  budget[`income-${getCurrentYear()}`] = income;
+  budget[`gdp-${getCurrentYear()}`] = gdp;
+  budget[`capita-${getCurrentYear()}`] = capita;
 
-    schools = schools_by_topic(school_collection, "Python")
-    for school in schools:
-        print("[{}] {} {}".format(school.get('_id'), school.get('name'), school.get('topics', "")))
+  return budget;
+}
+```
 
-guillaume@ubuntu:~/$ 
-guillaume@ubuntu:~/$ ./11-main.py
-[5a90731fd4321e1e5a3f53e3] Holberton school ['Algo', 'C', 'Python', 'React']
-[5a90731fd4321e1e5a3f53e5] UCLA ['C', 'Python']
-guillaume@ubuntu:~/$
+Execution:
+
+```
+bob@dylan:~$ cat 8-main.js
+import getBudgetForCurrentYear from './8-getBudgetCurrentYear.js';
+
+console.log(getBudgetForCurrentYear(2100, 5200, 1090));
+
+bob@dylan:~$
+bob@dylan:~$ npm run dev 8-main.js 
+{ 'income-2021': 2100, 'gdp-2021': 5200, 'capita-2021': 1090 }
+bob@dylan:~$
 ```
 
 ---
 
-### 12. Log stats <a name='subparagraph12'></a>
+### 9. ES6 method properties <a name='subparagraph9'></a>
 
-Write a Python script that provides some stats about Nginx logs stored in MongoDB:
-
-* Database: <code>logs</code>
-* Collection: <code>nginx</code>
-* Display (same as the example):
-
-
-  * first line: <code>x logs</code> where <code>x</code> is the number of documents in this collection
-  * second line: <code>Methods:</code>
-  * 5 lines with the number of documents with the <code>method</code> = <code>["GET", "POST", "PUT", "PATCH", "DELETE"]</code> in this order (see example below - warning: it’s a tabulation before each line)
-  * one line with the number of documents with:
-
-
-    * <code>method=GET</code>
-    * <code>path=/status</code>
-
-You can use this dump as data sample: <a href="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/misc/2020/6/645541f867bb79ae47b7a80922e9a48604a569b9.zip?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20251201%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20251201T124813Z&amp;X-Amz-Expires=345600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=7ea65f8b8e5408e1b22c2f93f967517af25e4151511b9be5e6b39983cd832bff" target="_blank" title="dump.zip">dump.zip</a>
-
-The output of your script <strong>must be exactly the same as the example</strong>
+Rewrite <code>getFullBudgetObject</code> to use ES6 method properties in the <code>fullBudget</code> object
 
 ```
-guillaume@ubuntu:~/$ curl -o dump.zip -s "https://s3.eu-west-3.amazonaws.com/hbtn.intranet.project.files/holbertonschool-webstack/411/dump.zip"
-guillaume@ubuntu:~/$ 
-guillaume@ubuntu:~/$ unzip dump.zip
-Archive:  dump.zip
-   creating: dump/
-   creating: dump/logs/
-  inflating: dump/logs/nginx.metadata.json  
-  inflating: dump/logs/nginx.bson    
-guillaume@ubuntu:~/$ 
-guillaume@ubuntu:~/$ mongorestore dump
-2018-02-23T20:12:37.807+0000    preparing collections to restore from
-2018-02-23T20:12:37.816+0000    reading metadata for logs.nginx from dump/logs/nginx.metadata.json
-2018-02-23T20:12:37.825+0000    restoring logs.nginx from dump/logs/nginx.bson
-2018-02-23T20:12:40.804+0000    [##......................]  logs.nginx  1.21MB/13.4MB  (9.0%)
-2018-02-23T20:12:43.803+0000    [#####...................]  logs.nginx  2.88MB/13.4MB  (21.4%)
-2018-02-23T20:12:46.803+0000    [#######.................]  logs.nginx  4.22MB/13.4MB  (31.4%)
-2018-02-23T20:12:49.803+0000    [##########..............]  logs.nginx  5.73MB/13.4MB  (42.7%)
-2018-02-23T20:12:52.803+0000    [############............]  logs.nginx  7.23MB/13.4MB  (53.8%)
-2018-02-23T20:12:55.803+0000    [###############.........]  logs.nginx  8.53MB/13.4MB  (63.5%)
-2018-02-23T20:12:58.803+0000    [#################.......]  logs.nginx  10.1MB/13.4MB  (74.9%)
-2018-02-23T20:13:01.803+0000    [####################....]  logs.nginx  11.3MB/13.4MB  (83.9%)
-2018-02-23T20:13:04.803+0000    [######################..]  logs.nginx  12.8MB/13.4MB  (94.9%)
-2018-02-23T20:13:06.228+0000    [########################]  logs.nginx  13.4MB/13.4MB  (100.0%)
-2018-02-23T20:13:06.230+0000    no indexes to restore
-2018-02-23T20:13:06.231+0000    finished restoring logs.nginx (94778 documents)
-2018-02-23T20:13:06.232+0000    done
-guillaume@ubuntu:~/$ 
-guillaume@ubuntu:~/$ ./12-log_stats.py 
-94778 logs
-Methods:
-    method GET: 93842
-    method POST: 229
-    method PUT: 0
-    method PATCH: 0
-    method DELETE: 0
-47415 status check
-guillaume@ubuntu:~/$
+import getBudgetObject from './7-getBudgetObject.js';
+
+export default function getFullBudgetObject(income, gdp, capita) {
+  const budget = getBudgetObject(income, gdp, capita);
+  const fullBudget = {
+    ...budget,
+    getIncomeInDollars: function (income) {
+      return `$${income}`;
+    },
+    getIncomeInEuros: function (income) {
+      return `${income} euros`;
+    },
+  };
+
+  return fullBudget;
+}
+```
+
+Execution:
+
+```
+bob@dylan:~$ cat 9-main.js
+import getFullBudgetObject from './9-getFullBudget.js';
+
+const fullBudget = getFullBudgetObject(20, 50, 10);
+
+console.log(fullBudget.getIncomeInDollars(fullBudget.income));
+console.log(fullBudget.getIncomeInEuros(fullBudget.income));
+
+bob@dylan:~$
+bob@dylan:~$ npm run dev 9-main.js 
+$20
+20 euros
+bob@dylan:~$
+```
+
+---
+
+### 10. For...of Loops <a name='subparagraph10'></a>
+
+Rewrite the function <code>appendToEachArrayValue</code> to use ES6’s <code>for...of</code> operator. And don’t forget that <code>var</code> is not ES6-friendly.
+
+```
+export default function appendToEachArrayValue(array, appendString) {
+  for (var idx in array) {
+    var value = array[idx];
+    array[idx] = appendString + value;
+  }
+
+  return array;
+}
+```
+
+Execution:
+
+```
+bob@dylan:~$ cat 10-main.js
+import appendToEachArrayValue from './10-loops.js';
+
+console.log(appendToEachArrayValue(['appended', 'fixed', 'displayed'], 'correctly-'));
+
+bob@dylan:~$
+bob@dylan:~$ npm run dev 10-main.js 
+[ 'correctly-appended', 'correctly-fixed', 'correctly-displayed' ]
+bob@dylan:~$
+```
+
+---
+
+### 11. Iterator <a name='subparagraph11'></a>
+
+Write a function named <code>createEmployeesObject</code> that will receive two arguments:
+
+* <code>departmentName</code> (String)
+* <code>employees</code> (Array of Strings)
+
+```
+export default function createEmployeesObject(departmentName, employees) {
+
+}
+```
+
+The function should return an object with the following format:
+
+```
+{
+     $departmentName: [
+          $employees,
+     ],
+}
+```
+
+Execution:
+
+```
+bob@dylan:~$ cat 11-main.js
+import createEmployeesObject from './11-createEmployeesObject.js';
+
+console.log(createEmployeesObject("Software", [ "Bob", "Sylvie" ]));
+
+bob@dylan:~$
+bob@dylan:~$ npm run dev 11-main.js 
+{ Software: [ 'Bob', 'Sylvie' ] }
+bob@dylan:~$
+```
+
+---
+
+### 12. Let's create a report object <a name='subparagraph12'></a>
+
+Write a function named <code>createReportObject</code> whose parameter, <code>employeesList</code>, is the return value of the previous function <code>createEmployeesObject</code>.
+
+```
+export default function createReportObject(employeesList) {
+
+}
+```
+
+<code>createReportObject</code> should return an object containing the key <code>allEmployees</code> and a method property called <code>getNumberOfDepartments</code>.
+
+<code>allEmployees</code> is a key that maps to an object containing the department name and a list of all the employees in that department. If you’re having trouble, use the spread syntax.
+
+The method property receives <code>employeesList</code> and returns the number of departments. I would suggest suggest thinking back to the ES6 method property syntax.
+
+```
+{
+  allEmployees: {
+     engineering: [
+          'John Doe',
+          'Guillaume Salva',
+     ],
+  },
+};
+```
+
+Execution:
+
+```
+bob@dylan:~$ cat 12-main.js
+import createEmployeesObject from './11-createEmployeesObject.js';
+import createReportObject from './12-createReportObject.js';
+
+const employees = {
+    ...createEmployeesObject('engineering', ['Bob', 'Jane']),
+    ...createEmployeesObject('marketing', ['Sylvie'])
+};      
+
+const report = createReportObject(employees);
+console.log(report.allEmployees);
+console.log(report.getNumberOfDepartments(report.allEmployees));
+
+bob@dylan:~$
+bob@dylan:~$ npm run dev 12-main.js 
+{ engineering: [ 'Bob', 'Jane' ], marketing: [ 'Sylvie' ] }
+2
+bob@dylan:~$
 ```
 
 ---

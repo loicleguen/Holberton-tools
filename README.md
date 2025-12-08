@@ -4,40 +4,30 @@
 
 ## Table of Contents :
 
-  - [0. Const or let?](#subparagraph0)
-  - [1. Block Scope](#subparagraph1)
-  - [2. Arrow functions](#subparagraph2)
-  - [3. Parameter defaults](#subparagraph3)
-  - [4. Rest parameter syntax for functions](#subparagraph4)
-  - [5. The wonders of spread syntax](#subparagraph5)
-  - [6. Take advantage of template literals](#subparagraph6)
-  - [7. Object property value shorthand syntax](#subparagraph7)
-  - [8. No need to create empty objects before adding in properties](#subparagraph8)
-  - [9. ES6 method properties](#subparagraph9)
-  - [10. For...of Loops](#subparagraph10)
-  - [11. Iterator](#subparagraph11)
-  - [12. Let's create a report object](#subparagraph12)
+  - [0. You used to attend a place like this at some point](#subparagraph0)
+  - [1. Let's make some classrooms](#subparagraph1)
+  - [2. A Course, Getters, and Setters](#subparagraph2)
+  - [3. Methods, static methods, computed methods names..... MONEY](#subparagraph3)
+  - [4. Pricing](#subparagraph4)
+  - [5. A Building](#subparagraph5)
+  - [6. Inheritance](#subparagraph6)
+  - [7. Airport](#subparagraph7)
+  - [8. Primitive - Holberton Class](#subparagraph8)
+  - [9. Hoisting](#subparagraph9)
+  - [10. Vroom](#subparagraph10)
 
 ## Resources
 ### Read or watch:
-* [ECMAScript 6 - ECMAScript 2015](/rltoken/Q20cy-_XFufANSBCW0hvog)
-* [Statements and declarations](/rltoken/OHkTGVz-DLmzmrpDuWDYBw)
-* [Arrow functions](/rltoken/5FxmFLP2qwTEo0puWUVHsQ)
-* [Default parameters](/rltoken/qZm6g37BqHVD9G96MLsnsg)
-* [Rest parameter](/rltoken/qD9tUS00akyWTDU7MKUAuA)
-* [Javascript ES6 — Iterables and Iterators](/rltoken/gtglY9FnmYP6aTNXh9QnrA)
+* [Classes](/rltoken/AJdJxuoO8o3hwpybQaFSDQ)
+* [Metaprogramming](/rltoken/jF42Fw5HNIPnFWKmDzVg1g)
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* What ES6 is
-* New features introduced in ES6
-* The difference between a constant and a variable
-* Block-scoped variables
-* Arrow functions and function parameters default to them
-* Rest and spread function parameters
-* String templating in ES6
-* Object creation and their properties in ES6
-* Iterators and for-of loops
+* How to define a Class
+* How to add methods to a class
+* Why and how to add a static method to a class
+* How to extend a class from another
+* Metaprogramming and symbols
 
 ## Requirements
 ### General
@@ -46,488 +36,457 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * All your files should end with a new line
 * AREADME.mdfile, at the root of the folder of the project, is mandatory
 * Your code should use thejsextension
-* Your code will be tested using theJest Testing Framework
-* Your code will be analyzed using the linterESLintalong with specific rules that we’ll provide
-* All of your functions must be exported
+* Your code will be tested usingJestand the commandnpm run test
+* Your code will be verified against lint using ESLint
+* Your code needs to pass all the tests and lint. You can verify the entire project runningnpm run full-test
 
 ## Task
-### 0. Const or let? <a name='subparagraph0'></a>
+### 0. You used to attend a place like this at some point <a name='subparagraph0'></a>
 
-Modify
+Implement a class named <code>ClassRoom</code>:
 
-* function <code>taskFirst</code> to instantiate variables using <code>const</code>
-* function <code>taskNext</code> to instantiate variables using <code>let</code>
-
-```
-export function taskFirst() {
-  var task = 'I prefer const when I can.';
-  return task;
-}
-
-export function getLast() {
-  return ' is okay';
-}
-
-export function taskNext() {
-  var combination = 'But sometimes let';
-  combination += getLast();
-
-  return combination;
-}
-```
-
-Execution example:
+* Prototype: <code>export default class ClassRoom</code>
+* It should accept one attribute named <code>maxStudentsSize</code> (Number) and assigned to <code>_maxStudentsSize</code>
 
 ```
 bob@dylan:~$ cat 0-main.js
-import { taskFirst, taskNext } from './0-constants.js';
+import ClassRoom from "./0-classroom.js";
 
-console.log(`${taskFirst()} ${taskNext()}`);
+const room = new ClassRoom(10);
+console.log(room._maxStudentsSize)
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 0-main.js 
-I prefer const when I can. But sometimes let is okay
+10
 bob@dylan:~$
 ```
 
 ---
 
-### 1. Block Scope <a name='subparagraph1'></a>
+### 1. Let's make some classrooms <a name='subparagraph1'></a>
 
-Given what you’ve read about <code>var</code> and hoisting, modify the variables inside the function <code>taskBlock</code> so that the variables aren’t overwritten inside the conditional block.
+Import the <code>ClassRoom</code> class from <code>0-classroom.js</code>.
 
-```
-export default function taskBlock(trueOrFalse) {
-  var task = false;
-  var task2 = true;
-
-  if (trueOrFalse) {
-    var task = true;
-    var task2 = false;
-  }
-
-  return [task, task2];
-}
-```
-
-Execution:
+Implement a function named <code>initializeRooms</code>. It should return an array of 3 <code>ClassRoom</code> objects with the sizes 19, 20, and 34 (in this order).
 
 ```
 bob@dylan:~$ cat 1-main.js
-import taskBlock from './1-block-scoped.js';
+import initializeRooms from './1-make_classrooms.js';
 
-console.log(taskBlock(true));
-console.log(taskBlock(false));
-bob@dylan:~$
+console.log(initializeRooms());
+
+bob@dylan:~$ 
 bob@dylan:~$ npm run dev 1-main.js 
-[ false, true ]
-[ false, true ]
-bob@dylan:~$
-```
-
----
-
-### 2. Arrow functions <a name='subparagraph2'></a>
-
-Rewrite the following standard function to use ES6’s arrow syntax of the function <code>add</code> (it will be an anonymous function after)
-
-```
-export default function getNeighborhoodsList() {
-  this.sanFranciscoNeighborhoods = ['SOMA', 'Union Square'];
-
-  const self = this;
-  this.addNeighborhood = function add(newNeighborhood) {
-    self.sanFranciscoNeighborhoods.push(newNeighborhood);
-    return self.sanFranciscoNeighborhoods;
-  };
-}
-```
-
-Execution:
-
-```
-bob@dylan:~$ cat 2-main.js
-import getNeighborhoodsList from './2-arrow.js';
-
-const neighborhoodsList = new getNeighborhoodsList();
-const res = neighborhoodsList.addNeighborhood('Noe Valley');
-console.log(res);
-bob@dylan:~$
-bob@dylan:~$ npm run dev 2-main.js 
-[ 'SOMA', 'Union Square', 'Noe Valley' ]
-bob@dylan:~$
-```
-
----
-
-### 3. Parameter defaults <a name='subparagraph3'></a>
-
-Condense the internals of the following function to 1 line - without changing the name of each function/variable.
-
-<em>Hint:</em> The key here to define default parameter values for the function parameters.
-
-```
-export default function getSumOfHoods(initialNumber, expansion1989, expansion2019) {
-  if (expansion1989 === undefined) {
-    expansion1989 = 89;
-  }
-
-  if (expansion2019 === undefined) {
-    expansion2019 = 19;
-  }
-  return initialNumber + expansion1989 + expansion2019;
-}
-```
-
-Execution:
-
-```
-bob@dylan:~$ cat 3-main.js
-import getSumOfHoods from './3-default-parameter.js';
-
-console.log(getSumOfHoods(34));
-console.log(getSumOfHoods(34, 3));
-console.log(getSumOfHoods(34, 3, 4));
-bob@dylan:~$
-bob@dylan:~$ npm run dev 3-main.js 
-142
-56
-41
-bob@dylan:~$
-```
-
----
-
-### 4. Rest parameter syntax for functions <a name='subparagraph4'></a>
-
-Modify the following function to return the number of arguments passed to it using the rest parameter syntax
-
-```
-export default function returnHowManyArguments() {
-
-}
-```
-
-Example:
-
-```
-> returnHowManyArguments("Hello", "Holberton", 2020);
-3
->
-```
-
-Execution:
-
-```
-bob@dylan:~$ cat 4-main.js
-import returnHowManyArguments from './4-rest-parameter.js';
-
-console.log(returnHowManyArguments("one"));
-console.log(returnHowManyArguments("one", "two", 3, "4th"));
-bob@dylan:~$
-bob@dylan:~$ npm run dev 4-main.js 
-1
-4
-bob@dylan:~$
-```
-
----
-
-### 5. The wonders of spread syntax <a name='subparagraph5'></a>
-
-Using spread syntax, concatenate 2 arrays and each character of a string by modifying the function below. Your function body should be one line long.
-
-```
-export default function concatArrays(array1, array2, string) {
-}
-```
-
-Execution:
-
-```
-bob@dylan:~$ cat 5-main.js
-import concatArrays from './5-spread-operator.js';
-
-console.log(concatArrays(['a', 'b'], ['c', 'd'], 'Hello'));
-
-bob@dylan:~$
-bob@dylan:~$ npm run dev 5-main.js 
 [
-  'a', 'b', 'c',
-  'd', 'H', 'e',
-  'l', 'l', 'o'
+  ClassRoom { _maxStudentsSize: 19 },
+  ClassRoom { _maxStudentsSize: 20 },
+  ClassRoom { _maxStudentsSize: 34 }
 ]
 bob@dylan:~$
 ```
 
 ---
 
-### 6. Take advantage of template literals <a name='subparagraph6'></a>
+### 2. A Course, Getters, and Setters <a name='subparagraph2'></a>
 
-Rewrite the return statement to use a template literal so you can the substitute the variables you’ve defined.
+Implement a class named <code>HolbertonCourse</code>:
+
+* Constructor attributes: 
+
+
+  * <code>name</code> (String)
+  * <code>length</code> (Number)
+  * <code>students</code> (array of Strings)
+* Make sure to verify the type of attributes during object creation
+* Each attribute must be stored in an “underscore” attribute version (ex: <code>name</code> is stored in <code>_name</code>)
+* Implement a getter and setter for each attribute.
 
 ```
-export default function getSanFranciscoDescription() {
-  const year = 2017;
-  const budget = {
-    income: '$119,868',
-    gdp: '$154.2 billion',
-    capita: '$178,479',
-  };
+bob@dylan:~$ cat 2-main.js
+import HolbertonCourse from "./2-hbtn_course.js";
 
-  return 'As of ' + year + ', it was the seventh-highest income county in the United States'
-        / ', with a per capita personal income of ' + budget.income + '. As of 2015, San Francisco'
-        / ' proper had a GDP of ' + budget.gdp + ', and a GDP per capita of ' + budget.capita + '.';
+const c1 = new HolbertonCourse("ES6", 1, ["Bob", "Jane"])
+console.log(c1.name);
+c1.name = "Python 101";
+console.log(c1);
+
+try {
+    c1.name = 12;
+} 
+catch(err) {
+    console.log(err);
 }
+
+try {
+    const c2 = new HolbertonCourse("ES6", "1", ["Bob", "Jane"]);
+}
+catch(err) {
+    console.log(err);
+}
+
+bob@dylan:~$ 
+bob@dylan:~$ npm run dev 2-main.js 
+ES6
+HolbertonCourse {
+  _name: 'Python 101',
+  _length: 1,
+  _students: [ 'Bob', 'Jane' ]
+}
+TypeError: Name must be a string
+    ...
+TypeError: Length must be a number
+    ...
+bob@dylan:~$
 ```
 
-Execution:
+---
+
+### 3. Methods, static methods, computed methods names..... MONEY <a name='subparagraph3'></a>
+
+Implement a class named <code>Currency</code>:
+
+* - Constructor attributes: 
+
+
+  * <code>code</code> (String)
+  * <code>name</code> (String)
+* Each attribute must be stored in an “underscore” attribute version (ex: <code>name</code> is stored in <code>_name</code>)
+* Implement a getter and setter for each attribute.
+* Implement a method named <code>displayFullCurrency</code> that will return the attributes in the following format <code>name (code)</code>.
+
+```
+bob@dylan:~$ cat 3-main.js
+import Currency from "./3-currency.js";
+
+const dollar = new Currency('$', 'Dollars');
+console.log(dollar.displayFullCurrency());
+
+bob@dylan:~$ 
+bob@dylan:~$ npm run dev 3-main.js 
+Dollars ($)
+bob@dylan:~$
+```
+
+---
+
+### 4. Pricing <a name='subparagraph4'></a>
+
+Import the class <code>Currency</code> from <code>3-currency.js</code>
+
+Implement a class named <code>Pricing</code>:
+
+* Constructor attributes: 
+
+
+  * <code>amount</code> (Number)
+  * <code>currency</code> (Currency)
+* Each attribute must be stored in an “underscore” attribute version (ex: <code>name</code> is stored in <code>_name</code>)
+* Implement a getter and setter for each attribute.
+* Implement a method named <code>displayFullPrice</code> that returns the attributes in the following format <code>amount currency_name (currency_code)</code>.
+* Implement a static method named <code>convertPrice</code>. It should accept two arguments: <code>amount</code> (Number), <code>conversionRate</code> (Number). The function should return the amount multiplied by the conversion rate.
+
+```
+bob@dylan:~$ cat 4-main.js
+import Pricing from './4-pricing.js';
+import Currency from './3-currency.js';
+
+const p = new Pricing(100, new Currency("EUR", "Euro"))
+console.log(p);
+console.log(p.displayFullPrice());
+
+bob@dylan:~$ 
+bob@dylan:~$ npm run dev 4-main.js 
+Pricing {
+  _amount: 100,
+  _currency: Currency { _code: 'EUR', _name: 'Euro' }
+}
+100 Euro (EUR)
+bob@dylan:~$
+```
+
+---
+
+### 5. A Building <a name='subparagraph5'></a>
+
+Implement a class named <code>Building</code>:
+
+* Constructor attributes: 
+
+
+  * <code>sqft</code> (Number)
+* Each attribute must be stored in an “underscore” attribute version (ex: <code>name</code> is stored in <code>_name</code>)
+* Implement a getter for each attribute.
+* Consider this class as an abstract class. And make sure that any class that extends from it should implement a method named <code>evacuationWarningMessage</code>.
+
+
+  * If a class that extends from it does not have a <code>evacuationWarningMessage</code> method, throw an error with the message <code>Class extending Building must override evacuationWarningMessage</code>
+
+```
+bob@dylan:~$ cat 5-main.js
+import Building from './5-building.js';
+
+const b = new Building(100);
+console.log(b);
+
+class TestBuilding extends Building {}
+
+try {
+    new TestBuilding(200)
+}
+catch(err) {
+    console.log(err);
+}
+
+bob@dylan:~$ 
+bob@dylan:~$ npm run dev 5-main.js 
+Building { _sqft: 100 }
+Error: Class extending Building must override evacuationWarningMessage
+    ...
+bob@dylan:~$
+```
+
+---
+
+### 6. Inheritance <a name='subparagraph6'></a>
+
+Import <code>Building</code> from <code>5-building.js</code>.
+
+Implement a class named <code>SkyHighBuilding</code> that extends from <code>Building</code>:
+
+* Constructor attributes: 
+
+
+  * <code>sqft</code> (Number) (must be assigned to the parent class <code>Building</code>)
+  * <code>floors</code> (Number)
+* Each attribute must be stored in an “underscore” attribute version (ex: <code>name</code> is stored in <code>_name</code>)
+* Implement a getter for each attribute.
+* Override the method named <code>evacuationWarningMessage</code> and return the following string <code>Evacuate slowly the NUMBER_OF_FLOORS floors</code>.
 
 ```
 bob@dylan:~$ cat 6-main.js
-import getSanFranciscoDescription from './6-string-interpolation.js';
+import SkyHighBuilding from './6-sky_high.js';
 
-console.log(getSanFranciscoDescription());
+const building = new SkyHighBuilding(140, 60);
+console.log(building.sqft);
+console.log(building.floors);
+console.log(building.evacuationWarningMessage());
 
-bob@dylan:~$
+bob@dylan:~$ 
 bob@dylan:~$ npm run dev 6-main.js 
-As of 2017, it was the seventh-highest income county in the United States, with a per capita personal income of $119,868. As of 2015, San Francisco proper had a GDP of $154.2 billion, and a GDP per capita of $178,479.
+140
+60
+Evacuate slowly the 60 floors
 bob@dylan:~$
 ```
 
 ---
 
-### 7. Object property value shorthand syntax <a name='subparagraph7'></a>
+### 7. Airport <a name='subparagraph7'></a>
 
-Notice how the keys and the variable names are the same?
+Implement a class named <code>Airport</code>:
 
-Modify the following function’s <code>budget</code> object to simply use the object property value shorthand syntax instead.
+* Constructor attributes: 
 
-```
-export default function getBudgetObject(income, gdp, capita) {
-  const budget = {
-    income: income,
-    gdp: gdp,
-    capita: capita,
-  };
 
-  return budget;
-}
-```
-
-Execution:
+  * <code>name</code> (String)
+  * <code>code</code> (String)
+* Each attribute must be stored in an “underscore” attribute version (ex: <code>name</code> is stored in <code>_name</code>)
+* The default string description of the class should return the airport <code>code</code> (example below).
 
 ```
 bob@dylan:~$ cat 7-main.js
-import getBudgetObject from './7-getBudgetObject.js';
+import Airport from "./7-airport.js";
 
-console.log(getBudgetObject(400, 700, 900));
+const airportSF = new Airport('San Francisco Airport', 'SFO');
+console.log(airportSF);
+console.log(airportSF.toString());
 
-bob@dylan:~$
+bob@dylan:~$ 
 bob@dylan:~$ npm run dev 7-main.js 
-{ income: 400, gdp: 700, capita: 900 }
+Airport [SFO] { _name: 'San Francisco Airport', _code: 'SFO' }
+[object SFO]
 bob@dylan:~$
 ```
 
 ---
 
-### 8. No need to create empty objects before adding in properties <a name='subparagraph8'></a>
+### 8. Primitive - Holberton Class <a name='subparagraph8'></a>
 
-Rewrite the <code>getBudgetForCurrentYear</code> function to use ES6 computed property names on the <code>budget</code> object
+Implement a class named <code>HolbertonClass</code>:
 
-```
-function getCurrentYear() {
-  const date = new Date();
-  return date.getFullYear();
-}
+* Constructor attributes: 
 
-export default function getBudgetForCurrentYear(income, gdp, capita) {
-  const budget = {};
 
-  budget[`income-${getCurrentYear()}`] = income;
-  budget[`gdp-${getCurrentYear()}`] = gdp;
-  budget[`capita-${getCurrentYear()}`] = capita;
-
-  return budget;
-}
-```
-
-Execution:
+  * <code>size</code> (Number)
+  * <code>location</code> (String)
+* Each attribute must be stored in an “underscore” attribute version (ex: <code>name</code> is stored in <code>_name</code>)
+* When the class is cast into a <code>Number</code>, it should return the size.
+* When the class is cast into a <code>String</code>, it should return the location.
 
 ```
 bob@dylan:~$ cat 8-main.js
-import getBudgetForCurrentYear from './8-getBudgetCurrentYear.js';
+import HolbertonClass from "./8-hbtn_class.js";
 
-console.log(getBudgetForCurrentYear(2100, 5200, 1090));
+const hc = new HolbertonClass(12, "Mezzanine")
+console.log(Number(hc));
+console.log(String(hc));
 
-bob@dylan:~$
+bob@dylan:~$ 
 bob@dylan:~$ npm run dev 8-main.js 
-{ 'income-2021': 2100, 'gdp-2021': 5200, 'capita-2021': 1090 }
+12
+Mezzanine
 bob@dylan:~$
 ```
 
 ---
 
-### 9. ES6 method properties <a name='subparagraph9'></a>
+### 9. Hoisting <a name='subparagraph9'></a>
 
-Rewrite <code>getFullBudgetObject</code> to use ES6 method properties in the <code>fullBudget</code> object
+Fix this code and make it work.
 
 ```
-import getBudgetObject from './7-getBudgetObject.js';
+const class2019 = new HolbertonClass(2019, 'San Francisco');
+const class2020 = new HolbertonClass(2020, 'San Francisco');
 
-export default function getFullBudgetObject(income, gdp, capita) {
-  const budget = getBudgetObject(income, gdp, capita);
-  const fullBudget = {
-    ...budget,
-    getIncomeInDollars: function (income) {
-      return `$${income}`;
-    },
-    getIncomeInEuros: function (income) {
-      return `${income} euros`;
-    },
-  };
+export class HolbertonClass {
+  constructor(year, location) {
+    this._year = year;
+    this._location = location;
+  }
 
-  return fullBudget;
+  get year() {
+    return this._year;
+  }
+
+  get location() {
+    return this._location;
+  }
 }
+
+const student1 = new StudentHolberton('Guillaume', 'Salva', class2020);
+const student2 = new StudentHolberton('John', 'Doe', class2020);
+const student3 = new StudentHolberton('Albert', 'Clinton', class2019);
+const student4 = new StudentHolberton('Donald', 'Bush', class2019);
+const student5 = new StudentHolberton('Jason', 'Sandler', class2019);
+
+export class StudentHolberton {
+  constructor(firstName, lastName) {
+    this._firstName = firstName;
+    this._lastName = lastName;
+    this._holbertonClass = holbertonClass;
+  }
+
+  get fullName() {
+    return `${this._firstName} ${this._lastName}`;
+  }
+
+  get holbertonClass() {
+    return this.holbertonClass;
+  }
+
+  get fullStudentDescription() {
+    return `${self._firstName} ${self._lastName} - ${self._holbertonClass.year} - ${self._holbertonClass.location}`;
+  }
+}
+
+
+export const listOfStudents = [student1, student2, student3, student4, student5];
 ```
 
-Execution:
+Result:
 
 ```
 bob@dylan:~$ cat 9-main.js
-import getFullBudgetObject from './9-getFullBudget.js';
+import listOfStudents from "./9-hoisting.js";
 
-const fullBudget = getFullBudgetObject(20, 50, 10);
+console.log(listOfStudents);
 
-console.log(fullBudget.getIncomeInDollars(fullBudget.income));
-console.log(fullBudget.getIncomeInEuros(fullBudget.income));
+const listPrinted = listOfStudents.map(
+    student => student.fullStudentDescription
+);
 
-bob@dylan:~$
-bob@dylan:~$ npm run dev 9-main.js 
-$20
-20 euros
+console.log(listPrinted)
+
+bob@dylan:~$ 
+bob@dylan:~$ npm run dev 9-main.js
+[
+  StudentHolberton {
+    _firstName: 'Guillaume',
+    _lastName: 'Salva',
+    _holbertonClass: HolbertonClass { _year: 2020, _location: 'San Francisco' }
+  },
+  StudentHolberton {
+    _firstName: 'John',
+    _lastName: 'Doe',
+    _holbertonClass: HolbertonClass { _year: 2020, _location: 'San Francisco' }
+  },
+  StudentHolberton {
+    _firstName: 'Albert',
+    _lastName: 'Clinton',
+    _holbertonClass: HolbertonClass { _year: 2019, _location: 'San Francisco' }
+  },
+  StudentHolberton {
+    _firstName: 'Donald',
+    _lastName: 'Bush',
+    _holbertonClass: HolbertonClass { _year: 2019, _location: 'San Francisco' }
+  },
+  StudentHolberton {
+    _firstName: 'Jason',
+    _lastName: 'Sandler',
+    _holbertonClass: HolbertonClass { _year: 2019, _location: 'San Francisco' }
+  }
+]
+[
+  'Guillaume Salva - 2020 - San Francisco',
+  'John Doe - 2020 - San Francisco',
+  'Albert Clinton - 2019 - San Francisco',
+  'Donald Bush - 2019 - San Francisco',
+  'Jason Sandler - 2019 - San Francisco'
+]
 bob@dylan:~$
 ```
 
 ---
 
-### 10. For...of Loops <a name='subparagraph10'></a>
+### 10. Vroom <a name='subparagraph10'></a>
 
-Rewrite the function <code>appendToEachArrayValue</code> to use ES6’s <code>for...of</code> operator. And don’t forget that <code>var</code> is not ES6-friendly.
+Implement a class named <code>Car</code>:
 
-```
-export default function appendToEachArrayValue(array, appendString) {
-  for (var idx in array) {
-    var value = array[idx];
-    array[idx] = appendString + value;
-  }
+* Constructor attributes: 
 
-  return array;
-}
-```
 
-Execution:
+  * <code>brand</code> (String)
+  * <code>motor</code> (String)
+  * <code>color</code> (String)
+* Each attribute must be stored in an “underscore” attribute version (ex: <code>name</code> is stored in <code>_name</code>)
+* Add a method named <code>cloneCar</code>. This method should return a new object of the class.
+
+Hint: Symbols in ES6
 
 ```
 bob@dylan:~$ cat 10-main.js
-import appendToEachArrayValue from './10-loops.js';
+import Car from "./10-car.js";
 
-console.log(appendToEachArrayValue(['appended', 'fixed', 'displayed'], 'correctly-'));
+class TestCar extends Car {}
 
-bob@dylan:~$
-bob@dylan:~$ npm run dev 10-main.js 
-[ 'correctly-appended', 'correctly-fixed', 'correctly-displayed' ]
-bob@dylan:~$
-```
+const tc1 = new TestCar("Nissan", "Turbo", "Pink");
+const tc2 = tc1.cloneCar();
 
----
+console.log(tc1);
+console.log(tc1 instanceof TestCar);
 
-### 11. Iterator <a name='subparagraph11'></a>
+console.log(tc2);
+console.log(tc2 instanceof TestCar);
 
-Write a function named <code>createEmployeesObject</code> that will receive two arguments:
+console.log(tc1 == tc2);
 
-* <code>departmentName</code> (String)
-* <code>employees</code> (Array of Strings)
-
-```
-export default function createEmployeesObject(departmentName, employees) {
-
-}
-```
-
-The function should return an object with the following format:
-
-```
-{
-     $departmentName: [
-          $employees,
-     ],
-}
-```
-
-Execution:
-
-```
-bob@dylan:~$ cat 11-main.js
-import createEmployeesObject from './11-createEmployeesObject.js';
-
-console.log(createEmployeesObject("Software", [ "Bob", "Sylvie" ]));
-
-bob@dylan:~$
-bob@dylan:~$ npm run dev 11-main.js 
-{ Software: [ 'Bob', 'Sylvie' ] }
-bob@dylan:~$
-```
-
----
-
-### 12. Let's create a report object <a name='subparagraph12'></a>
-
-Write a function named <code>createReportObject</code> whose parameter, <code>employeesList</code>, is the return value of the previous function <code>createEmployeesObject</code>.
-
-```
-export default function createReportObject(employeesList) {
-
-}
-```
-
-<code>createReportObject</code> should return an object containing the key <code>allEmployees</code> and a method property called <code>getNumberOfDepartments</code>.
-
-<code>allEmployees</code> is a key that maps to an object containing the department name and a list of all the employees in that department. If you’re having trouble, use the spread syntax.
-
-The method property receives <code>employeesList</code> and returns the number of departments. I would suggest suggest thinking back to the ES6 method property syntax.
-
-```
-{
-  allEmployees: {
-     engineering: [
-          'John Doe',
-          'Guillaume Salva',
-     ],
-  },
-};
-```
-
-Execution:
-
-```
-bob@dylan:~$ cat 12-main.js
-import createEmployeesObject from './11-createEmployeesObject.js';
-import createReportObject from './12-createReportObject.js';
-
-const employees = {
-    ...createEmployeesObject('engineering', ['Bob', 'Jane']),
-    ...createEmployeesObject('marketing', ['Sylvie'])
-};      
-
-const report = createReportObject(employees);
-console.log(report.allEmployees);
-console.log(report.getNumberOfDepartments(report.allEmployees));
-
-bob@dylan:~$
-bob@dylan:~$ npm run dev 12-main.js 
-{ engineering: [ 'Bob', 'Jane' ], marketing: [ 'Sylvie' ] }
-2
+bob@dylan:~$ 
+bob@dylan:~$ npm run dev 10-main.js
+TestCar { _brand: 'Nissan', _motor: 'Turbo', _color: 'Pink' }
+true
+TestCar { _brand: undefined, _motor: undefined, _color: undefined }
+true
+false
 bob@dylan:~$
 ```
 

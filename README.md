@@ -4,31 +4,33 @@
 
 ## Table of Contents :
 
-  - [0. Basic list of objects](#subparagraph0)
-  - [1. More mapping](#subparagraph1)
-  - [2. Filter](#subparagraph2)
-  - [3. Reduce](#subparagraph3)
-  - [4. Combine](#subparagraph4)
-  - [5. Typed Arrays](#subparagraph5)
-  - [6. Set data structure](#subparagraph6)
-  - [7. More set data structure](#subparagraph7)
-  - [8. Clean set](#subparagraph8)
-  - [9. Map data structure](#subparagraph9)
-  - [10. More map data structure](#subparagraph10)
+  - [0. Keep every promise you make and only make promises you can keep](#subparagraph0)
+  - [1. Don't make a promise...if you know you can't keep it](#subparagraph1)
+  - [2. Catch me if you can!](#subparagraph2)
+  - [3. Handle multiple successful promises](#subparagraph3)
+  - [4. Simple promise](#subparagraph4)
+  - [5. Reject the promises](#subparagraph5)
+  - [6. Handle multiple promises](#subparagraph6)
+  - [7. Load balancer](#subparagraph7)
+  - [8. Throw an error](#subparagraph8)
+  - [9. Throw error / try catch](#subparagraph9)
 
 ## Resources
 ### Read or watch:
-* [Array](/rltoken/fXeF-M30vPa-VR4qdM1hbQ)
-* [Typed Array](/rltoken/K8YavMi9P0JsBDS4W8PXvw)
-* [Set Data Structure](/rltoken/47KxkohflmsBUjMCzRxMkQ)
-* [Map Data Structure](/rltoken/c01xzbbE1CXwbXEW8jS0gQ)
-* [WeakMap](/rltoken/f-CLehBUa4LvtJt5c_tEUw)
+* [Promise](/rltoken/aNukpnQLStWa6kqBScmZuA)
+* [JavaScript Promise: An introduction](/rltoken/oE70cO9HPu1lOGuPFzYXXw)
+* [Await](/rltoken/7IuGsWrFjpvdJkNJ2nVhNg)
+* [Async](/rltoken/dA3jsQCVsvT1tslyo_8HJQ)
+* [Throw / Try](/rltoken/J7MhpGC9WLbQXe4Jc5hb8Q)
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* How to use map, filter and reduce on arrays
-* Typed arrays
-* The Set, Map, and Weak link data structures
+* Promises (how, why, and what)
+* How to use thethen,resolve,catchmethods
+* How to use every method of the Promise object
+* Throw / Try
+* The await operator
+* How to use anasyncfunction
 
 ## Requirements
 ### General
@@ -39,341 +41,330 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * Your code should use thejsextension
 * Your code will be tested usingJestand the commandnpm run test
 * Your code will be verified against lint using ESLint
-* Your code needs to pass all the tests and lint. You can verify the entire project runningnpm run full-test
 * All of your functions must be exported
 
 ## Task
-### 0. Basic list of objects <a name='subparagraph0'></a>
+### 0. Keep every promise you make and only make promises you can keep <a name='subparagraph0'></a>
 
-Create a function named <code>getListStudents</code> that returns an array of objects.
-
-Each object should have three attributes: <code>id</code> (Number), <code>firstName</code> (String), and <code>location</code> (String).
-
-The array contains the following students in order:
-
-* <code>Guillaume</code>, id: <code>1</code>, in <code>San Francisco</code>
-* <code>James</code>, id: <code>2</code>, in <code>Columbia</code>
-* <code>Serena</code>, id: <code>5</code>, in <code>San Francisco</code>
+Return a Promise using this prototype <code>function getResponseFromAPI()</code>
 
 ```
 bob@dylan:~$ cat 0-main.js
-import getListStudents from "./0-get_list_students.js";
+import getResponseFromAPI from "./0-promise.js";
 
-console.log(getListStudents());
+const response = getResponseFromAPI();
+console.log(response instanceof Promise);
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 0-main.js 
-[
-  { id: 1, firstName: 'Guillaume', location: 'San Francisco' },
-  { id: 2, firstName: 'James', location: 'Columbia' },
-  { id: 5, firstName: 'Serena', location: 'San Francisco' }
-]
+true
 bob@dylan:~$
 ```
 
 ---
 
-### 1. More mapping <a name='subparagraph1'></a>
+### 1. Don't make a promise...if you know you can't keep it <a name='subparagraph1'></a>
 
-Create a function <code>getListStudentIds</code> that returns an array of ids from a list of object.
+Using the prototype below, return a <code>promise</code>. The parameter is a <code>boolean</code>.
 
-This function is taking one argument which is an array of objects - and this array is the same format as <code>getListStudents</code> from the previous task.
+```
+getFullResponseFromAPI(success)
+```
 
-If the argument is not an array, the function is returning an empty array.
+When the argument is:
 
-You must use the <code>map</code> function on the array.
+* <code>true</code>
+
+  * resolve the promise by passing an object with 2 attributes:
+
+
+    * <code>status</code>: <code>200</code>
+    * <code>body</code>: <code>'Success'</code>
+* <code>false</code>
+
+  * reject the promise with an error object with the message <code>The fake API is not working currently</code>
+
+Try testing it out for yourself
 
 ```
 bob@dylan:~$ cat 1-main.js
-import getListStudentIds from "./1-get_list_student_ids.js";
-import getListStudents from "./0-get_list_students.js";
+import getFullResponseFromAPI from './1-promise';
 
-console.log(getListStudentIds("hello"));
-console.log(getListStudentIds(getListStudents()));
+console.log(getFullResponseFromAPI(true));
+console.log(getFullResponseFromAPI(false));
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 1-main.js 
-[]
-[ 1, 2, 5 ]
+Promise { { status: 200, body: 'Success' } }
+Promise {
+  <rejected> Error: The fake API is not working currently
+    ...
+    ...
 bob@dylan:~$
 ```
 
 ---
 
-### 2. Filter <a name='subparagraph2'></a>
+### 2. Catch me if you can! <a name='subparagraph2'></a>
 
-Create a function <code>getStudentsByLocation</code> that returns an array of objects who are located in a specific city.
+Using the function prototype below
 
-It should accept a list of students (from <code>getListStudents</code>) and a <code>city</code> (string) as parameters.
+```
+function handleResponseFromAPI(promise)
+```
 
-You must use the <code>filter</code> function on the array.
+Append three handlers to the function:
+
+* When the Promise resolves, return an object with the following attributes
+
+
+  * <code>status</code>: <code>200</code>
+  * <code>body</code>: <code>success</code>
+* When the Promise rejects, return an empty <code>Error</code> object
+* For every resolution, log <code>Got a response from the API</code> to the console
 
 ```
 bob@dylan:~$ cat 2-main.js
-import getListStudents from "./0-get_list_students.js";
-import getStudentsByLocation from "./2-get_students_by_loc.js";
+import handleResponseFromAPI from "./2-then";
 
-const students = getListStudents();
-
-console.log(getStudentsByLocation(students, 'San Francisco'));
+const promise = Promise.resolve();
+handleResponseFromAPI(promise);
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 2-main.js 
-[
-  { id: 1, firstName: 'Guillaume', location: 'San Francisco' },
-  { id: 5, firstName: 'Serena', location: 'San Francisco' }
-]
+Got a response from the API
 bob@dylan:~$
 ```
 
 ---
 
-### 3. Reduce <a name='subparagraph3'></a>
+### 3. Handle multiple successful promises <a name='subparagraph3'></a>
 
-Create a function <code>getStudentIdsSum</code> that returns the sum of all the student ids.
+In this file, import <code>uploadPhoto</code> and <code>createUser</code> from <code>utils.js</code>
 
-It should accept a list of students (from <code>getListStudents</code>) as a parameter.
+Knowing that the functions in <code>utils.js</code> return promises, use the prototype below to collectively resolve all promises and log <code>body firstName lastName</code> to the console.
 
-You must use the <code>reduce</code> function on the array.
+```
+function handleProfileSignup()
+```
+
+In the event of an error, log <code>Signup system offline</code> to the console
 
 ```
 bob@dylan:~$ cat 3-main.js
-import getListStudents from "./0-get_list_students.js";
-import getStudentIdsSum from "./3-get_ids_sum.js";
+import handleProfileSignup from "./3-all";
 
-const students = getListStudents();
-const value = getStudentIdsSum(students);
-
-console.log(value);
+handleProfileSignup();
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 3-main.js 
-8
+photo-profile-1 Guillaume Salva
 bob@dylan:~$
 ```
 
 ---
 
-### 4. Combine <a name='subparagraph4'></a>
+### 4. Simple promise <a name='subparagraph4'></a>
 
-Create a function <code>updateStudentGradeByCity</code> that returns an array of students for a specific city with their new grade
+Using the following prototype
 
-It should accept a list of students (from <code>getListStudents</code>), a <code>city</code> (String), and <code>newGrades</code> (Array of “grade” objects) as parameters.
+```
+function signUpUser(firstName, lastName) {
+}
+```
 
-<code>newGrades</code> is an array of objects with this format:
+That returns a resolved promise with this object:
 
 ```
 {
-    studentId: 31,
-    grade: 78,
-  }
+  firstName: value,
+  lastName: value,
+}
 ```
-
-If a student doesn’t have grade in <code>newGrades</code>, the final grade should be <code>N/A</code>.
-
-You must use <code>filter</code> and <code>map</code> combined.
 
 ```
 bob@dylan:~$ cat 4-main.js
-import getListStudents from "./0-get_list_students.js";
-import updateStudentGradeByCity from "./4-update_grade_by_city.js";
+import signUpUser from "./4-user-promise";
 
-console.log(updateStudentGradeByCity(getListStudents(), "San Francisco", [{ studentId: 5, grade: 97 }, { studentId: 1, grade: 86 }]));
-
-console.log(updateStudentGradeByCity(getListStudents(), "San Francisco", [{ studentId: 5, grade: 97 }]));
+console.log(signUpUser("Bob", "Dylan"));
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 4-main.js 
-[
-  {
-    id: 1,
-    firstName: 'Guillaume',
-    location: 'San Francisco',
-    grade: 86
-  },
-  { id: 5, firstName: 'Serena', location: 'San Francisco', grade: 97 }
-]
-[
-  {
-    id: 1,
-    firstName: 'Guillaume',
-    location: 'San Francisco',
-    grade: 'N/A'
-  },
-  { id: 5, firstName: 'Serena', location: 'San Francisco', grade: 97 }
-]
+Promise { { firstName: 'Bob', lastName: 'Dylan' } }
 bob@dylan:~$
 ```
 
 ---
 
-### 5. Typed Arrays <a name='subparagraph5'></a>
+### 5. Reject the promises <a name='subparagraph5'></a>
 
-Create a function named <code>createInt8TypedArray</code> that returns a new <code>ArrayBuffer</code> with an <code>Int8</code> value at a specific position.
+Write and export a function named <code>uploadPhoto</code>. It should accept one argument <code>fileName</code> (string).
 
-It should accept three arguments: <code>length</code> (Number), <code>position</code> (Number), and <code>value</code> (Number).
+The function should return a Promise rejecting with an Error and the string <code>$fileName cannot be processed</code>
 
-If adding the value is not possible the error <code>Position outside range</code> should be thrown.
+```
+export default function uploadPhoto(filename) {
+
+}
+```
 
 ```
 bob@dylan:~$ cat 5-main.js
-import createInt8TypedArray from "./5-typed_arrays.js";
+import uploadPhoto from './5-photo-reject';
 
-console.log(createInt8TypedArray(10, 2, 89));
+console.log(uploadPhoto('guillaume.jpg'));
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 5-main.js 
-DataView {
-  byteLength: 10,
-  byteOffset: 0,
-  buffer: ArrayBuffer {
-    [Uint8Contents]: <00 00 59 00 00 00 00 00 00 00>,
-    byteLength: 10
-  }
-}
+Promise {
+  <rejected> Error: guillaume.jpg cannot be processed
+  ..
+    ..
 bob@dylan:~$
 ```
 
 ---
 
-### 6. Set data structure <a name='subparagraph6'></a>
+### 6. Handle multiple promises <a name='subparagraph6'></a>
 
-Create a function named <code>setFromArray</code> that returns a <code>Set</code> from an array.
+Import <code>signUpUser</code> from <code>4-user-promise.js</code> and <code>uploadPhoto</code> from <code>5-photo-reject.js</code>.
 
-It accepts an argument (Array, of any kind of element).
+Write and export a function named <code>handleProfileSignup</code>. It should accept three arguments <code>firstName</code> (string), <code>lastName</code> (string), and <code>fileName</code> (string). The function should call the two other functions. When the promises are all settled it should return an array with the following structure:
+
+```
+[
+    {
+      status: status_of_the_promise,
+      value: value or error returned by the Promise
+    },
+    ...
+  ]
+```
 
 ```
 bob@dylan:~$ cat 6-main.js
-import setFromArray from "./6-set.js";
+import handleProfileSignup from './6-final-user';
 
-console.log(setFromArray([12, 32, 15, 78, 98, 15]));
+console.log(handleProfileSignup("Bob", "Dylan", "bob_dylan.jpg"));
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 6-main.js 
-Set { 12, 32, 15, 78, 98 }
+Promise { <pending> }
 bob@dylan:~$
 ```
 
 ---
 
-### 7. More set data structure <a name='subparagraph7'></a>
+### 7. Load balancer <a name='subparagraph7'></a>
 
-Create a function named <code>hasValuesFromArray</code> that returns a boolean if all the elements in the array exist within the set.
+Write and export a function named <code>loadBalancer</code>. It should accept two arguments <code>chinaDownload</code> (Promise) and <code>USDownload</code> (Promise).
 
-It accepts two arguments: a <code>set</code> (Set) and an <code>array</code> (Array).
+The function should return the value returned by the promise that resolved the first.
+
+```
+export default function loadBalancer(chinaDownload, USDownload) {
+
+}
+```
 
 ```
 bob@dylan:~$ cat 7-main.js
-import hasValuesFromArray from "./7-has_array_values.js";
+import loadBalancer from "./7-load_balancer";
 
-console.log(hasValuesFromArray(new Set([1, 2, 3, 4, 5]), [1]));
-console.log(hasValuesFromArray(new Set([1, 2, 3, 4, 5]), [10]));
-console.log(hasValuesFromArray(new Set([1, 2, 3, 4, 5]), [1, 10]));
+const ukSuccess = 'Downloading from UK is faster';
+const frSuccess = 'Downloading from FR is faster';
+
+const promiseUK = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 100, ukSuccess);
+});
+
+const promiseUKSlow = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 400, ukSuccess);
+});
+
+const promiseFR = new Promise(function(resolve, reject) {
+    setTimeout(resolve, 200, frSuccess);
+});
+
+const test = async () => {
+    console.log(await loadBalancer(promiseUK, promiseFR));
+    console.log(await loadBalancer(promiseUKSlow, promiseFR));
+}
+
+test();
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 7-main.js 
-true
-false
-false
+Downloading from UK is faster
+Downloading from FR is faster
 bob@dylan:~$
 ```
 
 ---
 
-### 8. Clean set <a name='subparagraph8'></a>
+### 8. Throw an error <a name='subparagraph8'></a>
 
-Create a function named <code>cleanSet</code> that returns a string of all the set values that start with a specific string (<code>startString</code>).
+Write a function named <code>divideFunction</code> that will accept two arguments: <code>numerator</code> (Number) and <code>denominator</code> (Number).
 
-It accepts two arguments: a <code>set</code> (Set) and a <code>startString</code> (String).
+When the <code>denominator</code> argument is equal to 0, the function should throw a new error with the message <code>cannot divide by 0</code>. Otherwise it should return the numerator divided by the denominator.
 
-When a value starts with <code>startString</code> you only append the rest of the string. The string contains all the values of the set separated by <code>-</code>.
+```
+export default function divideFunction(numerator, denominator) {
+
+}
+```
 
 ```
 bob@dylan:~$ cat 8-main.js
-import cleanSet from "./8-clean_set.js";
+import divideFunction from './8-try';
 
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), 'bon'));
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), ''));
+console.log(divideFunction(10, 2));
+console.log(divideFunction(10, 0));
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 8-main.js 
-jovi-aparte-appetit
+5
+..../8-try.js:15
+  throw Error('cannot divide by 0');
+  ^
+.....
 
 bob@dylan:~$
 ```
 
 ---
 
-### 9. Map data structure <a name='subparagraph9'></a>
+### 9. Throw error / try catch <a name='subparagraph9'></a>
 
-Create a function named <code>groceriesList</code> that returns a map of groceries with the following items (name, quantity):
+Write a function named <code>guardrail</code> that will accept one argument <code>mathFunction</code> (Function).
+
+This function should create and return an array named <code>queue</code>.
+
+When the <code>mathFunction</code> function is executed, the value returned by the function should be appended to the queue. 
+If this function throws an error, the error message should be appended to the queue. 
+In every case, the message <code>Guardrail was processed</code> should be added to the queue.
+
+Example:
 
 ```
-Apples, 10
-Tomatoes, 10
-Pasta, 1
-Rice, 1
-Banana, 5
+[
+  1000,
+  'Guardrail was processed',
+]
 ```
-
-Result:
 
 ```
 bob@dylan:~$ cat 9-main.js
-import groceriesList from "./9-groceries_list.js";
+import guardrail from './9-try';
+import divideFunction from './8-try';
 
-console.log(groceriesList());
+console.log(guardrail(() => { return divideFunction(10, 2)}));
+console.log(guardrail(() => { return divideFunction(10, 0)}));
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 9-main.js 
-Map {
-  'Apples' => 10,
-  'Tomatoes' => 10,
-  'Pasta' => 1,
-  'Rice' => 1,
-  'Banana' => 5
-}
-bob@dylan:~$
-```
-
----
-
-### 10. More map data structure <a name='subparagraph10'></a>
-
-Create a function named <code>updateUniqueItems</code> that returns an updated map for all items with initial quantity at 1.
-
-It should accept a map as an argument. The map it accepts for argument is similar to the map you create in the previous task.
-
-For each entry of the map where the quantity is 1, update the quantity to 100. 
-If updating the quantity is not possible (argument is not a map) the error <code>Cannot process</code> should be thrown.
-
-```
-bob@dylan:~$ cat 10-main.js
-import updateUniqueItems from "./10-update_uniq_items.js";
-import groceriesList from "./9-groceries_list.js";
-
-const map = groceriesList();
-console.log(map);
-
-updateUniqueItems(map)
-console.log(map);
-
-bob@dylan:~$ 
-bob@dylan:~$ npm run dev 10-main.js 
-Map {
-  'Apples' => 10,
-  'Tomatoes' => 10,
-  'Pasta' => 1,
-  'Rice' => 1,
-  'Banana' => 5
-}
-Map {
-  'Apples' => 10,
-  'Tomatoes' => 10,
-  'Pasta' => 100,
-  'Rice' => 100,
-  'Banana' => 5
-}
+[ 5, 'Guardrail was processed' ]
+[ 'Error: cannot divide by 0', 'Guardrail was processed' ]
 bob@dylan:~$
 ```
 

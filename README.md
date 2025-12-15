@@ -4,30 +4,31 @@
 
 ## Table of Contents :
 
-  - [0. You used to attend a place like this at some point](#subparagraph0)
-  - [1. Let's make some classrooms](#subparagraph1)
-  - [2. A Course, Getters, and Setters](#subparagraph2)
-  - [3. Methods, static methods, computed methods names..... MONEY](#subparagraph3)
-  - [4. Pricing](#subparagraph4)
-  - [5. A Building](#subparagraph5)
-  - [6. Inheritance](#subparagraph6)
-  - [7. Airport](#subparagraph7)
-  - [8. Primitive - Holberton Class](#subparagraph8)
-  - [9. Hoisting](#subparagraph9)
-  - [10. Vroom](#subparagraph10)
+  - [0. Basic list of objects](#subparagraph0)
+  - [1. More mapping](#subparagraph1)
+  - [2. Filter](#subparagraph2)
+  - [3. Reduce](#subparagraph3)
+  - [4. Combine](#subparagraph4)
+  - [5. Typed Arrays](#subparagraph5)
+  - [6. Set data structure](#subparagraph6)
+  - [7. More set data structure](#subparagraph7)
+  - [8. Clean set](#subparagraph8)
+  - [9. Map data structure](#subparagraph9)
+  - [10. More map data structure](#subparagraph10)
 
 ## Resources
 ### Read or watch:
-* [Classes](/rltoken/AJdJxuoO8o3hwpybQaFSDQ)
-* [Metaprogramming](/rltoken/jF42Fw5HNIPnFWKmDzVg1g)
+* [Array](/rltoken/fXeF-M30vPa-VR4qdM1hbQ)
+* [Typed Array](/rltoken/K8YavMi9P0JsBDS4W8PXvw)
+* [Set Data Structure](/rltoken/47KxkohflmsBUjMCzRxMkQ)
+* [Map Data Structure](/rltoken/c01xzbbE1CXwbXEW8jS0gQ)
+* [WeakMap](/rltoken/f-CLehBUa4LvtJt5c_tEUw)
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* How to define a Class
-* How to add methods to a class
-* Why and how to add a static method to a class
-* How to extend a class from another
-* Metaprogramming and symbols
+* How to use map, filter and reduce on arrays
+* Typed arrays
+* The Set, Map, and Weak link data structures
 
 ## Requirements
 ### General
@@ -39,454 +40,340 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * Your code will be tested usingJestand the commandnpm run test
 * Your code will be verified against lint using ESLint
 * Your code needs to pass all the tests and lint. You can verify the entire project runningnpm run full-test
+* All of your functions must be exported
 
 ## Task
-### 0. You used to attend a place like this at some point <a name='subparagraph0'></a>
+### 0. Basic list of objects <a name='subparagraph0'></a>
 
-Implement a class named <code>ClassRoom</code>:
+Create a function named <code>getListStudents</code> that returns an array of objects.
 
-* Prototype: <code>export default class ClassRoom</code>
-* It should accept one attribute named <code>maxStudentsSize</code> (Number) and assigned to <code>_maxStudentsSize</code>
+Each object should have three attributes: <code>id</code> (Number), <code>firstName</code> (String), and <code>location</code> (String).
+
+The array contains the following students in order:
+
+* <code>Guillaume</code>, id: <code>1</code>, in <code>San Francisco</code>
+* <code>James</code>, id: <code>2</code>, in <code>Columbia</code>
+* <code>Serena</code>, id: <code>5</code>, in <code>San Francisco</code>
 
 ```
 bob@dylan:~$ cat 0-main.js
-import ClassRoom from "./0-classroom.js";
+import getListStudents from "./0-get_list_students.js";
 
-const room = new ClassRoom(10);
-console.log(room._maxStudentsSize)
+console.log(getListStudents());
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 0-main.js 
-10
-bob@dylan:~$
-```
-
----
-
-### 1. Let's make some classrooms <a name='subparagraph1'></a>
-
-Import the <code>ClassRoom</code> class from <code>0-classroom.js</code>.
-
-Implement a function named <code>initializeRooms</code>. It should return an array of 3 <code>ClassRoom</code> objects with the sizes 19, 20, and 34 (in this order).
-
-```
-bob@dylan:~$ cat 1-main.js
-import initializeRooms from './1-make_classrooms.js';
-
-console.log(initializeRooms());
-
-bob@dylan:~$ 
-bob@dylan:~$ npm run dev 1-main.js 
 [
-  ClassRoom { _maxStudentsSize: 19 },
-  ClassRoom { _maxStudentsSize: 20 },
-  ClassRoom { _maxStudentsSize: 34 }
+  { id: 1, firstName: 'Guillaume', location: 'San Francisco' },
+  { id: 2, firstName: 'James', location: 'Columbia' },
+  { id: 5, firstName: 'Serena', location: 'San Francisco' }
 ]
 bob@dylan:~$
 ```
 
 ---
 
-### 2. A Course, Getters, and Setters <a name='subparagraph2'></a>
+### 1. More mapping <a name='subparagraph1'></a>
 
-Implement a class named <code>HolbertonCourse</code>:
+Create a function <code>getListStudentIds</code> that returns an array of ids from a list of object.
 
-* Constructor attributes: 
+This function is taking one argument which is an array of objects - and this array is the same format as <code>getListStudents</code> from the previous task.
 
+If the argument is not an array, the function is returning an empty array.
 
-  * <code>name</code> (String)
-  * <code>length</code> (Number)
-  * <code>students</code> (array of Strings)
-* Make sure to verify the type of attributes during object creation
-* Each attribute must be stored in an “underscore” attribute version (ex: <code>name</code> is stored in <code>_name</code>)
-* Implement a getter and setter for each attribute.
+You must use the <code>map</code> function on the array.
+
+```
+bob@dylan:~$ cat 1-main.js
+import getListStudentIds from "./1-get_list_student_ids.js";
+import getListStudents from "./0-get_list_students.js";
+
+console.log(getListStudentIds("hello"));
+console.log(getListStudentIds(getListStudents()));
+
+bob@dylan:~$ 
+bob@dylan:~$ npm run dev 1-main.js 
+[]
+[ 1, 2, 5 ]
+bob@dylan:~$
+```
+
+---
+
+### 2. Filter <a name='subparagraph2'></a>
+
+Create a function <code>getStudentsByLocation</code> that returns an array of objects who are located in a specific city.
+
+It should accept a list of students (from <code>getListStudents</code>) and a <code>city</code> (string) as parameters.
+
+You must use the <code>filter</code> function on the array.
 
 ```
 bob@dylan:~$ cat 2-main.js
-import HolbertonCourse from "./2-hbtn_course.js";
+import getListStudents from "./0-get_list_students.js";
+import getStudentsByLocation from "./2-get_students_by_loc.js";
 
-const c1 = new HolbertonCourse("ES6", 1, ["Bob", "Jane"])
-console.log(c1.name);
-c1.name = "Python 101";
-console.log(c1);
+const students = getListStudents();
 
-try {
-    c1.name = 12;
-} 
-catch(err) {
-    console.log(err);
-}
-
-try {
-    const c2 = new HolbertonCourse("ES6", "1", ["Bob", "Jane"]);
-}
-catch(err) {
-    console.log(err);
-}
+console.log(getStudentsByLocation(students, 'San Francisco'));
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 2-main.js 
-ES6
-HolbertonCourse {
-  _name: 'Python 101',
-  _length: 1,
-  _students: [ 'Bob', 'Jane' ]
-}
-TypeError: Name must be a string
-    ...
-TypeError: Length must be a number
-    ...
+[
+  { id: 1, firstName: 'Guillaume', location: 'San Francisco' },
+  { id: 5, firstName: 'Serena', location: 'San Francisco' }
+]
 bob@dylan:~$
 ```
 
 ---
 
-### 3. Methods, static methods, computed methods names..... MONEY <a name='subparagraph3'></a>
+### 3. Reduce <a name='subparagraph3'></a>
 
-Implement a class named <code>Currency</code>:
+Create a function <code>getStudentIdsSum</code> that returns the sum of all the student ids.
 
-* - Constructor attributes: 
+It should accept a list of students (from <code>getListStudents</code>) as a parameter.
 
-
-  * <code>code</code> (String)
-  * <code>name</code> (String)
-* Each attribute must be stored in an “underscore” attribute version (ex: <code>name</code> is stored in <code>_name</code>)
-* Implement a getter and setter for each attribute.
-* Implement a method named <code>displayFullCurrency</code> that will return the attributes in the following format <code>name (code)</code>.
+You must use the <code>reduce</code> function on the array.
 
 ```
 bob@dylan:~$ cat 3-main.js
-import Currency from "./3-currency.js";
+import getListStudents from "./0-get_list_students.js";
+import getStudentIdsSum from "./3-get_ids_sum.js";
 
-const dollar = new Currency('$', 'Dollars');
-console.log(dollar.displayFullCurrency());
+const students = getListStudents();
+const value = getStudentIdsSum(students);
+
+console.log(value);
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 3-main.js 
-Dollars ($)
+8
 bob@dylan:~$
 ```
 
 ---
 
-### 4. Pricing <a name='subparagraph4'></a>
+### 4. Combine <a name='subparagraph4'></a>
 
-Import the class <code>Currency</code> from <code>3-currency.js</code>
+Create a function <code>updateStudentGradeByCity</code> that returns an array of students for a specific city with their new grade
 
-Implement a class named <code>Pricing</code>:
+It should accept a list of students (from <code>getListStudents</code>), a <code>city</code> (String), and <code>newGrades</code> (Array of “grade” objects) as parameters.
 
-* Constructor attributes: 
+<code>newGrades</code> is an array of objects with this format:
 
+```
+{
+    studentId: 31,
+    grade: 78,
+  }
+```
 
-  * <code>amount</code> (Number)
-  * <code>currency</code> (Currency)
-* Each attribute must be stored in an “underscore” attribute version (ex: <code>name</code> is stored in <code>_name</code>)
-* Implement a getter and setter for each attribute.
-* Implement a method named <code>displayFullPrice</code> that returns the attributes in the following format <code>amount currency_name (currency_code)</code>.
-* Implement a static method named <code>convertPrice</code>. It should accept two arguments: <code>amount</code> (Number), <code>conversionRate</code> (Number). The function should return the amount multiplied by the conversion rate.
+If a student doesn’t have grade in <code>newGrades</code>, the final grade should be <code>N/A</code>.
+
+You must use <code>filter</code> and <code>map</code> combined.
 
 ```
 bob@dylan:~$ cat 4-main.js
-import Pricing from './4-pricing.js';
-import Currency from './3-currency.js';
+import getListStudents from "./0-get_list_students.js";
+import updateStudentGradeByCity from "./4-update_grade_by_city.js";
 
-const p = new Pricing(100, new Currency("EUR", "Euro"))
-console.log(p);
-console.log(p.displayFullPrice());
+console.log(updateStudentGradeByCity(getListStudents(), "San Francisco", [{ studentId: 5, grade: 97 }, { studentId: 1, grade: 86 }]));
+
+console.log(updateStudentGradeByCity(getListStudents(), "San Francisco", [{ studentId: 5, grade: 97 }]));
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 4-main.js 
-Pricing {
-  _amount: 100,
-  _currency: Currency { _code: 'EUR', _name: 'Euro' }
-}
-100 Euro (EUR)
+[
+  {
+    id: 1,
+    firstName: 'Guillaume',
+    location: 'San Francisco',
+    grade: 86
+  },
+  { id: 5, firstName: 'Serena', location: 'San Francisco', grade: 97 }
+]
+[
+  {
+    id: 1,
+    firstName: 'Guillaume',
+    location: 'San Francisco',
+    grade: 'N/A'
+  },
+  { id: 5, firstName: 'Serena', location: 'San Francisco', grade: 97 }
+]
 bob@dylan:~$
 ```
 
 ---
 
-### 5. A Building <a name='subparagraph5'></a>
+### 5. Typed Arrays <a name='subparagraph5'></a>
 
-Implement a class named <code>Building</code>:
+Create a function named <code>createInt8TypedArray</code> that returns a new <code>ArrayBuffer</code> with an <code>Int8</code> value at a specific position.
 
-* Constructor attributes: 
+It should accept three arguments: <code>length</code> (Number), <code>position</code> (Number), and <code>value</code> (Number).
 
-
-  * <code>sqft</code> (Number)
-* Each attribute must be stored in an “underscore” attribute version (ex: <code>name</code> is stored in <code>_name</code>)
-* Implement a getter for each attribute.
-* Consider this class as an abstract class. And make sure that any class that extends from it should implement a method named <code>evacuationWarningMessage</code>.
-
-
-  * If a class that extends from it does not have a <code>evacuationWarningMessage</code> method, throw an error with the message <code>Class extending Building must override evacuationWarningMessage</code>
+If adding the value is not possible the error <code>Position outside range</code> should be thrown.
 
 ```
 bob@dylan:~$ cat 5-main.js
-import Building from './5-building.js';
+import createInt8TypedArray from "./5-typed_arrays.js";
 
-const b = new Building(100);
-console.log(b);
-
-class TestBuilding extends Building {}
-
-try {
-    new TestBuilding(200)
-}
-catch(err) {
-    console.log(err);
-}
+console.log(createInt8TypedArray(10, 2, 89));
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 5-main.js 
-Building { _sqft: 100 }
-Error: Class extending Building must override evacuationWarningMessage
-    ...
+DataView {
+  byteLength: 10,
+  byteOffset: 0,
+  buffer: ArrayBuffer {
+    [Uint8Contents]: <00 00 59 00 00 00 00 00 00 00>,
+    byteLength: 10
+  }
+}
 bob@dylan:~$
 ```
 
 ---
 
-### 6. Inheritance <a name='subparagraph6'></a>
+### 6. Set data structure <a name='subparagraph6'></a>
 
-Import <code>Building</code> from <code>5-building.js</code>.
+Create a function named <code>setFromArray</code> that returns a <code>Set</code> from an array.
 
-Implement a class named <code>SkyHighBuilding</code> that extends from <code>Building</code>:
-
-* Constructor attributes: 
-
-
-  * <code>sqft</code> (Number) (must be assigned to the parent class <code>Building</code>)
-  * <code>floors</code> (Number)
-* Each attribute must be stored in an “underscore” attribute version (ex: <code>name</code> is stored in <code>_name</code>)
-* Implement a getter for each attribute.
-* Override the method named <code>evacuationWarningMessage</code> and return the following string <code>Evacuate slowly the NUMBER_OF_FLOORS floors</code>.
+It accepts an argument (Array, of any kind of element).
 
 ```
 bob@dylan:~$ cat 6-main.js
-import SkyHighBuilding from './6-sky_high.js';
+import setFromArray from "./6-set.js";
 
-const building = new SkyHighBuilding(140, 60);
-console.log(building.sqft);
-console.log(building.floors);
-console.log(building.evacuationWarningMessage());
+console.log(setFromArray([12, 32, 15, 78, 98, 15]));
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 6-main.js 
-140
-60
-Evacuate slowly the 60 floors
+Set { 12, 32, 15, 78, 98 }
 bob@dylan:~$
 ```
 
 ---
 
-### 7. Airport <a name='subparagraph7'></a>
+### 7. More set data structure <a name='subparagraph7'></a>
 
-Implement a class named <code>Airport</code>:
+Create a function named <code>hasValuesFromArray</code> that returns a boolean if all the elements in the array exist within the set.
 
-* Constructor attributes: 
-
-
-  * <code>name</code> (String)
-  * <code>code</code> (String)
-* Each attribute must be stored in an “underscore” attribute version (ex: <code>name</code> is stored in <code>_name</code>)
-* The default string description of the class should return the airport <code>code</code> (example below).
+It accepts two arguments: a <code>set</code> (Set) and an <code>array</code> (Array).
 
 ```
 bob@dylan:~$ cat 7-main.js
-import Airport from "./7-airport.js";
+import hasValuesFromArray from "./7-has_array_values.js";
 
-const airportSF = new Airport('San Francisco Airport', 'SFO');
-console.log(airportSF);
-console.log(airportSF.toString());
+console.log(hasValuesFromArray(new Set([1, 2, 3, 4, 5]), [1]));
+console.log(hasValuesFromArray(new Set([1, 2, 3, 4, 5]), [10]));
+console.log(hasValuesFromArray(new Set([1, 2, 3, 4, 5]), [1, 10]));
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 7-main.js 
-Airport [SFO] { _name: 'San Francisco Airport', _code: 'SFO' }
-[object SFO]
+true
+false
+false
 bob@dylan:~$
 ```
 
 ---
 
-### 8. Primitive - Holberton Class <a name='subparagraph8'></a>
+### 8. Clean set <a name='subparagraph8'></a>
 
-Implement a class named <code>HolbertonClass</code>:
+Create a function named <code>cleanSet</code> that returns a string of all the set values that start with a specific string (<code>startString</code>).
 
-* Constructor attributes: 
+It accepts two arguments: a <code>set</code> (Set) and a <code>startString</code> (String).
 
-
-  * <code>size</code> (Number)
-  * <code>location</code> (String)
-* Each attribute must be stored in an “underscore” attribute version (ex: <code>name</code> is stored in <code>_name</code>)
-* When the class is cast into a <code>Number</code>, it should return the size.
-* When the class is cast into a <code>String</code>, it should return the location.
+When a value starts with <code>startString</code> you only append the rest of the string. The string contains all the values of the set separated by <code>-</code>.
 
 ```
 bob@dylan:~$ cat 8-main.js
-import HolbertonClass from "./8-hbtn_class.js";
+import cleanSet from "./8-clean_set.js";
 
-const hc = new HolbertonClass(12, "Mezzanine")
-console.log(Number(hc));
-console.log(String(hc));
+console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), 'bon'));
+console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), ''));
 
 bob@dylan:~$ 
 bob@dylan:~$ npm run dev 8-main.js 
-12
-Mezzanine
+jovi-aparte-appetit
+
 bob@dylan:~$
 ```
 
 ---
 
-### 9. Hoisting <a name='subparagraph9'></a>
+### 9. Map data structure <a name='subparagraph9'></a>
 
-Fix this code and make it work.
+Create a function named <code>groceriesList</code> that returns a map of groceries with the following items (name, quantity):
 
 ```
-const class2019 = new HolbertonClass(2019, 'San Francisco');
-const class2020 = new HolbertonClass(2020, 'San Francisco');
-
-export class HolbertonClass {
-  constructor(year, location) {
-    this._year = year;
-    this._location = location;
-  }
-
-  get year() {
-    return this._year;
-  }
-
-  get location() {
-    return this._location;
-  }
-}
-
-const student1 = new StudentHolberton('Guillaume', 'Salva', class2020);
-const student2 = new StudentHolberton('John', 'Doe', class2020);
-const student3 = new StudentHolberton('Albert', 'Clinton', class2019);
-const student4 = new StudentHolberton('Donald', 'Bush', class2019);
-const student5 = new StudentHolberton('Jason', 'Sandler', class2019);
-
-export class StudentHolberton {
-  constructor(firstName, lastName) {
-    this._firstName = firstName;
-    this._lastName = lastName;
-    this._holbertonClass = holbertonClass;
-  }
-
-  get fullName() {
-    return `${this._firstName} ${this._lastName}`;
-  }
-
-  get holbertonClass() {
-    return this.holbertonClass;
-  }
-
-  get fullStudentDescription() {
-    return `${self._firstName} ${self._lastName} - ${self._holbertonClass.year} - ${self._holbertonClass.location}`;
-  }
-}
-
-
-export const listOfStudents = [student1, student2, student3, student4, student5];
+Apples, 10
+Tomatoes, 10
+Pasta, 1
+Rice, 1
+Banana, 5
 ```
 
 Result:
 
 ```
 bob@dylan:~$ cat 9-main.js
-import listOfStudents from "./9-hoisting.js";
+import groceriesList from "./9-groceries_list.js";
 
-console.log(listOfStudents);
-
-const listPrinted = listOfStudents.map(
-    student => student.fullStudentDescription
-);
-
-console.log(listPrinted)
+console.log(groceriesList());
 
 bob@dylan:~$ 
-bob@dylan:~$ npm run dev 9-main.js
-[
-  StudentHolberton {
-    _firstName: 'Guillaume',
-    _lastName: 'Salva',
-    _holbertonClass: HolbertonClass { _year: 2020, _location: 'San Francisco' }
-  },
-  StudentHolberton {
-    _firstName: 'John',
-    _lastName: 'Doe',
-    _holbertonClass: HolbertonClass { _year: 2020, _location: 'San Francisco' }
-  },
-  StudentHolberton {
-    _firstName: 'Albert',
-    _lastName: 'Clinton',
-    _holbertonClass: HolbertonClass { _year: 2019, _location: 'San Francisco' }
-  },
-  StudentHolberton {
-    _firstName: 'Donald',
-    _lastName: 'Bush',
-    _holbertonClass: HolbertonClass { _year: 2019, _location: 'San Francisco' }
-  },
-  StudentHolberton {
-    _firstName: 'Jason',
-    _lastName: 'Sandler',
-    _holbertonClass: HolbertonClass { _year: 2019, _location: 'San Francisco' }
-  }
-]
-[
-  'Guillaume Salva - 2020 - San Francisco',
-  'John Doe - 2020 - San Francisco',
-  'Albert Clinton - 2019 - San Francisco',
-  'Donald Bush - 2019 - San Francisco',
-  'Jason Sandler - 2019 - San Francisco'
-]
+bob@dylan:~$ npm run dev 9-main.js 
+Map {
+  'Apples' => 10,
+  'Tomatoes' => 10,
+  'Pasta' => 1,
+  'Rice' => 1,
+  'Banana' => 5
+}
 bob@dylan:~$
 ```
 
 ---
 
-### 10. Vroom <a name='subparagraph10'></a>
+### 10. More map data structure <a name='subparagraph10'></a>
 
-Implement a class named <code>Car</code>:
+Create a function named <code>updateUniqueItems</code> that returns an updated map for all items with initial quantity at 1.
 
-* Constructor attributes: 
+It should accept a map as an argument. The map it accepts for argument is similar to the map you create in the previous task.
 
-
-  * <code>brand</code> (String)
-  * <code>motor</code> (String)
-  * <code>color</code> (String)
-* Each attribute must be stored in an “underscore” attribute version (ex: <code>name</code> is stored in <code>_name</code>)
-* Add a method named <code>cloneCar</code>. This method should return a new object of the class.
-
-Hint: Symbols in ES6
+For each entry of the map where the quantity is 1, update the quantity to 100. 
+If updating the quantity is not possible (argument is not a map) the error <code>Cannot process</code> should be thrown.
 
 ```
 bob@dylan:~$ cat 10-main.js
-import Car from "./10-car.js";
+import updateUniqueItems from "./10-update_uniq_items.js";
+import groceriesList from "./9-groceries_list.js";
 
-class TestCar extends Car {}
+const map = groceriesList();
+console.log(map);
 
-const tc1 = new TestCar("Nissan", "Turbo", "Pink");
-const tc2 = tc1.cloneCar();
-
-console.log(tc1);
-console.log(tc1 instanceof TestCar);
-
-console.log(tc2);
-console.log(tc2 instanceof TestCar);
-
-console.log(tc1 == tc2);
+updateUniqueItems(map)
+console.log(map);
 
 bob@dylan:~$ 
-bob@dylan:~$ npm run dev 10-main.js
-TestCar { _brand: 'Nissan', _motor: 'Turbo', _color: 'Pink' }
-true
-TestCar { _brand: undefined, _motor: undefined, _color: undefined }
-true
-false
+bob@dylan:~$ npm run dev 10-main.js 
+Map {
+  'Apples' => 10,
+  'Tomatoes' => 10,
+  'Pasta' => 1,
+  'Rice' => 1,
+  'Banana' => 5
+}
+Map {
+  'Apples' => 10,
+  'Tomatoes' => 10,
+  'Pasta' => 100,
+  'Rice' => 100,
+  'Banana' => 5
+}
 bob@dylan:~$
 ```
 

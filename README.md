@@ -4,421 +4,396 @@
 
 ## Table of Contents :
 
-  - [0. Executing basic javascript with Node JS](#subparagraph0)
-  - [1. Using Process stdin](#subparagraph1)
-  - [2. Reading a file synchronously with Node JS](#subparagraph2)
-  - [3. Reading a file asynchronously with Node JS](#subparagraph3)
-  - [4. Create a small HTTP server using Node's HTTP module](#subparagraph4)
-  - [5. Create a more complex HTTP server using Node's HTTP module](#subparagraph5)
-  - [6. Create a small HTTP server using Express](#subparagraph6)
-  - [7. Create a more complex HTTP server using Express](#subparagraph7)
-  - [8. Organize a complex HTTP server using Express](#subparagraph8)
+  - [0. Creating an interface for a student](#subparagraph0)
+  - [1. Let's build a Teacher interface](#subparagraph1)
+  - [2. Extending the Teacher class](#subparagraph2)
+  - [3. Printing teachers](#subparagraph3)
+  - [4. Writing a class](#subparagraph4)
+  - [5. Advanced types Part 1](#subparagraph5)
+  - [6. Creating functions specific to employees](#subparagraph6)
+  - [7. String literal types](#subparagraph7)
+  - [8. Ambient Namespaces](#subparagraph8)
+  - [9. Namespace & Declaration merging](#subparagraph9)
+  - [10. Brand convention & Nominal typing](#subparagraph10)
 
+## Resources
+### Read or watch:
+* [TypeScript in 5 minutes](/rltoken/JBobnOShA2LO-xxTJAyKtw)
+* [TypeScript documentation](/rltoken/jWy0GemmKgkvZbvp3BoPrw)
+* [TypeScript Dom Manipulation](/rltoken/qr9K-gPTaev_T-iNzRJyVg)
+* [TypeScript Object Types](/rltoken/KHeDw9pp8j4jiQLU1tP0EA)
+* [TSConfig Reference](/rltoken/NJjLYB-m5iBNZCpzkmdYew)
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* run javascript using NodeJS
-* use NodeJS modules
-* use specific Node JS module to read files
-* useprocessto access command line arguments and the environment
-* create a small HTTP server using Node JS
-* create a small HTTP server using Express JS
-* create advanced routes with Express JS
-* use ES6 with Node JS with Babel-node
-* use Nodemon to develop faster
+* Basic types in Typescript
+* Interfaces, Classes, and functions
+* How to work with the DOM and Typescript
+* Generic types
+* How to use namespaces
+* How to merge declarations
+* How to use an ambient Namespace to import an external library
+* Basic nominal typing with Typescript
 
 ## Requirements
 ### General
 * Allowed editors:vi,vim,emacs,Visual Studio Code
-* All your files will be interpreted/compiled on Ubuntu 20.04 LTS usingnode(version 20.x.x)
 * All your files should end with a new line
+* All your files will be transpiled on Ubuntu 18.04
+* Your TS scripts will be checked withjest(version 24.9.* )
 * AREADME.mdfile, at the root of the folder of the project, is mandatory
-* Your code should use thejsextension
-* Your code will be tested usingJestand the commandnpm run test
-* Your code will be verified against lint using ESLint
-* Your code needs to pass all the tests and lint. You can verify the entire project runningnpm run full-test
-* All of your functions/classes must be exported by using this format:module.exports = myFunction;
-* You must also send the following files to your repository:package.json,babel.config.js,.eslintrc.jsanddatabase.csv
+* Your code should use thetsextension when possible
+* The Typescript compiler should not show any warning or error when compiling your code
 
 ## Task
-### 0. Executing basic javascript with Node JS <a name='subparagraph0'></a>
+### 0. Creating an interface for a student <a name='subparagraph0'></a>
 
-In the file <code>0-console.js</code>, create a function named <code>displayMessage</code> that prints in <code>STDOUT</code> the string argument.
+Copy the following configuration files (provided above) into the <code>task_0</code> directory: <code>package.json</code>, <code>.eslintrc.js</code>, <code>tsconfig.json</code>, <code>webpack.config.js</code>
 
-```
-bob@dylan:~$ cat 0-main.js
-const displayMessage = require('./0-console');
+Write your code in the <code>js/main.ts</code> file:
 
-displayMessage("Hello NodeJS!");
+* <p>Write an interface named <code>Student</code> that accepts the following elements: </p>
 
-bob@dylan:~$ node 0-main.js
-Hello NodeJS!
-bob@dylan:~$
-```
-
----
-
-### 1. Using Process stdin <a name='subparagraph1'></a>
-
-Create a program named <code>1-stdin.js</code> that will be executed through command line:
-
-* It should display the message <code>Welcome to Holberton School, what is your name?</code> (followed by a new line)
-* The user should be able to input their name on a new line
-* The program should display <code>Your name is: INPUT</code>
-* When the user ends the program, it should display <code>This important software is now closing</code> (followed by a new line)
+  * <code>firstName</code>: string
+  * <code>lastName</code>: string
+  * <code>age</code>: number
+  * <code>location</code>: string
+* <p>Create 2 students variables called <code>student1</code> and <code>student2</code> and store them into an array named <code>studentsList</code></p>
+* <p>Using Vanilla Javascript, render a table and for each elements in the array, append a new row to the table</p>
+* <p>Each row should contain the first name of the student and the location</p>
 
 <strong>Requirements:</strong>
 
-* Your code will be tested through a child process, make sure you have everything you need for that
+* <p>When running, Webpack should return <code>No type errors found</code>.</p>
+* <p>Every variable should use TypeScript when possible.</p>
 
-```
-bob@dylan:~$ node 1-stdin.js 
-Welcome to Holberton School, what is your name?
-Bob
-Your name is: Bob
-bob@dylan:~$ 
-bob@dylan:~$ echo "John" | node 1-stdin.js 
-Welcome to Holberton School, what is your name?
-Your name is: John
-This important software is now closing
-bob@dylan:~$
+---
+
+### 1. Let's build a Teacher interface <a name='subparagraph1'></a>
+
+Create a directory <code>task_1</code> and copy these configuration files into this folder: <code>package.json</code>, <code>tsconfig.json</code>, <code>webpack.config.js</code>
+
+Write your code in the <code>js/main.ts</code> file:
+
+* <p>Write an interface named <code>Teacher</code> that accepts the following elements: </p>
+
+  * <code>firstName</code>: string - can only be set during initialization of an object of this interface
+  * <code>lastName</code>: string - can only be set during initialization of an object of this interface
+  * <code>fullTimeEmployee</code>: boolean
+  * <code>yearsOfExperience</code>: number - optional
+  * <code>location</code>: string
+  * <p>Add the possibility to add any attribute to the <code>Teacher</code> object like <code>contract(boolean)</code> without specifying the name of the attribute:</p>
+
+    * Property should be a string
+    * Type of this property can be anything
+
+<strong>Requirements:</strong>
+
+* <p>When running, Webpack should return No type errors found.</p>
+* <p>Every variable should use TypeScript when possible.</p>
+
+<strong>Example:</strong>
+
+```yaml
+const teacher3: Teacher = {
+  firstName: 'John',
+  fullTimeEmployee: false,
+  lastName: 'Doe',
+  location: 'London',
+  contract: false,
+};
+
+console.log(teacher3);
+
+// should print
+// Object
+// contract: false
+// firstName: "John"
+// fullTimeEmployee: false
+// lastName: "Doe"
+// location: "London"
 ```
 
 ---
 
-### 2. Reading a file synchronously with Node JS <a name='subparagraph2'></a>
+### 2. Extending the Teacher class <a name='subparagraph2'></a>
 
-Using the database <code>database.csv</code> (provided in project description), create a function <code>countStudents</code> in the file <code>2-read_file.js</code>
+Write an interface named <code>Directors</code> that extends <code>Teacher</code>. It requires an attribute named <code>numberOfReports(number)</code>
 
-* Create a function named <code>countStudents</code>. It should accept a path in argument
-* The script should attempt to read the database file synchronously
-* If the database is not available, it should throw an error with the text <code>Cannot load the database</code>
-* If the database is available, it should log the following message to the console <code>Number of students: NUMBER_OF_STUDENTS</code>
-* It should log the number of students in each field, and the list with the following format: <code>Number of students in FIELD: 6. List: LIST_OF_FIRSTNAMES</code>
-* CSV file can contain empty lines (at the end) - and they are not a valid student!
+Example:
 
-```
-bob@dylan:~$ cat 2-main_0.js
-const countStudents = require('./2-read_file');
+```javascript
+const director1: Directors = {
+  firstName: 'John',
+  lastName: 'Doe',
+  location: 'London',
+  fullTimeEmployee: true,
+  numberOfReports: 17,
+};
+console.log(director1);
 
-countStudents("nope.csv");
-
-bob@dylan:~$ node 2-main_0.js
-2-read_file.js:9
-    throw new Error('Cannot load the database');
-    ^
-
-Error: Cannot load the database
-...
-bob@dylan:~$
-bob@dylan:~$ cat 2-main_1.js
-const countStudents = require('./2-read_file');
-
-countStudents("database.csv");
-
-bob@dylan:~$ node 2-main_1.js
-Number of students: 10
-Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaume, Katie
-Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
-bob@dylan:~$
+// should print
+// Object
+// firstName: "John"
+// fullTimeEmployee: true
+// lastName: "Doe"
+// location: "London"
+// numberOfReports: 17
 ```
 
 ---
 
-### 3. Reading a file asynchronously with Node JS <a name='subparagraph3'></a>
+### 3. Printing teachers <a name='subparagraph3'></a>
 
-Using the database <code>database.csv</code> (provided in project description), create a function <code>countStudents</code> in the file <code>3-read_file_async.js</code>
+Write a function <code>printTeacher</code>:
 
-* Create a function named <code>countStudents</code>. It should accept a path in argument (same as in <code>2-read_file.js</code>)
-* The script should attempt to read the database file asynchronously
-* The function should return a Promise
-* If the database is not available, it should throw an error with the text <code>Cannot load the database</code>
-* If the database is available, it should log the following message to the console <code>Number of students: NUMBER_OF_STUDENTS</code>
-* It should log the number of students in each field, and the list with the following format: <code>Number of students in FIELD: 6. List: LIST_OF_FIRSTNAMES</code>
-* CSV file can contain empty lines (at the end) - and they are not a valid student!
+* <p>It accepts two arguments <code>firstName</code> and <code>lastName</code></p>
+* <p>It returns the first letter of the firstName and the full lastName</p>
+* <p>Example: <code>printTeacher("John", "Doe") -&gt; J. Doe</code></p>
 
-```
-bob@dylan:~$ cat 3-main_0.js
-const countStudents = require('./3-read_file_async');
-
-countStudents("nope.csv")
-    .then(() => {
-        console.log("Done!");
-    })
-        .catch((error) => {
-        console.log(error);
-    });
-
-bob@dylan:~$ node 3-main_0.js
-Error: Cannot load the database
-...
-bob@dylan:~$
-bob@dylan:~$ cat 3-main_1.js
-const countStudents = require('./3-read_file_async');
-
-countStudents("database.csv")
-    .then(() => {
-        console.log("Done!");
-    })
-        .catch((error) => {
-        console.log(error);
-    });
-console.log("After!");
-
-bob@dylan:~$ node 3-main_1.js
-After!
-Number of students: 10
-Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaume, Katie
-Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
-Done!
-bob@dylan:~$
-```
-
-<strong>Tips:</strong>
-
-* Using asynchronous callbacks is the preferred way to write code in Node to avoid blocking threads
+Write an interface for the function named <code>printTeacherFunction</code>.
 
 ---
 
-### 4. Create a small HTTP server using Node's HTTP module <a name='subparagraph4'></a>
+### 4. Writing a class <a name='subparagraph4'></a>
 
-In a file named <code>4-http.js</code>, create a small HTTP server using the <code>http</code> module:
+Write a Class named <code>StudentClass</code>:
 
-* It should be assigned to the variable <code>app</code> and this one must be exported
-* HTTP server should listen on port 1245
-* Displays <code>Hello Holberton School!</code> in the page body for any endpoint as plain text
+* <p>The constructor accepts <code>firstName(string)</code> and <code>lastName(string)</code> arguments</p>
+* <p>The class has a method named <code>workOnHomework</code> that return the string <code>Currently working</code></p>
+* <p>The class has a method named <code>displayName</code>. It returns the firstName of the student</p>
+* <p>The constructor of the class should be described through an Interface</p>
+* <p>The class should be described through an Interface</p>
 
-In terminal 1:
+Requirements:
 
-```
-bob@dylan:~$ node 4-http.js
-...
-```
+* <p>You can reuse the Webpack configuration from the previous exercise to compile the code.</p>
+* <p>When running <code>npm run build</code>, no TypeScript error should be displayed.</p>
+* <p>Every variable should use TypeScript when possible.</p>
 
-In terminal 2:
+---
 
-```
-bob@dylan:~$ curl localhost:1245 && echo ""
-Hello Holberton School!
-bob@dylan:~$ 
-bob@dylan:~$ curl localhost:1245/any_endpoint && echo ""
-Hello Holberton School!
-bob@dylan:~$
+### 5. Advanced types Part 1 <a name='subparagraph5'></a>
+
+Create the <code>DirectorInterface</code> interface with the 3 expected methods:
+
+* <p><code>workFromHome()</code> returning a string</p>
+* <p><code>getCoffeeBreak()</code> returning a string</p>
+* <p><code>workDirectorTasks()</code> returning a string</p>
+
+Create the <code>TeacherInterface</code> interface with the 3 expected methods:
+
+* <p><code>workFromHome()</code> returning a string</p>
+* <p><code>getCoffeeBreak()</code> returning a string</p>
+* <p><code>workTeacherTasks()</code> returning a string</p>
+
+Create a class <code>Director</code> that will implement <code>DirectorInterface</code>
+
+* <p><code>workFromHome</code> should return the string <code>Working from home</code></p>
+* <p><code>getCoffeeBreak</code> should return the string <code>Getting a coffee break</code></p>
+* <p><code>workDirectorTasks</code> should return the string <code>Getting to director tasks</code></p>
+
+Create a class <code>Teacher</code> that will implement <code>TeacherInterface</code>
+
+* <p><code>workFromHome</code> should return the string <code>Cannot work from home</code></p>
+* <p><code>getCoffeeBreak</code> should return the string <code>Cannot have a break</code></p>
+* <p><code>workTeacherTasks</code> should return the string <code>Getting to work</code></p>
+
+Create a function <code>createEmployee</code> with the following requirements:
+
+* <p>It can return either a <code>Director</code> or a <code>Teacher</code> instance</p>
+* <p>It accepts 1 arguments:</p>
+
+  * <code>salary</code>(either number or string)
+* <p>if <code>salary</code> is a number and less than 500 - It should return a new <code>Teacher</code>. Otherwise it should return a <code>Director</code></p>
+
+Expected result:
+
+```javascript
+console.log(createEmployee(200));
+Teacher
+console.log(createEmployee(1000));
+Director
+console.log(createEmployee('$500'));
+Director
 ```
 
 ---
 
-### 5. Create a more complex HTTP server using Node's HTTP module <a name='subparagraph5'></a>
+### 6. Creating functions specific to employees <a name='subparagraph6'></a>
 
-In a file named <code>5-http.js</code>, create a small HTTP server using the <code>http</code> module:
+Write a function <code>isDirector</code>:
 
-* It should be assigned to the variable app and this one must be exported
-* HTTP server should listen on port 1245
-* It should return plain text
-* When the URL path is <code>/</code>, it should display <code>Hello Holberton School!</code> in the page body
-* When the URL path is <code>/students</code>, it should display <code>This is the list of our students</code> followed by the same content as the file <code>3-read_file_async.js</code> (with and without the database) - the name of the database must be passed as argument of the file
-* CSV file can contain empty lines (at the end) - and they are not a valid student!
+* <p>it accepts <code>employee</code> as an argument</p>
+* <p>it will be used as a type predicate and if the employee is a director</p>
 
-Terminal 1:
+Write a function <code>executeWork</code>:
 
-```
-bob@dylan:~$ node 5-http.js database.csv
-...
-```
+* <p>it accepts <code>employee</code> as an argument</p>
+* <p>if the employee is a Director, it will call <code>workDirectorTasks</code></p>
+* <p>if the employee is a Teacher, it will call <code>workTeacherTasks</code></p>
 
-In terminal 2:
+Expected result:
 
-```
-bob@dylan:~$ curl localhost:1245 && echo ""
-Hello Holberton School!
-bob@dylan:~$ 
-bob@dylan:~$ curl localhost:1245/students && echo ""
-This is the list of our students
-Number of students: 10
-Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaume, Katie
-Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
-bob@dylan:~$
+```scss
+executeWork(createEmployee(200));
+Getting to work
+executeWork(createEmployee(1000));
+Getting to director tasks
 ```
 
 ---
 
-### 6. Create a small HTTP server using Express <a name='subparagraph6'></a>
+### 7. String literal types <a name='subparagraph7'></a>
 
-Install Express and in a file named <code>6-http_express.js</code>, create a small HTTP server using Express module:
+Write a String literal type named <code>Subjects</code> allowing a variable to have the value <code>Math</code> or <code>History</code> only.
 
-* It should be assigned to the variable <code>app</code> and this one must be exported
-* HTTP server should listen on port 1245
-* Displays <code>Hello Holberton School!</code> in the page body for the endpoint <code>/</code>
+Write a function named <code>teachClass</code>:
 
-In terminal 1:
+* <p>it takes <code>todayClass</code> as an argument</p>
+* <p>it will return the string <code>Teaching Math</code> if <code>todayClass</code> is <code>Math</code></p>
+* <p>it will return the string <code>Teaching History</code> if <code>todayClass</code> is <code>History</code></p>
 
-```
-bob@dylan:~$ node 6-http_express.js
-...
-```
+Expected result:
 
-In terminal 2:
-
-```
-bob@dylan:~$ curl localhost:1245 && echo ""
-Hello Holberton School!
-bob@dylan:~$ 
-bob@dylan:~$ curl localhost:1245/any_endpoint && echo ""
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Error</title>
-</head>
-<body>
-<pre>Cannot GET /lskdlskd</pre>
-</body>
-</html> 
-bob@dylan:~$
+```scss
+teachClass('Math');
+Teaching Math
+teachClass('History');
+Teaching History
 ```
 
 ---
 
-### 7. Create a more complex HTTP server using Express <a name='subparagraph7'></a>
+### 8. Ambient Namespaces <a name='subparagraph8'></a>
 
-In a file named <code>7-http_express.js</code>, recreate the small HTTP server using <code>Express</code>:
+Create a directory called <code>task_3</code> and copy these configuration files into it: <code>package.json</code>, <code>webpack.config.js</code>, <code>tsconfig.json</code>.
 
-* It should be assigned to the variable app and this one must be exported
-* HTTP server should listen on port 1245
-* It should return plain text
-* When the URL path is <code>/</code>, it should display <code>Hello Holberton School!</code> in the page body
-* When the URL path is <code>/students</code>, it should display <code>This is the list of our students</code> followed by the same content as the file <code>3-read_file_async.js</code> (with and without the database) - the name of the database must be passed as argument of the file
-* CSV file can contain empty lines (at the end) - and they are not a valid student!
+The first part of will require that you build an <code>interface</code> and a <code>type</code>. Inside a file named <code>interface.ts</code>:
 
-Terminal 1:
+* <p>Create a type <code>RowID</code> and set it equal to <code>number</code></p>
+* <p>Create an interface <code>RowElement</code> that contains these 3 fields:</p>
 
+  * <code>firstName</code>: <code>string</code>
+  * <code>lastName</code>: <code>string</code>
+  * <code>age?</code>: <code>number</code>
+
+You are building the next part of the application architecture. The goal is to save the entities to a database.
+
+Because of time constraints, you can’t write a connector to the database, and you decided to download a library called <code>crud.js</code>. Copy this file into the <code>task_3/js</code> directory.
+
+Here it is
+
+```javascript
+export function insertRow(row) {
+  console.log('Insert row', row);
+  return Math.floor(Math.random() * Math.floor(1000));
+}
+
+export function deleteRow(rowId) {
+  console.log('Delete row id', rowId);
+  return;
+}
+
+export function updateRow(rowId, row) {
+  console.log(`Update row ${rowId}`, row);
+
+  return rowId;
+}
 ```
-bob@dylan:~$ node 7-http_express.js database.csv
-...
+
+Write an ambient file within <code>task_3/js</code>, named <code>crud.d.ts</code> containing the type declarations for each crud function. At the top of the file import <code>RowID</code> and <code>RowElement</code> from <code>interface.ts</code>.
+
+In <code>main.ts</code>
+
+* <p>At the top of the file create a <a href="/rltoken/GyTOcj0Pv_F78O7YdlvZNQ" target="_blank" title="triple slash directive">triple slash directive</a> that includes all the dependencies from <code>crud.d.ts</code></p>
+* <p>Import the <code>rowID</code> type and <code>rowElement</code> from <code>interface.ts</code></p>
+* <p>Import everything from <code>crud.js</code> as <code>CRUD</code></p>
+
+Create an object called <code>row</code> with the type <code>RowElement</code> with the fields set to these values:
+
+* <p><code>firstName</code>: <code>Guillaume</code></p>
+* <p><code>lastName</code>: <code>Salva</code></p>
+
+Create a <code>const</code> variable named <code>newRowID</code> with the type <code>RowID</code> and assign the value the <code>insertRow</code>  command.
+
+Next, create a <code>const</code> variable named <code>updatedRow</code> with the type <code>RowElement</code> and update <code>row</code> with an age field set to <code>23</code>
+
+Finally, call the <code>updateRow</code> and <code>deleteRow</code> commands.
+
+Expected result:
+
+```yaml
+const obj = {firstName: "Guillaume", lastName: "Salva"};
+CRUD.insertRow(obj)
+// Insert row {firstName: "Guillaume", lastName: "Salva"}
+
+const updatedRow: RowElement = { firstName: "Guillaume", lastName: "Salva", age: 23 };
+CRUD.updateRow(newRowID, updatedRow);
+// Update row 125 {firstName: "Guillaume", lastName: "Salva", age: 23}
+
+CRUD.deleteRow(125);
+// Delete row id 125
 ```
 
-In terminal 2:
+Requirements:
 
-```
-bob@dylan:~$ curl localhost:1245 && echo ""
-Hello Holberton School!
-bob@dylan:~$ 
-bob@dylan:~$ curl localhost:1245/students && echo ""
-This is the list of our students
-Number of students: 10
-Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaume, Katie
-Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
-bob@dylan:~$
-```
+* <p>When running <code>npm run build</code>, no TypeScript error should be displayed.</p>
+* <p>Every variable should use TypeScript when possible.</p>
+* <p>The main file and the ambient file should both import the types defined in the interface file.</p>
+* <p>You can easily test your ambient file by looking at the intellisense of your IDE when using the 3rd party functions.</p>
 
 ---
 
-### 8. Organize a complex HTTP server using Express <a name='subparagraph8'></a>
+### 9. Namespace & Declaration merging <a name='subparagraph9'></a>
 
-Obviously writing every part of a server within a single file is not sustainable. Let’s create a full server in a directory named <code>full_server</code>.
+Create a new directory <code>task_4</code>:
 
-Since you have used ES6 and Babel in the past projects, let’s use <code>babel-node</code> to allow to use ES6 functions like <code>import</code> or <code>export</code>.
+In <code>task_4/js/subjects</code>:
 
-* Create 2 directories within:
+* <p>Create a file <code>Teacher.ts</code> and write a <code>Teacher</code> interface in a namespace named <code>Subjects</code>.</p>
 
+  * the interface requires <code>firstName</code> and <code>lastName</code> as string
+* <p>Create a file <code>Subject.ts</code> and write a <code>Subject</code> class in the same namespace named <code>Subjects</code>.</p>
 
-  * <code>controllers</code>
-  * <code>routes</code>
-* Create a file <code>full_server/utils.js</code>, in the file create a function named <code>readDatabase</code> that accepts a file path as argument:
+  * the class has one attribute <code>teacher</code> that implements the <code>Teacher</code> interface
+  * the class has one setter method <code>setTeacher</code> that accepts a <code>teacher</code> in argument (and as setter, set the instance attribute <code>teacher</code> with it)
+* <p>Create a file <code>Cpp.ts</code> and make the following modifications in the same namespace.</p>
 
+  * Using declaration merging, add a new optional attribute <code>experienceTeachingC</code> (number) to the <code>Teacher</code> interface
+  * Create a class <code>Cpp</code> extending from <code>Subject</code>
+  * Write a method named <code>getRequirements</code> that will return a string <code>Here is the list of requirements for Cpp</code>
+  * Write a method named <code>getAvailableTeacher</code> that will return a string <code>Available Teacher: &lt;first name of teacher&gt;</code>
+  * If the teacher doesn’t have any experience in teaching C, then the method should return a string <code>No available teacher</code>
+* <p>Create a file <code>React.ts</code> and write a <code>React Class</code> in the same namespace.</p>
 
-  * It should read the database asynchronously
-  * It should return a promise
-  * When the file is not accessible, it should reject the promise with the error
-  * When the file can be read, it should return an object of arrays of the firstname of students per fields
+  * Add a new attribute <code>experienceTeachingReact?</code> (number) to the <code>Teacher</code> interface
+  * In the class, write a method named <code>getRequirements</code> that will return a string <code>Here is the list of requirements for React</code>
+  * Write a method named <code>getAvailableTeacher</code> that will return a string <code>Available Teacher: &lt;first name of teacher&gt;</code>
+  * If the teacher doesn’t have any experience in teaching React, then the method should return a string <code>No available teacher</code>
+* <p>Create a file <code>Java.ts</code> and write a <code>Java Class</code> in the same namespace.</p>
 
-Inside the file <code>full_server/controllers/AppController.js</code>:
+  * Add a new attribute <code>experienceTeachingJava?</code> (number) to the <code>Teacher</code> interface
+  * In the class, write a method named <code>getRequirements</code> that will return a string <code>Here is the list of requirements for Java</code>
+  * Write a method named <code>getAvailableTeacher</code> that will return a string <code>Available Teacher: &lt;first name of teacher&gt;</code>
+  * If the teacher doesn’t have any experience in teaching Java, then the method should return a string <code>No available teacher</code>
 
-* Create a class named <code>AppController</code>. Add a static method named <code>getHomepage</code>
-* The method accepts <code>request</code> and <code>response</code> as argument. It returns a 200 status and the message <code>Hello Holberton School!</code>
+---
 
-Inside the file <code>full_server/controllers/StudentsController.js</code>, create a class named <code>StudentsController</code>. Add two static methods:
+### 10. Brand convention & Nominal typing <a name='subparagraph10'></a>
 
-The first one is <code>getAllStudents</code>:
+Create a directory <code>task_5</code> and copy these configuration files into the root of <code>task_5</code>: <code>package.json</code>, <code>tsconfig.json</code>, <code>webpack.config.js</code>
 
-* The method accepts <code>request</code> and <code>response</code> as argument
-* It should return a status 200
-* It calls the function <code>readDatabase</code> from the <code>utils</code> file, and display in the page:
+Create two interfaces <code>MajorCredits</code> and <code>MinorCredits</code> in <code>task_5/js/main.ts</code>:
 
+* <p>Each interface defines a number named <code>credits</code></p>
+* <p>Add a brand property to each interface in order to uniquely identify each of them</p>
 
-  * First line: <code>This is the list of our students</code>
-  * And for each field (order by alphabetic order case insensitive), a line that displays the number of students in the field, and the list of first names (ordered by appearance in the database file) with the following format: <code>Number of students in FIELD: 6. List: LIST_OF_FIRSTNAMES</code>
-* If the database is not available, it should return a status 500 and the error message <code>Cannot load the database</code>
+Create two functions named <code>sumMajorCredits</code> and <code>sumMinorCredits</code> in <code>task_5/js/main.ts</code>:
 
-The second one is <code>getAllStudentsByMajor</code>:
-
-* The method accepts <code>request</code> and <code>response</code> as argument
-* It should return a status 200
-* It uses a parameter that the user can pass to the browser <code>major</code>. The <code>major</code> can only be <code>CS</code> or <code>SWE</code>. If the user is passing another parameter, the server should return a 500 and the error <code>Major parameter must be CS or SWE</code>
-* It calls the function <code>readDatabase</code> from the <code>utils</code> file, and display in the page the list of first names  for the students (ordered by appearance in the database file) in the specified field <code>List: LIST_OF_FIRSTNAMES_IN_THE_FIELD</code>
-* If the database is not available, it should return a status 500 and the error message <code>Cannot load the database</code>
-
-Inside the file <code>full_server/routes/index.js</code>:
-
-* Link the route <code>/</code> to the <code>AppController</code>
-* Link the route <code>/students</code>  and <code>/students/:major</code>to the <code>StudentsController</code>
-
-Inside the file named <code>full_server/server.js</code>, create a small Express server:
-
-* It should use the routes defined in <code>full_server/routes/index.js</code>
-* It should use the port <code>1245</code>
-
-If you are starting node from outside of the folder <code>full_server</code>, you will have to update the command <code>dev</code> by: <code>nodemon --exec babel-node --presets babel-preset-env ./full_server/server.js ./database.csv</code>
-
-<strong>Warning:</strong>
-
-* Don’t forget to export your express app at the end of <code>server.js</code> (<code>export default app;</code>)
-* The database filename is passed as argument of the <code>server.js</code> BUT, for testing purpose, you should retrieve this filename at the execution (when <code>getAllStudents</code> or <code>getAllStudentsByMajor</code>  are called for example)
-
-In terminal 1:
-
-```
-bob@dylan:~$ npm run dev
-...
-```
-
-In terminal 2:
-
-```
-bob@dylan:~$ curl localhost:1245 && echo ""
-Hello Holberton School!
-bob@dylan:~$ 
-bob@dylan:~$ curl localhost:1245/students && echo ""
-This is the list of our students
-Number of students in CS: 6. List: Johann, Arielle, Jonathan, Emmanuel, Guillaume, Katie
-Number of students in SWE: 4. List: Guillaume, Joseph, Paul, Tommy
-bob@dylan:~$ 
-bob@dylan:~$ curl localhost:1245/students/SWE && echo ""
-List: Guillaume, Joseph, Paul, Tommy
-bob@dylan:~$ 
-bob@dylan:~$ curl localhost:1245/students/French -vvv && echo ""
-*   Trying 127.0.0.1...
-* TCP_NODELAY set
-* Connected to localhost (127.0.0.1) port 1245 (#0)
-> GET /students/SWES HTTP/1.1
-> Host: localhost:1245
-> User-Agent: curl/7.58.0
-> Accept: */*
->
-< HTTP/1.1 500 Internal Server Error
-< X-Powered-By: Express
-< Date: Mon, 06 Jul 2020 03:29:00 GMT
-< Connection: keep-alive
-< Content-Length: 33
-<
-* Connection #0 to host localhost left intact
-Major parameter must be CS or SWE
-bob@dylan:~$
-```
-
-If you want to add test to validate your integration, you will need to add this file: <code>.babelrc</code>
-
-
+* <p>Each function takes two arguments <code>subject1</code> and <code>subject2</code></p>
+* <p><code>sumMajorCredits</code> returns <code>MajorCredits</code> value and <code>sumMinorCredits</code> returns <code>MinorCredits</code> value</p>
+* <p>Each function sums the credits of the two subjects</p>
 
 ---
 

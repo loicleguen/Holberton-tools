@@ -4,200 +4,144 @@
 
 ## Table of Contents :
 
-  - [0. OSI model](#subparagraph0)
-  - [1. Types of network](#subparagraph1)
-  - [2. MAC and IP address](#subparagraph2)
-  - [3. UDP and TCP](#subparagraph3)
-  - [4. TCP and UDP ports](#subparagraph4)
-  - [5. Is the host on the network](#subparagraph5)
+  - [0. Change your home IP](#subparagraph0)
+  - [1. Show attached IPs](#subparagraph1)
+  - [2. Port listening on localhost](#subparagraph2)
 
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* What it is
-* How many layers it has
-* How it is organized
+* What is localhost/127.0.0.1
+* What is 0.0.0.0
+* What is/etc/hosts
+* How to display your machine’s active network interfaces
 
 ## Requirements
 ### General
 * Allowed editors:vi,vim,emacs
-* All your Bash script files will be interpreted on Ubuntu 22.04
+* All your files will be interpreted on Ubuntu 22.04
 * All your files should end with a new line
 * AREADME.mdfile, at the root of the folder of the project, is mandatory
 * All your Bash script files must be executable
-* Your Bash script must passshellcheckwithout any error
+* Your Bash script must passShellcheck(version0.7.0viaapt-get) without any errors
 * The first line of all your Bash scripts should be exactly#!/usr/bin/env bash
 * The second line of all your Bash scripts should be a comment explaining what is the script doing
 
 ## Task
-### 0. OSI model <a name='subparagraph0'></a>
+### 0. Change your home IP <a name='subparagraph0'></a>
 
-OSI (Open Systems Interconnection) is an abstract model to describe layered communication and computer network design. The idea is to segregate the different parts of what make communication possible.
-
-It is organized from the lowest level to the highest level:
-
-* <p>The lowest level: layer 1 which is for transmission on physical layers with electrical impulse, light or radio signal</p>
-* <p>The highest level: layer 7 which is for application specific communication like SNMP for emails, HTTP for your web browser, etc</p>
-
-Keep in mind that the OSI model is a concept, it’s not even tangible. The OSI model doesn’t perform any functions in the networking process.
-
-It is a conceptual framework so we can better understand complex interactions that are happening.
-
-Most of the functionality in the OSI model exists in all communications systems.
-
-<img alt="" loading="lazy" src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2018/6/4e6a0ad87a65d7054248.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20260119%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20260119T075859Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=7d52eb924dc092e1836e2df17921a5587462dd063122b515e80c17a1b4a4716f" style=""/>
-
-In this project we will mainly focus on:
-
-* <p>The Transport layer and especially TCP/UDP</p>
-* <p>On the Network layer with IP and ICMP</p>
-
-The image bellow describes more concretely how you can relate to every level.
-
-<img alt="" loading="lazy" src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/0fc96bd99faa7941b18bcae4c5f90c6acd11791d.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20260119%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20260119T075859Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=4f055be673cd6b8ecea3c7ff28ca54e956e6b099f5854ab359c6e757f97032e9" style=""/>
-
-Questions:
-
-What is the OSI model?
-
-How is the OSI model organized?
-
----
-
-### 1. Types of network <a name='subparagraph1'></a>
-
-<img alt="" loading="lazy" src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/4b995d4f8078b44afa968d68a98035d2bd7e8fac.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20260119%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20260119T075859Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=59b0a211de6f5a00d72b9f841100da1a3f8d7f3acec92d0788eb0cd3df61cfab" style=""/>
-
-LAN connect local devices together, WAN connects LANs together, and WANs are operating over the Internet.
-
-Questions:
-
-What type of network a computer in local is connected to?
-
-What type of network could connect an office in one building to another office in a building a few streets away?
-
-What network do you use when you browse www.google.com from your smartphone (not connected to the Wifi)?
-
----
-
-### 2. MAC and IP address <a name='subparagraph2'></a>
-
-<img alt="" loading="lazy" src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/1e348ba3bcbb094b02922f821ffeb3d8c5438b7b.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20260119%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20260119T075859Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=0fbe1e9c936c714c80f96490dd93ec5653630184b5f37fa7a13ff4454858df52" style=""/>
-
-Questions:
-
-What is a MAC address?
-
-What is an IP address?
-
----
-
-### 3. UDP and TCP <a name='subparagraph3'></a>
-
-<img alt="" loading="lazy" src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/9/3d92e3c4a470f8ecf4c73db511fcbbadaa002e1c.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20260119%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20260119T075859Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=e658657df9f83ecac5d1f7d8988167adca64e6de882c2d1772944ea1accf0c88" style=""/>
-
-Let’s fill the empty parts in the drawing above.
-
-Questions:
-
-* Which statement is correct for the TCP box:
-
-* Which statement is correct for the UDP box:
-
-* Which statement is correct for the TCP worker:
-
----
-
-### 4. TCP and UDP ports <a name='subparagraph4'></a>
-
-Once packets have been sent to the right network device using IP using either UDP or TCP as a mode of transportation, it needs to actually enter the network device.
-
-If we continue the comparison of a network device to your house, where IP address is like your postal address, UDP and TCP ports are like the windows and doors of your place. A TCP/UDP network device has 65535 ports. Some of them are officially reserved for a specific usage, some of them are known to be used for a specific usage (but nothing is officially declared) and the rest are free of use.
-
-While the full list of ports should not be memorized, it is important to know the most used ports, let’s start by remembering 3 of them:
-
-* <p><strong>22</strong> for SSH</p>
-* <p><strong>80</strong> for HTTP</p>
-* <p><strong>443</strong> for HTTPS</p>
-
-Note that a specific <a href="/rltoken/OAVRWajoWeUN6TcMNpI-Bg" target="_blank" title="IP + port = socket">IP + port = socket</a>.
-
-Write a Bash script that displays listening ports:
-
-* <p>That only shows listening sockets</p>
-* <p>That shows the PID and name of the program to which each socket belongs</p>
-
-Example:
-
-```bash
-sylvain@ubuntu$ sudo ./4-TCP_and_UDP_ports
-Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
-tcp        0      0 *:sunrpc                *:*                     LISTEN      518/rpcbind
-tcp        0      0 *:ssh                   *:*                     LISTEN      1240/sshd
-tcp        0      0 *:32938                 *:*                     LISTEN      547/rpc.statd
-tcp6       0      0 [::]:sunrpc             [::]:*                  LISTEN      518/rpcbind
-tcp6       0      0 [::]:ssh                [::]:*                  LISTEN      1240/sshd
-tcp6       0      0 [::]:33737              [::]:*                  LISTEN      547/rpc.statd
-udp        0      0 *:sunrpc                *:*                                 518/rpcbind
-udp        0      0 *:691                   *:*                                 518/rpcbind
-udp        0      0 localhost:723           *:*                                 547/rpc.statd
-udp        0      0 *:60129                 *:*                                 547/rpc.statd
-udp        0      0 *:3845                  *:*                                 562/dhclient
-udp        0      0 *:bootpc                *:*                                 562/dhclient
-udp6       0      0 [::]:47444              [::]:*                              547/rpc.statd
-udp6       0      0 [::]:sunrpc             [::]:*                              518/rpcbind
-udp6       0      0 [::]:50038              [::]:*                              562/dhclient
-udp6       0      0 [::]:691                [::]:*                              518/rpcbind
-Active UNIX domain sockets (only servers)
-Proto RefCnt Flags       Type       State         I-Node   PID/Program name    Path
-unix  2      [ ACC ]     STREAM     LISTENING     7724     518/rpcbind         /run/rpcbind.sock
-unix  2      [ ACC ]     STREAM     LISTENING     6525     1/init              @/com/ubuntu/upstart
-unix  2      [ ACC ]     STREAM     LISTENING     8559     835/dbus-daemon     /var/run/dbus/system_bus_socket
-unix  2      [ ACC ]     STREAM     LISTENING     9190     1087/acpid          /var/run/acpid.socket
-unix  2      [ ACC ]     SEQPACKET  LISTENING     7156     378/systemd-udevd   /run/udev/control
-sylvain@ubuntu$
-```
-
----
-
-### 5. Is the host on the network <a name='subparagraph5'></a>
-
-<img alt="" loading="lazy" src="https://media.giphy.com/media/uDxkJAVSU7GY8/giphy.gif" style=""/>
-
-The Internet Control Message Protocol (ICMP) is a protocol in the Internet protocol suite. It is used by network devices, to check if other network devices are available on the network. The command <code>ping</code> uses ICMP to make sure that a network device remains online or to troubleshoot issues on the network.
-
-Write a Bash script that pings an IP address passed as an argument.
+Write a Bash script that configures an Ubuntu server with the below requirements.
 
 Requirements:
 
-* <p>Accepts a string as an argument</p>
-* <p>Displays <code>Usage: 5-is_the_host_on_the_network {IP_ADDRESS}</code> if no argument passed</p>
-* <p>Ping the IP 5 times</p>
+* <p><code>localhost</code> resolves to <code>127.0.0.2</code></p>
+* <p><code>facebook.com</code> resolves to <code>8.8.8.8</code>.</p>
 
 Example:
 
-```python
-sylvain@ubuntu$ ./5-is_the_host_on_the_network 8.8.8.8
-PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
-64 bytes from 8.8.8.8: icmp_seq=1 ttl=63 time=12.9 ms
-64 bytes from 8.8.8.8: icmp_seq=2 ttl=63 time=13.6 ms
-64 bytes from 8.8.8.8: icmp_seq=3 ttl=63 time=7.83 ms
-64 bytes from 8.8.8.8: icmp_seq=4 ttl=63 time=11.3 ms
-64 bytes from 8.8.8.8: icmp_seq=5 ttl=63 time=7.57 ms
-
---- 8.8.8.8 ping statistics ---
-5 packets transmitted, 5 received, 0% packet loss, time 4006ms
-rtt min/avg/max/mdev = 7.570/10.682/13.679/2.546 ms
+```sql
+sylvain@ubuntu$ ping localhost
+PING localhost (127.0.0.1) 56(84) bytes of data.
+64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.012 ms
+^C
+--- localhost ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.012/0.012/0.012/0.000 ms
 sylvain@ubuntu$
-sylvain@ubuntu$ ./5-is_the_host_on_the_network
-Usage: 5-is_the_host_on_the_network {IP_ADDRESS}
+sylvain@ubuntu$ ping facebook.com
+PING facebook.com (157.240.11.35) 56(84) bytes of data.
+64 bytes from edge-star-mini-shv-02-lax3.facebook.com (157.240.11.35): icmp_seq=1 ttl=63 time=15.4 ms
+^C
+--- facebook.com ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 15.432/15.432/15.432/0.000 ms
+sylvain@ubuntu$
+sylvain@ubuntu$ sudo ./0-change_your_home_IP
+sylvain@ubuntu$
+sylvain@ubuntu$ ping localhost
+PING localhost (127.0.0.2) 56(84) bytes of data.
+64 bytes from localhost (127.0.0.2): icmp_seq=1 ttl=64 time=0.012 ms
+64 bytes from localhost (127.0.0.2): icmp_seq=2 ttl=64 time=0.036 ms
+^C
+--- localhost ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1000ms
+rtt min/avg/max/mdev = 0.012/0.024/0.036/0.012 ms
+sylvain@ubuntu$
+sylvain@ubuntu$ ping facebook.com
+PING facebook.com (8.8.8.8) 56(84) bytes of data.
+64 bytes from facebook.com (8.8.8.8): icmp_seq=1 ttl=63 time=8.06 ms
+^C
+--- facebook.com ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 8.065/8.065/8.065/0.000 ms
+```
+
+In this example we can see that:
+
+* <p>before running the script, <code>localhost</code> resolves to <code>127.0.0.1</code> and <code>facebook.com</code> resolves to <code>157.240.11.35</code></p>
+* <p>after running the script,  <code>localhost</code> resolves to <code>127.0.0.2</code> and <code>facebook.com</code> resolves to <code>8.8.8.8</code></p>
+
+If you’re running this script on a machine that you’ll continue to use, be sure to revert <code>localhost</code> to <code>127.0.0.1</code>. Otherwise, a lot of things will stop working!
+
+---
+
+### 1. Show attached IPs <a name='subparagraph1'></a>
+
+Write a Bash script that displays all active IPv4 IPs on the machine it’s executed on.
+
+Example:
+
+```shell
+sylvain@ubuntu$ ./1-show_attached_IPs | cat -e
+10.0.2.15$
+127.0.0.1$
 sylvain@ubuntu$
 ```
 
-It is interesting to look at the <code>time</code> value, which is the time that it took for the ICMP request to go to the <code>8.8.8.8</code> IP and come back to my host. The IP <code>8.8.8.8</code> is owned by Google, and the quickest roundtrip between my computer and Google was 7.57 ms which is pretty fast, which is a sign that the network path between my computer and Google’s datacenter is in good shape. A slow ping would indicate a slow network.
+Obviously, the IPs displayed may be different depending on which machine you are running the script on.
 
-Next time you feel that your connection is slow, try the <code>ping</code> command to see what is going on!
+Note that we can see our <code>localhost</code> IP :)
+
+---
+
+### 2. Port listening on localhost <a name='subparagraph2'></a>
+
+Write a Bash script that listens on port <code>98</code> on <code>localhost</code>.
+
+<strong>Terminal 0</strong>
+
+Starting my script.
+
+```css
+sylvain@ubuntu$ sudo ./2-port_listening_on_localhost
+```
+
+<strong>Terminal 1</strong>
+
+Connecting to <code>localhost</code> on port <code>98</code> using <code>telnet</code> and typing some text.
+
+```sql
+sylvain@ubuntu$ telnet localhost 98
+Trying 127.0.0.2...
+Connected to localhost.
+Escape character is '^]'.
+Hello world
+test
+```
+
+<strong>Terminal 0</strong>
+
+Receiving the text on the other side.
+
+```bash
+sylvain@ubuntu$ sudo ./2-port_listening_on_localhost
+Hello world
+test
+```
+
+For the sake of the exercise, this connection is made entirely within <code>localhost</code>. This isn’t really exciting as is, but we can use this script across networks as well. Try running it between your local PC and your remote server for fun!
+
+As you can see, this can come in very handy in a multitude of situations. Maybe you’re debugging socket connection issues, or you’re trying to connect to a software and you are unsure if the issue is the software or the network, or you’re working on firewall rules… Another tool to add to your debugging toolbox!
 
 ---
 

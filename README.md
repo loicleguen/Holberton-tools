@@ -1,154 +1,69 @@
 <div align="center"><img src="https://github.com/ksyv/holbertonschool-web_front_end/blob/main/baniere_holberton.png"></div>
 
-# Resources
+# Background Context
 
 ## Table of Contents :
 
-  - [0. Simple web stack](#subparagraph0)
-  - [1. Distributed web infrastructure](#subparagraph1)
-  - [2. Secured and monitored web infrastructure](#subparagraph2)
-  - [3. Scale up](#subparagraph3)
-
-
-## Learning Objectives
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* You must be able to draw a diagram covering the web stack you built with the sysadmin/devops track projects
-* You must be able to explain what each component is doing
-* You must be able to explain system redundancy
-* Know all the mentioned acronyms: LAMP, SPOF, QPS
+  - [0. What happens when...](#subparagraph0)
+  - [1. Everything's better with a pretty diagram](#subparagraph1)
 
 ## Requirements
 ### General
+* You can post your blog post on the platform of your choice, LinkedIn or Medium are good ones
 * AREADME.mdfile, at the root of the folder of the project, is mandatory
-* For each task, once you are done whiteboarding (on a whiteboard, piece of paper or software or your choice), take a picture/screenshot of your diagram
-* This project will be manually reviewed:
-* As each task is completed, the name of that task will turn green
-* Upload a screenshot, showing that you completed the required levels, to any image hosting service (I personally useimgurbut feel free to use anything you want).
-* For the following tasks, insert the link from of your screenshot into the answer file
-* After pushing your answer file to GitHub, insert the GitHub file link into the URL box
-* You will also have to whiteboard each task in front of a mentor, staff or student - no computer or notes will be allowed during the whiteboarding session
-* Focus on what you are being asked:
-* Cover what the requirements mention, we will explore details in a later project
-* Keep in mind that you will have 30 minutes to perform the exercise, you will get points for what is asked in requirements
-* Similarly in a job interview, you should answer what the interviewer asked for, be careful about being too verbose - always ask the interviewer if going into details is necessary - speaking too much can play against you
-* In this project, again, avoid going in details if not asked
 
 ## Task
-### 0. Simple web stack <a name='subparagraph0'></a>
+### 0. What happens when... <a name='subparagraph0'></a>
 
-A lot of websites are powered by simple web infrastructure, a lot of time it is composed of a single server with a <a href="/rltoken/OtZFy7tXzJmziqfiXKT5lA" target="_blank" title="LAMP stack">LAMP stack</a>.
+This question is a classic and still widely used interview question for many types of software engineering position. It is used to assess a candidate’s general knowledge of how the web stack works on top of the internet. One important guideline to begin answering this question is that you should ask your interviewer whether they would like you to focus in on one specific area of the workflow. For a front-end position they may want you to talk at length about how the DOM is rendering. For an SRE position they may want you to go into the load balancing mechanism.
 
-On a whiteboard, design a one server web infrastructure that hosts the website that is reachable via <code>www.foobar.com</code>. Start your explanation by having a user wanting to access your website.
+This question is a good test of whether you understand DNS. Many software engineering candidates struggle with this concept, so if you do well on this question, you are already way ahead of the curve. If you take this project seriously and write an excellent article, it may be something that will grab the attention of future employers.
 
-Requirements:
+Write a blog post explaining what happens when you type <code>https://www.google.com</code> in your browser and press <code>Enter</code>.
 
-* <p>You must use:</p>
+Requirements, your post must cover:
 
-  * 1 domain name <code>foobar.com</code> configured with a <code>www</code> record that points to your server IP <code>8.8.8.8</code>
-  * <p>1 server (containing the following)</p>
+* <p>DNS request</p>
+* <p>TCP/IP</p>
+* <p>Firewall</p>
+* <p>HTTPS/SSL</p>
+* <p>Load-balancer</p>
+* <p>Web server</p>
+* <p>Application server</p>
+* <p>Database</p>
 
-    * 1 web server (Nginx)
-    * 1 application server
-    * 1 application files (your code base)
-    * 1 database (MySQL)
-* <p>You must be able to explain some specifics about this infrastructure:</p>
+Publish your blog post on Medium or LinkedIn; share the URL of your blog post in your answer file and in the field below.
 
-  * What is a server
-  * What is the role of the domain name
-  * What type of DNS record <code>www</code> is in <code>www.foobar.com</code>
-  * What is the role of the web server
-  * What is the role of the application server
-  * What is the role of the database
-  * What is the server using to communicate with the computer of the user requesting the website
-* <p>You must be able to explain what the issues are with this infrastructure:</p>
-
-  * SPOF
-  * Downtime when maintenance needed (like deploying new code web server needs to be restarted)
-  * Cannot scale if too much incoming traffic
-
-Please, remember that everything must be written in English to further your technical ability in a variety of settings.
+Please, remember that these blogs must be written in English to further your technical ability in a variety of settings.
 
 ---
 
-### 1. Distributed web infrastructure <a name='subparagraph1'></a>
+### 1. Everything's better with a pretty diagram <a name='subparagraph1'></a>
 
-On a whiteboard, design a three server web infrastructure that hosts the website <code>www.foobar.com</code>.
+Add a schema to your blog post illustrating the flow of the request created when you type <code>https://www.google.com</code> in your browser and press <code>Enter</code>.
 
-Requirements:
+The diagram should show:
 
-* <p>You must add:</p>
+* <p>DNS resolution</p>
+* <p>that the request hitting server IP on the appropriate port</p>
+* <p>that the traffic is encrypted</p>
+* <p>that the traffic goes through a firewall</p>
+* <p>that the request is distributed via a load balancer</p>
+* <p>that the web server answers the request by serving a web page</p>
+* <p>that the application server generates the web page</p>
+* <p>that the application server request data from the database</p>
 
-  * 1 load-balancer (HAproxy)<br/>
-  * <p>2 servers (each containing the following)</p>
+<a href="/rltoken/psFvxy-j0nALTn_sapK5tg" target="_blank" title="Gliffy">Gliffy</a> is free and what I personally use, but feel free to use what fits you best.
 
-    * 1 web server (Nginx)
-    * 1 application server
-    * 1 set of application files (your code base)
-    * 1 database (MySQL)
-* <p>You must be able to explain some specifics about this infrastructure:</p>
+Some unrelated examples:
 
-  * For every additional element, why you are adding it
-  * What distribution algorithm your load balancer is configured with and how it works
-  * Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both
-  * How a database Primary-Replica (Master-Slave) cluster works
-  * What is the difference between the Primary node and the Replica node in regard to the application
-* <p>You must be able to explain what the issues are with this infrastructure:</p>
+<img alt="" loading="lazy" src="http://i.imgur.com/i9ivkdo.png" style=""/>
 
-  * Where are SPOF
-  * Security issues (no firewall, no HTTPS)
-  * No monitoring
+<img alt="" loading="lazy" src="http://i.imgur.com/R8R3sqC.png" style=""/>
 
-Please, remember that everything must be written in English to further your technical ability in a variety of settings.
+Share the URL of your diagram image in your answer file and il the field below.
 
----
-
-### 2. Secured and monitored web infrastructure <a name='subparagraph2'></a>
-
-On a whiteboard, design a three server web infrastructure that hosts the website <code>www.foobar.com</code>, it must be secured, serve encrypted traffic, and be monitored.
-
-Requirements:
-
-* <p>You must add:</p>
-
-  * 3 firewalls
-  * 1 SSL certificate to serve <code>www.foobar.com</code> over HTTPS
-  * 3 monitoring clients (data collector for Sumologic or other monitoring services)
-* <p>You must be able to explain some specifics about this infrastructure:</p>
-
-  * For every additional element, why you are adding it
-  * What are firewalls for
-  * Why is the traffic served over HTTPS
-  * What monitoring is used for
-  * How the monitoring tool is collecting data
-  * Explain what to do if you want to monitor your web server QPS
-* <p>You must be able to explain what the issues are with this infrastructure:</p>
-
-  * Why terminating SSL at the load balancer level is an issue
-  * Why having only one MySQL server capable of accepting writes is an issue
-  * Why having servers with all the same components (database, web server and application server) might be a problem
-
-Please, remember that everything must be written in English to further your technical ability in a variety of settings.
-
----
-
-### 3. Scale up <a name='subparagraph3'></a>
-
-Readme
-
-* <a href="/rltoken/okRb72QtkOSmwDsyR-hJHA" target="_blank" title="Application server vs web server">Application server vs web server</a>
-
-Requirements:
-
-* <p>You must add:</p>
-
-  * 1 server
-  * 1 load-balancer (HAproxy) configured as cluster with the other one
-  * Split components (web server, application server, database) with their own server
-* <p>You must be able to explain some specifics about this infrastructure:</p>
-
-  * For every additional element, why you are adding it
-
-Please, remember that everything must be written in English to further your technical ability in a variety of settings.
+Please, remember that these blogs must be written in English to further your technical ability in a variety of settings.
 
 ---
 

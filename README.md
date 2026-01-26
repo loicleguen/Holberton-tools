@@ -4,144 +4,151 @@
 
 ## Table of Contents :
 
-  - [0. Change your home IP](#subparagraph0)
-  - [1. Show attached IPs](#subparagraph1)
-  - [2. Port listening on localhost](#subparagraph2)
+  - [0. Simple web stack](#subparagraph0)
+  - [1. Distributed web infrastructure](#subparagraph1)
+  - [2. Secured and monitored web infrastructure](#subparagraph2)
+  - [3. Scale up](#subparagraph3)
 
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* What is localhost/127.0.0.1
-* What is 0.0.0.0
-* What is/etc/hosts
-* How to display your machine’s active network interfaces
+* You must be able to draw a diagram covering the web stack you built with the sysadmin/devops track projects
+* You must be able to explain what each component is doing
+* You must be able to explain system redundancy
+* Know all the mentioned acronyms: LAMP, SPOF, QPS
 
 ## Requirements
 ### General
-* Allowed editors:vi,vim,emacs
-* All your files will be interpreted on Ubuntu 22.04
-* All your files should end with a new line
 * AREADME.mdfile, at the root of the folder of the project, is mandatory
-* All your Bash script files must be executable
-* Your Bash script must passShellcheck(version0.7.0viaapt-get) without any errors
-* The first line of all your Bash scripts should be exactly#!/usr/bin/env bash
-* The second line of all your Bash scripts should be a comment explaining what is the script doing
+* For each task, once you are done whiteboarding (on a whiteboard, piece of paper or software or your choice), take a picture/screenshot of your diagram
+* This project will be manually reviewed:
+* As each task is completed, the name of that task will turn green
+* Upload a screenshot, showing that you completed the required levels, to any image hosting service (I personally useimgurbut feel free to use anything you want).
+* For the following tasks, insert the link from of your screenshot into the answer file
+* After pushing your answer file to GitHub, insert the GitHub file link into the URL box
+* You will also have to whiteboard each task in front of a mentor, staff or student - no computer or notes will be allowed during the whiteboarding session
+* Focus on what you are being asked:
+* Cover what the requirements mention, we will explore details in a later project
+* Keep in mind that you will have 30 minutes to perform the exercise, you will get points for what is asked in requirements
+* Similarly in a job interview, you should answer what the interviewer asked for, be careful about being too verbose - always ask the interviewer if going into details is necessary - speaking too much can play against you
+* In this project, again, avoid going in details if not asked
 
 ## Task
-### 0. Change your home IP <a name='subparagraph0'></a>
+### 0. Simple web stack <a name='subparagraph0'></a>
 
-Write a Bash script that configures an Ubuntu server with the below requirements.
+A lot of websites are powered by simple web infrastructure, a lot of time it is composed of a single server with a <a href="/rltoken/OtZFy7tXzJmziqfiXKT5lA" target="_blank" title="LAMP stack">LAMP stack</a>.
+
+On a whiteboard, design a one server web infrastructure that hosts the website that is reachable via <code>www.foobar.com</code>. Start your explanation by having a user wanting to access your website.
 
 Requirements:
 
-* <p><code>localhost</code> resolves to <code>127.0.0.2</code></p>
-* <p><code>facebook.com</code> resolves to <code>8.8.8.8</code>.</p>
+* <p>You must use:</p>
 
-Example:
+  * 1 domain name <code>foobar.com</code> configured with a <code>www</code> record that points to your server IP <code>8.8.8.8</code>
+  * <p>1 server (containing the following)</p>
 
-```sql
-sylvain@ubuntu$ ping localhost
-PING localhost (127.0.0.1) 56(84) bytes of data.
-64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.012 ms
-^C
---- localhost ping statistics ---
-1 packets transmitted, 1 received, 0% packet loss, time 0ms
-rtt min/avg/max/mdev = 0.012/0.012/0.012/0.000 ms
-sylvain@ubuntu$
-sylvain@ubuntu$ ping facebook.com
-PING facebook.com (157.240.11.35) 56(84) bytes of data.
-64 bytes from edge-star-mini-shv-02-lax3.facebook.com (157.240.11.35): icmp_seq=1 ttl=63 time=15.4 ms
-^C
---- facebook.com ping statistics ---
-1 packets transmitted, 1 received, 0% packet loss, time 0ms
-rtt min/avg/max/mdev = 15.432/15.432/15.432/0.000 ms
-sylvain@ubuntu$
-sylvain@ubuntu$ sudo ./0-change_your_home_IP
-sylvain@ubuntu$
-sylvain@ubuntu$ ping localhost
-PING localhost (127.0.0.2) 56(84) bytes of data.
-64 bytes from localhost (127.0.0.2): icmp_seq=1 ttl=64 time=0.012 ms
-64 bytes from localhost (127.0.0.2): icmp_seq=2 ttl=64 time=0.036 ms
-^C
---- localhost ping statistics ---
-2 packets transmitted, 2 received, 0% packet loss, time 1000ms
-rtt min/avg/max/mdev = 0.012/0.024/0.036/0.012 ms
-sylvain@ubuntu$
-sylvain@ubuntu$ ping facebook.com
-PING facebook.com (8.8.8.8) 56(84) bytes of data.
-64 bytes from facebook.com (8.8.8.8): icmp_seq=1 ttl=63 time=8.06 ms
-^C
---- facebook.com ping statistics ---
-1 packets transmitted, 1 received, 0% packet loss, time 0ms
-rtt min/avg/max/mdev = 8.065/8.065/8.065/0.000 ms
-```
+    * 1 web server (Nginx)
+    * 1 application server
+    * 1 application files (your code base)
+    * 1 database (MySQL)
+* <p>You must be able to explain some specifics about this infrastructure:</p>
 
-In this example we can see that:
+  * What is a server
+  * What is the role of the domain name
+  * What type of DNS record <code>www</code> is in <code>www.foobar.com</code>
+  * What is the role of the web server
+  * What is the role of the application server
+  * What is the role of the database
+  * What is the server using to communicate with the computer of the user requesting the website
+* <p>You must be able to explain what the issues are with this infrastructure:</p>
 
-* <p>before running the script, <code>localhost</code> resolves to <code>127.0.0.1</code> and <code>facebook.com</code> resolves to <code>157.240.11.35</code></p>
-* <p>after running the script,  <code>localhost</code> resolves to <code>127.0.0.2</code> and <code>facebook.com</code> resolves to <code>8.8.8.8</code></p>
+  * SPOF
+  * Downtime when maintenance needed (like deploying new code web server needs to be restarted)
+  * Cannot scale if too much incoming traffic
 
-If you’re running this script on a machine that you’ll continue to use, be sure to revert <code>localhost</code> to <code>127.0.0.1</code>. Otherwise, a lot of things will stop working!
+Please, remember that everything must be written in English to further your technical ability in a variety of settings.
 
 ---
 
-### 1. Show attached IPs <a name='subparagraph1'></a>
+### 1. Distributed web infrastructure <a name='subparagraph1'></a>
 
-Write a Bash script that displays all active IPv4 IPs on the machine it’s executed on.
+On a whiteboard, design a three server web infrastructure that hosts the website <code>www.foobar.com</code>.
 
-Example:
+Requirements:
 
-```shell
-sylvain@ubuntu$ ./1-show_attached_IPs | cat -e
-10.0.2.15$
-127.0.0.1$
-sylvain@ubuntu$
-```
+* <p>You must add:</p>
 
-Obviously, the IPs displayed may be different depending on which machine you are running the script on.
+  * 1 load-balancer (HAproxy)<br/>
+  * <p>2 servers (each containing the following)</p>
 
-Note that we can see our <code>localhost</code> IP :)
+    * 1 web server (Nginx)
+    * 1 application server
+    * 1 set of application files (your code base)
+    * 1 database (MySQL)
+* <p>You must be able to explain some specifics about this infrastructure:</p>
+
+  * For every additional element, why you are adding it
+  * What distribution algorithm your load balancer is configured with and how it works
+  * Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both
+  * How a database Primary-Replica (Master-Slave) cluster works
+  * What is the difference between the Primary node and the Replica node in regard to the application
+* <p>You must be able to explain what the issues are with this infrastructure:</p>
+
+  * Where are SPOF
+  * Security issues (no firewall, no HTTPS)
+  * No monitoring
+
+Please, remember that everything must be written in English to further your technical ability in a variety of settings.
 
 ---
 
-### 2. Port listening on localhost <a name='subparagraph2'></a>
+### 2. Secured and monitored web infrastructure <a name='subparagraph2'></a>
 
-Write a Bash script that listens on port <code>98</code> on <code>localhost</code>.
+On a whiteboard, design a three server web infrastructure that hosts the website <code>www.foobar.com</code>, it must be secured, serve encrypted traffic, and be monitored.
 
-<strong>Terminal 0</strong>
+Requirements:
 
-Starting my script.
+* <p>You must add:</p>
 
-```css
-sylvain@ubuntu$ sudo ./2-port_listening_on_localhost
-```
+  * 3 firewalls
+  * 1 SSL certificate to serve <code>www.foobar.com</code> over HTTPS
+  * 3 monitoring clients (data collector for Sumologic or other monitoring services)
+* <p>You must be able to explain some specifics about this infrastructure:</p>
 
-<strong>Terminal 1</strong>
+  * For every additional element, why you are adding it
+  * What are firewalls for
+  * Why is the traffic served over HTTPS
+  * What monitoring is used for
+  * How the monitoring tool is collecting data
+  * Explain what to do if you want to monitor your web server QPS
+* <p>You must be able to explain what the issues are with this infrastructure:</p>
 
-Connecting to <code>localhost</code> on port <code>98</code> using <code>telnet</code> and typing some text.
+  * Why terminating SSL at the load balancer level is an issue
+  * Why having only one MySQL server capable of accepting writes is an issue
+  * Why having servers with all the same components (database, web server and application server) might be a problem
 
-```sql
-sylvain@ubuntu$ telnet localhost 98
-Trying 127.0.0.2...
-Connected to localhost.
-Escape character is '^]'.
-Hello world
-test
-```
+Please, remember that everything must be written in English to further your technical ability in a variety of settings.
 
-<strong>Terminal 0</strong>
+---
 
-Receiving the text on the other side.
+### 3. Scale up <a name='subparagraph3'></a>
 
-```bash
-sylvain@ubuntu$ sudo ./2-port_listening_on_localhost
-Hello world
-test
-```
+Readme
 
-For the sake of the exercise, this connection is made entirely within <code>localhost</code>. This isn’t really exciting as is, but we can use this script across networks as well. Try running it between your local PC and your remote server for fun!
+* <a href="/rltoken/okRb72QtkOSmwDsyR-hJHA" target="_blank" title="Application server vs web server">Application server vs web server</a>
 
-As you can see, this can come in very handy in a multitude of situations. Maybe you’re debugging socket connection issues, or you’re trying to connect to a software and you are unsure if the issue is the software or the network, or you’re working on firewall rules… Another tool to add to your debugging toolbox!
+Requirements:
+
+* <p>You must add:</p>
+
+  * 1 server
+  * 1 load-balancer (HAproxy) configured as cluster with the other one
+  * Split components (web server, application server, database) with their own server
+* <p>You must be able to explain some specifics about this infrastructure:</p>
+
+  * For every additional element, why you are adding it
+
+Please, remember that everything must be written in English to further your technical ability in a variety of settings.
 
 ---
 

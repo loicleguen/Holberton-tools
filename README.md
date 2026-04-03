@@ -1,69 +1,152 @@
 <div align="center"><img src="https://github.com/ksyv/holbertonschool-web_front_end/blob/main/baniere_holberton.png"></div>
 
-# Background Context
+# Resources
 
 ## Table of Contents :
 
-  - [0. What happens when...](#subparagraph0)
-  - [1. Everything's better with a pretty diagram](#subparagraph1)
+  - [0. Slice Me Up](#subparagraph0)
+  - [1. Trim Me Down](#subparagraph1)
+  - [2. Size Me Please](#subparagraph2)
+  - [3. Flip Me Over](#subparagraph3)
+  - [4. Line Up](#subparagraph4)
+  - [5. Across The Planes](#subparagraph5)
+  - [6. Howdy Partner](#subparagraph6)
+  - [7. Gettin’ Cozy](#subparagraph7)
+  - [8. Ridin’ Bareback](#subparagraph8)
+  - [9. Let The Butcher Slice It](#subparagraph9)
+  - [10. I’ll Use My Scale](#subparagraph10)
+  - [11. The Western Exchange](#subparagraph11)
+  - [12. Bracing The Elements](#subparagraph12)
+  - [13. Cat's Got Your Tongue](#subparagraph13)
+  - [14. Saddle Up](#subparagraph14)
+  - [15. Slice Like A Ninja#advanced](#subparagraph15)
+  - [16. The Whole Barn#advanced](#subparagraph16)
+  - [17. Squashed Like Sardines#advanced](#subparagraph17)
+
+## Resources
+### Read or watch:
+* [Introduction to vectors](/rltoken/etIQrQxL8VjFy3_GQwXqFA)
+* [What is a matrix?](/rltoken/sYFUDN-BNvCA-_gEOW0tHw)
+* [Transpose](/rltoken/eYiY4EcXpBbdN3t-rMdIhg)
+* [Understanding the dot product](/rltoken/6R095Ag0q1tEl8dasOjc5w)
+* [Matrix Multiplication](/rltoken/8EUpaubJpCFy9NSIfhAwcw)
+* [What is the relationship between matrix multiplication and the dot product?](/rltoken/FrVXyQ2yWgCvozysoQoN2w)
+* [The Dot Product, Matrix Multiplication, and the Magic of Orthogonal Matrices](/rltoken/393FwOtyBT-h0sp2xd09yA)
+* [numpy tutorial](/rltoken/Z_Bi83ieYQoXVky061hv4g)
+* [numpy basics](/rltoken/a1iQ7PAaK3K0hHRQChhBIA)
+* [array indexing](/rltoken/krY2ahHZ9lvn5H2Olisyyg)
+* [numerical operations on arrays](/rltoken/MWfJsdC9M600ivYFOtgZFA)
+* [Broadcasting](/rltoken/UibPhXncjhBjjdeiAGVIDg)
+* [numpy mutations and broadcasting](/rltoken/d0P2ANwdccNiDL4KggEIUQ)
+* [numpy.ndarray](/rltoken/d7d3HRoklrLXizWLeh35oQ)
+* [numpy.ndarray.shape](/rltoken/TmUj94kx5QDUR81K4TvCQw)
+* [numpy.transpose](/rltoken/BArGhGOOnbzg6O3KnklKXw)
+* [numpy.ndarray.transpose](/rltoken/VLP2xnn3VEob-A9upmkAag)
+* [numpy.matmul](/rltoken/cOrTOZi53gEGSFKODGA-8w)
+
+## Learning Objectives
+At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
+* What is a vector?
+* What is a matrix?
+* What is a transpose?
+* What is the shape of a matrix?
+* What is an axis?
+* What is a slice?
+* How do you slice a vector/matrix?
+* What are element-wise operations?
+* How do you concatenate vectors/matrices?
+* What is the dot product?
+* What is matrix multiplication?
+* What isNumpy?
+* What is parallelization and why is it important?
+* What is broadcasting?
 
 ## Requirements
 ### General
-* You can post your blog post on the platform of your choice, LinkedIn or Medium are good ones
+* Allowed editors:vi,vim,emacs
+* All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.9)
+* Your files will be executed withnumpy(version 1.25.2)
+* All your files should end with a new line
+* The first line of all your files should be exactly#!/usr/bin/env python3
 * AREADME.mdfile, at the root of the folder of the project, is mandatory
+* Your code should followpycodestyle(version 2.11.1)
+* All your modules should have documentation (python3 -c 'print(__import__("my_module").__doc__)')
+* All your classes should have documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
+* All your functions (inside and outside a class) should have documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)'andpython3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
+* Unless otherwise noted, you are not allowed to import any module
+* All your files must be executable
+* The length of your files will be tested usingwc
 
 ## Task
-### 0. What happens when... <a name='subparagraph0'></a>
-
-This question is a classic and still widely used interview question for many types of software engineering position. It is used to assess a candidate’s general knowledge of how the web stack works on top of the internet. One important guideline to begin answering this question is that you should ask your interviewer whether they would like you to focus in on one specific area of the workflow. For a front-end position they may want you to talk at length about how the DOM is rendering. For an SRE position they may want you to go into the load balancing mechanism.
-
-This question is a good test of whether you understand DNS. Many software engineering candidates struggle with this concept, so if you do well on this question, you are already way ahead of the curve. If you take this project seriously and write an excellent article, it may be something that will grab the attention of future employers.
-
-Write a blog post explaining what happens when you type <code>https://www.google.com</code> in your browser and press <code>Enter</code>.
-
-Requirements, your post must cover:
-
-* <p>DNS request</p>
-* <p>TCP/IP</p>
-* <p>Firewall</p>
-* <p>HTTPS/SSL</p>
-* <p>Load-balancer</p>
-* <p>Web server</p>
-* <p>Application server</p>
-* <p>Database</p>
-
-Publish your blog post on Medium or LinkedIn; share the URL of your blog post in your answer file and in the field below.
-
-Please, remember that these blogs must be written in English to further your technical ability in a variety of settings.
+### 0. Slice Me Up <a name='subparagraph0'></a>
 
 ---
 
-### 1. Everything's better with a pretty diagram <a name='subparagraph1'></a>
+### 1. Trim Me Down <a name='subparagraph1'></a>
 
-Add a schema to your blog post illustrating the flow of the request created when you type <code>https://www.google.com</code> in your browser and press <code>Enter</code>.
+---
 
-The diagram should show:
+### 2. Size Me Please <a name='subparagraph2'></a>
 
-* <p>DNS resolution</p>
-* <p>that the request hitting server IP on the appropriate port</p>
-* <p>that the traffic is encrypted</p>
-* <p>that the traffic goes through a firewall</p>
-* <p>that the request is distributed via a load balancer</p>
-* <p>that the web server answers the request by serving a web page</p>
-* <p>that the application server generates the web page</p>
-* <p>that the application server request data from the database</p>
+---
 
-<a href="/rltoken/psFvxy-j0nALTn_sapK5tg" target="_blank" title="Gliffy">Gliffy</a> is free and what I personally use, but feel free to use what fits you best.
+### 3. Flip Me Over <a name='subparagraph3'></a>
 
-Some unrelated examples:
+---
 
-<img alt="" loading="lazy" src="http://i.imgur.com/i9ivkdo.png" style=""/>
+### 4. Line Up <a name='subparagraph4'></a>
 
-<img alt="" loading="lazy" src="http://i.imgur.com/R8R3sqC.png" style=""/>
+---
 
-Share the URL of your diagram image in your answer file and il the field below.
+### 5. Across The Planes <a name='subparagraph5'></a>
 
-Please, remember that these blogs must be written in English to further your technical ability in a variety of settings.
+---
+
+### 6. Howdy Partner <a name='subparagraph6'></a>
+
+---
+
+### 7. Gettin’ Cozy <a name='subparagraph7'></a>
+
+---
+
+### 8. Ridin’ Bareback <a name='subparagraph8'></a>
+
+---
+
+### 9. Let The Butcher Slice It <a name='subparagraph9'></a>
+
+---
+
+### 10. I’ll Use My Scale <a name='subparagraph10'></a>
+
+---
+
+### 11. The Western Exchange <a name='subparagraph11'></a>
+
+---
+
+### 12. Bracing The Elements <a name='subparagraph12'></a>
+
+---
+
+### 13. Cat's Got Your Tongue <a name='subparagraph13'></a>
+
+---
+
+### 14. Saddle Up <a name='subparagraph14'></a>
+
+---
+
+### 15. Slice Like A Ninja#advanced <a name='subparagraph15'></a>
+
+---
+
+### 16. The Whole Barn#advanced <a name='subparagraph16'></a>
+
+---
+
+### 17. Squashed Like Sardines#advanced <a name='subparagraph17'></a>
 
 ---
 

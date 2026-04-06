@@ -4,72 +4,60 @@
 
 ## Table of Contents :
 
-  - [0. Slice Me Up](#subparagraph0)
-  - [1. Trim Me Down](#subparagraph1)
-  - [2. Size Me Please](#subparagraph2)
-  - [3. Flip Me Over](#subparagraph3)
-  - [4. Line Up](#subparagraph4)
-  - [5. Across The Planes](#subparagraph5)
-  - [6. Howdy Partner](#subparagraph6)
-  - [7. Gettin’ Cozy](#subparagraph7)
-  - [8. Ridin’ Bareback](#subparagraph8)
-  - [9. Let The Butcher Slice It](#subparagraph9)
-  - [10. I’ll Use My Scale](#subparagraph10)
-  - [11. The Western Exchange](#subparagraph11)
-  - [12. Bracing The Elements](#subparagraph12)
-  - [13. Cat's Got Your Tongue](#subparagraph13)
-  - [14. Saddle Up](#subparagraph14)
-  - [15. Slice Like A Ninja#advanced](#subparagraph15)
-  - [16. The Whole Barn#advanced](#subparagraph16)
-  - [17. Squashed Like Sardines#advanced](#subparagraph17)
+  - [0. Line Graph](#subparagraph0)
+  - [1. Scatter](#subparagraph1)
+  - [2. Change of scale](#subparagraph2)
+  - [3. Two is better than one](#subparagraph3)
+  - [4. Frequency](#subparagraph4)
+  - [5. All in One](#subparagraph5)
+  - [6. Stacking Bars](#subparagraph6)
 
 ## Resources
 ### Read or watch:
-* [Introduction to vectors](/rltoken/etIQrQxL8VjFy3_GQwXqFA)
-* [What is a matrix?](/rltoken/sYFUDN-BNvCA-_gEOW0tHw)
-* [Transpose](/rltoken/eYiY4EcXpBbdN3t-rMdIhg)
-* [Understanding the dot product](/rltoken/6R095Ag0q1tEl8dasOjc5w)
-* [Matrix Multiplication](/rltoken/8EUpaubJpCFy9NSIfhAwcw)
-* [What is the relationship between matrix multiplication and the dot product?](/rltoken/FrVXyQ2yWgCvozysoQoN2w)
-* [The Dot Product, Matrix Multiplication, and the Magic of Orthogonal Matrices](/rltoken/393FwOtyBT-h0sp2xd09yA)
-* [numpy tutorial](/rltoken/Z_Bi83ieYQoXVky061hv4g)
-* [numpy basics](/rltoken/a1iQ7PAaK3K0hHRQChhBIA)
-* [array indexing](/rltoken/krY2ahHZ9lvn5H2Olisyyg)
-* [numerical operations on arrays](/rltoken/MWfJsdC9M600ivYFOtgZFA)
-* [Broadcasting](/rltoken/UibPhXncjhBjjdeiAGVIDg)
-* [numpy mutations and broadcasting](/rltoken/d0P2ANwdccNiDL4KggEIUQ)
-* [numpy.ndarray](/rltoken/d7d3HRoklrLXizWLeh35oQ)
-* [numpy.ndarray.shape](/rltoken/TmUj94kx5QDUR81K4TvCQw)
-* [numpy.transpose](/rltoken/BArGhGOOnbzg6O3KnklKXw)
-* [numpy.ndarray.transpose](/rltoken/VLP2xnn3VEob-A9upmkAag)
-* [numpy.matmul](/rltoken/cOrTOZi53gEGSFKODGA-8w)
+* [Plot (graphics)](/rltoken/swUAw_dV4-PhFth6wSzU1w)
+* [Scatter plot](/rltoken/ukujmh-I_E6VTCLeJLiANw)
+* [Line chart](/rltoken/gO3-Klt1z0tJeVU1aJD9qg)
+* [Bar chart](/rltoken/JLN6oUJ6zbzZPW2i4Z_TaQ)
+* [Histogram](/rltoken/FXDyUjw0H15E7AmmTo35LA)
+* [Pyplot tutorial](/rltoken/OFIlhs5hVBKKb94LTPKJTw)
+* [matplotlib.pyplot](/rltoken/rx6ItoEW_I7nK4nCex7lXQ)
+* [matplotlib.pyplot.plot](/rltoken/Rw2oKb9JYJiMhnbPTUCUhA)
+* [matplotlib.pyplot.scatter](/rltoken/QmfwDDiu9-quaGgApMT6OA)
+* [matplotlib.pyplot.bar](/rltoken/rRktEeEVDCiYNmvx4SKcjA)
+* [matplotlib.pyplot.hist](/rltoken/PKXgWPcvfmcpiGUKz6bE6Q)
+* [matplotlib.pyplot.xlabel](/rltoken/GISbsT3nJW7rEYoQAnSTKg)
+* [matplotlib.pyplot.ylabel](/rltoken/67JxQlRapJGqmN7EvaxdTA)
+* [matplotlib.pyplot.title](/rltoken/uDufZCOCuGQ-P29WXOBNCg)
+* [matplotlib.pyplot.subplot](/rltoken/mBsd852vz8grSP5kvGhqhg)
+* [matplotlib.pyplot.subplots](/rltoken/rkBfM37qFj3r2Zm6rb2WWw)
+* [matplotlib.pyplot.subplot2grid](/rltoken/DZ8FTOFfRieTNTKXAYgLYQ)
+* [matplotlib.pyplot.suptitle](/rltoken/fIbmAwjMSxHo5ICOB9KSpw)
+* [matplotlib.pyplot.xscale](/rltoken/YyNVIM3nprhu4dQFFKZ3Vw)
+* [matplotlib.pyplot.yscale](/rltoken/_7VHQogvt_KfI1zRlfZuxg)
+* [matplotlib.pyplot.xlim](/rltoken/vzbdq2QyqGID4NHYqffdYw)
+* [matplotlib.pyplot.ylim](/rltoken/ceOmeIsz4fuDL-yp_EXeSA)
+* [mplot3d tutorial](/rltoken/olLT2_Ce61FD4APHoTqb4Q)
+* [additional tutorials](/rltoken/ZuVz5fLoA3Aj-mSd9Ks6eQ)
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* What is a vector?
-* What is a matrix?
-* What is a transpose?
-* What is the shape of a matrix?
-* What is an axis?
-* What is a slice?
-* How do you slice a vector/matrix?
-* What are element-wise operations?
-* How do you concatenate vectors/matrices?
-* What is the dot product?
-* What is matrix multiplication?
-* What isNumpy?
-* What is parallelization and why is it important?
-* What is broadcasting?
+* What is a plot?
+* What is a scatter plot? line graph? bar graph? histogram?
+* What ismatplotlib?
+* How to plot data withmatplotlib
+* How to label a plot
+* How to scale an axis
+* How to plot multiple sets of data at the same time
 
 ## Requirements
 ### General
 * Allowed editors:vi,vim,emacs
-* All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.9)
-* Your files will be executed withnumpy(version 1.25.2)
+* All your files will be interpreted/compiled on Ubuntu 20.04 LTS usingpython3(version 3.9)
+* Your files will be executed withnumpy(version 1.25.2) andmatplotlib(version 3.8.3)
 * All your files should end with a new line
 * The first line of all your files should be exactly#!/usr/bin/env python3
 * AREADME.mdfile, at the root of the folder of the project, is mandatory
-* Your code should followpycodestyle(version 2.11.1)
+* Your code should use thepycodestylestyle (version 2.11.1)
 * All your modules should have documentation (python3 -c 'print(__import__("my_module").__doc__)')
 * All your classes should have documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
 * All your functions (inside and outside a class) should have documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)'andpython3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
@@ -78,75 +66,31 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * The length of your files will be tested usingwc
 
 ## Task
-### 0. Slice Me Up <a name='subparagraph0'></a>
+### 0. Line Graph <a name='subparagraph0'></a>
 
 ---
 
-### 1. Trim Me Down <a name='subparagraph1'></a>
+### 1. Scatter <a name='subparagraph1'></a>
 
 ---
 
-### 2. Size Me Please <a name='subparagraph2'></a>
+### 2. Change of scale <a name='subparagraph2'></a>
 
 ---
 
-### 3. Flip Me Over <a name='subparagraph3'></a>
+### 3. Two is better than one <a name='subparagraph3'></a>
 
 ---
 
-### 4. Line Up <a name='subparagraph4'></a>
+### 4. Frequency <a name='subparagraph4'></a>
 
 ---
 
-### 5. Across The Planes <a name='subparagraph5'></a>
+### 5. All in One <a name='subparagraph5'></a>
 
 ---
 
-### 6. Howdy Partner <a name='subparagraph6'></a>
-
----
-
-### 7. Gettin’ Cozy <a name='subparagraph7'></a>
-
----
-
-### 8. Ridin’ Bareback <a name='subparagraph8'></a>
-
----
-
-### 9. Let The Butcher Slice It <a name='subparagraph9'></a>
-
----
-
-### 10. I’ll Use My Scale <a name='subparagraph10'></a>
-
----
-
-### 11. The Western Exchange <a name='subparagraph11'></a>
-
----
-
-### 12. Bracing The Elements <a name='subparagraph12'></a>
-
----
-
-### 13. Cat's Got Your Tongue <a name='subparagraph13'></a>
-
----
-
-### 14. Saddle Up <a name='subparagraph14'></a>
-
----
-
-### 15. Slice Like A Ninja#advanced <a name='subparagraph15'></a>
-
----
-
-### 16. The Whole Barn#advanced <a name='subparagraph16'></a>
-
----
-
-### 17. Squashed Like Sardines#advanced <a name='subparagraph17'></a>
+### 6. Stacking Bars <a name='subparagraph6'></a>
 
 ---
 

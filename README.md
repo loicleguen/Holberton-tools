@@ -4,93 +4,149 @@
 
 ## Table of Contents :
 
-  - [0. Line Graph](#subparagraph0)
-  - [1. Scatter](#subparagraph1)
-  - [2. Change of scale](#subparagraph2)
-  - [3. Two is better than one](#subparagraph3)
-  - [4. Frequency](#subparagraph4)
-  - [5. All in One](#subparagraph5)
-  - [6. Stacking Bars](#subparagraph6)
+  - [0. Sigma is for Sum](#subparagraph0)
+  - [1. The Greeks pronounce it sEEgma](#subparagraph1)
+  - [2. Pi is for Product](#subparagraph2)
+  - [3. The Greeks pronounce it pEE](#subparagraph3)
+  - [4. Hello, derivatives!](#subparagraph4)
+  - [5. A log on the fire](#subparagraph5)
+  - [6. It is difficult to free fools from the chains they revere](#subparagraph6)
+  - [7. Partial truths are often more insidious than total falsehoods](#subparagraph7)
+  - [8. Put it all together and what do you get?](#subparagraph8)
+  - [9. Our life is the sum total of all the decisions we make every day, and those decisions are determined by our priorities](#subparagraph9)
+  - [10. Derive happiness in oneself from a good day's work](#subparagraph10)
+  - [11. Good grooming is integral and impeccable style is a must](#subparagraph11)
+  - [12. We are all an integral part of the web of life](#subparagraph12)
+  - [13. Create a definite plan for carrying out your desire and begin at once](#subparagraph13)
+  - [14. My talents fall within definite limitations](#subparagraph14)
+  - [15. Winners are people with definite purpose in life](#subparagraph15)
+  - [16. Double whammy](#subparagraph16)
+  - [17. Integrate](#subparagraph17)
 
 ## Resources
 ### Read or watch:
-* [Plot (graphics)](/rltoken/swUAw_dV4-PhFth6wSzU1w)
-* [Scatter plot](/rltoken/ukujmh-I_E6VTCLeJLiANw)
-* [Line chart](/rltoken/gO3-Klt1z0tJeVU1aJD9qg)
-* [Bar chart](/rltoken/JLN6oUJ6zbzZPW2i4Z_TaQ)
-* [Histogram](/rltoken/FXDyUjw0H15E7AmmTo35LA)
-* [Pyplot tutorial](/rltoken/OFIlhs5hVBKKb94LTPKJTw)
-* [matplotlib.pyplot](/rltoken/rx6ItoEW_I7nK4nCex7lXQ)
-* [matplotlib.pyplot.plot](/rltoken/Rw2oKb9JYJiMhnbPTUCUhA)
-* [matplotlib.pyplot.scatter](/rltoken/QmfwDDiu9-quaGgApMT6OA)
-* [matplotlib.pyplot.bar](/rltoken/rRktEeEVDCiYNmvx4SKcjA)
-* [matplotlib.pyplot.hist](/rltoken/PKXgWPcvfmcpiGUKz6bE6Q)
-* [matplotlib.pyplot.xlabel](/rltoken/GISbsT3nJW7rEYoQAnSTKg)
-* [matplotlib.pyplot.ylabel](/rltoken/67JxQlRapJGqmN7EvaxdTA)
-* [matplotlib.pyplot.title](/rltoken/uDufZCOCuGQ-P29WXOBNCg)
-* [matplotlib.pyplot.subplot](/rltoken/mBsd852vz8grSP5kvGhqhg)
-* [matplotlib.pyplot.subplots](/rltoken/rkBfM37qFj3r2Zm6rb2WWw)
-* [matplotlib.pyplot.subplot2grid](/rltoken/DZ8FTOFfRieTNTKXAYgLYQ)
-* [matplotlib.pyplot.suptitle](/rltoken/fIbmAwjMSxHo5ICOB9KSpw)
-* [matplotlib.pyplot.xscale](/rltoken/YyNVIM3nprhu4dQFFKZ3Vw)
-* [matplotlib.pyplot.yscale](/rltoken/_7VHQogvt_KfI1zRlfZuxg)
-* [matplotlib.pyplot.xlim](/rltoken/vzbdq2QyqGID4NHYqffdYw)
-* [matplotlib.pyplot.ylim](/rltoken/ceOmeIsz4fuDL-yp_EXeSA)
-* [mplot3d tutorial](/rltoken/olLT2_Ce61FD4APHoTqb4Q)
-* [additional tutorials](/rltoken/ZuVz5fLoA3Aj-mSd9Ks6eQ)
+* [Sigma Notation](/rltoken/P4fEYMawMBvqymRql00qHA)
+* [Π Product Notation](/rltoken/5rAMe6XcuFDno3ecCmejdg)
+* [Sigma and Pi Notation](/rltoken/1zMUM5UUz7YtAZKzptDvuw)
+* [What is a Series?](/rltoken/iJ0YYA20wFZNnp15bgGhcw)
+* [What is a Mathematical Series?](/rltoken/8KkTmzzxO8vJnO962A2NjA)
+* [List of mathematical series: Sums of powers](/rltoken/huUW8erf_Bz3DxzYokoCVQ)
+* [Bernoulli Numbers(Bn)](/rltoken/o68vP3f1ymgxBPhgvJmgDw)
+* [Bernoulli Polynomials(Bn(x))](/rltoken/D2SDK5ZVnpUQQqmkC8Q62g)
+* [Derivative (mathematics)](/rltoken/LSGWGR8_cys_7ybRqSqkqQ)
+* [Calculus for ML](/rltoken/3oYk65Z4g1MFnjXWhiIpXg)
+* [1 of 2: Seeing the big picture](/rltoken/b5GdixDURnuntAJn3bWK7A)
+* [2 of 2: First Principles](/rltoken/LAL1_omub3ICzvo8P8B4Qg)
+* [1 of 2: Finding the Derivative](/rltoken/oOeoqvmX6kA02y40vYO1bw)
+* [2 of 2: What do we discover?](/rltoken/XojGWpFp_yX2_2bxahzOCg)
+* [Deriving a Rule for Differentiating Powers of x](/rltoken/OeYMIwWGnZ34D36mJxexxA)
+* [1 of 3: Introducing a substitution](/rltoken/9tHeZ4GUJ_wRuU4YHuUDGw)
+* [2 of 3: Combining derivatives](/rltoken/tu66SYRbAREphTwKmUT40w)
+* [How To Understand Derivatives: The Product, Power & Chain Rules](/rltoken/xFkYYaEvXFes0bEqCU3YDA)
+* [Product Rule](/rltoken/tHX3B-KTU0kSpwZtvifpCw)
+* [Common Derivatives and Integrals](/rltoken/Vod8q1XaReOKFxPVXhWo9A)
+* [Introduction to partial derivatives](/rltoken/Tp8KBKLxIMuhGsUrE9bgOQ)
+* [Partial derivatives - How to solve?](/rltoken/LGqjU3wWvf_cDaB-IkTKJw)
+* [Integral](/rltoken/npuxaCylZuGoKm2cKqfL2A)
+* [Integration and the fundamental theorem of calculus](/rltoken/gh0eQv6M_8XpZY6Bxw9sOg)
+* [Introduction to Integration](/rltoken/Um2RSz0K2oCqzP9f8hJ9gw)
+* [Indefinite Integral - Basic Integration Rules, Problems, Formulas, Trig Functions, Calculus](/rltoken/ZO6-7vo9cDgtdpyuzhHXYQ)
+* [Definite Integrals](/rltoken/3mbCvI5FZ-xhPMUOu7qUkA)
+* [Definite Integral](/rltoken/fyk3fzzszQoZfMhMRi261Q)
+* [Multiple integral](/rltoken/HB0sv-XWeiyNScbhFaF3OQ)
+* [Double integral 1](/rltoken/G-06hjW1ySnS7JFJ78_p9w)
+* [Double integrals 2](/rltoken/OKsO-FvxZHiTaHwNTB86lQ)
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* What is a plot?
-* What is a scatter plot? line graph? bar graph? histogram?
-* What ismatplotlib?
-* How to plot data withmatplotlib
-* How to label a plot
-* How to scale an axis
-* How to plot multiple sets of data at the same time
+* Summation and Product notation
+* What is a series?
+* Common series
+* What is a derivative?
+* What is the product rule?
+* What is the chain rule?
+* Common derivative rules
+* What is a partial derivative?
+* What is an indefinite integral?
+* What is a definite integral?
+* What is a double integral?
 
 ## Requirements
 ### General
 * Allowed editors:vi,vim,emacs
-* All your files will be interpreted/compiled on Ubuntu 20.04 LTS usingpython3(version 3.9)
-* Your files will be executed withnumpy(version 1.25.2) andmatplotlib(version 3.8.3)
+* Type the number of the correct answer in your answer file
 * All your files should end with a new line
-* The first line of all your files should be exactly#!/usr/bin/env python3
-* AREADME.mdfile, at the root of the folder of the project, is mandatory
-* Your code should use thepycodestylestyle (version 2.11.1)
-* All your modules should have documentation (python3 -c 'print(__import__("my_module").__doc__)')
-* All your classes should have documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
-* All your functions (inside and outside a class) should have documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)'andpython3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
-* Unless otherwise noted, you are not allowed to import any module
-* All your files must be executable
-* The length of your files will be tested usingwc
 
 ## Task
-### 0. Line Graph <a name='subparagraph0'></a>
+### 0. Sigma is for Sum <a name='subparagraph0'></a>
 
 ---
 
-### 1. Scatter <a name='subparagraph1'></a>
+### 1. The Greeks pronounce it sEEgma <a name='subparagraph1'></a>
 
 ---
 
-### 2. Change of scale <a name='subparagraph2'></a>
+### 2. Pi is for Product <a name='subparagraph2'></a>
 
 ---
 
-### 3. Two is better than one <a name='subparagraph3'></a>
+### 3. The Greeks pronounce it pEE <a name='subparagraph3'></a>
 
 ---
 
-### 4. Frequency <a name='subparagraph4'></a>
+### 4. Hello, derivatives! <a name='subparagraph4'></a>
 
 ---
 
-### 5. All in One <a name='subparagraph5'></a>
+### 5. A log on the fire <a name='subparagraph5'></a>
 
 ---
 
-### 6. Stacking Bars <a name='subparagraph6'></a>
+### 6. It is difficult to free fools from the chains they revere <a name='subparagraph6'></a>
+
+---
+
+### 7. Partial truths are often more insidious than total falsehoods <a name='subparagraph7'></a>
+
+---
+
+### 8. Put it all together and what do you get? <a name='subparagraph8'></a>
+
+---
+
+### 9. Our life is the sum total of all the decisions we make every day, and those decisions are determined by our priorities <a name='subparagraph9'></a>
+
+---
+
+### 10. Derive happiness in oneself from a good day's work <a name='subparagraph10'></a>
+
+---
+
+### 11. Good grooming is integral and impeccable style is a must <a name='subparagraph11'></a>
+
+---
+
+### 12. We are all an integral part of the web of life <a name='subparagraph12'></a>
+
+---
+
+### 13. Create a definite plan for carrying out your desire and begin at once <a name='subparagraph13'></a>
+
+---
+
+### 14. My talents fall within definite limitations <a name='subparagraph14'></a>
+
+---
+
+### 15. Winners are people with definite purpose in life <a name='subparagraph15'></a>
+
+---
+
+### 16. Double whammy <a name='subparagraph16'></a>
+
+---
+
+### 17. Integrate <a name='subparagraph17'></a>
 
 ---
 

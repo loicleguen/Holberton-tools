@@ -4,35 +4,40 @@
 
 ## Table of Contents :
 
-  - [0. Likelihood](#subparagraph0)
-  - [1. Intersection](#subparagraph1)
-  - [2. Marginal Probability](#subparagraph2)
-  - [3. Posterior](#subparagraph3)
+  - [0. PCA#advanced](#subparagraph0)
+  - [1. PCA v2#advanced](#subparagraph1)
+  - [2. Initialize t-SNE#advanced](#subparagraph2)
+  - [3. Entropy#advanced](#subparagraph3)
+  - [4. P affinities#advanced](#subparagraph4)
+  - [5. Q affinities#advanced](#subparagraph5)
+  - [6. Gradients#advanced](#subparagraph6)
+  - [7. Cost#advanced](#subparagraph7)
+  - [8. t-SNE#advanced](#subparagraph8)
 
 ## Resources
 ### Read or watch:
-* [Bayesian probability](/rltoken/LbqcqhQMTB8rM_32zTne2Q)
-* [Bayesian statistics](/rltoken/X8-YO11zNEJVIbaQNYEyUQ)
-* [Bayes' Theorem - The Simplest Case](/rltoken/whOqB5sAhc5gLXIFHC7Jdw)
-* [Bayes' Theorem (3Blue1Brown)](/rltoken/2AtACz7whqXfDzWU419HPQ)
-* [A visual guide to Bayesian thinking](/rltoken/DCcZjShoGrFtwxHaL0mVFA)
-* [Base Rates](/rltoken/CfKOIbI68nOGhkEXgJ28Rg)
-* [Bayesian statistics: a comprehensive course](/rltoken/VOIFP5sKP_sn2jpPoHha3g)
-* [Bayes' rule - an intuitive explanation](/rltoken/OrPZyTyYX4-yDarX0se24g)
-* [Bayes' rule in statistics](/rltoken/OlSXY3qIk6V2zKc-Hcv4qw)
-* [Bayes' rule in inference - likelihood](/rltoken/8PCYllQCETbNYrITW8TpNg)
-* [Bayes' rule in inference - the prior and denominator](/rltoken/Q1cXtDQtO5SH_2Nf7TpDyg)
-* [Bayes' rule denominator: discrete and continuous](/rltoken/qE_Okqp4Ez3gEKsfJDnetQ)
-* [Bayes' rule: why likelihood is not a probability](/rltoken/H6ZtvaxKp_t3zCeyz3pjpA)
+* [Dimensionality Reduction For Dummies — Part 1: Intuition](/rltoken/4IBA-zeGq3ZRtR8I7BkH-w)
+* [Singular Value Decomposition](/rltoken/hRIf7xXoj3JhoEcuiL-rmg)
+* [Understanding SVD (Singular Value Decomposition)](/rltoken/bFsXJ10qf5Y7KHG-nYwv5A)
+* [Intuitively, what is the difference between Eigendecomposition and Singular Value Decomposition?](/rltoken/U2ssAfo2ZDs3KbNUHFWXqw)
+* [Dimensionality Reduction: Principal Components Analysis, Part 1](/rltoken/2UO2LZc5NITBkBW8Lmh8sA)
+* [Dimensionality Reduction: Principal Components Analysis, Part 2](/rltoken/NRAxuzkUU_bUF7-KTQpjHQ)
+* [StatQuest: t-SNE, Clearly Explained](/rltoken/cGo4lmHxxVNAGUXR477pWA)
+* [t-SNE tutorial Part1](/rltoken/ubQGaFqOQCH7zT5GEZnx3g)
+* [t-SNE tutorial Part2](/rltoken/kOp-MNuN0bIDMxgNadwJSg)
+* [How to Use t-SNE Effectively](/rltoken/5r2ywom9O3mzWuAQQng7fg)
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* What is Bayesian Probability?
-* What is Bayes’ rule and how do you use it?
-* What is a base rate?
-* What is a prior?
-* What is a posterior?
-* What is a likelihood?
+* What is eigendecomposition?
+* What is singular value decomposition?
+* What is the difference between eig and svd?
+* What is dimensionality reduction and what are its purposes?
+* What is principal components analysis (PCA)?
+* What is t-distributed stochastic neighbor embedding (t-SNE)?
+* What is a manifold?
+* What is the difference between linear and non-linear dimensionality reduction?
+* Which techniques are linear/non-linear?
 
 ## Requirements
 ### General
@@ -48,22 +53,42 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * All your functions (inside and outside a class) should have documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)'andpython3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 * Unless otherwise noted, you are not allowed to import any module exceptimport numpy as np
 * All your files must be executable
-* The length of your files will be tested usingwc
+* Your code should use the minimum number of operations to avoid floating point errors
 
 ## Task
-### 0. Likelihood <a name='subparagraph0'></a>
+### 0. PCA#advanced <a name='subparagraph0'></a>
 
 ---
 
-### 1. Intersection <a name='subparagraph1'></a>
+### 1. PCA v2#advanced <a name='subparagraph1'></a>
 
 ---
 
-### 2. Marginal Probability <a name='subparagraph2'></a>
+### 2. Initialize t-SNE#advanced <a name='subparagraph2'></a>
 
 ---
 
-### 3. Posterior <a name='subparagraph3'></a>
+### 3. Entropy#advanced <a name='subparagraph3'></a>
+
+---
+
+### 4. P affinities#advanced <a name='subparagraph4'></a>
+
+---
+
+### 5. Q affinities#advanced <a name='subparagraph5'></a>
+
+---
+
+### 6. Gradients#advanced <a name='subparagraph6'></a>
+
+---
+
+### 7. Cost#advanced <a name='subparagraph7'></a>
+
+---
+
+### 8. t-SNE#advanced <a name='subparagraph8'></a>
 
 ---
 

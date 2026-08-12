@@ -4,22 +4,22 @@
 
 ## Table of Contents :
 
-  - [0. Star Wars Characters](#subparagraph0)
+  - [0. Rain](#subparagraph0)
 
 ## Requirements
 ### General
 * Allowed editors:vi,vim,emacs
-* All your files will be interpreted on Ubuntu 14.04 LTS usingnode(version 10.14.x)
+* All your files will be interpreted/compiled on Ubuntu 14.04 LTS usingpython3(version 3.4.3)
 * All your files should end with a new line
-* The first line of all your files should be exactly#!/usr/bin/node
+* The first line of all your files should be exactly#!/usr/bin/python3
 * AREADME.mdfile, at the root of the folder of the project, is mandatory
-* Your code should besemistandardcompliant.Rules of Standard+semicolons on top. Also as reference:AirBnB style
+* Your code should use thePEP 8style (version 1.7.x)
+* You are not allowed to import any module
+* All modules and functions must be documented
 * All your files must be executable
-* The length of your files will be tested usingwc
-* You are not allowed to usevar
 
 ## Task
-### 0. Star Wars Characters <a name='subparagraph0'></a>
+### 0. Rain <a name='subparagraph0'></a>
 
 ---
 

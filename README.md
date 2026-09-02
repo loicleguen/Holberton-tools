@@ -4,43 +4,34 @@
 
 ## Table of Contents :
 
-  - [0. Bag Of Words](#subparagraph0)
-  - [1. TF-IDF](#subparagraph1)
-  - [2. Train Word2Vec](#subparagraph2)
-  - [3. Extract Word2Vec](#subparagraph3)
-  - [4. FastText](#subparagraph4)
-  - [5. ELMo](#subparagraph5)
+  - [0. Unigram BLEU score#advanced](#subparagraph0)
+  - [1. N-gram BLEU score#advanced](#subparagraph1)
+  - [2. Cumulative N-gram BLEU score#advanced](#subparagraph2)
 
 ## Resources
 ### Read or watch:
-* [An Introduction to Word Embeddings](/rltoken/nvfQT4uJGmhWEPYg6JcAAQ)
-* [Introduction to Word Embeddings](/rltoken/DHcwnaCVrQoLkWsMdacQWw)
-* [Natural Language Processing|Bag Of Words Intuition](/rltoken/-mSn7HlmeJkmxIv8QZ3tAg)
-* [Natural Language Processing|TF-IDF Intuition| Text Prerocessing](/rltoken/7o-iPxs2hr8tey5_S6BfTw)
-* [Word Embedding - Natural Language Processing| Deep Learning](/rltoken/p3gf0mQTNMvd0bCuGiwAUg)
-* [Word2Vec Tutorial - The Skip-Gram Model](/rltoken/d2S2BNRUgUjM4RZFTQOvXg)
-* [Word2Vec Tutorial Part 2 - Negative Sampling](/rltoken/u8GAzgsS-Y_cUo887Mcugg)
-* [GloVe Explained](/rltoken/Rr9mic3yK0vzSAkpSxoupQ)
-* [FastText: Under the Hood](/rltoken/PzURniQdHvYCIkbJcGXvyA)
-* [ELMo Explained](/rltoken/Hb_6xoJCOihj7Lnb6si7gA)
+* [7 Applications of Deep Learning for Natural Language Processing](/rltoken/IYDIKPW-OMoU6MusXwtrIw)
+* [10 Applications of Artificial Neural Networks in Natural Language Processing](/rltoken/2DOEX8NaohA50GuwdWtcGQ)
+* [A Gentle Introduction to Calculating the BLEU Score for Text in Python](/rltoken/zsPawhP5ezqZDwFBc6DyYA)
+* [Bleu Score](/rltoken/hPRNbFBuuRwZguNRoUpYlg)
+* [Evaluating Text Output in NLP: BLEU at your own risk](/rltoken/uzRnWxjjoMCG-mxMCC5sCg)
+* [ROUGE metric](/rltoken/t2YO3xg7Vk6KuFMwQDMX5Q)
+* [Evaluation and Perplexity](/rltoken/iWXkSDA5Cyw4bP_Z7VeFNg)
+* [Evaluation metrics](/rltoken/fB5mQNcsuxScDvGo0S9deA)
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* What is natural language processing?
-* What is a word embedding?
-* What is bag of words?
-* What is TF-IDF?
-* What is CBOW?
-* What is a skip-gram?
-* What is an n-gram?
-* What is negative sampling?
-* What is word2vec, GloVe, fastText, ELMo?
+* What are the applications of natural language processing?
+* What is a BLEU score?
+* What is a ROUGE score?
+* What is perplexity?
+* When should you use one evaluation metric over another?
 
 ## Requirements
 ### General
 * Allowed editors:vi,vim,emacs
 * All your files will be interpreted/compiled on Ubuntu 20.04 LTS usingpython3(version 3.9)
-* Your files will be executed withnumpy(version 1.25.2) andtensorflow(version 2.15)
+* Your files will be executed withnumpy(version 1.25.2)
 * All your files should end with a new line
 * The first line of all your files should be exactly#!/usr/bin/env python3
 * All of your files must be executable
@@ -49,29 +40,18 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * All your modules should have documentation (python3 -c 'print(__import__("my_module").__doc__)')
 * All your classes should have documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
 * All your functions (inside and outside a class) should have documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)'andpython3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
+* You are not allowed to use thenltkmodule
 
 ## Task
-### 0. Bag Of Words <a name='subparagraph0'></a>
+### 0. Unigram BLEU score#advanced <a name='subparagraph0'></a>
 
 ---
 
-### 1. TF-IDF <a name='subparagraph1'></a>
+### 1. N-gram BLEU score#advanced <a name='subparagraph1'></a>
 
 ---
 
-### 2. Train Word2Vec <a name='subparagraph2'></a>
-
----
-
-### 3. Extract Word2Vec <a name='subparagraph3'></a>
-
----
-
-### 4. FastText <a name='subparagraph4'></a>
-
----
-
-### 5. ELMo <a name='subparagraph5'></a>
+### 2. Cumulative N-gram BLEU score#advanced <a name='subparagraph2'></a>
 
 ---
 

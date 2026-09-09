@@ -1,37 +1,38 @@
 <div align="center"><img src="https://github.com/ksyv/holbertonschool-web_front_end/blob/main/baniere_holberton.png"></div>
 
-# Resources
+# Resources:
 
 ## Table of Contents :
 
-  - [0. Unigram BLEU score#advanced](#subparagraph0)
-  - [1. N-gram BLEU score#advanced](#subparagraph1)
-  - [2. Cumulative N-gram BLEU score#advanced](#subparagraph2)
-
-## Resources
-### Read or watch:
-* [7 Applications of Deep Learning for Natural Language Processing](/rltoken/IYDIKPW-OMoU6MusXwtrIw)
-* [10 Applications of Artificial Neural Networks in Natural Language Processing](/rltoken/2DOEX8NaohA50GuwdWtcGQ)
-* [A Gentle Introduction to Calculating the BLEU Score for Text in Python](/rltoken/zsPawhP5ezqZDwFBc6DyYA)
-* [Bleu Score](/rltoken/hPRNbFBuuRwZguNRoUpYlg)
-* [Evaluating Text Output in NLP: BLEU at your own risk](/rltoken/uzRnWxjjoMCG-mxMCC5sCg)
-* [ROUGE metric](/rltoken/t2YO3xg7Vk6KuFMwQDMX5Q)
-* [Evaluation and Perplexity](/rltoken/iWXkSDA5Cyw4bP_Z7VeFNg)
-* [Evaluation metrics](/rltoken/fB5mQNcsuxScDvGo0S9deA)
+  - [0. RNN Encoder](#subparagraph0)
+  - [1. Self Attention](#subparagraph1)
+  - [2. RNN Decoder](#subparagraph2)
+  - [3. Positional Encoding](#subparagraph3)
+  - [4. Scaled Dot Product Attention](#subparagraph4)
+  - [5. Multi Head Attention](#subparagraph5)
+  - [6. Transformer Encoder Block](#subparagraph6)
+  - [7. Transformer Decoder Block](#subparagraph7)
+  - [8. Transformer Encoder](#subparagraph8)
+  - [9. Transformer Decoder](#subparagraph9)
+  - [10. Transformer Network](#subparagraph10)
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* What are the applications of natural language processing?
-* What is a BLEU score?
-* What is a ROUGE score?
-* What is perplexity?
-* When should you use one evaluation metric over another?
+* What is the attention mechanism?
+* How to apply attention to RNNs
+* What is a transformer?
+* How to create an encoder-decoder transformer model
+* What is GPT?
+* What is BERT?
+* What is self-supervised learning?
+* How to use BERT for specific NLP tasks
+* What is SQuAD? GLUE?
 
 ## Requirements
 ### General
 * Allowed editors:vi,vim,emacs
 * All your files will be interpreted/compiled on Ubuntu 20.04 LTS usingpython3(version 3.9)
-* Your files will be executed withnumpy(version 1.25.2)
+* Your files will be executed withnumpy(version 1.25.2) andtensorflow(version 2.15)
 * All your files should end with a new line
 * The first line of all your files should be exactly#!/usr/bin/env python3
 * All of your files must be executable
@@ -40,18 +41,50 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * All your modules should have documentation (python3 -c 'print(__import__("my_module").__doc__)')
 * All your classes should have documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
 * All your functions (inside and outside a class) should have documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)'andpython3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
-* You are not allowed to use thenltkmodule
+* Unless otherwise stated, you cannot import any module exceptimport tensorflow as tf
 
 ## Task
-### 0. Unigram BLEU score#advanced <a name='subparagraph0'></a>
+### 0. RNN Encoder <a name='subparagraph0'></a>
 
 ---
 
-### 1. N-gram BLEU score#advanced <a name='subparagraph1'></a>
+### 1. Self Attention <a name='subparagraph1'></a>
 
 ---
 
-### 2. Cumulative N-gram BLEU score#advanced <a name='subparagraph2'></a>
+### 2. RNN Decoder <a name='subparagraph2'></a>
+
+---
+
+### 3. Positional Encoding <a name='subparagraph3'></a>
+
+---
+
+### 4. Scaled Dot Product Attention <a name='subparagraph4'></a>
+
+---
+
+### 5. Multi Head Attention <a name='subparagraph5'></a>
+
+---
+
+### 6. Transformer Encoder Block <a name='subparagraph6'></a>
+
+---
+
+### 7. Transformer Decoder Block <a name='subparagraph7'></a>
+
+---
+
+### 8. Transformer Encoder <a name='subparagraph8'></a>
+
+---
+
+### 9. Transformer Decoder <a name='subparagraph9'></a>
+
+---
+
+### 10. Transformer Network <a name='subparagraph10'></a>
 
 ---
 

@@ -4,30 +4,31 @@
 
 ## Table of Contents :
 
-  - [0. Dataset](#subparagraph0)
-  - [1. Encode Tokens](#subparagraph1)
-  - [2. TF Encode](#subparagraph2)
-  - [3. Pipeline](#subparagraph3)
-  - [4. Create Masks](#subparagraph4)
-  - [5. Train](#subparagraph5)
+  - [0. Question Answering](#subparagraph0)
+  - [1. Create the loop](#subparagraph1)
+  - [2. Answer Questions](#subparagraph2)
+  - [3. Semantic Search](#subparagraph3)
+  - [4. Multi-reference Question Answering](#subparagraph4)
 
 ## Resources
 ### Read or watch:
-* [How machines Read](/rltoken/kd5yrDx2tlh1LfeCWBvpOA)
-* [Sub-word tokenizers](/rltoken/luuEHmn8yqarthPbrei8KA)
-* [Summary of the tokenizers](/rltoken/aBx_d0p9xhcyYdo6cjP0sw)
-* [Subword Tokenization](/rltoken/KgJI9YXjBOmRf9RCthqv9g)
-* [Notes on BERT tokenizer and model](/rltoken/2DH5A0_Bm5rRLYvMBe6MAA)
-* [What is AutoTokenizer?](/rltoken/tqHc6InG4aMGhGRGk8or8g)
-* [Training a new tokenizer from an old one](/rltoken/ObRBDgX-h_ZP_bjwy63pew)
-* [TFDS Overview](/rltoken/GGUi9ziJ5vLQbHqT3aPYSw)
-* [How Transformers Work: A Detailed Exploration of Transformer Architecture](/rltoken/KUgtQKtHcwD8vr8cpPffnQ)
+* [Question Answering (Q&A) Systems with LLMs](/rltoken/IfUPZkhvQm61iOsf1PPGvQ)
+* [Improving Language Understanding by Generative Pre-Training (2018)](/rltoken/vFBWBmL-idNfApsMEt-RRw)
+* [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (2018)](/rltoken/mIab2UZnm64p6TSa-xPTrA)
+* [SQuAD 2.0](/rltoken/vigSZvwAnpAoqGUHBQ6TIw)
+* [Know What You Don’t Know: Unanswerable Questions for SQuAD (2018)](/rltoken/ASnUmAeZLCy4fuIlZQocIg)
+* [GLUE Benchmark](/rltoken/KDjvnz6EKqTiRjQwhQ47tQ)
+* [GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding (2019)](/rltoken/zH4c1olq3tnR3DFd-ZA8fQ)
+* [Speech-transformer: A no-recurrence sequence-to-sequence model for speech recognition (2018)](/rltoken/lAfZfIU9arRF-S_egdfrJw)
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* How to use Transformers for Machine Translation
-* How to write a custom train/test loop in Keras
-* How to use Tensorflow Datasets
+* What is Question-Answering?
+* What is Semantic Search?
+* What is BERT?
+* How to develop a QA chatbot
+* How to use thetransformerslibrary
+* How to use thetensorflow-hublibrary
 
 ## Requirements
 ### General
@@ -42,30 +43,25 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * All your modules should have documentation (python3 -c 'print(__import__("my_module").__doc__)')
 * All your classes should have documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
 * All your functions (inside and outside a class) should have documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)'andpython3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
-* Unless otherwise stated, you cannot import any module exceptimport transformersandfrom setup import load_pt2en(the dataset helper described in theTF Datasetssection). For some tasks,import tensorflow as tfis also allowed.
 
 ## Task
-### 0. Dataset <a name='subparagraph0'></a>
+### 0. Question Answering <a name='subparagraph0'></a>
 
 ---
 
-### 1. Encode Tokens <a name='subparagraph1'></a>
+### 1. Create the loop <a name='subparagraph1'></a>
 
 ---
 
-### 2. TF Encode <a name='subparagraph2'></a>
+### 2. Answer Questions <a name='subparagraph2'></a>
 
 ---
 
-### 3. Pipeline <a name='subparagraph3'></a>
+### 3. Semantic Search <a name='subparagraph3'></a>
 
 ---
 
-### 4. Create Masks <a name='subparagraph4'></a>
-
----
-
-### 5. Train <a name='subparagraph5'></a>
+### 4. Multi-reference Question Answering <a name='subparagraph4'></a>
 
 ---
 

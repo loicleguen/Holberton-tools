@@ -1,67 +1,113 @@
 <div align="center"><img src="https://github.com/ksyv/holbertonschool-web_front_end/blob/main/baniere_holberton.png"></div>
 
-# Resources
+# 1. Introduction
 
 ## Table of Contents :
 
-  - [0. Question Answering](#subparagraph0)
-  - [1. Create the loop](#subparagraph1)
-  - [2. Answer Questions](#subparagraph2)
-  - [3. Semantic Search](#subparagraph3)
-  - [4. Multi-reference Question Answering](#subparagraph4)
-
-## Resources
-### Read or watch:
-* [Question Answering (Q&A) Systems with LLMs](/rltoken/IfUPZkhvQm61iOsf1PPGvQ)
-* [Improving Language Understanding by Generative Pre-Training (2018)](/rltoken/vFBWBmL-idNfApsMEt-RRw)
-* [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (2018)](/rltoken/mIab2UZnm64p6TSa-xPTrA)
-* [SQuAD 2.0](/rltoken/vigSZvwAnpAoqGUHBQ6TIw)
-* [Know What You Don’t Know: Unanswerable Questions for SQuAD (2018)](/rltoken/ASnUmAeZLCy4fuIlZQocIg)
-* [GLUE Benchmark](/rltoken/KDjvnz6EKqTiRjQwhQ47tQ)
-* [GLUE: A Multi-Task Benchmark and Analysis Platform for Natural Language Understanding (2019)](/rltoken/zH4c1olq3tnR3DFd-ZA8fQ)
-* [Speech-transformer: A no-recurrence sequence-to-sequence model for speech recognition (2018)](/rltoken/lAfZfIU9arRF-S_egdfrJw)
-
-## Learning Objectives
-At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* What is Question-Answering?
-* What is Semantic Search?
-* What is BERT?
-* How to develop a QA chatbot
-* How to use thetransformerslibrary
-* How to use thetensorflow-hublibrary
-
-## Requirements
-### General
-* Allowed editors:vi,vim,emacs
-* All your files will be interpreted/compiled on Ubuntu 20.04 LTS usingpython3(version 3.9)
-* Your files will be executed withnumpy(version 1.25.2) andtensorflow(version 2.15)
-* All your files should end with a new line
-* The first line of all your files should be exactly#!/usr/bin/env python3
-* All of your files must be executable
-* AREADME.mdfile, at the root of the folder of the project, is mandatory
-* Your code should follow thepycodestylestyle (version 2.11.1)
-* All your modules should have documentation (python3 -c 'print(__import__("my_module").__doc__)')
-* All your classes should have documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
-* All your functions (inside and outside a class) should have documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)'andpython3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
+  - [0. Exercice 1 — Afficher les clients](#subparagraph0)
+  - [1. Exercice 2 — Filtrer les demandes prioritaires](#subparagraph1)
+  - [2. Exercice 3 — Trier les échantillons reçus](#subparagraph2)
+  - [3. Exercice 4 — Compter les échantillons](#subparagraph3)
+  - [4. Exercice 5 — Calculer une température moyenne](#subparagraph4)
+  - [5. Exercice 6 — Identifier les équipements récents](#subparagraph5)
+  - [6. Exercice 7 — Lier les sites et les clients](#subparagraph6)
+  - [7. Exercice 8 — Afficher les échantillons avec leur type](#subparagraph7)
+  - [8. Exercice 9 — Afficher les analyses avec leur méthode](#subparagraph8)
+  - [9. Exercice 10 — Afficher tous les échantillons avec leur résultat éventuel](#subparagraph9)
+  - [10. Exercice 11 — Résultats complets des analyses](#subparagraph10)
+  - [11. Exercice 12 — Compter les analyses par analyste](#subparagraph11)
+  - [12. Exercice 13 — Repérer les paramètres non conformes](#subparagraph12)
+  - [13. Exercice 14 — Nombre d’échantillons par client](#subparagraph13)
+  - [14. Exercice 15 — Durée moyenne des analyses terminées par méthode](#subparagraph14)
+  - [15. Exercice 16 — Analyses plus longues que la moyenne](#subparagraph15)
+  - [16. Exercice 17 — Utiliser une CTE](#subparagraph16)
+  - [17. Exercice 18 — Créer un statut lisible avec CASE](#subparagraph17)
+  - [18. Exercice 19 — Créer une vue de résultats complets](#subparagraph18)
+  - [19. Exercice 20 — Classer les analyses terminées par durée](#subparagraph19)
+  - [20. Quiz](#subparagraph20)
 
 ## Task
-### 0. Question Answering <a name='subparagraph0'></a>
+### 0. Exercice 1 — Afficher les clients <a name='subparagraph0'></a>
 
 ---
 
-### 1. Create the loop <a name='subparagraph1'></a>
+### 1. Exercice 2 — Filtrer les demandes prioritaires <a name='subparagraph1'></a>
 
 ---
 
-### 2. Answer Questions <a name='subparagraph2'></a>
+### 2. Exercice 3 — Trier les échantillons reçus <a name='subparagraph2'></a>
 
 ---
 
-### 3. Semantic Search <a name='subparagraph3'></a>
+### 3. Exercice 4 — Compter les échantillons <a name='subparagraph3'></a>
 
 ---
 
-### 4. Multi-reference Question Answering <a name='subparagraph4'></a>
+### 4. Exercice 5 — Calculer une température moyenne <a name='subparagraph4'></a>
+
+---
+
+### 5. Exercice 6 — Identifier les équipements récents <a name='subparagraph5'></a>
+
+---
+
+### 6. Exercice 7 — Lier les sites et les clients <a name='subparagraph6'></a>
+
+---
+
+### 7. Exercice 8 — Afficher les échantillons avec leur type <a name='subparagraph7'></a>
+
+---
+
+### 8. Exercice 9 — Afficher les analyses avec leur méthode <a name='subparagraph8'></a>
+
+---
+
+### 9. Exercice 10 — Afficher tous les échantillons avec leur résultat éventuel <a name='subparagraph9'></a>
+
+---
+
+### 10. Exercice 11 — Résultats complets des analyses <a name='subparagraph10'></a>
+
+---
+
+### 11. Exercice 12 — Compter les analyses par analyste <a name='subparagraph11'></a>
+
+---
+
+### 12. Exercice 13 — Repérer les paramètres non conformes <a name='subparagraph12'></a>
+
+---
+
+### 13. Exercice 14 — Nombre d’échantillons par client <a name='subparagraph13'></a>
+
+---
+
+### 14. Exercice 15 — Durée moyenne des analyses terminées par méthode <a name='subparagraph14'></a>
+
+---
+
+### 15. Exercice 16 — Analyses plus longues que la moyenne <a name='subparagraph15'></a>
+
+---
+
+### 16. Exercice 17 — Utiliser une CTE <a name='subparagraph16'></a>
+
+---
+
+### 17. Exercice 18 — Créer un statut lisible avec CASE <a name='subparagraph17'></a>
+
+---
+
+### 18. Exercice 19 — Créer une vue de résultats complets <a name='subparagraph18'></a>
+
+---
+
+### 19. Exercice 20 — Classer les analyses terminées par durée <a name='subparagraph19'></a>
+
+---
+
+### 20. Quiz <a name='subparagraph20'></a>
 
 ---
 

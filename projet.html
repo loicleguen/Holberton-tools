@@ -5,7 +5,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="google" content="notranslate">
-    <title>Project: Q-learning | Holberton Thonon-les-Bains, France Intranet</title>
+    <title>Project: Deep Q-learning | Holberton Thonon-les-Bains, France Intranet</title>
       <style data-tippy-stylesheet="">.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;white-space:normal;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}</style><link rel="stylesheet" href="https://use.typekit.net/xgz4ilr.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
       <link rel="stylesheet" href="/assets/application-ba9441cbf7f976aad6e3647bc6bbb7e2670329e3812b97602330327ceb1fcc2b.css" media="all">
@@ -14,7 +14,7 @@
       <script src="/assets/application-06ede115b3a1f28de8129d53ced453ce86352b42e0a4c8c016697eec36cee07b.js"></script>
       <link rel="icon" type="image/x-icon" href="/favicon.ico">
       <meta name="csrf-param" content="authenticity_token">
-<meta name="csrf-token" content="lR9hxy5Jqu8jJnimgX4vSij3LDb3Ukp0hRcEAl9DDW0MDnHFXXZE-UDE8ukcz7tXPy-m-smJ2rcrnJUrOEFZ7Q">
+<meta name="csrf-token" content="GPZtbfLQ6ETkCDnJyQ3UdDFM-BbHNVPa8MDafZau26ZwuUUecwrQ_AMzVA8eskidlfPXLD7QO8pWEQR2KDLMSw">
       <link rel="apple-touch-icon" href="/apple-touch-icon.png">
       <!-- Google OAuth -->
         <script src="https://accounts.google.com/gsi/client" async="" defer=""></script>
@@ -489,7 +489,7 @@
 
 
     <div class="sm-gap">
-    <div data-react-class="projects/ProjectHeader" data-react-props="{&quot;metadata&quot;:{&quot;level&quot;:&quot;Master&quot;,&quot;author&quot;:&quot;Alexa Orrico, Software Engineer at Holberton School&quot;,&quot;weight&quot;:2,&quot;migrated_to_sasheck&quot;:true,&quot;task_level_review_type&quot;:&quot;Your score will be updated as you progress.&quot;,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_manual_correction&quot;:true}},&quot;project&quot;:{&quot;completion&quot;:0.0,&quot;id&quot;:2416,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/005_color-7e093441390199aa2cdc4b6f6478f1def43125d09c333d9ba21227c9a56cbc0d.png&quot;,&quot;name&quot;:&quot;Q-learning&quot;,&quot;score&quot;:{&quot;mandatory&quot;:null,&quot;optional&quot;:null},&quot;tasksCount&quot;:0,&quot;correctionType&quot;:&quot;auto_and_manual&quot;},&quot;showMetadata&quot;:true,&quot;slackLink&quot;:null,&quot;tags&quot;:[],&quot;videoRoomLink&quot;:null}" data-react-cache-id="projects/ProjectHeader-0"><div class="panel panel-tile project-header"><div class="panel-body" style="align-items: center; display: flex;"><div class="pathway" style="padding: 16px;"><div class="project-circle project-circle-on-tile" style="border-radius: 100%; height: 150px; margin: auto; padding: 5px; width: 150px;"><div data-test-id="CircularProgressbarWithChildren"><div style="position: relative; width: 100%; height: 100%;"><svg class="CircularProgressbar " viewBox="0 0 100 100" data-test-id="CircularProgressbar" style="height: 140px; vertical-align: middle; width: 140px;"><path class="CircularProgressbar-trail" d="
+    <div data-react-class="projects/ProjectHeader" data-react-props="{&quot;metadata&quot;:{&quot;level&quot;:&quot;Master&quot;,&quot;author&quot;:&quot;Alexa Orrico, Software Engineer at Holberton School&quot;,&quot;weight&quot;:6,&quot;migrated_to_sasheck&quot;:true,&quot;correction&quot;:{&quot;released&quot;:true,&quot;requires_manual_correction&quot;:true}},&quot;project&quot;:{&quot;completion&quot;:0.0,&quot;id&quot;:2417,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/005_color-7e093441390199aa2cdc4b6f6478f1def43125d09c333d9ba21227c9a56cbc0d.png&quot;,&quot;name&quot;:&quot;Deep Q-learning&quot;,&quot;score&quot;:{&quot;mandatory&quot;:null,&quot;optional&quot;:null},&quot;tasksCount&quot;:0,&quot;correctionType&quot;:&quot;only_manual&quot;},&quot;showMetadata&quot;:true,&quot;slackLink&quot;:null,&quot;tags&quot;:[],&quot;videoRoomLink&quot;:null}" data-react-cache-id="projects/ProjectHeader-0"><div class="panel panel-tile project-header"><div class="panel-body" style="align-items: center; display: flex;"><div class="pathway" style="padding: 16px;"><div class="project-circle project-circle-on-tile" style="border-radius: 100%; height: 150px; margin: auto; padding: 5px; width: 150px;"><div data-test-id="CircularProgressbarWithChildren"><div style="position: relative; width: 100%; height: 100%;"><svg class="CircularProgressbar " viewBox="0 0 100 100" data-test-id="CircularProgressbar" style="height: 140px; vertical-align: middle; width: 140px;"><path class="CircularProgressbar-trail" d="
       M 50,50
       m 0,-48.5
       a 48.5,48.5 0 1 1 0,97
@@ -499,74 +499,56 @@
       m 0,-48.5
       a 48.5,48.5 0 1 1 0,97
       a 48.5,48.5 0 1 1 0,-97
-    " stroke-width="3" fill-opacity="0" style="stroke-dasharray: 304.734px, 304.734px; stroke-dashoffset: 304.734px;"></path></svg><div data-test-id="CircularProgressbarWithChildren__children" style="position: absolute; width: 100%; height: 100%; margin-top: -100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"><div class="position-relative"><div class="align-items-center d-flex justify-content-center project-circle-body active" style="border-radius: 100%; height: 124px; width: 124px;"><img alt="Project badge" src="/assets/pathway/005_color-7e093441390199aa2cdc4b6f6478f1def43125d09c333d9ba21227c9a56cbc0d.png" width="60%"></div><div class="p-1 position-absolute project-circle-score text-center" style="border-radius: 10px; width: auto; max-width: 100%; min-width: 120px; left: 50%; transform: translateX(-50%);"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Score Mandatory Tasks"><span class="d-block">0%</span></span></div></div></div></div></div></div></div><div class="project-info" style="flex-basis: 100%; margin: 16px;"><h1 style="margin: 0px;">Q-learning</h1><ul class="list-group metadata" id="project-metadata"><li class="list-group-item"><i aria-hidden="true" class="fa fa-level-up fa-fw"></i> Master</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-user fa-fw"></i> By: Alexa Orrico, Software Engineer at Holberton School</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-cog fa-fw"></i> Weight: 2</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-check-square fa-fw"></i> Your score will be updated as you progress.</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-check-square fa-fw"></i> <strong>Manual QA review must be done</strong> (request it when you are done with the project)</li></ul></div></div></div></div>
+    " stroke-width="3" fill-opacity="0" style="stroke-dasharray: 304.734px, 304.734px; stroke-dashoffset: 304.734px;"></path></svg><div data-test-id="CircularProgressbarWithChildren__children" style="position: absolute; width: 100%; height: 100%; margin-top: -100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"><div class="position-relative"><div class="align-items-center d-flex justify-content-center project-circle-body active" style="border-radius: 100%; height: 124px; width: 124px;"><img alt="Project badge" src="/assets/pathway/005_color-7e093441390199aa2cdc4b6f6478f1def43125d09c333d9ba21227c9a56cbc0d.png" width="60%"></div><div class="p-1 position-absolute project-circle-score text-center" style="border-radius: 10px; width: auto; max-width: 100%; min-width: 120px; left: 50%; transform: translateX(-50%);"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Score Mandatory Tasks"><span class="d-block">0%</span></span></div></div></div></div></div></div></div><div class="project-info" style="flex-basis: 100%; margin: 16px;"><h1 style="margin: 0px;">Deep Q-learning</h1><ul class="list-group metadata" id="project-metadata"><li class="list-group-item"><i aria-hidden="true" class="fa fa-level-up fa-fw"></i> Master</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-user fa-fw"></i> By: Alexa Orrico, Software Engineer at Holberton School</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-cog fa-fw"></i> Weight: 6</li><li class="list-group-item"><i aria-hidden="true" class="fa fa-check-square fa-fw"></i> <strong>Manual QA review must be done</strong> (request it when you are done with the project)</li></ul></div></div></div></div>
   </div>
 
 
     
 
-  <div id="project_id" class="d-none" data-project-id="2416"></div>
+  <div id="project_id" class="d-none" data-project-id="2417"></div>
 
 
     <div>
-      <ul class="nav nav-pills nav-justified" role="tablist">
-          <li class="active"><a href="#description" role="tab" data-toggle="tab">Description</a></li>
-          <li class=""><a href="#quiz" role="tab" data-toggle="tab">Quiz</a></li>
-      </ul>
       <div class="tab-content mt-4">
         <div role="tabpanel" class="tab-pane active" id="description">
           <div class="panel panel-default position-relative" id="project-description">
   <div class="panel-body text-justify">
-    <div class="project-description-markdown" data-markdown="true" data-markdown-converted="true"><script type="application/json" class="project-markdown-data">"![rlcats.jpg](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/8/5478322429e44f196aff6896f42ce2ea0741ba36.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20260929%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-Date=20260929T082635Z\u0026X-Amz-Expires=345600\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=6f97baa0f8df50fb8b141a3cef0f61a3b0826936a66031f2f134f15c0074a219)\r\n\r\n## Resources\r\n\r\n**Read or watch**:\r\n\r\n- [MIT 6.S191: Reinforcement Learning](/rltoken/saQI8BvlKV60MENEf_43MA)\r\n- [An introduction to Reinforcement Learning](/rltoken/gOyUyOcWBr5QnuXhgJuVlw)\r\n- [An Introduction to Q-Learning: A Tutorial For Beginners](/rltoken/c9NpSay4kyBNipR9cwPouw)\r\n- [Q-Learning](/rltoken/EYIHlSinClcDSXQ9TnuXLg)\r\n- [Markov Decision Processes (MDPs) - Structuring a Reinforcement Learning Problem](/rltoken/YUp-gcE1R9mC1cjjfvFh2w)\r\n- [Expected Return - What Drives a Reinforcement Learning Agent in an MDP](/rltoken/BKs-9m9ep0sTz8V-EjoGrQ)\r\n- [Policies and Value Functions - Good Actions for a Reinforcement Learning Agent](/rltoken/i3LsCe2sGI5kM1Qzr0d6Rg)\r\n- [What do Reinforcement Learning Algorithms Learn - Optimal Policies](/rltoken/3nofOjrYYD1ghpMOEkG02g)\r\n- [Q-Learning Explained - A Reinforcement Learning Technique](/rltoken/v3Bnyaow4gRx6K0os1GsSA)\r\n- [Exploration vs. Exploitation - Learning the Optimal Reinforcement Learning Policy](/rltoken/igctuWgpbqhykidsjEwZxQ)\r\n- [Q-Learning Tutorial 1: Train Gymnasium FrozenLake-v1 with Python Reinforcement Learning](/rltoken/U-tHCRc7pwL9rQNcfcJNag)\r\n- [Q-Learning: Implementation](/rltoken/PoDqq2FzDizjdtVLkmgSZQ)\r\n- [Markov Decision Processes](/rltoken/IRn9ww1sX2MQSCsqwgUhSA)\r\n\r\n**Definitions to skim:**\r\n\r\n- [Reinforcement Learning](/rltoken/5UL4o3rRKzaKgdn_KZbk4g)\r\n- [Markov Decision Process](/rltoken/qdx8Ngc-KwHS4tEqYFhgcw)\r\n- [Q-learning](/rltoken/6PTuLv2ydxZMNSoHo2H__A)\r\n\r\n**References**:\r\n\r\n- [Gymnasium](/rltoken/SsIl9ONmw0QdnKM3JCrJEw)\r\n- [Gymnasium: Frozen Lake env](/rltoken/JV_5-FJjBJWz86dKtlkeSg)\r\n- [Gymnasium: Q-Learning with Frozenlake env](/rltoken/RoH_yN8UOWnfH8NwrYQ_cw)\r\n- [Gymnasium: Env](/rltoken/lI4cmpbu0UYJGH7G4moxew)\r\n\r\n## Learning Objectives\r\n\r\n- What is a Markov Decision Process?\r\n- What is an environment?\r\n- What is an agent?\r\n- What is a state?\r\n- What is a policy function?\r\n- What is a value function? a state-value function? an action-value function?\r\n- What is a discount factor?\r\n- What is the Bellman equation?\r\n- What is epsilon greedy?\r\n- What is Q-learning?\r\n\r\n## Requirements\r\n\r\n### General\r\n\r\n- Allowed editors: `vi`, `vim`, `emacs`\r\n- All your files will be interpreted/compiled on Ubuntu 20.04 LTS using `python3` (version 3.9)\r\n- Your files will be executed with `numpy` (version 1.25.2), and `gymnasium ` (version 0.29.1)\r\n- All your files should end with a new line\r\n- The first line of all your files should be exactly `#!/usr/bin/env python3`\r\n- A `README.md` file, at the root of the folder of the project, is mandatory\r\n- Your code should use the `pycodestyle` style (version 2.11.1)\r\n- All your modules should have documentation (`python3 -c 'print(__import__(\"my_module\").__doc__)' `)\r\n- All your classes should have documentation (`python3 -c 'print(__import__(\"my_module\").MyClass.__doc__)' `)\r\n- All your functions (inside and outside a class) should have documentation (`python3 -c 'print(__import__(\"my_module\").my_function.__doc__)' ` and `python3 -c 'print(__import__(\"my_module\").MyClass.my_function.__doc__)' `)\r\n- All your files must be executable\r\n- **Your code should use the minimum number of operations**\r\n\r\n## More Info\r\n\r\n### Installing Gymnasium 0.29.1\r\n\r\n```\r\npip install --user gymnasium==0.29.1\r\n```\r\n\r\n### Dependencies (that should already be installed)\r\n\r\n```\r\npip install --user Pillow==10.3.0\r\npip install --user h5py==3.11.0\r\n```\r"</script><div class="project-description-content" data-markdown-converted="true"><p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/8/5478322429e44f196aff6896f42ce2ea0741ba36.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20260929%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20260929T082635Z&amp;X-Amz-Expires=345600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=6f97baa0f8df50fb8b141a3cef0f61a3b0826936a66031f2f134f15c0074a219" alt="rlcats.jpg"></p>
+    <div class="project-description-markdown" data-markdown="true" data-markdown-converted="true"><script type="application/json" class="project-markdown-data">"![breakout.gif](https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/8/9239a27ccd609cb9092aba0e6bb55ba7b5cf0b6b.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20261001%2Feu-west-3%2Fs3%2Faws4_request\u0026X-Amz-Date=20261001T074541Z\u0026X-Amz-Expires=345600\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=7dc6c762cf962b732a2ba06c42afe8ddad62e2a2ce0de255ba0364a292bce6a0)\r\n\r\n## Resources\r\n\r\n**Read or watch**:\r\n\r\n- [Deep Q-Learning - Combining Neural Networks and Reinforcement Learning](/rltoken/ieV4_ka9fXq0EDjTsW0TZQ)\r\n- [Replay Memory Explained - Experience for Deep Q-Network Training](/rltoken/mA-O49pM8Cza7hLcD1COow)\r\n- [Training a Deep Q-Network - Reinforcement Learning](/rltoken/Q0mismdsgAZz9LtjbhJSuw)\r\n- [Training a Deep Q-Network with Fixed Q-targets - Reinforcement Learning](/rltoken/D9jXXXZ47HqUgcslmf_Nmw)\r\n- [Deep Reinforcement Learning Libraries](/rltoken/94YNUCeemEZuKdNxSapAKA)\r\n\r\n**References**:\r\n\r\n- [Gymnasium Wrappers for existing environment modification](/rltoken/GYADhGr4wQFaEThtKqzr3A)\r\n- [Setting up anaconda for keras-rl](/rltoken/AoxRUNSCeL-WGLTt-UcN2Q)\r\n- [How to import keras_rl](/rltoken/76a-knAiZ2199PVfdli6Hg)\r\n- [keras-rl](/rltoken/nqDN9cYW6hfVPty0J4F44w)\r\n\t- [rl.policy](https://github.com/keras-rl/keras-rl/blob/master/rl/policy.py)\r\n\t- [rl.memory](https://github.com/keras-rl/keras-rl/blob/master/rl/memory.py)\r\n\t- [rl.agents.dqn](https://github.com/keras-rl/keras-rl/blob/master/rl/agents/dqn.py)\r\n- [Playing Atari with Deep Reinforcement Learning](/rltoken/6S3fYdbeXwEEewunPKz0Cw)\r\n\r\n## Learning Objectives\r\n\r\n- What is Deep Q-learning?\r\n- What is the policy network?\r\n- What is replay memory?\r\n- What is the target network?\r\n- Why must we utilize two separate networks during training?\r\n- What is keras-rl? How do you use it?\r\n\r\n## Requirements\r\n\r\n### General\r\n\r\n- Allowed editors: `vi`, `vim`, `emacs`\r\n- All your files will be interpreted/compiled on Ubuntu 20.04 LTS using `python3` (version 3.9)\r\n- Your files will be executed with `numpy` (version 1.25.2),  `gymnasium` (version 0.29.1), `keras` (version 2.15.0), and `keras-rl2` (version 1.0.4)\r\n- All your files should end with a new line\r\n- The first line of all your files should be exactly `#!/usr/bin/env python3`\r\n- A `README.md` file, at the root of the folder of the project, is mandatory\r\n- Your code should use the `pycodestyle` style (version 2.11.1)\r\n- All your modules should have documentation (`python3 -c 'print(__import__(\"my_module\").__doc__)' `)\r\n- All your classes should have documentation (`python3 -c 'print(__import__(\"my_module\").MyClass.__doc__)' `)\r\n- All your functions (inside and outside a class) should have documentation (`python3 -c 'print(__import__(\"my_module\").my_function.__doc__)' ` and `python3 -c 'print(__import__(\"my_module\").MyClass.my_function.__doc__)' `)\r\n- All your files must be executable\r\n- **Your code should use the minimum number of operations**\r\n\r\n##  Keras-RL Installation\r\n\r\n```\r\npip install --user keras-rl2==1.0.4\r\n```\r\n\r\n### Dependencies\r\n```\r\npip install --user gymnasium[atari]==0.29.1\r\npip install --user tensorflow==2.15.0\r\npip install --user keras==2.15.0\r\npip install --user numpy==1.25.2\r\npip install --user Pillow==10.3.0\r\npip install --user h5py==3.11.0\r\npip install autorom[accept-rom-license]\r\n```\r"</script><div class="project-description-content" data-markdown-converted="true"><p><img src="https://s3.eu-west-3.amazonaws.com/hbtn.intranet/uploads/medias/2020/8/9239a27ccd609cb9092aba0e6bb55ba7b5cf0b6b.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA4MYA5JM5DUTZGMZG%2F20261001%2Feu-west-3%2Fs3%2Faws4_request&amp;X-Amz-Date=20261001T074541Z&amp;X-Amz-Expires=345600&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=7dc6c762cf962b732a2ba06c42afe8ddad62e2a2ce0de255ba0364a292bce6a0" alt="breakout.gif"></p>
 <h2 id="resources">Resources</h2>
 <p><strong>Read or watch</strong>:</p>
 <ul>
-<li><a href="/rltoken/saQI8BvlKV60MENEf_43MA" target="_blank" rel="noopener noreferrer">MIT 6.S191: Reinforcement Learning</a></li>
-<li><a href="/rltoken/gOyUyOcWBr5QnuXhgJuVlw" target="_blank" rel="noopener noreferrer">An introduction to Reinforcement Learning</a></li>
-<li><a href="/rltoken/c9NpSay4kyBNipR9cwPouw" target="_blank" rel="noopener noreferrer">An Introduction to Q-Learning: A Tutorial For Beginners</a></li>
-<li><a href="/rltoken/EYIHlSinClcDSXQ9TnuXLg" target="_blank" rel="noopener noreferrer">Q-Learning</a></li>
-<li><a href="/rltoken/YUp-gcE1R9mC1cjjfvFh2w" target="_blank" rel="noopener noreferrer">Markov Decision Processes (MDPs) - Structuring a Reinforcement Learning Problem</a></li>
-<li><a href="/rltoken/BKs-9m9ep0sTz8V-EjoGrQ" target="_blank" rel="noopener noreferrer">Expected Return - What Drives a Reinforcement Learning Agent in an MDP</a></li>
-<li><a href="/rltoken/i3LsCe2sGI5kM1Qzr0d6Rg" target="_blank" rel="noopener noreferrer">Policies and Value Functions - Good Actions for a Reinforcement Learning Agent</a></li>
-<li><a href="/rltoken/3nofOjrYYD1ghpMOEkG02g" target="_blank" rel="noopener noreferrer">What do Reinforcement Learning Algorithms Learn - Optimal Policies</a></li>
-<li><a href="/rltoken/v3Bnyaow4gRx6K0os1GsSA" target="_blank" rel="noopener noreferrer">Q-Learning Explained - A Reinforcement Learning Technique</a></li>
-<li><a href="/rltoken/igctuWgpbqhykidsjEwZxQ" target="_blank" rel="noopener noreferrer">Exploration vs. Exploitation - Learning the Optimal Reinforcement Learning Policy</a></li>
-<li><a href="/rltoken/U-tHCRc7pwL9rQNcfcJNag" target="_blank" rel="noopener noreferrer">Q-Learning Tutorial 1: Train Gymnasium FrozenLake-v1 with Python Reinforcement Learning</a></li>
-<li><a href="/rltoken/PoDqq2FzDizjdtVLkmgSZQ" target="_blank" rel="noopener noreferrer">Q-Learning: Implementation</a></li>
-<li><a href="/rltoken/IRn9ww1sX2MQSCsqwgUhSA" target="_blank" rel="noopener noreferrer">Markov Decision Processes</a></li>
-</ul>
-<p><strong>Definitions to skim:</strong></p>
-<ul>
-<li><a href="/rltoken/5UL4o3rRKzaKgdn_KZbk4g" target="_blank" rel="noopener noreferrer">Reinforcement Learning</a></li>
-<li><a href="/rltoken/qdx8Ngc-KwHS4tEqYFhgcw" target="_blank" rel="noopener noreferrer">Markov Decision Process</a></li>
-<li><a href="/rltoken/6PTuLv2ydxZMNSoHo2H__A" target="_blank" rel="noopener noreferrer">Q-learning</a></li>
+<li><a href="/rltoken/ieV4_ka9fXq0EDjTsW0TZQ" target="_blank" rel="noopener noreferrer">Deep Q-Learning - Combining Neural Networks and Reinforcement Learning</a></li>
+<li><a href="/rltoken/mA-O49pM8Cza7hLcD1COow" target="_blank" rel="noopener noreferrer">Replay Memory Explained - Experience for Deep Q-Network Training</a></li>
+<li><a href="/rltoken/Q0mismdsgAZz9LtjbhJSuw" target="_blank" rel="noopener noreferrer">Training a Deep Q-Network - Reinforcement Learning</a></li>
+<li><a href="/rltoken/D9jXXXZ47HqUgcslmf_Nmw" target="_blank" rel="noopener noreferrer">Training a Deep Q-Network with Fixed Q-targets - Reinforcement Learning</a></li>
+<li><a href="/rltoken/94YNUCeemEZuKdNxSapAKA" target="_blank" rel="noopener noreferrer">Deep Reinforcement Learning Libraries</a></li>
 </ul>
 <p><strong>References</strong>:</p>
 <ul>
-<li><a href="/rltoken/SsIl9ONmw0QdnKM3JCrJEw" target="_blank" rel="noopener noreferrer">Gymnasium</a></li>
-<li><a href="/rltoken/JV_5-FJjBJWz86dKtlkeSg" target="_blank" rel="noopener noreferrer">Gymnasium: Frozen Lake env</a></li>
-<li><a href="/rltoken/RoH_yN8UOWnfH8NwrYQ_cw" target="_blank" rel="noopener noreferrer">Gymnasium: Q-Learning with Frozenlake env</a></li>
-<li><a href="/rltoken/lI4cmpbu0UYJGH7G4moxew" target="_blank" rel="noopener noreferrer">Gymnasium: Env</a></li>
+<li><a href="/rltoken/GYADhGr4wQFaEThtKqzr3A" target="_blank" rel="noopener noreferrer">Gymnasium Wrappers for existing environment modification</a></li>
+<li><a href="/rltoken/AoxRUNSCeL-WGLTt-UcN2Q" target="_blank" rel="noopener noreferrer">Setting up anaconda for keras-rl</a></li>
+<li><a href="/rltoken/76a-knAiZ2199PVfdli6Hg" target="_blank" rel="noopener noreferrer">How to import keras_rl</a></li>
+<li><a href="/rltoken/nqDN9cYW6hfVPty0J4F44w" target="_blank" rel="noopener noreferrer">keras-rl</a><ul>
+<li><a href="https://github.com/keras-rl/keras-rl/blob/master/rl/policy.py" target="_blank" rel="noopener noreferrer">rl.policy</a></li>
+<li><a href="https://github.com/keras-rl/keras-rl/blob/master/rl/memory.py" target="_blank" rel="noopener noreferrer">rl.memory</a></li>
+<li><a href="https://github.com/keras-rl/keras-rl/blob/master/rl/agents/dqn.py" target="_blank" rel="noopener noreferrer">rl.agents.dqn</a></li></ul></li>
+<li><a href="/rltoken/6S3fYdbeXwEEewunPKz0Cw" target="_blank" rel="noopener noreferrer">Playing Atari with Deep Reinforcement Learning</a></li>
 </ul>
 <h2 id="learningobjectives">Learning Objectives</h2>
 <ul>
-<li>What is a Markov Decision Process?</li>
-<li>What is an environment?</li>
-<li>What is an agent?</li>
-<li>What is a state?</li>
-<li>What is a policy function?</li>
-<li>What is a value function? a state-value function? an action-value function?</li>
-<li>What is a discount factor?</li>
-<li>What is the Bellman equation?</li>
-<li>What is epsilon greedy?</li>
-<li>What is Q-learning?</li>
+<li>What is Deep Q-learning?</li>
+<li>What is the policy network?</li>
+<li>What is replay memory?</li>
+<li>What is the target network?</li>
+<li>Why must we utilize two separate networks during training?</li>
+<li>What is keras-rl? How do you use it?</li>
 </ul>
 <h2 id="requirements">Requirements</h2>
 <h3 id="general">General</h3>
 <ul>
 <li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
 <li>All your files will be interpreted/compiled on Ubuntu 20.04 LTS using <code>python3</code> (version 3.9)</li>
-<li>Your files will be executed with <code>numpy</code> (version 1.25.2), and <code>gymnasium</code> (version 0.29.1)</li>
+<li>Your files will be executed with <code>numpy</code> (version 1.25.2),  <code>gymnasium</code> (version 0.29.1), <code>keras</code> (version 2.15.0), and <code>keras-rl2</code> (version 1.0.4)</li>
 <li>All your files should end with a new line</li>
 <li>The first line of all your files should be exactly <code>#!/usr/bin/env python3</code></li>
 <li>A <code>README.md</code> file, at the root of the folder of the project, is mandatory</li>
@@ -577,391 +559,21 @@
 <li>All your files must be executable</li>
 <li><strong>Your code should use the minimum number of operations</strong></li>
 </ul>
-<h2 id="moreinfo">More Info</h2>
-<h3 id="installinggymnasium0291">Installing Gymnasium 0.29.1</h3>
-<pre><code data-highlighted="yes" class="hljs language-lua">pip install <span class="hljs-comment">--user gymnasium==0.29.1</span>
+<h2 id="kerasrlinstallation">Keras-RL Installation</h2>
+<pre><code data-highlighted="yes" class="hljs language-lua">pip install <span class="hljs-comment">--user keras-rl2==1.0.4</span>
 </code></pre>
-<h3 id="dependenciesthatshouldalreadybeinstalled">Dependencies (that should already be installed)</h3>
-<pre><code data-highlighted="yes" class="hljs language-lua">pip install <span class="hljs-comment">--user Pillow==10.3.0</span>
+<h3 id="dependencies">Dependencies</h3>
+<pre><code data-highlighted="yes" class="hljs language-lua">pip install <span class="hljs-comment">--user gymnasium[atari]==0.29.1</span>
+pip install <span class="hljs-comment">--user tensorflow==2.15.0</span>
+pip install <span class="hljs-comment">--user keras==2.15.0</span>
+pip install <span class="hljs-comment">--user numpy==1.25.2</span>
+pip install <span class="hljs-comment">--user Pillow==10.3.0</span>
 pip install <span class="hljs-comment">--user h5py==3.11.0</span>
+pip install autorom[accept-rom-license]
 </code></pre></div></div>
   </div>
 </div>
         </div>
-          <div role="tabpanel" class="tab-pane " id="quiz">
-              <div class="panel panel-default" id="project-quiz-questions-title">
-    <div class="panel-body">
-
-        <div class="alert alert-info">
-          <strong>Great!</strong>
-          You've completed the quiz successfully! Keep going!
-          <span id="quiz_questions_collapse_toggle">(Hide quiz)</span>
-        </div>
-
-      <section class="quiz_questions_show_container">
-          <div class="quiz_question_item_container" data-role="quiz_question6333" data-position="1">
-            <div class=" clearfix" id="quiz_question-6333">
-
-    <h4 class="quiz_question">
-        
-        Question #0
-    </h4>
-
-    <!-- Quiz question Body -->
-    <p>What is reinforcement learning?</p>
-
-
-    <!-- Quiz question Answers -->
-        <ul class="quiz_question_answers" data-question-id="6333">
-                <li class="">
-
-  <input type="radio" name="6333" id="6333-1597064459176" value="1597064459176" data-quiz-answer-id="1597064459176" data-quiz-question-id="6333" disabled="disabled">
-  <label for="6333-1597064459176"><p>A type of supervised learning, because the rewards supervise the learning</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="radio" name="6333" id="6333-1597064470602" value="1597064470602" data-quiz-answer-id="1597064470602" data-quiz-question-id="6333" disabled="disabled">
-  <label for="6333-1597064470602"><p>A type of unsupervised learning, because there are no labels for each action</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="radio" name="6333" id="6333-1597064530799" value="1597064530799" data-quiz-answer-id="1597064530799" data-quiz-question-id="6333" disabled="disabled" checked="checked">
-  <label for="6333-1597064530799"><p>Its own subcategory of machine learning</p>
-</label>
-</li>
-
-        </ul>
-
-    <!-- Quiz question Tips -->
-
-</div>
-
-          </div>
-          <div class="quiz_question_item_container" data-role="quiz_question6334" data-position="2">
-            <div class=" clearfix" id="quiz_question-6334">
-
-    <h4 class="quiz_question">
-        
-        Question #1
-    </h4>
-
-    <!-- Quiz question Body -->
-    <p>What is an environment?</p>
-
-
-    <!-- Quiz question Answers -->
-        <ul class="quiz_question_answers" data-question-id="6334">
-                <li class="">
-
-  <input type="radio" name="6334" id="6334-1597064553451" value="1597064553451" data-quiz-answer-id="1597064553451" data-quiz-question-id="6334" disabled="disabled" checked="checked">
-  <label for="6334-1597064553451"><p>The place in which actions can be performed</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="radio" name="6334" id="6334-1597064595588" value="1597064595588" data-quiz-answer-id="1597064595588" data-quiz-question-id="6334" disabled="disabled">
-  <label for="6334-1597064595588"><p>A description of what the agent sees</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="radio" name="6334" id="6334-1597064613428" value="1597064613428" data-quiz-answer-id="1597064613428" data-quiz-question-id="6334" disabled="disabled">
-  <label for="6334-1597064613428"><p>A list of actions that can be performed</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="radio" name="6334" id="6334-1597064684102" value="1597064684102" data-quiz-answer-id="1597064684102" data-quiz-question-id="6334" disabled="disabled">
-  <label for="6334-1597064684102"><p>A description of which actions the agent should perform</p>
-</label>
-</li>
-
-        </ul>
-
-    <!-- Quiz question Tips -->
-
-</div>
-
-          </div>
-          <div class="quiz_question_item_container" data-role="quiz_question6335" data-position="3">
-            <div class=" clearfix" id="quiz_question-6335">
-
-    <h4 class="quiz_question">
-        
-        Question #2
-    </h4>
-
-    <!-- Quiz question Body -->
-    <p>An agent chooses its action based on:</p>
-
-
-    <!-- Quiz question Answers -->
-        <ul class="quiz_question_answers" data-question-id="6335">
-                <li class="">
-
-  <input type="checkbox" name="6335" id="6335-1597064723092" value="1597064723092" data-quiz-answer-id="1597064723092" data-quiz-question-id="6335" disabled="disabled" checked="checked">
-  <label for="6335-1597064723092"><p>The current state</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="6335" id="6335-1597064777169" value="1597064777169" data-quiz-answer-id="1597064777169" data-quiz-question-id="6335" disabled="disabled" checked="checked">
-  <label for="6335-1597064777169"><p>The value function</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="6335" id="6335-1597064804099" value="1597064804099" data-quiz-answer-id="1597064804099" data-quiz-question-id="6335" disabled="disabled" checked="checked">
-  <label for="6335-1597064804099"><p>The policy function</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="6335" id="6335-1597064811946" value="1597064811946" data-quiz-answer-id="1597064811946" data-quiz-question-id="6335" disabled="disabled" checked="checked">
-  <label for="6335-1597064811946"><p>The previous reward</p>
-</label>
-</li>
-
-        </ul>
-
-    <!-- Quiz question Tips -->
-
-</div>
-
-          </div>
-          <div class="quiz_question_item_container" data-role="quiz_question6336" data-position="4">
-            <div class=" clearfix" id="quiz_question-6336">
-
-    <h4 class="quiz_question">
-        
-        Question #3
-    </h4>
-
-    <!-- Quiz question Body -->
-    <p>What is a policy function?</p>
-
-
-    <!-- Quiz question Answers -->
-        <ul class="quiz_question_answers" data-question-id="6336">
-                <li class="">
-
-  <input type="checkbox" name="6336" id="6336-1597064872305" value="1597064872305" data-quiz-answer-id="1597064872305" data-quiz-question-id="6336" disabled="disabled">
-  <label for="6336-1597064872305"><p>A description of how the agent should be rewarded</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="6336" id="6336-1597064897528" value="1597064897528" data-quiz-answer-id="1597064897528" data-quiz-question-id="6336" disabled="disabled" checked="checked">
-  <label for="6336-1597064897528"><p>A description of how the agent should behave</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="6336" id="6336-1597064922927" value="1597064922927" data-quiz-answer-id="1597064922927" data-quiz-question-id="6336" disabled="disabled">
-  <label for="6336-1597064922927"><p>A description of how the agent could be rewarded in the future</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="6336" id="6336-1597064941602" value="1597064941602" data-quiz-answer-id="1597064941602" data-quiz-question-id="6336" disabled="disabled" checked="checked">
-  <label for="6336-1597064941602"><p>A function that is learned</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="6336" id="6336-1597064983884" value="1597064983884" data-quiz-answer-id="1597064983884" data-quiz-question-id="6336" disabled="disabled">
-  <label for="6336-1597064983884"><p>A function that is set at the beginning</p>
-</label>
-</li>
-
-        </ul>
-
-    <!-- Quiz question Tips -->
-
-</div>
-
-          </div>
-          <div class="quiz_question_item_container" data-role="quiz_question6337" data-position="5">
-            <div class=" clearfix" id="quiz_question-6337">
-
-    <h4 class="quiz_question">
-        
-        Question #4
-    </h4>
-
-    <!-- Quiz question Body -->
-    <p>What is a value function?</p>
-
-
-    <!-- Quiz question Answers -->
-        <ul class="quiz_question_answers" data-question-id="6337">
-                <li class="">
-
-  <input type="checkbox" name="6337" id="6337-1597064976872" value="1597064976872" data-quiz-answer-id="1597064976872" data-quiz-question-id="6337" disabled="disabled">
-  <label for="6337-1597064976872"><p>A description of how the agent should be rewarded</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="6337" id="6337-1597065040070" value="1597065040070" data-quiz-answer-id="1597065040070" data-quiz-question-id="6337" disabled="disabled">
-  <label for="6337-1597065040070"><p>A description of how the agent should behave</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="6337" id="6337-1597065041923" value="1597065041923" data-quiz-answer-id="1597065041923" data-quiz-question-id="6337" disabled="disabled" checked="checked">
-  <label for="6337-1597065041923"><p>A description of how the agent could be rewarded in the future</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="6337" id="6337-1597065043315" value="1597065043315" data-quiz-answer-id="1597065043315" data-quiz-question-id="6337" disabled="disabled" checked="checked">
-  <label for="6337-1597065043315"><p>A function that is learned</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="6337" id="6337-1597065044825" value="1597065044825" data-quiz-answer-id="1597065044825" data-quiz-question-id="6337" disabled="disabled">
-  <label for="6337-1597065044825"><p>A function that is set at the beginning</p>
-</label>
-</li>
-
-        </ul>
-
-    <!-- Quiz question Tips -->
-
-</div>
-
-          </div>
-          <div class="quiz_question_item_container" data-role="quiz_question6338" data-position="6">
-            <div class=" clearfix" id="quiz_question-6338">
-
-    <h4 class="quiz_question">
-        
-        Question #5
-    </h4>
-
-    <!-- Quiz question Body -->
-    <p>What is epsilon-greedy?</p>
-
-
-    <!-- Quiz question Answers -->
-        <ul class="quiz_question_answers" data-question-id="6338">
-                <li class="">
-
-  <input type="radio" name="6338" id="6338-1597065092155" value="1597065092155" data-quiz-answer-id="1597065092155" data-quiz-question-id="6338" disabled="disabled">
-  <label for="6338-1597065092155"><p>A type of policy function</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="radio" name="6338" id="6338-1597065108394" value="1597065108394" data-quiz-answer-id="1597065108394" data-quiz-question-id="6338" disabled="disabled">
-  <label for="6338-1597065108394"><p>A type of value function</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="radio" name="6338" id="6338-1597065116709" value="1597065116709" data-quiz-answer-id="1597065116709" data-quiz-question-id="6338" disabled="disabled">
-  <label for="6338-1597065116709"><p>A way to balance policy and value functions</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="radio" name="6338" id="6338-1597065133196" value="1597065133196" data-quiz-answer-id="1597065133196" data-quiz-question-id="6338" disabled="disabled" checked="checked">
-  <label for="6338-1597065133196"><p>A balance exploration and exploitation</p>
-</label>
-</li>
-
-        </ul>
-
-    <!-- Quiz question Tips -->
-
-</div>
-
-          </div>
-          <div class="quiz_question_item_container" data-role="quiz_question6339" data-position="7">
-            <div class=" clearfix" id="quiz_question-6339">
-
-    <h4 class="quiz_question">
-        
-        Question #6
-    </h4>
-
-    <!-- Quiz question Body -->
-    <p>What is Q-learning?</p>
-
-
-    <!-- Quiz question Answers -->
-        <ul class="quiz_question_answers" data-question-id="6339">
-                <li class="">
-
-  <input type="checkbox" name="6339" id="6339-1597065211074" value="1597065211074" data-quiz-answer-id="1597065211074" data-quiz-question-id="6339" disabled="disabled" checked="checked">
-  <label for="6339-1597065211074"><p>A reinforcement learning algorithm</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="6339" id="6339-1597065222266" value="1597065222266" data-quiz-answer-id="1597065222266" data-quiz-question-id="6339" disabled="disabled">
-  <label for="6339-1597065222266"><p>A deep reinforcement learning algorithm</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="6339" id="6339-1597065232362" value="1597065232362" data-quiz-answer-id="1597065232362" data-quiz-question-id="6339" disabled="disabled" checked="checked">
-  <label for="6339-1597065232362"><p>A value-based learning algorithm</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="6339" id="6339-1597065318629" value="1597065318629" data-quiz-answer-id="1597065318629" data-quiz-question-id="6339" disabled="disabled">
-  <label for="6339-1597065318629"><p>A policy-based learning algorithm</p>
-</label>
-</li>
-
-                <li class="">
-
-  <input type="checkbox" name="6339" id="6339-1597065330303" value="1597065330303" data-quiz-answer-id="1597065330303" data-quiz-question-id="6339" disabled="disabled">
-  <label for="6339-1597065330303"><p>A model-based approach</p>
-</label>
-</li>
-
-        </ul>
-
-    <!-- Quiz question Tips -->
-
-</div>
-
-          </div>
-
-      </section>
-    </div>
-  </div>
-
-          </div>
       </div>
     </div>
 
@@ -978,7 +590,7 @@ pip install <span class="hljs-comment">--user h5py==3.11.0</span>
   <div class="modal fade" id="report-issue-modal" tabindex="-1" role="dialog" aria-labelledby="report-issue-title">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <form action="/projects/2416/issue_reports" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="lR9hxy5Jqu8jJnimgX4vSij3LDb3Ukp0hRcEAl9DDW0MDnHFXXZE-UDE8ukcz7tXPy-m-smJ2rcrnJUrOEFZ7Q" autocomplete="off">
+        <form action="/projects/2417/issue_reports" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="GPZtbfLQ6ETkCDnJyQ3UdDFM-BbHNVPa8MDafZau26ZwuUUecwrQ_AMzVA8eskidlfPXLD7QO8pWEQR2KDLMSw" autocomplete="off">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
             <h4 class="modal-title" id="report-issue-title">Report an issue</h4>
@@ -990,11 +602,7 @@ pip install <span class="hljs-comment">--user h5py==3.11.0</span>
               <input type="hidden" name="task_index" id="issue_task_index" value="" autocomplete="off">
               <select name="task_id" id="issue_task_id" class="form-control">
                 <option value="">Not specific to one task</option>
-                  <option value="22018" data-task-index="0">Load the Environment</option>
-                  <option value="22019" data-task-index="1">Initialize Q-table</option>
-                  <option value="22020" data-task-index="2">Epsilon Greedy</option>
-                  <option value="22021" data-task-index="3">Q-learning</option>
-                  <option value="22022" data-task-index="4">Play</option>
+                  <option value="22023" data-task-index="0">Breakout</option>
               </select>
               <script>
                 (function () {
@@ -1035,17 +643,17 @@ pip install <span class="hljs-comment">--user h5py==3.11.0</span>
 
   </div>
 
-  <div class="col-sm-12 col-md-12 col-lg-8 xol-xl-9" data-current-task-index="0" data-total-tasks="5">
+  <div class="col-sm-12 col-md-12 col-lg-8 xol-xl-9" data-current-task-index="0" data-total-tasks="1">
     <!-- All Tasks Display (initially hidden, shown one at a time via JS) -->
-      <div class="task-container" data-role="task22018" data-position="1" id="task-num-0" style="display: block;">
-        <div class="panel panel-default task-card " id="task-22018">
+      <div class="task-container" data-role="task22023" data-position="1" id="task-num-0" style="display: block;">
+        <div class="panel panel-default task-card " id="task-22023">
   <span id="user_id" data-id="11510"></span>
 
   <div class="panel-heading panel-heading-actions">
     <h3 class="panel-title" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-      <span>0. Load the Environment</span>
+      <span>0. Breakout</span>
       <div style="display: flex; align-items: center; gap: 10px;">
-          <button class="btn btn-link task-help-icon" data-task-id="22018" data-batch-id="1062" data-toggle="modal" data-target="#task-22018-users-done-modal" data-placement="left" title="Help - Who has already finished the task" style="padding: 0; color: #666; text-decoration: none; font-size: inherit; vertical-align: baseline;">
+          <button class="btn btn-link task-help-icon" data-task-id="22023" data-batch-id="1062" data-toggle="modal" data-target="#task-22023-users-done-modal" data-placement="left" title="Help - Who has already finished the task" style="padding: 0; color: #666; text-decoration: none; font-size: inherit; vertical-align: baseline;">
             <i class="fa fa-users" style="font-size: inherit;"></i>
           </button>
       </div>
@@ -1058,73 +666,25 @@ pip install <span class="hljs-comment">--user h5py==3.11.0</span>
     <!-- Progress vs Score -->
 
     <!-- Task Body -->
-    <div class="task-description-markdown" data-markdown="true" data-markdown-converted="true"><script type="application/json" class="task-markdown-data">"Write a function `def load_frozen_lake(desc=None, map_name=None, is_slippery=False):` that loads the pre-made `FrozenLakeEnv` environment from  `gymnasium`:\r\n\r\n- `desc` is either `None` or a list of lists containing a custom description of the map to load for the environment\r\n- `map_name` is either `None` or a string containing the pre-made map to load\r\n- *Note: If both `desc` and `map_name` are `None`, the environment will load a randomly generated 8x8 map*\r\n- `is_slippery` is a boolean to determine if the ice is slippery\r\n- Returns: the environment\r\n\r\n```\r\n$ cat 0-main.py\r\n#!/usr/bin/env python3\r\n\r\nload_frozen_lake = __import__('0-load_env').load_frozen_lake\r\n\r\nenv = load_frozen_lake()\r\nprint(env.unwrapped.desc) \r\nprint(len(env.unwrapped.P[0][0]))\r\nprint(env.unwrapped.P[0][0])\r\n\r\nenv = load_frozen_lake(is_slippery=True)\r\nprint(env.unwrapped.desc)\r\nprint(len(env.unwrapped.P[0][0]))\r\nprint(env.unwrapped.P[0][0])\r\n\r\ndesc = [['S', 'F', 'F'], ['F', 'H', 'H'], ['F', 'F', 'G']]\r\nenv = load_frozen_lake(desc=desc)\r\nprint(env.unwrapped.desc)\r\n\r\nenv = load_frozen_lake(map_name='4x4')\r\nprint(env.unwrapped.desc)\r\n$ ./0-main.py\r\n[[b'S' b'F' b'F' b'F' b'F' b'F' b'F' b'F']\r\n [b'H' b'F' b'H' b'F' b'F' b'H' b'F' b'F']\r\n [b'F' b'F' b'H' b'H' b'F' b'F' b'H' b'F']\r\n [b'F' b'F' b'F' b'F' b'F' b'H' b'F' b'H']\r\n [b'F' b'H' b'F' b'F' b'F' b'F' b'F' b'F']\r\n [b'H' b'F' b'F' b'F' b'F' b'F' b'F' b'H']\r\n [b'F' b'H' b'F' b'F' b'F' b'H' b'F' b'F']\r\n [b'F' b'F' b'F' b'F' b'F' b'H' b'F' b'G']]\r\n1\r\n[(1.0, 0, 0.0, False)]\r\n[[b'S' b'F' b'F' b'F' b'F' b'F' b'H' b'H']\r\n [b'F' b'F' b'H' b'F' b'H' b'F' b'F' b'H']\r\n [b'H' b'F' b'H' b'F' b'F' b'F' b'F' b'F']\r\n [b'F' b'H' b'F' b'F' b'F' b'F' b'F' b'F']\r\n [b'F' b'F' b'H' b'F' b'F' b'F' b'F' b'H']\r\n [b'F' b'F' b'H' b'F' b'F' b'F' b'F' b'F']\r\n [b'F' b'F' b'F' b'H' b'H' b'F' b'F' b'F']\r\n [b'F' b'F' b'F' b'F' b'F' b'H' b'F' b'G']]\r\n3\r\n[(0.3333333333333333, 0, 0.0, False), (0.3333333333333333, 0, 0.0, False), (0.3333333333333333, 8, 0.0, False)]\r\n[[b'S' b'F' b'F']\r\n [b'F' b'H' b'H']\r\n [b'F' b'F' b'G']]\r\n[[b'S' b'F' b'F' b'F']\r\n [b'F' b'H' b'F' b'H']\r\n [b'F' b'F' b'F' b'H']\r\n [b'H' b'F' b'F' b'G']]\r\n$\r\n```"</script><div class="task-description-content" data-markdown-converted="true"><p>Write a function <code>def load_frozen_lake(desc=None, map_name=None, is_slippery=False):</code> that loads the pre-made <code>FrozenLakeEnv</code> environment from  <code>gymnasium</code>:</p>
+    <div class="task-description-markdown" data-markdown="true" data-markdown-converted="true"><script type="application/json" class="task-markdown-data">"Write a python script `train.py` that utilizes `keras`, `keras-rl2`, and `gymnasium` to train an agent that can play Atari's Breakout:\r\n\r\n- Your script should utilize `keras-rl2`'s `DQNAgent`, `SequentialMemory`, and `EpsGreedyQPolicy`\r\n- Your script should save the final policy network as `policy.h5`\r\n\r\nWrite a python script `play.py` that can display a game played by the agent trained by `train.py`:\r\n\r\n- Your script should load the policy network saved in `policy.h5`\r\n- Your agent should use the `GreedyQPolicy`\r\n\r\n**HINT**: To make Gymnasium compatible with `keras-rl`, you need to update the function `reset`, `step` and `render` using the Wrappers provided by gymnasium."</script><div class="task-description-content" data-markdown-converted="true"><p>Write a python script <code>train.py</code> that utilizes <code>keras</code>, <code>keras-rl2</code>, and <code>gymnasium</code> to train an agent that can play Atari's Breakout:</p>
 <ul>
-<li><code>desc</code> is either <code>None</code> or a list of lists containing a custom description of the map to load for the environment</li>
-<li><code>map_name</code> is either <code>None</code> or a string containing the pre-made map to load</li>
-<li><em>Note: If both <code>desc</code> and <code>map_name</code> are <code>None</code>, the environment will load a randomly generated 8x8 map</em></li>
-<li><code>is_slippery</code> is a boolean to determine if the ice is slippery</li>
-<li>Returns: the environment</li>
+<li>Your script should utilize <code>keras-rl2</code>'s <code>DQNAgent</code>, <code>SequentialMemory</code>, and <code>EpsGreedyQPolicy</code></li>
+<li>Your script should save the final policy network as <code>policy.h5</code></li>
 </ul>
-<pre><code data-highlighted="yes" class="hljs language-python">$ cat <span class="hljs-number">0</span>-main.py
-<span class="hljs-comment">#!/usr/bin/env python3</span>
-
-load_frozen_lake = <span class="hljs-built_in">__import__</span>(<span class="hljs-string">'0-load_env'</span>).load_frozen_lake
-
-env = load_frozen_lake()
-<span class="hljs-built_in">print</span>(env.unwrapped.desc) 
-<span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(env.unwrapped.P[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]))
-<span class="hljs-built_in">print</span>(env.unwrapped.P[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>])
-
-env = load_frozen_lake(is_slippery=<span class="hljs-literal">True</span>)
-<span class="hljs-built_in">print</span>(env.unwrapped.desc)
-<span class="hljs-built_in">print</span>(<span class="hljs-built_in">len</span>(env.unwrapped.P[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>]))
-<span class="hljs-built_in">print</span>(env.unwrapped.P[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>])
-
-desc = [[<span class="hljs-string">'S'</span>, <span class="hljs-string">'F'</span>, <span class="hljs-string">'F'</span>], [<span class="hljs-string">'F'</span>, <span class="hljs-string">'H'</span>, <span class="hljs-string">'H'</span>], [<span class="hljs-string">'F'</span>, <span class="hljs-string">'F'</span>, <span class="hljs-string">'G'</span>]]
-env = load_frozen_lake(desc=desc)
-<span class="hljs-built_in">print</span>(env.unwrapped.desc)
-
-env = load_frozen_lake(map_name=<span class="hljs-string">'4x4'</span>)
-<span class="hljs-built_in">print</span>(env.unwrapped.desc)
-$ ./<span class="hljs-number">0</span>-main.py
-[[<span class="hljs-string">b'S'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span>]
- [<span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span>]
- [<span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span>]
- [<span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span>]
- [<span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span>]
- [<span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span>]
- [<span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span>]
- [<span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'G'</span>]]
-<span class="hljs-number">1</span>
-[(<span class="hljs-number">1.0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.0</span>, <span class="hljs-literal">False</span>)]
-[[<span class="hljs-string">b'S'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'H'</span>]
- [<span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span>]
- [<span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span>]
- [<span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span>]
- [<span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span>]
- [<span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span>]
- [<span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span>]
- [<span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'G'</span>]]
-<span class="hljs-number">3</span>
-[(<span class="hljs-number">0.3333333333333333</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.0</span>, <span class="hljs-literal">False</span>), (<span class="hljs-number">0.3333333333333333</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0.0</span>, <span class="hljs-literal">False</span>), (<span class="hljs-number">0.3333333333333333</span>, <span class="hljs-number">8</span>, <span class="hljs-number">0.0</span>, <span class="hljs-literal">False</span>)]
-[[<span class="hljs-string">b'S'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span>]
- [<span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'H'</span>]
- [<span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'G'</span>]]
-[[<span class="hljs-string">b'S'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span>]
- [<span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span>]
- [<span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'H'</span>]
- [<span class="hljs-string">b'H'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'F'</span> <span class="hljs-string">b'G'</span>]]
-$
-</code></pre></div></div>
+<p>Write a python script <code>play.py</code> that can display a game played by the agent trained by <code>train.py</code>:</p>
+<ul>
+<li>Your script should load the policy network saved in <code>policy.h5</code></li>
+<li>Your agent should use the <code>GreedyQPolicy</code></li>
+</ul>
+<p><strong>HINT</strong>: To make Gymnasium compatible with <code>keras-rl</code>, you need to update the function <code>reset</code>, <code>step</code> and <code>render</code> using the Wrappers provided by gymnasium.</p></div></div>
 
     <!-- Technical information (Repo) - inside task description -->
       <div class="list-group-item">
         <p><strong>Repo:</strong></p>
         <ul>
           <li>GitHub repository: <code>holbertonschool-machine_learning</code></li>
-            <li>Directory: <code>reinforcement_learning/q_learning</code></li>
-            <li>File: <code>0-load_env.py</code></li>
+            <li>Directory: <code>reinforcement_learning/deep_q_learning</code></li>
+            <li>File: <code>train.py, play.py</code></li>
         </ul>
       </div>
   </div>
@@ -1136,722 +696,21 @@ $
     
     <div class="task-score-block">
       <h4 class="task-section-heading">Score of the task</h4>
-      <div id="task-22018-score-info-container" class="task-result-toggle task-score-in-description" data-task-id="22018" style="background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%); border-radius: 8px; padding: 12px 16px; border: 2px solid #dc3545; box-shadow: 0 2px 4px rgba(0,0,0,0.1); cursor: pointer;">
+      <div id="task-22023-score-info-container" class="task-result-toggle task-score-in-description" data-task-id="22023" style="background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%); border-radius: 8px; padding: 12px 16px; border: 2px solid #dc3545; box-shadow: 0 2px 4px rgba(0,0,0,0.1); cursor: pointer;">
         <div class="text-center">
           <div style="font-size: 32px; font-weight: 900; line-height: 1; margin-bottom: 4px;" class="text-danger">
-            <span class="text-danger" id="task-22018-score-info-score" style="text-shadow: 0 1px 2px rgba(0,0,0,0.1);">0</span>
-            <span class="text-muted" id="task-22018-score-info-points" style="font-size: 20px; font-weight: 600;">/7</span>
+            <span class="text-danger" id="task-22023-score-info-score" style="text-shadow: 0 1px 2px rgba(0,0,0,0.1);">0</span>
+            <span class="text-muted" id="task-22023-score-info-points" style="font-size: 20px; font-weight: 600;">/18</span>
             <span class="text-muted" style="font-size: 14px; font-weight: 500; margin-left: 4px;">
               pts
             </span>
           </div>
           <div style="margin-top: 6px;">
-            <span class="label label-danger" id="task-22018-score-info-percentage" style="font-size: 13px; padding: 4px 10px; font-weight: bold; border-radius: 12px;">0.0%</span>
+            <span class="label label-danger" id="task-22023-score-info-percentage" style="font-size: 13px; padding: 4px 10px; font-weight: bold; border-radius: 12px;">0.0%</span>
           </div>
-          <div id="task-22018-correction-requests-container" style="margin-top: 8px; display: none;">
-            <span class="label label-success task-result-toggle" id="task-22018-correction-requests-label" data-task-id="22018" style="font-size: 11px; padding: 4px 8px; cursor: pointer; display: inline-block;">
-              <span class="glyphicon glyphicon-exclamation-sign"></span> <span id="task-22018-correction-requests-count">0</span> correction requests
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  <!-- My Answer block - just above buttons -->
-
-  <!-- Buttons block - separate block just under task description -->
-      <div class="task-buttons-block">
-        
-
-
-
-  <div class="run-correction-button-wrapper ">
-          <div class="student-task-github-area">
-            <div class="student-task-github-target student-task-github-inline student-task-github-card" data-task-id="22018" data-persist-url="/tasks/22018/save_student_checker_github">
-  <input type="hidden" class="task-github-token" data-task-id="22018" value="">
-  <input type="hidden" class="task-github-mode" data-task-id="22018" value="private">
-
-  <div class="student-task-github-card__head">
-    <h4 class="student-task-github-card__title">
-      <i class="fa fa-github" aria-hidden="true"></i>
-      My GitHub
-    </h4>
-  </div>
-
-  <div class="task-github-private-oauth-bar student-task-github-card__account" data-task-id="22018">
-    <a href="/tasks/22018/github_connect?return_url=https%3A%2F%2Fintranet.hbtn.io%2Fprojects%2F2416" class="btn btn-default btn-sm btn-block task-github-connect-btn student-task-github-card__connect-btn" data-task-id="22018">
-      <i class="fa fa-github"></i> Connect GitHub
-    </a>
-    <div class="task-github-connected-wrap student-task-github-card__connected-row" data-task-id="22018" style="display: none;">
-      <span class="task-github-connected task-github-connected-text" data-task-id="22018">
-        Connect as: <strong class="task-github-connected-user"></strong>
-      </span>
-      <button type="button" class="btn btn-default btn-sm task-github-disconnect-btn task-github-disconnect student-task-github-card__disconnect" data-task-id="22018" title="Disconnect">
-        Disconnect
-      </button>
-    </div>
-  </div>
-
-  <div class="row task-github-private-row task-github-private-row--student student-task-github-card__fields" data-task-id="22018" style="display:none;">
-    <div class="col-sm-7 col-xs-12 task-github-private-col">
-      <label class="task-github-field-label">Repository</label>
-      <select class="form-control input-sm task-github-repo-select task-github-unified-input" data-task-id="22018">
-        <option value="">Select a repository…</option>
-      </select>
-    </div>
-    <div class="col-sm-5 col-xs-12 task-github-private-col">
-      <label class="task-github-field-label">Folder (optional)</label>
-      <input class="form-control input-sm task-github-private-path task-github-unified-input" type="text" placeholder="Optional" data-task-id="22018">
-    </div>
-  </div>
-</div>
-
-          </div>
-      <div class="student-task-correction-actions">
-        <div class="student-task-actions-toolbar">
-          <div class="student-run-correction-button-wrap">
-            <button name="button" type="submit" class="btn btn-primary correction_request_test_send run-correction-button" data-task-id="22018">
-              <i aria-hidden="true" class="fa fa-play "></i> Run the correction
-</button>          </div>
-        </div>
-      </div>
-
-    
-  </div>
-
-<div style="display: flex; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
-
-
-
-</div>
-
-      </div>
-
-  <div class="list-group">
-    <!-- Task URLs -->
-
-    <!-- Task Files -->
-
-
-
-    <!-- Self-paced manual review -->
-
-    <!-- Self validation checks -->
-
-    <!-- Inline review your work section for students -->
-  </div>
-
-  <!-- Panel footer - Controls -->
-  <div class="panel-footer task-result-footer" id="task-22018-result-footer" style="display: none;">
-      
-        <div style="margin-top: 15px; width: 100%; max-width: 100%; box-sizing: border-box;">
-          <div class="task-test-correction-inline task_correction_modal student_modal" id="task-test-correction-22018-correction-modal" data-hide-result-on-load="false">
-    <div class="spinner" style="display: none; margin: 20px auto; text-align: center;">
-        <div class="bounce1"></div>
-        <div class="bounce2"></div>
-        <div class="bounce3"></div>
-    </div>
-    <div class="actions" style="display: none;">
-        <div class="alert alert-info hidden"></div>
-        <div class="error"></div>
-        <div class="info"></div>
-    </div>
-    <div class="result" style="display: none;" data-auto-hide="false"></div>
-</div>
-
-
-        </div>
-      
-        <div class="modal fade users-done-modal" id="task-22018-users-done-modal" data-task-id="22018" data-batch-id="1062">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <h4 class="modal-title">Students who are done with "0. Load the Environment"</h4>
-      </div>
-      <div class="modal-body">
-        <div class="list-group">
-        </div>
-        <div class="spinner" style="display: none;">
-          <div class="bounce1"></div>
-          <div class="bounce2"></div>
-          <div class="bounce3"></div>
-        </div>
-        <div class="error"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-  </div>
-
-</div>
-
-      </div>
-      <div class="task-container" data-role="task22019" data-position="2" id="task-num-1" style="display: none;">
-        <div class="panel panel-default task-card " id="task-22019">
-  <span id="user_id" data-id="11510"></span>
-
-  <div class="panel-heading panel-heading-actions">
-    <h3 class="panel-title" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-      <span>1. Initialize Q-table</span>
-      <div style="display: flex; align-items: center; gap: 10px;">
-          <button class="btn btn-link task-help-icon" data-task-id="22019" data-batch-id="1062" data-toggle="modal" data-target="#task-22019-users-done-modal" data-placement="left" title="Help - Who has already finished the task" style="padding: 0; color: #666; text-decoration: none; font-size: inherit; vertical-align: baseline;">
-            <i class="fa fa-users" style="font-size: inherit;"></i>
-          </button>
-      </div>
-    </h3>
-  </div>
-
-  <div class="panel-body">
-    <span id="user_id" data-id="11510"></span>
-
-    <!-- Progress vs Score -->
-
-    <!-- Task Body -->
-    <div class="task-description-markdown" data-markdown="true" data-markdown-converted="true"><script type="application/json" class="task-markdown-data">"Write a function `def q_init(env):` that initializes the Q-table:\r\n\r\n- `env` is the `FrozenLakeEnv` instance\r\n- Returns: the Q-table as a `numpy.ndarray` of zeros\r\n\r\n```\r\n$ cat 1-main.py\r\n#!/usr/bin/env python3\r\n\r\nload_frozen_lake = __import__('0-load_env').load_frozen_lake\r\nq_init = __import__('1-q_init').q_init\r\n\r\nenv = load_frozen_lake()\r\nQ = q_init(env)\r\nprint(Q.shape)\r\nenv = load_frozen_lake(is_slippery=True)\r\nQ = q_init(env)\r\nprint(Q.shape)\r\ndesc = [['S', 'F', 'F'], ['F', 'H', 'H'], ['F', 'F', 'G']]\r\nenv = load_frozen_lake(desc=desc)\r\nQ = q_init(env)\r\nprint(Q.shape)\r\nenv = load_frozen_lake(map_name='4x4')\r\nQ = q_init(env)\r\nprint(Q.shape)\r\n$ ./1-main.py\r\n(64, 4)\r\n(64, 4)\r\n(9, 4)\r\n(16, 4)\r\n$\r\n```"</script><div class="task-description-content" data-markdown-converted="true"><p>Write a function <code>def q_init(env):</code> that initializes the Q-table:</p>
-<ul>
-<li><code>env</code> is the <code>FrozenLakeEnv</code> instance</li>
-<li>Returns: the Q-table as a <code>numpy.ndarray</code> of zeros</li>
-</ul>
-<pre><code data-highlighted="yes" class="hljs language-bash">$ <span class="hljs-built_in">cat</span> 1-main.py
-<span class="hljs-comment">#!/usr/bin/env python3</span>
-
-load_frozen_lake = __import__(<span class="hljs-string">'0-load_env'</span>).load_frozen_lake
-q_init = __import__(<span class="hljs-string">'1-q_init'</span>).q_init
-
-<span class="hljs-built_in">env</span> = load_frozen_lake()
-Q = q_init(<span class="hljs-built_in">env</span>)
-<span class="hljs-built_in">print</span>(Q.shape)
-<span class="hljs-built_in">env</span> = load_frozen_lake(is_slippery=True)
-Q = q_init(<span class="hljs-built_in">env</span>)
-<span class="hljs-built_in">print</span>(Q.shape)
-desc = [[<span class="hljs-string">'S'</span>, <span class="hljs-string">'F'</span>, <span class="hljs-string">'F'</span>], [<span class="hljs-string">'F'</span>, <span class="hljs-string">'H'</span>, <span class="hljs-string">'H'</span>], [<span class="hljs-string">'F'</span>, <span class="hljs-string">'F'</span>, <span class="hljs-string">'G'</span>]]
-<span class="hljs-built_in">env</span> = load_frozen_lake(desc=desc)
-Q = q_init(<span class="hljs-built_in">env</span>)
-<span class="hljs-built_in">print</span>(Q.shape)
-<span class="hljs-built_in">env</span> = load_frozen_lake(map_name=<span class="hljs-string">'4x4'</span>)
-Q = q_init(<span class="hljs-built_in">env</span>)
-<span class="hljs-built_in">print</span>(Q.shape)
-$ ./1-main.py
-(64, 4)
-(64, 4)
-(9, 4)
-(16, 4)
-$
-</code></pre></div></div>
-
-    <!-- Technical information (Repo) - inside task description -->
-      <div class="list-group-item">
-        <p><strong>Repo:</strong></p>
-        <ul>
-          <li>GitHub repository: <code>holbertonschool-machine_learning</code></li>
-            <li>Directory: <code>reinforcement_learning/q_learning</code></li>
-            <li>File: <code>1-q_init.py</code></li>
-        </ul>
-      </div>
-  </div>
-
-  
-
-
-  <!-- Score container - full width at the end (only when task has online checks) -->
-    
-    <div class="task-score-block">
-      <h4 class="task-section-heading">Score of the task</h4>
-      <div id="task-22019-score-info-container" class="task-result-toggle task-score-in-description" data-task-id="22019" style="background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%); border-radius: 8px; padding: 12px 16px; border: 2px solid #dc3545; box-shadow: 0 2px 4px rgba(0,0,0,0.1); cursor: pointer;">
-        <div class="text-center">
-          <div style="font-size: 32px; font-weight: 900; line-height: 1; margin-bottom: 4px;" class="text-danger">
-            <span class="text-danger" id="task-22019-score-info-score" style="text-shadow: 0 1px 2px rgba(0,0,0,0.1);">0</span>
-            <span class="text-muted" id="task-22019-score-info-points" style="font-size: 20px; font-weight: 600;">/12</span>
-            <span class="text-muted" style="font-size: 14px; font-weight: 500; margin-left: 4px;">
-              pts
-            </span>
-          </div>
-          <div style="margin-top: 6px;">
-            <span class="label label-danger" id="task-22019-score-info-percentage" style="font-size: 13px; padding: 4px 10px; font-weight: bold; border-radius: 12px;">0.0%</span>
-          </div>
-          <div id="task-22019-correction-requests-container" style="margin-top: 8px; display: none;">
-            <span class="label label-success task-result-toggle" id="task-22019-correction-requests-label" data-task-id="22019" style="font-size: 11px; padding: 4px 8px; cursor: pointer; display: inline-block;">
-              <span class="glyphicon glyphicon-exclamation-sign"></span> <span id="task-22019-correction-requests-count">0</span> correction requests
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  <!-- My Answer block - just above buttons -->
-
-  <!-- Buttons block - separate block just under task description -->
-      <div class="task-buttons-block">
-        
-
-
-
-  <div class="run-correction-button-wrapper ">
-          <div class="student-task-github-area">
-            <div class="student-task-github-target student-task-github-inline student-task-github-card" data-task-id="22019" data-persist-url="/tasks/22019/save_student_checker_github">
-  <input type="hidden" class="task-github-token" data-task-id="22019" value="">
-  <input type="hidden" class="task-github-mode" data-task-id="22019" value="private">
-
-  <div class="student-task-github-card__head">
-    <h4 class="student-task-github-card__title">
-      <i class="fa fa-github" aria-hidden="true"></i>
-      My GitHub
-    </h4>
-  </div>
-
-  <div class="task-github-private-oauth-bar student-task-github-card__account" data-task-id="22019">
-    <a href="/tasks/22019/github_connect?return_url=https%3A%2F%2Fintranet.hbtn.io%2Fprojects%2F2416" class="btn btn-default btn-sm btn-block task-github-connect-btn student-task-github-card__connect-btn" data-task-id="22019">
-      <i class="fa fa-github"></i> Connect GitHub
-    </a>
-    <div class="task-github-connected-wrap student-task-github-card__connected-row" data-task-id="22019" style="display: none;">
-      <span class="task-github-connected task-github-connected-text" data-task-id="22019">
-        Connect as: <strong class="task-github-connected-user"></strong>
-      </span>
-      <button type="button" class="btn btn-default btn-sm task-github-disconnect-btn task-github-disconnect student-task-github-card__disconnect" data-task-id="22019" title="Disconnect">
-        Disconnect
-      </button>
-    </div>
-  </div>
-
-  <div class="row task-github-private-row task-github-private-row--student student-task-github-card__fields" data-task-id="22019" style="display:none;">
-    <div class="col-sm-7 col-xs-12 task-github-private-col">
-      <label class="task-github-field-label">Repository</label>
-      <select class="form-control input-sm task-github-repo-select task-github-unified-input" data-task-id="22019">
-        <option value="">Select a repository…</option>
-      </select>
-    </div>
-    <div class="col-sm-5 col-xs-12 task-github-private-col">
-      <label class="task-github-field-label">Folder (optional)</label>
-      <input class="form-control input-sm task-github-private-path task-github-unified-input" type="text" placeholder="Optional" data-task-id="22019">
-    </div>
-  </div>
-</div>
-
-          </div>
-      <div class="student-task-correction-actions">
-        <div class="student-task-actions-toolbar">
-          <div class="student-run-correction-button-wrap">
-            <button name="button" type="submit" class="btn btn-primary correction_request_test_send run-correction-button" data-task-id="22019">
-              <i aria-hidden="true" class="fa fa-play "></i> Run the correction
-</button>          </div>
-        </div>
-      </div>
-
-    
-  </div>
-
-<div style="display: flex; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
-
-
-
-</div>
-
-      </div>
-
-  <div class="list-group">
-    <!-- Task URLs -->
-
-    <!-- Task Files -->
-
-
-
-    <!-- Self-paced manual review -->
-
-    <!-- Self validation checks -->
-
-    <!-- Inline review your work section for students -->
-  </div>
-
-  <!-- Panel footer - Controls -->
-  <div class="panel-footer task-result-footer" id="task-22019-result-footer" style="display: none;">
-      
-        <div style="margin-top: 15px; width: 100%; max-width: 100%; box-sizing: border-box;">
-          <div class="task-test-correction-inline task_correction_modal student_modal" id="task-test-correction-22019-correction-modal" data-hide-result-on-load="false">
-    <div class="spinner" style="display: none; margin: 20px auto; text-align: center;">
-        <div class="bounce1"></div>
-        <div class="bounce2"></div>
-        <div class="bounce3"></div>
-    </div>
-    <div class="actions" style="display: none;">
-        <div class="alert alert-info hidden"></div>
-        <div class="error"></div>
-        <div class="info"></div>
-    </div>
-    <div class="result" style="display: none;" data-auto-hide="false"></div>
-</div>
-
-
-        </div>
-      
-        <div class="modal fade users-done-modal" id="task-22019-users-done-modal" data-task-id="22019" data-batch-id="1062">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <h4 class="modal-title">Students who are done with "1. Initialize Q-table"</h4>
-      </div>
-      <div class="modal-body">
-        <div class="list-group">
-        </div>
-        <div class="spinner" style="display: none;">
-          <div class="bounce1"></div>
-          <div class="bounce2"></div>
-          <div class="bounce3"></div>
-        </div>
-        <div class="error"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-  </div>
-
-</div>
-
-      </div>
-      <div class="task-container" data-role="task22020" data-position="3" id="task-num-2" style="display: none;">
-        <div class="panel panel-default task-card " id="task-22020">
-  <span id="user_id" data-id="11510"></span>
-
-  <div class="panel-heading panel-heading-actions">
-    <h3 class="panel-title" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-      <span>2. Epsilon Greedy</span>
-      <div style="display: flex; align-items: center; gap: 10px;">
-          <button class="btn btn-link task-help-icon" data-task-id="22020" data-batch-id="1062" data-toggle="modal" data-target="#task-22020-users-done-modal" data-placement="left" title="Help - Who has already finished the task" style="padding: 0; color: #666; text-decoration: none; font-size: inherit; vertical-align: baseline;">
-            <i class="fa fa-users" style="font-size: inherit;"></i>
-          </button>
-      </div>
-    </h3>
-  </div>
-
-  <div class="panel-body">
-    <span id="user_id" data-id="11510"></span>
-
-    <!-- Progress vs Score -->
-
-    <!-- Task Body -->
-    <div class="task-description-markdown" data-markdown="true" data-markdown-converted="true"><script type="application/json" class="task-markdown-data">"Write a function `def epsilon_greedy(Q, state, epsilon):` that uses epsilon-greedy to determine the next action:\r\n\r\n- `Q` is a `numpy.ndarray` containing the q-table\r\n- `state` is the current state\r\n- `epsilon` is the epsilon to use for the calculation\r\n- You should sample `p` with `numpy.random.uniformn` to determine if your algorithm should explore or exploit\r\n- If exploring, you should pick the next action with `numpy.random.randint` from all possible actions\r\n- Returns: the next action index\r\n\r\n```\r\n$ cat 2-main.py\r\n#!/usr/bin/env python3\r\n\r\nload_frozen_lake = __import__('0-load_env').load_frozen_lake\r\nq_init = __import__('1-q_init').q_init\r\nepsilon_greedy = __import__('2-epsilon_greedy').epsilon_greedy\r\nimport numpy as np\r\n\r\ndesc = [['S', 'F', 'F'], ['F', 'H', 'H'], ['F', 'F', 'G']]\r\nenv = load_frozen_lake(desc=desc)\r\nQ = q_init(env)\r\nQ[7] = np.array([0.5, 0.7, 1, -1])\r\nnp.random.seed(0)\r\nprint(epsilon_greedy(Q, 7, 0.5))\r\nnp.random.seed(1)\r\nprint(epsilon_greedy(Q, 7, 0.5))\r\n$ ./2-main.py\r\n2\r\n0\r\n$\r\n```"</script><div class="task-description-content" data-markdown-converted="true"><p>Write a function <code>def epsilon_greedy(Q, state, epsilon):</code> that uses epsilon-greedy to determine the next action:</p>
-<ul>
-<li><code>Q</code> is a <code>numpy.ndarray</code> containing the q-table</li>
-<li><code>state</code> is the current state</li>
-<li><code>epsilon</code> is the epsilon to use for the calculation</li>
-<li>You should sample <code>p</code> with <code>numpy.random.uniformn</code> to determine if your algorithm should explore or exploit</li>
-<li>If exploring, you should pick the next action with <code>numpy.random.randint</code> from all possible actions</li>
-<li>Returns: the next action index</li>
-</ul>
-<pre><code data-highlighted="yes" class="hljs language-python">$ cat <span class="hljs-number">2</span>-main.py
-<span class="hljs-comment">#!/usr/bin/env python3</span>
-
-load_frozen_lake = <span class="hljs-built_in">__import__</span>(<span class="hljs-string">'0-load_env'</span>).load_frozen_lake
-q_init = <span class="hljs-built_in">__import__</span>(<span class="hljs-string">'1-q_init'</span>).q_init
-epsilon_greedy = <span class="hljs-built_in">__import__</span>(<span class="hljs-string">'2-epsilon_greedy'</span>).epsilon_greedy
-<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
-
-desc = [[<span class="hljs-string">'S'</span>, <span class="hljs-string">'F'</span>, <span class="hljs-string">'F'</span>], [<span class="hljs-string">'F'</span>, <span class="hljs-string">'H'</span>, <span class="hljs-string">'H'</span>], [<span class="hljs-string">'F'</span>, <span class="hljs-string">'F'</span>, <span class="hljs-string">'G'</span>]]
-env = load_frozen_lake(desc=desc)
-Q = q_init(env)
-Q[<span class="hljs-number">7</span>] = np.array([<span class="hljs-number">0.5</span>, <span class="hljs-number">0.7</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">1</span>])
-np.random.seed(<span class="hljs-number">0</span>)
-<span class="hljs-built_in">print</span>(epsilon_greedy(Q, <span class="hljs-number">7</span>, <span class="hljs-number">0.5</span>))
-np.random.seed(<span class="hljs-number">1</span>)
-<span class="hljs-built_in">print</span>(epsilon_greedy(Q, <span class="hljs-number">7</span>, <span class="hljs-number">0.5</span>))
-$ ./<span class="hljs-number">2</span>-main.py
-<span class="hljs-number">2</span>
-<span class="hljs-number">0</span>
-$
-</code></pre></div></div>
-
-    <!-- Technical information (Repo) - inside task description -->
-      <div class="list-group-item">
-        <p><strong>Repo:</strong></p>
-        <ul>
-          <li>GitHub repository: <code>holbertonschool-machine_learning</code></li>
-            <li>Directory: <code>reinforcement_learning/q_learning</code></li>
-            <li>File: <code>2-epsilon_greedy.py</code></li>
-        </ul>
-      </div>
-  </div>
-
-  
-
-
-  <!-- Score container - full width at the end (only when task has online checks) -->
-    
-    <div class="task-score-block">
-      <h4 class="task-section-heading">Score of the task</h4>
-      <div id="task-22020-score-info-container" class="task-result-toggle task-score-in-description" data-task-id="22020" style="background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%); border-radius: 8px; padding: 12px 16px; border: 2px solid #dc3545; box-shadow: 0 2px 4px rgba(0,0,0,0.1); cursor: pointer;">
-        <div class="text-center">
-          <div style="font-size: 32px; font-weight: 900; line-height: 1; margin-bottom: 4px;" class="text-danger">
-            <span class="text-danger" id="task-22020-score-info-score" style="text-shadow: 0 1px 2px rgba(0,0,0,0.1);">0</span>
-            <span class="text-muted" id="task-22020-score-info-points" style="font-size: 20px; font-weight: 600;">/12</span>
-            <span class="text-muted" style="font-size: 14px; font-weight: 500; margin-left: 4px;">
-              pts
-            </span>
-          </div>
-          <div style="margin-top: 6px;">
-            <span class="label label-danger" id="task-22020-score-info-percentage" style="font-size: 13px; padding: 4px 10px; font-weight: bold; border-radius: 12px;">0.0%</span>
-          </div>
-          <div id="task-22020-correction-requests-container" style="margin-top: 8px; display: none;">
-            <span class="label label-success task-result-toggle" id="task-22020-correction-requests-label" data-task-id="22020" style="font-size: 11px; padding: 4px 8px; cursor: pointer; display: inline-block;">
-              <span class="glyphicon glyphicon-exclamation-sign"></span> <span id="task-22020-correction-requests-count">0</span> correction requests
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  <!-- My Answer block - just above buttons -->
-
-  <!-- Buttons block - separate block just under task description -->
-      <div class="task-buttons-block">
-        
-
-
-
-  <div class="run-correction-button-wrapper ">
-          <div class="student-task-github-area">
-            <div class="student-task-github-target student-task-github-inline student-task-github-card" data-task-id="22020" data-persist-url="/tasks/22020/save_student_checker_github">
-  <input type="hidden" class="task-github-token" data-task-id="22020" value="">
-  <input type="hidden" class="task-github-mode" data-task-id="22020" value="private">
-
-  <div class="student-task-github-card__head">
-    <h4 class="student-task-github-card__title">
-      <i class="fa fa-github" aria-hidden="true"></i>
-      My GitHub
-    </h4>
-  </div>
-
-  <div class="task-github-private-oauth-bar student-task-github-card__account" data-task-id="22020">
-    <a href="/tasks/22020/github_connect?return_url=https%3A%2F%2Fintranet.hbtn.io%2Fprojects%2F2416" class="btn btn-default btn-sm btn-block task-github-connect-btn student-task-github-card__connect-btn" data-task-id="22020">
-      <i class="fa fa-github"></i> Connect GitHub
-    </a>
-    <div class="task-github-connected-wrap student-task-github-card__connected-row" data-task-id="22020" style="display: none;">
-      <span class="task-github-connected task-github-connected-text" data-task-id="22020">
-        Connect as: <strong class="task-github-connected-user"></strong>
-      </span>
-      <button type="button" class="btn btn-default btn-sm task-github-disconnect-btn task-github-disconnect student-task-github-card__disconnect" data-task-id="22020" title="Disconnect">
-        Disconnect
-      </button>
-    </div>
-  </div>
-
-  <div class="row task-github-private-row task-github-private-row--student student-task-github-card__fields" data-task-id="22020" style="display:none;">
-    <div class="col-sm-7 col-xs-12 task-github-private-col">
-      <label class="task-github-field-label">Repository</label>
-      <select class="form-control input-sm task-github-repo-select task-github-unified-input" data-task-id="22020">
-        <option value="">Select a repository…</option>
-      </select>
-    </div>
-    <div class="col-sm-5 col-xs-12 task-github-private-col">
-      <label class="task-github-field-label">Folder (optional)</label>
-      <input class="form-control input-sm task-github-private-path task-github-unified-input" type="text" placeholder="Optional" data-task-id="22020">
-    </div>
-  </div>
-</div>
-
-          </div>
-      <div class="student-task-correction-actions">
-        <div class="student-task-actions-toolbar">
-          <div class="student-run-correction-button-wrap">
-            <button name="button" type="submit" class="btn btn-primary correction_request_test_send run-correction-button" data-task-id="22020">
-              <i aria-hidden="true" class="fa fa-play "></i> Run the correction
-</button>          </div>
-        </div>
-      </div>
-
-    
-  </div>
-
-<div style="display: flex; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
-
-
-
-</div>
-
-      </div>
-
-  <div class="list-group">
-    <!-- Task URLs -->
-
-    <!-- Task Files -->
-
-
-
-    <!-- Self-paced manual review -->
-
-    <!-- Self validation checks -->
-
-    <!-- Inline review your work section for students -->
-  </div>
-
-  <!-- Panel footer - Controls -->
-  <div class="panel-footer task-result-footer" id="task-22020-result-footer" style="display: none;">
-      
-        <div style="margin-top: 15px; width: 100%; max-width: 100%; box-sizing: border-box;">
-          <div class="task-test-correction-inline task_correction_modal student_modal" id="task-test-correction-22020-correction-modal" data-hide-result-on-load="false">
-    <div class="spinner" style="display: none; margin: 20px auto; text-align: center;">
-        <div class="bounce1"></div>
-        <div class="bounce2"></div>
-        <div class="bounce3"></div>
-    </div>
-    <div class="actions" style="display: none;">
-        <div class="alert alert-info hidden"></div>
-        <div class="error"></div>
-        <div class="info"></div>
-    </div>
-    <div class="result" style="display: none;" data-auto-hide="false"></div>
-</div>
-
-
-        </div>
-      
-        <div class="modal fade users-done-modal" id="task-22020-users-done-modal" data-task-id="22020" data-batch-id="1062">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <h4 class="modal-title">Students who are done with "2. Epsilon Greedy"</h4>
-      </div>
-      <div class="modal-body">
-        <div class="list-group">
-        </div>
-        <div class="spinner" style="display: none;">
-          <div class="bounce1"></div>
-          <div class="bounce2"></div>
-          <div class="bounce3"></div>
-        </div>
-        <div class="error"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-  </div>
-
-</div>
-
-      </div>
-      <div class="task-container" data-role="task22021" data-position="4" id="task-num-3" style="display: none;">
-        <div class="panel panel-default task-card " id="task-22021">
-  <span id="user_id" data-id="11510"></span>
-
-  <div class="panel-heading panel-heading-actions">
-    <h3 class="panel-title" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-      <span>3. Q-learning</span>
-      <div style="display: flex; align-items: center; gap: 10px;">
-          <button class="btn btn-link task-help-icon" data-task-id="22021" data-batch-id="1062" data-toggle="modal" data-target="#task-22021-users-done-modal" data-placement="left" title="Help - Who has already finished the task" style="padding: 0; color: #666; text-decoration: none; font-size: inherit; vertical-align: baseline;">
-            <i class="fa fa-users" style="font-size: inherit;"></i>
-          </button>
-      </div>
-    </h3>
-  </div>
-
-  <div class="panel-body">
-    <span id="user_id" data-id="11510"></span>
-
-    <!-- Progress vs Score -->
-
-    <!-- Task Body -->
-    <div class="task-description-markdown" data-markdown="true" data-markdown-converted="true"><script type="application/json" class="task-markdown-data">"Write the function `def train(env, Q, episodes=5000, max_steps=100, alpha=0.1, gamma=0.99, epsilon=1, min_epsilon=0.1, epsilon_decay=0.05):` that performs Q-learning:\r\n\r\n- `env` is the `FrozenLakeEnv` instance\r\n- `Q` is a `numpy.ndarray` containing the Q-table\r\n- `episodes` is the total number of episodes to train over\r\n- `max_steps` is the maximum number of steps per episode\r\n- `alpha` is the learning rate\r\n- `gamma` is the discount rate\r\n- `epsilon` is the initial threshold for epsilon greedy\r\n- `min_epsilon` is the minimum value that `epsilon` should decay to\r\n- `epsilon_decay` is the decay rate for updating `epsilon` between episodes\r\n- When the agent falls in a hole, the reward should be updated to be `-1`\r\n- You should use `epsilon_greedy = __import__('2-epsilon_greedy').epsilon_greedy`\r\n- Returns: `Q, total_rewards`\r\n\t- `Q` is the updated Q-table\r\n\t- `total_rewards` is a list containing the rewards per episode\r\n\r\n\r\n```\r\n$ cat 3-main.py\r\n#!/usr/bin/env python3\r\n\r\nload_frozen_lake = __import__('0-load_env').load_frozen_lake\r\nq_init = __import__('1-q_init').q_init\r\ntrain = __import__('3-q_learning').train\r\nimport numpy as np\r\n\r\nnp.random.seed(0)\r\ndesc = [['S', 'F', 'F'], ['F', 'H', 'H'], ['F', 'F', 'G']]\r\nenv = load_frozen_lake(desc=desc)\r\nQ = q_init(env)\r\n\r\nQ, total_rewards  = train(env, Q)\r\nprint(Q)\r\nsplit_rewards = np.split(np.array(total_rewards), 10)\r\nfor i, rewards in enumerate(split_rewards):\r\n    print((i+1) * 500, ':', np.mean(rewards))\r\n$ ./3-main.py\r\n[[0.96059595 0.970299   0.95098641 0.96059508]\r\n [0.96059578 0.         0.00914612 0.43792863]\r\n [0.17824547 0.         0.         0.        ]\r\n [0.97029808 0.9801     0.         0.96059035]\r\n [0.         0.         0.         0.        ]\r\n [0.         0.         0.         0.        ]\r\n [0.9800999  0.98009991 0.99       0.97029895]\r\n [0.98009936 0.98999805 1.         0.        ]\r\n [0.         0.         0.         0.        ]]\r\n500 : 0.918\r\n1000 : 0.962\r\n1500 : 0.948\r\n2000 : 0.946\r\n2500 : 0.948\r\n3000 : 0.964\r\n3500 : 0.95\r\n4000 : 0.934\r\n4500 : 0.928\r\n5000 : 0.934\r\n$\r\n```\r\n*Note : The output may vary based on your implemntation but for every run, you should have the same result*"</script><div class="task-description-content" data-markdown-converted="true"><p>Write the function <code>def train(env, Q, episodes=5000, max_steps=100, alpha=0.1, gamma=0.99, epsilon=1, min_epsilon=0.1, epsilon_decay=0.05):</code> that performs Q-learning:</p>
-<ul>
-<li><code>env</code> is the <code>FrozenLakeEnv</code> instance</li>
-<li><code>Q</code> is a <code>numpy.ndarray</code> containing the Q-table</li>
-<li><code>episodes</code> is the total number of episodes to train over</li>
-<li><code>max_steps</code> is the maximum number of steps per episode</li>
-<li><code>alpha</code> is the learning rate</li>
-<li><code>gamma</code> is the discount rate</li>
-<li><code>epsilon</code> is the initial threshold for epsilon greedy</li>
-<li><code>min_epsilon</code> is the minimum value that <code>epsilon</code> should decay to</li>
-<li><code>epsilon_decay</code> is the decay rate for updating <code>epsilon</code> between episodes</li>
-<li>When the agent falls in a hole, the reward should be updated to be <code>-1</code></li>
-<li>You should use <code>epsilon_greedy = __import__('2-epsilon_greedy').epsilon_greedy</code></li>
-<li>Returns: <code>Q, total_rewards</code><ul>
-<li><code>Q</code> is the updated Q-table</li>
-<li><code>total_rewards</code> is a list containing the rewards per episode</li></ul></li>
-</ul>
-<pre><code data-highlighted="yes" class="hljs language-python">$ cat <span class="hljs-number">3</span>-main.py
-<span class="hljs-comment">#!/usr/bin/env python3</span>
-
-load_frozen_lake = <span class="hljs-built_in">__import__</span>(<span class="hljs-string">'0-load_env'</span>).load_frozen_lake
-q_init = <span class="hljs-built_in">__import__</span>(<span class="hljs-string">'1-q_init'</span>).q_init
-train = <span class="hljs-built_in">__import__</span>(<span class="hljs-string">'3-q_learning'</span>).train
-<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
-
-np.random.seed(<span class="hljs-number">0</span>)
-desc = [[<span class="hljs-string">'S'</span>, <span class="hljs-string">'F'</span>, <span class="hljs-string">'F'</span>], [<span class="hljs-string">'F'</span>, <span class="hljs-string">'H'</span>, <span class="hljs-string">'H'</span>], [<span class="hljs-string">'F'</span>, <span class="hljs-string">'F'</span>, <span class="hljs-string">'G'</span>]]
-env = load_frozen_lake(desc=desc)
-Q = q_init(env)
-
-Q, total_rewards  = train(env, Q)
-<span class="hljs-built_in">print</span>(Q)
-split_rewards = np.split(np.array(total_rewards), <span class="hljs-number">10</span>)
-<span class="hljs-keyword">for</span> i, rewards <span class="hljs-keyword">in</span> <span class="hljs-built_in">enumerate</span>(split_rewards):
-    <span class="hljs-built_in">print</span>((i+<span class="hljs-number">1</span>) * <span class="hljs-number">500</span>, <span class="hljs-string">':'</span>, np.mean(rewards))
-$ ./<span class="hljs-number">3</span>-main.py
-[[<span class="hljs-number">0.96059595</span> <span class="hljs-number">0.970299</span>   <span class="hljs-number">0.95098641</span> <span class="hljs-number">0.96059508</span>]
- [<span class="hljs-number">0.96059578</span> <span class="hljs-number">0.</span>         <span class="hljs-number">0.00914612</span> <span class="hljs-number">0.43792863</span>]
- [<span class="hljs-number">0.17824547</span> <span class="hljs-number">0.</span>         <span class="hljs-number">0.</span>         <span class="hljs-number">0.</span>        ]
- [<span class="hljs-number">0.97029808</span> <span class="hljs-number">0.9801</span>     <span class="hljs-number">0.</span>         <span class="hljs-number">0.96059035</span>]
- [<span class="hljs-number">0.</span>         <span class="hljs-number">0.</span>         <span class="hljs-number">0.</span>         <span class="hljs-number">0.</span>        ]
- [<span class="hljs-number">0.</span>         <span class="hljs-number">0.</span>         <span class="hljs-number">0.</span>         <span class="hljs-number">0.</span>        ]
- [<span class="hljs-number">0.9800999</span>  <span class="hljs-number">0.98009991</span> <span class="hljs-number">0.99</span>       <span class="hljs-number">0.97029895</span>]
- [<span class="hljs-number">0.98009936</span> <span class="hljs-number">0.98999805</span> <span class="hljs-number">1.</span>         <span class="hljs-number">0.</span>        ]
- [<span class="hljs-number">0.</span>         <span class="hljs-number">0.</span>         <span class="hljs-number">0.</span>         <span class="hljs-number">0.</span>        ]]
-<span class="hljs-number">500</span> : <span class="hljs-number">0.918</span>
-<span class="hljs-number">1000</span> : <span class="hljs-number">0.962</span>
-<span class="hljs-number">1500</span> : <span class="hljs-number">0.948</span>
-<span class="hljs-number">2000</span> : <span class="hljs-number">0.946</span>
-<span class="hljs-number">2500</span> : <span class="hljs-number">0.948</span>
-<span class="hljs-number">3000</span> : <span class="hljs-number">0.964</span>
-<span class="hljs-number">3500</span> : <span class="hljs-number">0.95</span>
-<span class="hljs-number">4000</span> : <span class="hljs-number">0.934</span>
-<span class="hljs-number">4500</span> : <span class="hljs-number">0.928</span>
-<span class="hljs-number">5000</span> : <span class="hljs-number">0.934</span>
-$
-</code></pre>
-<p><em>Note : The output may vary based on your implemntation but for every run, you should have the same result</em></p></div></div>
-
-    <!-- Technical information (Repo) - inside task description -->
-      <div class="list-group-item">
-        <p><strong>Repo:</strong></p>
-        <ul>
-          <li>GitHub repository: <code>holbertonschool-machine_learning</code></li>
-            <li>Directory: <code>reinforcement_learning/q_learning</code></li>
-            <li>File: <code>3-q_learning.py</code></li>
-        </ul>
-      </div>
-  </div>
-
-  
-
-
-  <!-- Score container - full width at the end (only when task has online checks) -->
-    
-    <div class="task-score-block">
-      <h4 class="task-section-heading">Score of the task</h4>
-      <div id="task-22021-score-info-container" class="task-result-toggle task-score-in-description" data-task-id="22021" style="background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%); border-radius: 8px; padding: 12px 16px; border: 2px solid #dc3545; box-shadow: 0 2px 4px rgba(0,0,0,0.1); cursor: pointer;">
-        <div class="text-center">
-          <div style="font-size: 32px; font-weight: 900; line-height: 1; margin-bottom: 4px;" class="text-danger">
-            <span class="text-danger" id="task-22021-score-info-score" style="text-shadow: 0 1px 2px rgba(0,0,0,0.1);">0</span>
-            <span class="text-muted" id="task-22021-score-info-points" style="font-size: 20px; font-weight: 600;">/16</span>
-            <span class="text-muted" style="font-size: 14px; font-weight: 500; margin-left: 4px;">
-              pts
-            </span>
-          </div>
-          <div style="margin-top: 6px;">
-            <span class="label label-danger" id="task-22021-score-info-percentage" style="font-size: 13px; padding: 4px 10px; font-weight: bold; border-radius: 12px;">0.0%</span>
-          </div>
-          <div id="task-22021-correction-requests-container" style="margin-top: 8px; display: none;">
-            <span class="label label-success task-result-toggle" id="task-22021-correction-requests-label" data-task-id="22021" style="font-size: 11px; padding: 4px 8px; cursor: pointer; display: inline-block;">
-              <span class="glyphicon glyphicon-exclamation-sign"></span> <span id="task-22021-correction-requests-count">0</span> correction requests
+          <div id="task-22023-correction-requests-container" style="margin-top: 8px; display: none;">
+            <span class="label label-success task-result-toggle" id="task-22023-correction-requests-label" data-task-id="22023" style="font-size: 11px; padding: 4px 8px; cursor: pointer; display: inline-block;">
+              <span class="glyphicon glyphicon-exclamation-sign"></span> <span id="task-22023-correction-requests-count">0</span> correction requests
             </span>
           </div>
         </div>
@@ -1888,268 +747,15 @@ $
   </div>
 
   <!-- Panel footer - Controls -->
-  <div class="panel-footer task-result-footer" id="task-22021-result-footer" style="display: none;">
+  <div class="panel-footer task-result-footer" id="task-22023-result-footer" style="display: none;">
       
       
-        <div class="modal fade users-done-modal" id="task-22021-users-done-modal" data-task-id="22021" data-batch-id="1062">
+        <div class="modal fade users-done-modal" id="task-22023-users-done-modal" data-task-id="22023" data-batch-id="1062">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <h4 class="modal-title">Students who are done with "3. Q-learning"</h4>
-      </div>
-      <div class="modal-body">
-        <div class="list-group">
-        </div>
-        <div class="spinner" style="display: none;">
-          <div class="bounce1"></div>
-          <div class="bounce2"></div>
-          <div class="bounce3"></div>
-        </div>
-        <div class="error"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-  </div>
-
-</div>
-
-      </div>
-      <div class="task-container" data-role="task22022" data-position="5" id="task-num-4" style="display: none;">
-        <div class="panel panel-default task-card " id="task-22022">
-  <span id="user_id" data-id="11510"></span>
-
-  <div class="panel-heading panel-heading-actions">
-    <h3 class="panel-title" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
-      <span>4. Play</span>
-      <div style="display: flex; align-items: center; gap: 10px;">
-          <button class="btn btn-link task-help-icon" data-task-id="22022" data-batch-id="1062" data-toggle="modal" data-target="#task-22022-users-done-modal" data-placement="left" title="Help - Who has already finished the task" style="padding: 0; color: #666; text-decoration: none; font-size: inherit; vertical-align: baseline;">
-            <i class="fa fa-users" style="font-size: inherit;"></i>
-          </button>
-      </div>
-    </h3>
-  </div>
-
-  <div class="panel-body">
-    <span id="user_id" data-id="11510"></span>
-
-    <!-- Progress vs Score -->
-
-    <!-- Task Body -->
-    <div class="task-description-markdown" data-markdown="true" data-markdown-converted="true"><script type="application/json" class="task-markdown-data">"Write a function `def play(env, Q, max_steps=100):` that has the trained agent play an episode:\r\n\r\n- `env` is the `FrozenLakeEnv` instance\r\n- `Q` is a `numpy.ndarray` containing the Q-table\r\n- `max_steps` is the maximum number of steps in the episode\r\n\t- You need to update `0-load_env.py` to add `render_mode=\"ansi\"`\r\n\t- Each state of the board should be displayed via the console\r\n\t- You should always exploit the Q-table\r\n\t- Ensure that the final state of the environment is also displayed after the episode concludes.\r\n- Returns: The total rewards for the episode and a list of rendered outputs representing the board state at each step.\r\n\r\n```\r\n$ cat 4-main.py\r\n#!/usr/bin/env python3\r\n\r\nload_frozen_lake = __import__('0-load_env').load_frozen_lake\r\nq_init = __import__('1-q_init').q_init\r\ntrain = __import__('3-q_learning').train\r\nplay = __import__('4-play').play\r\n\r\nimport numpy as np\r\n\r\nnp.random.seed(0)\r\ndesc = [['S', 'F', 'F'], ['F', 'H', 'H'], ['F', 'F', 'G']]\r\nenv = load_frozen_lake(desc=desc)\r\nQ = q_init(env)\r\n\r\nQ, _ = train(env, Q)\r\n\r\nenv.reset()\r\ntotal_rewards, rendered_outputs = play(env, Q)\r\n\r\nprint(f'Total Rewards: {total_rewards}')\r\nfor output in rendered_outputs:\r\n    print(output)\r\n$ ./4-main.py\r\nTotal Rewards: 1.0\r\n\r\n`S`FF\r\nFHH\r\nFFG\r\n  (Down)\r\nSFF\r\n`F`HH\r\nFFG\r\n  (Down)\r\nSFF\r\nFHH\r\n`F`FG\r\n  (Right)\r\nSFF\r\nFHH\r\nF`F`G\r\n  (Right)\r\nSFF\r\nFHH\r\nFF`G`\r\n\r\n$\r\n```"</script><div class="task-description-content" data-markdown-converted="true"><p>Write a function <code>def play(env, Q, max_steps=100):</code> that has the trained agent play an episode:</p>
-<ul>
-<li><code>env</code> is the <code>FrozenLakeEnv</code> instance</li>
-<li><code>Q</code> is a <code>numpy.ndarray</code> containing the Q-table</li>
-<li><code>max_steps</code> is the maximum number of steps in the episode<ul>
-<li>You need to update <code>0-load_env.py</code> to add <code>render_mode="ansi"</code></li>
-<li>Each state of the board should be displayed via the console</li>
-<li>You should always exploit the Q-table</li>
-<li>Ensure that the final state of the environment is also displayed after the episode concludes.</li></ul></li>
-<li>Returns: The total rewards for the episode and a list of rendered outputs representing the board state at each step.</li>
-</ul>
-<pre><code data-highlighted="yes" class="hljs language-python">$ cat <span class="hljs-number">4</span>-main.py
-<span class="hljs-comment">#!/usr/bin/env python3</span>
-
-load_frozen_lake = <span class="hljs-built_in">__import__</span>(<span class="hljs-string">'0-load_env'</span>).load_frozen_lake
-q_init = <span class="hljs-built_in">__import__</span>(<span class="hljs-string">'1-q_init'</span>).q_init
-train = <span class="hljs-built_in">__import__</span>(<span class="hljs-string">'3-q_learning'</span>).train
-play = <span class="hljs-built_in">__import__</span>(<span class="hljs-string">'4-play'</span>).play
-
-<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
-
-np.random.seed(<span class="hljs-number">0</span>)
-desc = [[<span class="hljs-string">'S'</span>, <span class="hljs-string">'F'</span>, <span class="hljs-string">'F'</span>], [<span class="hljs-string">'F'</span>, <span class="hljs-string">'H'</span>, <span class="hljs-string">'H'</span>], [<span class="hljs-string">'F'</span>, <span class="hljs-string">'F'</span>, <span class="hljs-string">'G'</span>]]
-env = load_frozen_lake(desc=desc)
-Q = q_init(env)
-
-Q, _ = train(env, Q)
-
-env.reset()
-total_rewards, rendered_outputs = play(env, Q)
-
-<span class="hljs-built_in">print</span>(<span class="hljs-string">f'Total Rewards: <span class="hljs-subst">{total_rewards}</span>'</span>)
-<span class="hljs-keyword">for</span> output <span class="hljs-keyword">in</span> rendered_outputs:
-    <span class="hljs-built_in">print</span>(output)
-$ ./<span class="hljs-number">4</span>-main.py
-Total Rewards: <span class="hljs-number">1.0</span>
-
-`S`FF
-FHH
-FFG
-  (Down)
-SFF
-`F`HH
-FFG
-  (Down)
-SFF
-FHH
-`F`FG
-  (Right)
-SFF
-FHH
-F`F`G
-  (Right)
-SFF
-FHH
-FF`G`
-
-$
-</code></pre></div></div>
-
-    <!-- Technical information (Repo) - inside task description -->
-      <div class="list-group-item">
-        <p><strong>Repo:</strong></p>
-        <ul>
-          <li>GitHub repository: <code>holbertonschool-machine_learning</code></li>
-            <li>Directory: <code>reinforcement_learning/q_learning</code></li>
-            <li>File: <code>4-play.py</code></li>
-        </ul>
-      </div>
-  </div>
-
-  
-
-
-  <!-- Score container - full width at the end (only when task has online checks) -->
-    
-    <div class="task-score-block">
-      <h4 class="task-section-heading">Score of the task</h4>
-      <div id="task-22022-score-info-container" class="task-result-toggle task-score-in-description" data-task-id="22022" style="background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%); border-radius: 8px; padding: 12px 16px; border: 2px solid #dc3545; box-shadow: 0 2px 4px rgba(0,0,0,0.1); cursor: pointer;">
-        <div class="text-center">
-          <div style="font-size: 32px; font-weight: 900; line-height: 1; margin-bottom: 4px;" class="text-danger">
-            <span class="text-danger" id="task-22022-score-info-score" style="text-shadow: 0 1px 2px rgba(0,0,0,0.1);">0</span>
-            <span class="text-muted" id="task-22022-score-info-points" style="font-size: 20px; font-weight: 600;">/7</span>
-            <span class="text-muted" style="font-size: 14px; font-weight: 500; margin-left: 4px;">
-              pts
-            </span>
-          </div>
-          <div style="margin-top: 6px;">
-            <span class="label label-danger" id="task-22022-score-info-percentage" style="font-size: 13px; padding: 4px 10px; font-weight: bold; border-radius: 12px;">0.0%</span>
-          </div>
-          <div id="task-22022-correction-requests-container" style="margin-top: 8px; display: none;">
-            <span class="label label-success task-result-toggle" id="task-22022-correction-requests-label" data-task-id="22022" style="font-size: 11px; padding: 4px 8px; cursor: pointer; display: inline-block;">
-              <span class="glyphicon glyphicon-exclamation-sign"></span> <span id="task-22022-correction-requests-count">0</span> correction requests
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  <!-- My Answer block - just above buttons -->
-
-  <!-- Buttons block - separate block just under task description -->
-      <div class="task-buttons-block">
-        
-
-
-
-  <div class="run-correction-button-wrapper ">
-          <div class="student-task-github-area">
-            <div class="student-task-github-target student-task-github-inline student-task-github-card" data-task-id="22022" data-persist-url="/tasks/22022/save_student_checker_github">
-  <input type="hidden" class="task-github-token" data-task-id="22022" value="">
-  <input type="hidden" class="task-github-mode" data-task-id="22022" value="private">
-
-  <div class="student-task-github-card__head">
-    <h4 class="student-task-github-card__title">
-      <i class="fa fa-github" aria-hidden="true"></i>
-      My GitHub
-    </h4>
-  </div>
-
-  <div class="task-github-private-oauth-bar student-task-github-card__account" data-task-id="22022">
-    <a href="/tasks/22022/github_connect?return_url=https%3A%2F%2Fintranet.hbtn.io%2Fprojects%2F2416" class="btn btn-default btn-sm btn-block task-github-connect-btn student-task-github-card__connect-btn" data-task-id="22022">
-      <i class="fa fa-github"></i> Connect GitHub
-    </a>
-    <div class="task-github-connected-wrap student-task-github-card__connected-row" data-task-id="22022" style="display: none;">
-      <span class="task-github-connected task-github-connected-text" data-task-id="22022">
-        Connect as: <strong class="task-github-connected-user"></strong>
-      </span>
-      <button type="button" class="btn btn-default btn-sm task-github-disconnect-btn task-github-disconnect student-task-github-card__disconnect" data-task-id="22022" title="Disconnect">
-        Disconnect
-      </button>
-    </div>
-  </div>
-
-  <div class="row task-github-private-row task-github-private-row--student student-task-github-card__fields" data-task-id="22022" style="display:none;">
-    <div class="col-sm-7 col-xs-12 task-github-private-col">
-      <label class="task-github-field-label">Repository</label>
-      <select class="form-control input-sm task-github-repo-select task-github-unified-input" data-task-id="22022">
-        <option value="">Select a repository…</option>
-      </select>
-    </div>
-    <div class="col-sm-5 col-xs-12 task-github-private-col">
-      <label class="task-github-field-label">Folder (optional)</label>
-      <input class="form-control input-sm task-github-private-path task-github-unified-input" type="text" placeholder="Optional" data-task-id="22022">
-    </div>
-  </div>
-</div>
-
-          </div>
-      <div class="student-task-correction-actions">
-        <div class="student-task-actions-toolbar">
-          <div class="student-run-correction-button-wrap">
-            <button name="button" type="submit" class="btn btn-primary correction_request_test_send run-correction-button" data-task-id="22022">
-              <i aria-hidden="true" class="fa fa-play "></i> Run the correction
-</button>          </div>
-        </div>
-      </div>
-
-    
-  </div>
-
-<div style="display: flex; align-items: flex-start; gap: 8px; flex-wrap: wrap;">
-
-
-
-</div>
-
-      </div>
-
-  <div class="list-group">
-    <!-- Task URLs -->
-
-    <!-- Task Files -->
-
-
-
-    <!-- Self-paced manual review -->
-
-    <!-- Self validation checks -->
-
-    <!-- Inline review your work section for students -->
-  </div>
-
-  <!-- Panel footer - Controls -->
-  <div class="panel-footer task-result-footer" id="task-22022-result-footer" style="display: none;">
-      
-        <div style="margin-top: 15px; width: 100%; max-width: 100%; box-sizing: border-box;">
-          <div class="task-test-correction-inline task_correction_modal student_modal" id="task-test-correction-22022-correction-modal" data-hide-result-on-load="false">
-    <div class="spinner" style="display: none; margin: 20px auto; text-align: center;">
-        <div class="bounce1"></div>
-        <div class="bounce2"></div>
-        <div class="bounce3"></div>
-    </div>
-    <div class="actions" style="display: none;">
-        <div class="alert alert-info hidden"></div>
-        <div class="error"></div>
-        <div class="info"></div>
-    </div>
-    <div class="result" style="display: none;" data-auto-hide="false"></div>
-</div>
-
-
-        </div>
-      
-        <div class="modal fade users-done-modal" id="task-22022-users-done-modal" data-task-id="22022" data-batch-id="1062">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <h4 class="modal-title">Students who are done with "4. Play"</h4>
+        <h4 class="modal-title">Students who are done with "0. Breakout"</h4>
       </div>
       <div class="modal-body">
         <div class="list-group">
@@ -2226,126 +832,6 @@ $
                 </div>
                 
                 <!-- Connector Line -->
-                  <div class="task-connector-line" style="
-                         width: 40px;
-                         height: 2px;
-                         background-color: #d3d3d3;
-                         margin: 0 5px;
-                         flex-shrink: 0;
-                       "></div>
-              </div>
-              
-              <!-- Task Circle -->
-              <div class="task-progress-item d-flex align-items-center" data-task-index="1">
-                <div class="task-progress-circle" data-task-index="1" style="
-                       width: 40px;
-                       height: 40px;
-                       border-radius: 50%;
-                       border: 2px solid #d3d3d3;
-                       background-color: #fff;
-                       display: flex;
-                       align-items: center;
-                       justify-content: center;
-                       font-weight: bold;
-                       color: #666;
-                       font-size: 16px;
-                       cursor: pointer;
-                       flex-shrink: 0;
-                     ">
-                  1
-                </div>
-                
-                <!-- Connector Line -->
-                  <div class="task-connector-line" style="
-                         width: 40px;
-                         height: 2px;
-                         background-color: #d3d3d3;
-                         margin: 0 5px;
-                         flex-shrink: 0;
-                       "></div>
-              </div>
-              
-              <!-- Task Circle -->
-              <div class="task-progress-item d-flex align-items-center" data-task-index="2">
-                <div class="task-progress-circle" data-task-index="2" style="
-                       width: 40px;
-                       height: 40px;
-                       border-radius: 50%;
-                       border: 2px solid #d3d3d3;
-                       background-color: #fff;
-                       display: flex;
-                       align-items: center;
-                       justify-content: center;
-                       font-weight: bold;
-                       color: #666;
-                       font-size: 16px;
-                       cursor: pointer;
-                       flex-shrink: 0;
-                     ">
-                  2
-                </div>
-                
-                <!-- Connector Line -->
-                  <div class="task-connector-line" style="
-                         width: 40px;
-                         height: 2px;
-                         background-color: #d3d3d3;
-                         margin: 0 5px;
-                         flex-shrink: 0;
-                       "></div>
-              </div>
-              
-              <!-- Task Circle -->
-              <div class="task-progress-item d-flex align-items-center" data-task-index="3">
-                <div class="task-progress-circle" data-task-index="3" style="
-                       width: 40px;
-                       height: 40px;
-                       border-radius: 50%;
-                       border: 2px solid #d3d3d3;
-                       background-color: #fff;
-                       display: flex;
-                       align-items: center;
-                       justify-content: center;
-                       font-weight: bold;
-                       color: #666;
-                       font-size: 16px;
-                       cursor: pointer;
-                       flex-shrink: 0;
-                     ">
-                  3
-                </div>
-                
-                <!-- Connector Line -->
-                  <div class="task-connector-line" style="
-                         width: 40px;
-                         height: 2px;
-                         background-color: #d3d3d3;
-                         margin: 0 5px;
-                         flex-shrink: 0;
-                       "></div>
-              </div>
-              
-              <!-- Task Circle -->
-              <div class="task-progress-item d-flex align-items-center" data-task-index="4">
-                <div class="task-progress-circle" data-task-index="4" style="
-                       width: 40px;
-                       height: 40px;
-                       border-radius: 50%;
-                       border: 2px solid #d3d3d3;
-                       background-color: #fff;
-                       display: flex;
-                       align-items: center;
-                       justify-content: center;
-                       font-weight: bold;
-                       color: #666;
-                       font-size: 16px;
-                       cursor: pointer;
-                       flex-shrink: 0;
-                     ">
-                  4
-                </div>
-                
-                <!-- Connector Line -->
               </div>
           </div>
         </div>
@@ -2354,11 +840,9 @@ $
         <div id="task-list-nav-buttons" class="d-flex justify-content-between align-items-center" style="margin-top: 20px;">
             <div></div>
           
-          <span id="task-counter" style="color: #666; font-weight: bold;" data-translation-template="Task %{current} of %{total}">Task 0 of 4</span>
+          <span id="task-counter" style="color: #666; font-weight: bold;" data-translation-template="Task %{current} of %{total}">Task 0 of 0</span>
           
-            <button id="task-nav-next" class="btn btn-primary" data-task-index="1">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            </button>
+            <div></div>
         </div>
       </div>
     </div>
@@ -2366,7 +850,7 @@ $
   </div>
   
     <div class="col-sm-12 col-md-12 hidden-lg">
-        <div data-react-class="projects/ProjectReview" data-react-props="{&quot;style&quot;:&quot;line&quot;,&quot;correction&quot;:{&quot;statusURI&quot;:&quot;/corrections/1755339/status_self_paced.json&quot;,&quot;startReviewURI&quot;:&quot;/corrections/1755339/start_auto_review_self_paced.json&quot;},&quot;csrfToken&quot;:&quot;pLcESUaZHDlo8Lh4pFCA-AoK_bXAFlwPX-Pwb9c4AAo9phRLNabyLwsSMjc54RTlHdJ3ef7NzMzxaGFGsDpUig&quot;,&quot;nextProject&quot;:{&quot;details&quot;:{&quot;curriculum_completed&quot;:false,&quot;message&quot;:&quot;Next project: Deep Q-learning&quot;,&quot;uri&quot;:&quot;/projects/2417&quot;},&quot;fetchURI&quot;:&quot;/projects/2416/next&quot;},&quot;pollingInterval&quot;:10000,&quot;progress&quot;:{&quot;auto_review&quot;:{&quot;can_execute&quot;:true,&quot;completion&quot;:{&quot;count&quot;:0,&quot;is_completed&quot;:false,&quot;percentage&quot;:0.0},&quot;inability_to_execute_reason&quot;:null},&quot;tasks&quot;:[{&quot;id&quot;:22018,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:7,&quot;score&quot;:0},&quot;correction_requests_count&quot;:0},{&quot;id&quot;:22019,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:12,&quot;score&quot;:0},&quot;correction_requests_count&quot;:0},{&quot;id&quot;:22020,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:12,&quot;score&quot;:0},&quot;correction_requests_count&quot;:0},{&quot;id&quot;:22021,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:16,&quot;score&quot;:0},&quot;correction_requests_count&quot;:0},{&quot;id&quot;:22022,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:7,&quot;score&quot;:0},&quot;correction_requests_count&quot;:0}],&quot;summary&quot;:{&quot;completion&quot;:0.0,&quot;score&quot;:{&quot;mandatory&quot;:null,&quot;optional&quot;:null}},&quot;can_skip&quot;:true,&quot;can_start_peer_review&quot;:false},&quot;peerReview&quot;:{&quot;availableReviewersURI&quot;:&quot;/corrections/1755339/available_reviewers.json&quot;,&quot;canReviewPeerDirectly&quot;:true,&quot;correctCorrectionURI&quot;:&quot;https://intranet.hbtn.io/corrections/1755339/correct&quot;,&quot;qaReviewsURI&quot;:&quot;/corrections/to_review&quot;,&quot;readyForReviewURI&quot;:&quot;/corrections/1755339/toggle_ready_for_review.json&quot;,&quot;reviewDeadline&quot;:null,&quot;synchronousManualReview&quot;:false},&quot;project&quot;:{&quot;completion&quot;:0.0,&quot;id&quot;:2416,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/005_color-7e093441390199aa2cdc4b6f6478f1def43125d09c333d9ba21227c9a56cbc0d.png&quot;,&quot;name&quot;:&quot;Q-learning&quot;,&quot;score&quot;:{&quot;mandatory&quot;:null,&quot;optional&quot;:null},&quot;tasksCount&quot;:0,&quot;correctionType&quot;:&quot;auto_and_manual&quot;},&quot;skipURI&quot;:&quot;/corrections/1755339/skip&quot;,&quot;taskLevelReviewTypeHumanized&quot;:&quot;Your score will be updated as you progress.&quot;,&quot;hasManualChecks&quot;:true}" data-react-cache-id="projects/ProjectReview-0"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">Score</h3></div><div class="panel-body"><div class="align-items-center gap-5 d-flex"><div class="pathway" style="padding: 10px 30px 40px;"><div class="project-circle project-circle-on-tile" style="border-radius: 100%; box-shadow: rgb(229, 230, 230) 10px 20px 10px; height: 125px; margin: auto; padding: 5px; width: 125px;"><div data-test-id="CircularProgressbarWithChildren"><div style="position: relative; width: 100%; height: 100%;"><svg class="CircularProgressbar " viewBox="0 0 100 100" data-test-id="CircularProgressbar" style="height: 115px; vertical-align: middle; width: 115px;"><path class="CircularProgressbar-trail" d="
+        <div data-react-class="projects/ProjectReview" data-react-props="{&quot;style&quot;:&quot;line&quot;,&quot;correction&quot;:{&quot;statusURI&quot;:&quot;/corrections/1755347/status_self_paced.json&quot;,&quot;startReviewURI&quot;:&quot;/corrections/1755347/start_auto_review_self_paced.json&quot;},&quot;csrfToken&quot;:&quot;WPYSIVW7ffv8wuVuw3BnLdRWibwrcUhWKpUJBUUaTuQwuTpS1GFFQxv5iKgUz_vEcOmmhtKUIEaMRNcO-4ZZCQ&quot;,&quot;nextProject&quot;:{&quot;details&quot;:{&quot;curriculum_completed&quot;:false,&quot;message&quot;:&quot;Next project: Temporal Difference&quot;,&quot;uri&quot;:&quot;/projects/2418&quot;},&quot;fetchURI&quot;:&quot;/projects/2417/next&quot;},&quot;pollingInterval&quot;:10000,&quot;progress&quot;:{&quot;auto_review&quot;:{&quot;can_execute&quot;:true,&quot;completion&quot;:null,&quot;inability_to_execute_reason&quot;:null},&quot;tasks&quot;:[{&quot;id&quot;:22023,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:18,&quot;score&quot;:0},&quot;correction_requests_count&quot;:0}],&quot;summary&quot;:{&quot;completion&quot;:0.0,&quot;score&quot;:{&quot;mandatory&quot;:null,&quot;optional&quot;:null}},&quot;can_skip&quot;:true,&quot;can_start_peer_review&quot;:false},&quot;peerReview&quot;:{&quot;availableReviewersURI&quot;:&quot;/corrections/1755347/available_reviewers.json&quot;,&quot;canReviewPeerDirectly&quot;:true,&quot;correctCorrectionURI&quot;:&quot;https://intranet.hbtn.io/corrections/1755347/correct&quot;,&quot;qaReviewsURI&quot;:&quot;/corrections/to_review&quot;,&quot;readyForReviewURI&quot;:&quot;/corrections/1755347/toggle_ready_for_review.json&quot;,&quot;reviewDeadline&quot;:null,&quot;synchronousManualReview&quot;:false},&quot;project&quot;:{&quot;completion&quot;:0.0,&quot;id&quot;:2417,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/005_color-7e093441390199aa2cdc4b6f6478f1def43125d09c333d9ba21227c9a56cbc0d.png&quot;,&quot;name&quot;:&quot;Deep Q-learning&quot;,&quot;score&quot;:{&quot;mandatory&quot;:null,&quot;optional&quot;:null},&quot;tasksCount&quot;:0,&quot;correctionType&quot;:&quot;only_manual&quot;},&quot;skipURI&quot;:&quot;/corrections/1755347/skip&quot;,&quot;taskLevelReviewTypeHumanized&quot;:null,&quot;hasManualChecks&quot;:true}" data-react-cache-id="projects/ProjectReview-0"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">Score</h3></div><div class="panel-body"><div class="align-items-center gap-5 d-flex"><div class="pathway" style="padding: 10px 30px 40px;"><div class="project-circle project-circle-on-tile" style="border-radius: 100%; box-shadow: rgb(229, 230, 230) 10px 20px 10px; height: 125px; margin: auto; padding: 5px; width: 125px;"><div data-test-id="CircularProgressbarWithChildren"><div style="position: relative; width: 100%; height: 100%;"><svg class="CircularProgressbar " viewBox="0 0 100 100" data-test-id="CircularProgressbar" style="height: 115px; vertical-align: middle; width: 115px;"><path class="CircularProgressbar-trail" d="
       M 50,50
       m 0,-48.5
       a 48.5,48.5 0 1 1 0,97
@@ -2376,19 +860,19 @@ $
       m 0,-48.5
       a 48.5,48.5 0 1 1 0,97
       a 48.5,48.5 0 1 1 0,-97
-    " stroke-width="3" fill-opacity="0" style="stroke-dasharray: 304.734px, 304.734px; stroke-dashoffset: 304.734px;"></path></svg><div data-test-id="CircularProgressbarWithChildren__children" style="position: absolute; width: 100%; height: 100%; margin-top: -100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"><div class="position-relative"><div class="align-items-center d-flex justify-content-center project-circle-body active" style="border-radius: 100%; height: 100px; width: 100px;"><img alt="Project badge" src="/assets/pathway/005_color-7e093441390199aa2cdc4b6f6478f1def43125d09c333d9ba21227c9a56cbc0d.png" width="60%"></div><div class="p-1 position-absolute project-circle-score text-center" style="border-radius: 10px; width: auto; max-width: 100%; min-width: 120px; left: 50%; transform: translateX(-50%);"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Score Mandatory Tasks"><span class="d-block">0%</span></span></div></div></div></div></div></div></div><div style="display: flex; flex-direction: column; justify-content: center; align-items: center;"><p class="mb-2 text-primary"><span>Your score will be updated as you progress.</span></p><p>When you are ready to be reviewed, share your link to your peers.</p><div class="modal fade" id="available-reviewers-modal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button><h4 class="modal-title">Contact one of your peers</h4></div><div class="modal-body"><div class="block-spinner" style="text-align: center;"><div style="animation: 1.4s ease-in-out -0.32s infinite normal both running sk-bouncedelay; background-color: rgb(51, 51, 51); border-radius: 50%; display: inline-block; height: 18px; width: 18px;"></div><div style="animation: 1.4s ease-in-out -0.16s infinite normal both running sk-bouncedelay; background-color: rgb(51, 51, 51); border-radius: 50%; display: inline-block; height: 18px; width: 18px;"></div><div style="animation: 1.4s ease-in-out 0s infinite normal both running sk-bouncedelay; background-color: rgb(51, 51, 51); border-radius: 50%; display: inline-block; height: 18px; width: 18px;"></div></div></div></div></div></div><div class="input-group d-block my-2"><span class="form-control user-select-all max-width-250-ellipsis">https://intranet.hbtn.io/corrections/1755339/correct</span><span class="input-group-btn"><a class="btn btn-default"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Click to copy"><span role="button"><i aria-hidden="true" class="fa fa-clipboard fa-fw"></i></span></span></a></span></div></div></div></div></div></div>
+    " stroke-width="3" fill-opacity="0" style="stroke-dasharray: 304.734px, 304.734px; stroke-dashoffset: 304.734px;"></path></svg><div data-test-id="CircularProgressbarWithChildren__children" style="position: absolute; width: 100%; height: 100%; margin-top: -100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"><div class="position-relative"><div class="align-items-center d-flex justify-content-center project-circle-body active" style="border-radius: 100%; height: 100px; width: 100px;"><img alt="Project badge" src="/assets/pathway/005_color-7e093441390199aa2cdc4b6f6478f1def43125d09c333d9ba21227c9a56cbc0d.png" width="60%"></div><div class="p-1 position-absolute project-circle-score text-center" style="border-radius: 10px; width: auto; max-width: 100%; min-width: 120px; left: 50%; transform: translateX(-50%);"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Score Mandatory Tasks"><span class="d-block">0%</span></span></div></div></div></div></div></div></div><div style="display: flex; flex-direction: column; justify-content: center; align-items: center;"><p class="mb-2 text-primary"></p><p>When you are ready to be reviewed, share your link to your peers.</p><div class="modal fade" id="available-reviewers-modal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button><h4 class="modal-title">Contact one of your peers</h4></div><div class="modal-body"><div class="block-spinner" style="text-align: center;"><div style="animation: 1.4s ease-in-out -0.32s infinite normal both running sk-bouncedelay; background-color: rgb(51, 51, 51); border-radius: 50%; display: inline-block; height: 18px; width: 18px;"></div><div style="animation: 1.4s ease-in-out -0.16s infinite normal both running sk-bouncedelay; background-color: rgb(51, 51, 51); border-radius: 50%; display: inline-block; height: 18px; width: 18px;"></div><div style="animation: 1.4s ease-in-out 0s infinite normal both running sk-bouncedelay; background-color: rgb(51, 51, 51); border-radius: 50%; display: inline-block; height: 18px; width: 18px;"></div></div></div></div></div></div><div class="input-group d-block my-2"><span class="form-control user-select-all max-width-250-ellipsis">https://intranet.hbtn.io/corrections/1755347/correct</span><span class="input-group-btn"><a class="btn btn-default"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Click to copy"><span role="button"><i aria-hidden="true" class="fa fa-clipboard fa-fw"></i></span></span></a></span></div></div></div></div></div></div>
 
       
           <div class="panel panel-default project-navigation-buttons" style="margin-bottom: 20px; margin-top: 20px; clear: both;">
             <div class="panel-body">
               <div class="d-flex justify-content-around flex-wrap" style="gap: 10px;">
                   <div>
-                    <a data-toggle="tooltip" title="" class="btn btn-primary" role="button" href="/projects/2361" data-original-title="QA Bot">
+                    <a data-toggle="tooltip" title="" class="btn btn-primary" role="button" href="/projects/2416" data-original-title="Q-learning">
                       <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Previous project
 </a>                  </div>
                   <div>
-                      <form action="/corrections/1755339/skip" method="post" style="display: inline;">
-                        <input name="authenticity_token" type="hidden" value="lR9hxy5Jqu8jJnimgX4vSij3LDb3Ukp0hRcEAl9DDW0MDnHFXXZE-UDE8ukcz7tXPy-m-smJ2rcrnJUrOEFZ7Q">
+                      <form action="/corrections/1755347/skip" method="post" style="display: inline;">
+                        <input name="authenticity_token" type="hidden" value="GPZtbfLQ6ETkCDnJyQ3UdDFM-BbHNVPa8MDafZau26ZwuUUecwrQ_AMzVA8eskidlfPXLD7QO8pWEQR2KDLMSw">
                         <button class="btn btn-primary" type="submit">
                           Next project <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
                         </button>
@@ -2400,7 +884,7 @@ $
     </div>
 
   <div class="col-xl-3 col-lg-4 hidden-xs hidden-sm hidden-md sticky-nav">
-          <div data-react-class="projects/ProjectReview" data-react-props="{&quot;style&quot;:&quot;column&quot;,&quot;correction&quot;:{&quot;statusURI&quot;:&quot;/corrections/1755339/status_self_paced.json&quot;,&quot;startReviewURI&quot;:&quot;/corrections/1755339/start_auto_review_self_paced.json&quot;},&quot;csrfToken&quot;:&quot;1AToUpoOoAZFl9ypBE9208Xw9N6H-sj1EDEOdJMX5WlNFfhQ6TFOECZ1VuaZ_uLO0ih-ErkhWDa-up9d9BWx6Q&quot;,&quot;nextProject&quot;:{&quot;details&quot;:{&quot;curriculum_completed&quot;:false,&quot;message&quot;:&quot;Next project: Deep Q-learning&quot;,&quot;uri&quot;:&quot;/projects/2417&quot;},&quot;fetchURI&quot;:&quot;/projects/2416/next&quot;},&quot;pollingInterval&quot;:10000,&quot;progress&quot;:{&quot;auto_review&quot;:{&quot;can_execute&quot;:true,&quot;completion&quot;:{&quot;count&quot;:0,&quot;is_completed&quot;:false,&quot;percentage&quot;:0.0},&quot;inability_to_execute_reason&quot;:null},&quot;tasks&quot;:[{&quot;id&quot;:22018,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:7,&quot;score&quot;:0},&quot;correction_requests_count&quot;:0},{&quot;id&quot;:22019,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:12,&quot;score&quot;:0},&quot;correction_requests_count&quot;:0},{&quot;id&quot;:22020,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:12,&quot;score&quot;:0},&quot;correction_requests_count&quot;:0},{&quot;id&quot;:22021,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:16,&quot;score&quot;:0},&quot;correction_requests_count&quot;:0},{&quot;id&quot;:22022,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:7,&quot;score&quot;:0},&quot;correction_requests_count&quot;:0}],&quot;summary&quot;:{&quot;completion&quot;:0.0,&quot;score&quot;:{&quot;mandatory&quot;:null,&quot;optional&quot;:null}},&quot;can_skip&quot;:true,&quot;can_start_peer_review&quot;:false},&quot;peerReview&quot;:{&quot;availableReviewersURI&quot;:&quot;/corrections/1755339/available_reviewers.json&quot;,&quot;canReviewPeerDirectly&quot;:true,&quot;correctCorrectionURI&quot;:&quot;https://intranet.hbtn.io/corrections/1755339/correct&quot;,&quot;qaReviewsURI&quot;:&quot;/corrections/to_review&quot;,&quot;readyForReviewURI&quot;:&quot;/corrections/1755339/toggle_ready_for_review.json&quot;,&quot;reviewDeadline&quot;:null,&quot;synchronousManualReview&quot;:false},&quot;project&quot;:{&quot;completion&quot;:0.0,&quot;id&quot;:2416,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/005_color-7e093441390199aa2cdc4b6f6478f1def43125d09c333d9ba21227c9a56cbc0d.png&quot;,&quot;name&quot;:&quot;Q-learning&quot;,&quot;score&quot;:{&quot;mandatory&quot;:null,&quot;optional&quot;:null},&quot;tasksCount&quot;:0,&quot;correctionType&quot;:&quot;auto_and_manual&quot;},&quot;skipURI&quot;:&quot;/corrections/1755339/skip&quot;,&quot;taskLevelReviewTypeHumanized&quot;:&quot;Your score will be updated as you progress.&quot;,&quot;hasManualChecks&quot;:true}" data-react-cache-id="projects/ProjectReview-0"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">Score</h3></div><div class="panel-body"><div class="align-items-center gap-5 "><div class="pathway" style="padding: 10px 30px 40px;"><div class="project-circle project-circle-on-tile" style="border-radius: 100%; box-shadow: rgb(229, 230, 230) 10px 20px 10px; height: 125px; margin: auto; padding: 5px; width: 125px;"><div data-test-id="CircularProgressbarWithChildren"><div style="position: relative; width: 100%; height: 100%;"><svg class="CircularProgressbar " viewBox="0 0 100 100" data-test-id="CircularProgressbar" style="height: 115px; vertical-align: middle; width: 115px;"><path class="CircularProgressbar-trail" d="
+          <div data-react-class="projects/ProjectReview" data-react-props="{&quot;style&quot;:&quot;column&quot;,&quot;correction&quot;:{&quot;statusURI&quot;:&quot;/corrections/1755347/status_self_paced.json&quot;,&quot;startReviewURI&quot;:&quot;/corrections/1755347/start_auto_review_self_paced.json&quot;},&quot;csrfToken&quot;:&quot;6GtA5OxNuDLedjCX65RI0IQGIdwsTp6LC26motgpd9uAJGiXbZeAijlNXVE8K9Q5ILkO5tWr9putv3ipZrVgNg&quot;,&quot;nextProject&quot;:{&quot;details&quot;:{&quot;curriculum_completed&quot;:false,&quot;message&quot;:&quot;Next project: Temporal Difference&quot;,&quot;uri&quot;:&quot;/projects/2418&quot;},&quot;fetchURI&quot;:&quot;/projects/2417/next&quot;},&quot;pollingInterval&quot;:10000,&quot;progress&quot;:{&quot;auto_review&quot;:{&quot;can_execute&quot;:true,&quot;completion&quot;:null,&quot;inability_to_execute_reason&quot;:null},&quot;tasks&quot;:[{&quot;id&quot;:22023,&quot;progress_score&quot;:{&quot;progress&quot;:0.0,&quot;score&quot;:0.0},&quot;score_info&quot;:{&quot;passed&quot;:false,&quot;points&quot;:18,&quot;score&quot;:0},&quot;correction_requests_count&quot;:0}],&quot;summary&quot;:{&quot;completion&quot;:0.0,&quot;score&quot;:{&quot;mandatory&quot;:null,&quot;optional&quot;:null}},&quot;can_skip&quot;:true,&quot;can_start_peer_review&quot;:false},&quot;peerReview&quot;:{&quot;availableReviewersURI&quot;:&quot;/corrections/1755347/available_reviewers.json&quot;,&quot;canReviewPeerDirectly&quot;:true,&quot;correctCorrectionURI&quot;:&quot;https://intranet.hbtn.io/corrections/1755347/correct&quot;,&quot;qaReviewsURI&quot;:&quot;/corrections/to_review&quot;,&quot;readyForReviewURI&quot;:&quot;/corrections/1755347/toggle_ready_for_review.json&quot;,&quot;reviewDeadline&quot;:null,&quot;synchronousManualReview&quot;:false},&quot;project&quot;:{&quot;completion&quot;:0.0,&quot;id&quot;:2417,&quot;index&quot;:0,&quot;isAccessible&quot;:true,&quot;isOptional&quot;:false,&quot;imagePath&quot;:&quot;/assets/pathway/005_color-7e093441390199aa2cdc4b6f6478f1def43125d09c333d9ba21227c9a56cbc0d.png&quot;,&quot;name&quot;:&quot;Deep Q-learning&quot;,&quot;score&quot;:{&quot;mandatory&quot;:null,&quot;optional&quot;:null},&quot;tasksCount&quot;:0,&quot;correctionType&quot;:&quot;only_manual&quot;},&quot;skipURI&quot;:&quot;/corrections/1755347/skip&quot;,&quot;taskLevelReviewTypeHumanized&quot;:null,&quot;hasManualChecks&quot;:true}" data-react-cache-id="projects/ProjectReview-0"><div class="panel panel-default"><div class="panel-heading"><h3 class="panel-title">Score</h3></div><div class="panel-body"><div class="align-items-center gap-5 "><div class="pathway" style="padding: 10px 30px 40px;"><div class="project-circle project-circle-on-tile" style="border-radius: 100%; box-shadow: rgb(229, 230, 230) 10px 20px 10px; height: 125px; margin: auto; padding: 5px; width: 125px;"><div data-test-id="CircularProgressbarWithChildren"><div style="position: relative; width: 100%; height: 100%;"><svg class="CircularProgressbar " viewBox="0 0 100 100" data-test-id="CircularProgressbar" style="height: 115px; vertical-align: middle; width: 115px;"><path class="CircularProgressbar-trail" d="
       M 50,50
       m 0,-48.5
       a 48.5,48.5 0 1 1 0,97
@@ -2410,19 +894,19 @@ $
       m 0,-48.5
       a 48.5,48.5 0 1 1 0,97
       a 48.5,48.5 0 1 1 0,-97
-    " stroke-width="3" fill-opacity="0" style="stroke-dasharray: 304.734px, 304.734px; stroke-dashoffset: 304.734px;"></path></svg><div data-test-id="CircularProgressbarWithChildren__children" style="position: absolute; width: 100%; height: 100%; margin-top: -100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"><div class="position-relative"><div class="align-items-center d-flex justify-content-center project-circle-body active" style="border-radius: 100%; height: 100px; width: 100px;"><img alt="Project badge" src="/assets/pathway/005_color-7e093441390199aa2cdc4b6f6478f1def43125d09c333d9ba21227c9a56cbc0d.png" width="60%"></div><div class="p-1 position-absolute project-circle-score text-center" style="border-radius: 10px; width: auto; max-width: 100%; min-width: 120px; left: 50%; transform: translateX(-50%);"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Score Mandatory Tasks"><span class="d-block">0%</span></span></div></div></div></div></div></div></div><div style="display: flex; flex-direction: column; justify-content: center; align-items: center;"><p class="mb-2 text-primary"><span>Your score will be updated as you progress.</span></p><p>When you are ready to be reviewed, share your link to your peers.</p><div class="modal fade" id="available-reviewers-modal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button><h4 class="modal-title">Contact one of your peers</h4></div><div class="modal-body"><div class="block-spinner" style="text-align: center;"><div style="animation: 1.4s ease-in-out -0.32s infinite normal both running sk-bouncedelay; background-color: rgb(51, 51, 51); border-radius: 50%; display: inline-block; height: 18px; width: 18px;"></div><div style="animation: 1.4s ease-in-out -0.16s infinite normal both running sk-bouncedelay; background-color: rgb(51, 51, 51); border-radius: 50%; display: inline-block; height: 18px; width: 18px;"></div><div style="animation: 1.4s ease-in-out 0s infinite normal both running sk-bouncedelay; background-color: rgb(51, 51, 51); border-radius: 50%; display: inline-block; height: 18px; width: 18px;"></div></div></div></div></div></div><div class="input-group d-block my-2"><span class="form-control user-select-all max-width-250-ellipsis">https://intranet.hbtn.io/corrections/1755339/correct</span><span class="input-group-btn"><a class="btn btn-default"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Click to copy"><span role="button"><i aria-hidden="true" class="fa fa-clipboard fa-fw"></i></span></span></a></span></div></div></div></div></div></div>
+    " stroke-width="3" fill-opacity="0" style="stroke-dasharray: 304.734px, 304.734px; stroke-dashoffset: 304.734px;"></path></svg><div data-test-id="CircularProgressbarWithChildren__children" style="position: absolute; width: 100%; height: 100%; margin-top: -100%; display: flex; flex-direction: column; justify-content: center; align-items: center;"><div class="position-relative"><div class="align-items-center d-flex justify-content-center project-circle-body active" style="border-radius: 100%; height: 100px; width: 100px;"><img alt="Project badge" src="/assets/pathway/005_color-7e093441390199aa2cdc4b6f6478f1def43125d09c333d9ba21227c9a56cbc0d.png" width="60%"></div><div class="p-1 position-absolute project-circle-score text-center" style="border-radius: 10px; width: auto; max-width: 100%; min-width: 120px; left: 50%; transform: translateX(-50%);"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Score Mandatory Tasks"><span class="d-block">0%</span></span></div></div></div></div></div></div></div><div style="display: flex; flex-direction: column; justify-content: center; align-items: center;"><p class="mb-2 text-primary"></p><p>When you are ready to be reviewed, share your link to your peers.</p><div class="modal fade" id="available-reviewers-modal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span></button><h4 class="modal-title">Contact one of your peers</h4></div><div class="modal-body"><div class="block-spinner" style="text-align: center;"><div style="animation: 1.4s ease-in-out -0.32s infinite normal both running sk-bouncedelay; background-color: rgb(51, 51, 51); border-radius: 50%; display: inline-block; height: 18px; width: 18px;"></div><div style="animation: 1.4s ease-in-out -0.16s infinite normal both running sk-bouncedelay; background-color: rgb(51, 51, 51); border-radius: 50%; display: inline-block; height: 18px; width: 18px;"></div><div style="animation: 1.4s ease-in-out 0s infinite normal both running sk-bouncedelay; background-color: rgb(51, 51, 51); border-radius: 50%; display: inline-block; height: 18px; width: 18px;"></div></div></div></div></div></div><div class="input-group d-block my-2"><span class="form-control user-select-all max-width-250-ellipsis">https://intranet.hbtn.io/corrections/1755347/correct</span><span class="input-group-btn"><a class="btn btn-default"><span data-container="body" data-html="false" data-placement="auto top" data-toggle="tooltip" title="" data-original-title="Click to copy"><span role="button"><i aria-hidden="true" class="fa fa-clipboard fa-fw"></i></span></span></a></span></div></div></div></div></div></div>
 
         
             <div class="panel panel-default project-navigation-buttons" style="margin-bottom: 20px; margin-top: 20px; clear: both;">
               <div class="panel-body">
                 <div class="d-flex justify-content-around flex-wrap" style="gap: 10px;">
                     <div>
-                      <a data-toggle="tooltip" title="" class="btn btn-primary" role="button" href="/projects/2361" data-original-title="QA Bot">
+                      <a data-toggle="tooltip" title="" class="btn btn-primary" role="button" href="/projects/2416" data-original-title="Q-learning">
                         <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span> Previous project
 </a>                    </div>
                     <div>
-                        <form action="/corrections/1755339/skip" method="post" style="display: inline;">
-                          <input name="authenticity_token" type="hidden" value="lR9hxy5Jqu8jJnimgX4vSij3LDb3Ukp0hRcEAl9DDW0MDnHFXXZE-UDE8ukcz7tXPy-m-smJ2rcrnJUrOEFZ7Q">
+                        <form action="/corrections/1755347/skip" method="post" style="display: inline;">
+                          <input name="authenticity_token" type="hidden" value="GPZtbfLQ6ETkCDnJyQ3UdDFM-BbHNVPa8MDafZau26ZwuUUecwrQ_AMzVA8eskidlfPXLD7QO8pWEQR2KDLMSw">
                           <button class="btn btn-primary" type="submit">
                             Next project <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
                           </button>
@@ -2439,63 +923,15 @@ $
         </h3>
       </div>
       <div class="panel-body task-list">
-          <div class="task-button d-flex justify-content-between active" data-task-index="0" data-task-id="22018" style="text-decoration: none; padding: 10px; margin-bottom: 5px; border-radius: 4px; cursor: pointer; background-color: #f0f0f0; border-left: 3px solid #dc3545;" role="button">
+          <div class="task-button d-flex justify-content-between active" data-task-index="0" data-task-id="22023" style="text-decoration: none; padding: 10px; margin-bottom: 5px; border-radius: 4px; cursor: pointer; background-color: #f0f0f0; border-left: 3px solid #dc3545;" role="button">
             <div class="task-title-list">
-              0. <code>Load the Environment</code>
+              0. <code>Breakout</code>
             </div>
             <div class="d-flex ml-2 align-center">
               
 
                 <strong class="ml-2 text-danger" style="font-size: 14px; min-width: 50px; text-align: right;">
-                  0/7
-                </strong>
-            </div>
-          </div>
-          <div class="task-button d-flex justify-content-between" data-task-index="1" data-task-id="22019" style="text-decoration: none; padding: 10px; margin-bottom: 5px; border-radius: 4px; cursor: pointer; " role="button">
-            <div class="task-title-list">
-              1. <code>Initialize Q-table</code>
-            </div>
-            <div class="d-flex ml-2 align-center">
-              
-
-                <strong class="ml-2 text-danger" style="font-size: 14px; min-width: 50px; text-align: right;">
-                  0/12
-                </strong>
-            </div>
-          </div>
-          <div class="task-button d-flex justify-content-between" data-task-index="2" data-task-id="22020" style="text-decoration: none; padding: 10px; margin-bottom: 5px; border-radius: 4px; cursor: pointer; " role="button">
-            <div class="task-title-list">
-              2. <code>Epsilon Greedy</code>
-            </div>
-            <div class="d-flex ml-2 align-center">
-              
-
-                <strong class="ml-2 text-danger" style="font-size: 14px; min-width: 50px; text-align: right;">
-                  0/12
-                </strong>
-            </div>
-          </div>
-          <div class="task-button d-flex justify-content-between" data-task-index="3" data-task-id="22021" style="text-decoration: none; padding: 10px; margin-bottom: 5px; border-radius: 4px; cursor: pointer; " role="button">
-            <div class="task-title-list">
-              3. <code>Q-learning</code>
-            </div>
-            <div class="d-flex ml-2 align-center">
-              
-
-                <strong class="ml-2 text-danger" style="font-size: 14px; min-width: 50px; text-align: right;">
-                  0/16
-                </strong>
-            </div>
-          </div>
-          <div class="task-button d-flex justify-content-between" data-task-index="4" data-task-id="22022" style="text-decoration: none; padding: 10px; margin-bottom: 5px; border-radius: 4px; cursor: pointer; " role="button">
-            <div class="task-title-list">
-              4. <code>Play</code>
-            </div>
-            <div class="d-flex ml-2 align-center">
-              
-
-                <strong class="ml-2 text-danger" style="font-size: 14px; min-width: 50px; text-align: right;">
-                  0/7
+                  0/18
                 </strong>
             </div>
           </div>
@@ -2622,7 +1058,7 @@ alert(example);
         });
       </script>
       
-        <div id="clippyAssistant" data-id="11510" data-firstname="Loic" data-batch-number="C#27" data-lastname="Le Guen" data-slack-id="U08V055A476" data-is-staff="false" data-location="Holberton Thonon-les-Bains, France" data-project-id="2416" data-location-white-label="false">
+        <div id="clippyAssistant" data-id="11510" data-firstname="Loic" data-batch-number="C#27" data-lastname="Le Guen" data-slack-id="U08V055A476" data-is-staff="false" data-location="Holberton Thonon-les-Bains, France" data-project-id="2417" data-location-white-label="false">
         <div class="chat-container" id="chat-container">
             <div class="chat-header" style="cursor: default;">
                 <div>

@@ -4,46 +4,30 @@
 
 ## Table of Contents :
 
-  - [0. Load the Environment](#subparagraph0)
-  - [1. Initialize Q-table](#subparagraph1)
-  - [2. Epsilon Greedy](#subparagraph2)
-  - [3. Q-learning](#subparagraph3)
-  - [4. Play](#subparagraph4)
+  - [0. Breakout](#subparagraph0)
 
 ## Resources
 ### Read or watch:
-* [MIT 6.S191: Reinforcement Learning](/rltoken/saQI8BvlKV60MENEf_43MA)
-* [An introduction to Reinforcement Learning](/rltoken/gOyUyOcWBr5QnuXhgJuVlw)
-* [An Introduction to Q-Learning: A Tutorial For Beginners](/rltoken/c9NpSay4kyBNipR9cwPouw)
-* [Q-Learning](/rltoken/EYIHlSinClcDSXQ9TnuXLg)
-* [Markov Decision Processes (MDPs) - Structuring a Reinforcement Learning Problem](/rltoken/YUp-gcE1R9mC1cjjfvFh2w)
-* [Expected Return - What Drives a Reinforcement Learning Agent in an MDP](/rltoken/BKs-9m9ep0sTz8V-EjoGrQ)
-* [Policies and Value Functions - Good Actions for a Reinforcement Learning Agent](/rltoken/i3LsCe2sGI5kM1Qzr0d6Rg)
-* [What do Reinforcement Learning Algorithms Learn - Optimal Policies](/rltoken/3nofOjrYYD1ghpMOEkG02g)
-* [Q-Learning Explained - A Reinforcement Learning Technique](/rltoken/v3Bnyaow4gRx6K0os1GsSA)
-* [Exploration vs. Exploitation - Learning the Optimal Reinforcement Learning Policy](/rltoken/igctuWgpbqhykidsjEwZxQ)
-* [Q-Learning Tutorial 1: Train Gymnasium FrozenLake-v1 with Python Reinforcement Learning](/rltoken/U-tHCRc7pwL9rQNcfcJNag)
-* [Q-Learning: Implementation](/rltoken/PoDqq2FzDizjdtVLkmgSZQ)
-* [Markov Decision Processes](/rltoken/IRn9ww1sX2MQSCsqwgUhSA)
+* [Deep Q-Learning - Combining Neural Networks and Reinforcement Learning](/rltoken/ieV4_ka9fXq0EDjTsW0TZQ)
+* [Replay Memory Explained - Experience for Deep Q-Network Training](/rltoken/mA-O49pM8Cza7hLcD1COow)
+* [Training a Deep Q-Network - Reinforcement Learning](/rltoken/Q0mismdsgAZz9LtjbhJSuw)
+* [Training a Deep Q-Network with Fixed Q-targets - Reinforcement Learning](/rltoken/D9jXXXZ47HqUgcslmf_Nmw)
+* [Deep Reinforcement Learning Libraries](/rltoken/94YNUCeemEZuKdNxSapAKA)
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
-* What is a Markov Decision Process?
-* What is an environment?
-* What is an agent?
-* What is a state?
-* What is a policy function?
-* What is a value function? a state-value function? an action-value function?
-* What is a discount factor?
-* What is the Bellman equation?
-* What is epsilon greedy?
-* What is Q-learning?
+* What is Deep Q-learning?
+* What is the policy network?
+* What is replay memory?
+* What is the target network?
+* Why must we utilize two separate networks during training?
+* What is keras-rl? How do you use it?
 
 ## Requirements
 ### General
 * Allowed editors:vi,vim,emacs
 * All your files will be interpreted/compiled on Ubuntu 20.04 LTS usingpython3(version 3.9)
-* Your files will be executed withnumpy(version 1.25.2), andgymnasium(version 0.29.1)
+* Your files will be executed withnumpy(version 1.25.2),gymnasium(version 0.29.1),keras(version 2.15.0), andkeras-rl2(version 1.0.4)
 * All your files should end with a new line
 * The first line of all your files should be exactly#!/usr/bin/env python3
 * AREADME.mdfile, at the root of the folder of the project, is mandatory
@@ -55,23 +39,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * Your code should use the minimum number of operations
 
 ## Task
-### 0. Load the Environment <a name='subparagraph0'></a>
-
----
-
-### 1. Initialize Q-table <a name='subparagraph1'></a>
-
----
-
-### 2. Epsilon Greedy <a name='subparagraph2'></a>
-
----
-
-### 3. Q-learning <a name='subparagraph3'></a>
-
----
-
-### 4. Play <a name='subparagraph4'></a>
+### 0. Breakout <a name='subparagraph0'></a>
 
 ---
 
